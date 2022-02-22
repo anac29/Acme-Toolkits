@@ -9,6 +9,7 @@
 # they accept any liabilities with respect to them.
 
 - Rafael Corchuelo (corchu@us.es)
+- Jaime Borrego Conde (jaiborcon@alum.us.es)
 - Gonzalo Martínez Fernández (gonmarfer2@alum.us.es)
 - Ana Conde Marrón (anaconmar@alum.us.es)
 - Antonio Campos Gil (antcamgil@us.es)
