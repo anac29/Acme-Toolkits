@@ -1,310 +1,277 @@
-2022-02-22 20:45:28.959 INFO  [acme.Launcher@main] Starting Launcher using Java 1.8.0_281 on DESKTOP-1FCH2T2 with PID 552 (C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Frameworks\Acme-Framework-22.1\target\classes started by GONZALO in C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits) 
-2022-02-22 20:45:28.960 DEBUG [acme.Launcher@main] Running with Spring Boot v2.4.2, Spring v5.3.3 
-2022-02-22 20:45:28.961 INFO  [acme.Launcher@main] The following profiles are active: development,populator 
-2022-02-22 20:45:31.010 DEBUG [org.apache.jasper.servlet.JasperInitializer@main] Initializing Jasper for context [application] 
-2022-02-22 20:45:34.792 DEBUG [org.apache.jasper.servlet.JspServlet@main] Scratch dir for the JSP engine is: [C:\Users\gonza\AppData\Local\Temp\tomcat.8083.4315818150796232863\work\Tomcat\localhost\acme-toolkits-22.1] 
-2022-02-22 20:45:34.792 DEBUG [org.apache.jasper.servlet.JspServlet@main] IMPORTANT: Do not modify the generated servlets 
-2022-02-22 20:45:34.799 INFO  [acme.Launcher@main] Started Launcher in 6.403 seconds (JVM running for 7.036) 
-2022-02-22 20:45:34.802 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/Documents/ESTUDIOS/UNIVERSIDAD/3%20II%20SOFTWARE/DP2/Workspace/Workspace-22.0/Projects/Acme-Toolkits/target/classes/' 
-2022-02-22 20:45:34.802 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/Documents/ESTUDIOS/UNIVERSIDAD/3%20II%20SOFTWARE/DP2/Workspace/Workspace-22.0/Projects/Acme-Toolkits/target/test-classes/' 
-2022-02-22 20:45:34.802 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.4.2/spring-boot-starter-tomcat-2.4.2.jar' 
-2022-02-22 20:45:34.803 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar' 
-2022-02-22 20:45:34.803 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.41/tomcat-embed-core-9.0.41.jar' 
-2022-02-22 20:45:34.803 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar' 
-2022-02-22 20:45:34.803 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.41/tomcat-embed-websocket-9.0.41.jar' 
-2022-02-22 20:45:34.803 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/9.0.41/tomcat-embed-jasper-9.0.41.jar' 
-2022-02-22 20:45:34.803 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.41/tomcat-embed-el-9.0.41.jar' 
-2022-02-22 20:45:34.803 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/eclipse/jdt/ecj/3.18.0/ecj-3.18.0.jar' 
-2022-02-22 20:45:34.804 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar' 
-2022-02-22 20:45:34.804 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.4.2/spring-boot-starter-test-2.4.2.jar' 
-2022-02-22 20:45:34.804 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter/2.4.2/spring-boot-starter-2.4.2.jar' 
-2022-02-22 20:45:34.804 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot/2.4.2/spring-boot-2.4.2.jar' 
-2022-02-22 20:45:34.804 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.4.2/spring-boot-autoconfigure-2.4.2.jar' 
-2022-02-22 20:45:34.804 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.4.2/spring-boot-starter-logging-2.4.2.jar' 
-2022-02-22 20:45:34.804 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar' 
-2022-02-22 20:45:34.805 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar' 
-2022-02-22 20:45:34.805 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.jar' 
-2022-02-22 20:45:34.805 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar' 
-2022-02-22 20:45:34.805 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar' 
-2022-02-22 20:45:34.805 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar' 
-2022-02-22 20:45:34.805 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-test/2.4.2/spring-boot-test-2.4.2.jar' 
-2022-02-22 20:45:34.805 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.4.2/spring-boot-test-autoconfigure-2.4.2.jar' 
-2022-02-22 20:45:34.805 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar' 
-2022-02-22 20:45:34.806 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar' 
-2022-02-22 20:45:34.806 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar' 
-2022-02-22 20:45:34.806 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar' 
-2022-02-22 20:45:34.806 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar' 
-2022-02-22 20:45:34.806 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar' 
-2022-02-22 20:45:34.806 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/assertj/assertj-core/3.18.1/assertj-core-3.18.1.jar' 
-2022-02-22 20:45:34.806 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar' 
-2022-02-22 20:45:34.806 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.0/junit-jupiter-5.7.0.jar' 
-2022-02-22 20:45:34.807 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28.jar' 
-2022-02-22 20:45:34.807 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.19/byte-buddy-agent-1.10.19.jar' 
-2022-02-22 20:45:34.807 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar' 
-2022-02-22 20:45:34.807 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/mockito/mockito-junit-jupiter/3.6.28/mockito-junit-jupiter-3.6.28.jar' 
-2022-02-22 20:45:34.807 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar' 
-2022-02-22 20:45:34.807 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar' 
-2022-02-22 20:45:34.807 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-core/5.3.3/spring-core-5.3.3.jar' 
-2022-02-22 20:45:34.807 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.jar' 
-2022-02-22 20:45:34.808 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-test/5.3.3/spring-test-5.3.3.jar' 
-2022-02-22 20:45:34.808 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/xmlunit/xmlunit-core/2.7.0/xmlunit-core-2.7.0.jar' 
-2022-02-22 20:45:34.808 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.4.2/spring-boot-starter-security-2.4.2.jar' 
-2022-02-22 20:45:34.808 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-aop/5.3.3/spring-aop-5.3.3.jar' 
-2022-02-22 20:45:34.808 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/security/spring-security-web/5.4.2/spring-security-web-5.4.2.jar' 
-2022-02-22 20:45:34.808 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/security/spring-security-core/5.4.2/spring-security-core-5.4.2.jar' 
-2022-02-22 20:45:34.808 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-beans/5.3.3/spring-beans-5.3.3.jar' 
-2022-02-22 20:45:34.809 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-context/5.3.3/spring-context-5.3.3.jar' 
-2022-02-22 20:45:34.809 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-expression/5.3.3/spring-expression-5.3.3.jar' 
-2022-02-22 20:45:34.809 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-web/5.3.3/spring-web-5.3.3.jar' 
-2022-02-22 20:45:34.809 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/security/spring-security-config/5.4.2/spring-security-config-5.4.2.jar' 
-2022-02-22 20:45:34.809 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/security/spring-security-taglibs/5.4.2/spring-security-taglibs-5.4.2.jar' 
-2022-02-22 20:45:34.809 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/security/spring-security-acl/5.4.2/spring-security-acl-5.4.2.jar' 
-2022-02-22 20:45:34.809 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-jdbc/5.3.3/spring-jdbc-5.3.3.jar' 
-2022-02-22 20:45:34.809 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-tx/5.3.3/spring-tx-5.3.3.jar' 
-2022-02-22 20:45:34.810 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.4.2/spring-boot-starter-web-2.4.2.jar' 
-2022-02-22 20:45:34.810 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.4.2/spring-boot-starter-json-2.4.2.jar' 
-2022-02-22 20:45:34.810 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar' 
-2022-02-22 20:45:34.810 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar' 
-2022-02-22 20:45:34.810 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar' 
-2022-02-22 20:45:34.810 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar' 
-2022-02-22 20:45:34.810 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar' 
-2022-02-22 20:45:34.810 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar' 
-2022-02-22 20:45:34.811 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-webmvc/5.3.3/spring-webmvc-5.3.3.jar' 
-2022-02-22 20:45:34.811 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tiles/tiles-jsp/3.0.8/tiles-jsp-3.0.8.jar' 
-2022-02-22 20:45:34.811 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tiles/tiles-servlet/3.0.8/tiles-servlet-3.0.8.jar' 
-2022-02-22 20:45:34.811 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tiles/tiles-core/3.0.8/tiles-core-3.0.8.jar' 
-2022-02-22 20:45:34.811 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/commons-digester/commons-digester/2.0/commons-digester-2.0.jar' 
-2022-02-22 20:45:34.811 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar' 
-2022-02-22 20:45:34.811 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tiles/tiles-request-servlet/1.0.7/tiles-request-servlet-1.0.7.jar' 
-2022-02-22 20:45:34.811 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tiles/tiles-template/3.0.8/tiles-template-3.0.8.jar' 
-2022-02-22 20:45:34.812 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tiles/tiles-api/3.0.8/tiles-api-3.0.8.jar' 
-2022-02-22 20:45:34.812 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tiles/tiles-autotag-core-runtime/1.2/tiles-autotag-core-runtime-1.2.jar' 
-2022-02-22 20:45:34.812 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar' 
-2022-02-22 20:45:34.812 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tiles/tiles-request-jsp/1.0.7/tiles-request-jsp-1.0.7.jar' 
-2022-02-22 20:45:34.812 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/tiles/tiles-request-api/1.0.7/tiles-request-api-1.0.7.jar' 
-2022-02-22 20:45:34.812 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.4.2/spring-boot-starter-data-jpa-2.4.2.jar' 
-2022-02-22 20:45:34.812 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.4.2/spring-boot-starter-aop-2.4.2.jar' 
-2022-02-22 20:45:34.812 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar' 
-2022-02-22 20:45:34.813 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.4.2/spring-boot-starter-jdbc-2.4.2.jar' 
-2022-02-22 20:45:34.813 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar' 
-2022-02-22 20:45:34.813 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar' 
-2022-02-22 20:45:34.813 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/hibernate/hibernate-core/5.4.27.Final/hibernate-core-5.4.27.Final.jar' 
-2022-02-22 20:45:34.813 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar' 
-2022-02-22 20:45:34.813 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar' 
-2022-02-22 20:45:34.813 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar' 
-2022-02-22 20:45:34.813 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/jboss/jandex/2.1.3.Final/jandex-2.1.3.Final.jar' 
-2022-02-22 20:45:34.814 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar' 
-2022-02-22 20:45:34.814 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar' 
-2022-02-22 20:45:34.814 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar' 
-2022-02-22 20:45:34.814 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar' 
-2022-02-22 20:45:34.814 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar' 
-2022-02-22 20:45:34.814 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar' 
-2022-02-22 20:45:34.814 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar' 
-2022-02-22 20:45:34.814 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/data/spring-data-jpa/2.4.3/spring-data-jpa-2.4.3.jar' 
-2022-02-22 20:45:34.814 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/data/spring-data-commons/2.4.3/spring-data-commons-2.4.3.jar' 
-2022-02-22 20:45:34.815 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-orm/5.3.3/spring-orm-5.3.3.jar' 
-2022-02-22 20:45:34.815 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/spring-aspects/5.3.3/spring-aspects-5.3.3.jar' 
-2022-02-22 20:45:34.815 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.4.2/spring-boot-starter-validation-2.4.2.jar' 
-2022-02-22 20:45:34.815 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/hibernate/validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar' 
-2022-02-22 20:45:34.815 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar' 
-2022-02-22 20:45:34.815 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/mysql/mysql-connector-java/8.0.22/mysql-connector-java-8.0.22.jar' 
-2022-02-22 20:45:34.815 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar' 
-2022-02-22 20:45:34.815 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar' 
-2022-02-22 20:45:34.816 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar' 
-2022-02-22 20:45:34.821 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar' 
-2022-02-22 20:45:34.821 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar' 
-2022-02-22 20:45:34.821 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar' 
-2022-02-22 20:45:34.821 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar' 
-2022-02-22 20:45:34.821 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.0/junit-jupiter-params-5.7.0.jar' 
-2022-02-22 20:45:34.821 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.jar' 
-2022-02-22 20:45:34.821 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar' 
-2022-02-22 20:45:34.821 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar' 
-2022-02-22 20:45:34.822 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar' 
-2022-02-22 20:45:34.822 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar' 
-2022-02-22 20:45:34.822 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar' 
-2022-02-22 20:45:34.822 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar' 
-2022-02-22 20:45:34.822 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar' 
-2022-02-22 20:45:34.822 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar' 
-2022-02-22 20:45:34.822 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar' 
-2022-02-22 20:45:34.823 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar' 
-2022-02-22 20:45:34.823 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/net/bytebuddy/byte-buddy/1.10.19/byte-buddy-1.10.19.jar' 
-2022-02-22 20:45:34.823 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar' 
-2022-02-22 20:45:34.823 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar' 
-2022-02-22 20:45:34.824 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar' 
-2022-02-22 20:45:34.824 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar' 
-2022-02-22 20:45:34.824 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar' 
-2022-02-22 20:45:34.824 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar' 
-2022-02-22 20:45:34.824 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar' 
-2022-02-22 20:45:34.824 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/squareup/okhttp3/okhttp/3.14.9/okhttp-3.14.9.jar' 
-2022-02-22 20:45:34.824 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar' 
-2022-02-22 20:45:34.824 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar' 
-2022-02-22 20:45:34.824 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/commons/commons-text/1.8/commons-text-1.8.jar' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/com/opencsv/opencsv/5.4/opencsv-5.4.jar' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/Documents/ESTUDIOS/UNIVERSIDAD/3%20II%20SOFTWARE/DP2/Workspace/Workspace-22.0/Frameworks/Acme-Framework-22.1/target/classes/' 
-2022-02-22 20:45:34.825 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/Documents/ESTUDIOS/UNIVERSIDAD/3%20II%20SOFTWARE/DP2/Workspace/Workspace-22.0/Frameworks/Acme-Framework-22.1/target/test-classes/' 
-2022-02-22 20:45:34.826 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/gonza/Documents/ESTUDIOS/UNIVERSIDAD/3%20II%20SOFTWARE/DP2/Workspace/Workspace-22.0/Tools/IDEs/eclipse-jee-2021-12-R/configuration/org.eclipse.osgi/418/0/.cp/lib/javaagent-shaded.jar' 
-2022-02-22 20:45:34.877 DEBUG [acme.Launcher@main] Found entity class 'acme.roles.Consumer 
-2022-02-22 20:45:34.880 DEBUG [acme.Launcher@main] Found entity class 'acme.roles.Provider 
-2022-02-22 20:45:34.880 DEBUG [acme.Launcher@main] Found entity class 'acme.framework.entities.UserAccount 
-2022-02-22 20:45:34.880 DEBUG [acme.Launcher@main] Found entity class 'acme.framework.roles.Administrator 
-2022-02-22 20:45:34.880 DEBUG [acme.Launcher@main] Found entity class 'acme.framework.roles.Anonymous 
-2022-02-22 20:45:34.880 DEBUG [acme.Launcher@main] Found entity class 'acme.framework.roles.Authenticated 
-2022-02-22 20:45:34.883 INFO  [acme.Launcher@main] Populating (sample data) 
-2022-02-22 20:45:34.883 INFO  [acme.framework.components.database.DatabasePopulator@main] Building database schema 
-2022-02-22 20:45:34.905 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script. 
-2022-02-22 20:45:34.905 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting new transaction. 
-2022-02-22 20:45:34.911 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing command 'set transaction isolation level read uncommitted;'. 
-2022-02-22 20:45:34.921 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting transaction '31245887'. 
-2022-02-22 20:45:34.922 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'set foreign_key_checks=0'. 
-2022-02-22 20:45:34.922 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists administrator'. 
-2022-02-22 20:45:34.929 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists anonymous'. 
-2022-02-22 20:45:34.934 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists authenticated'. 
-2022-02-22 20:45:34.939 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists consumer'. 
-2022-02-22 20:45:34.943 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists hibernate_sequence'. 
-2022-02-22 20:45:34.948 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists provider'. 
-2022-02-22 20:45:34.952 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists user_account'. 
-2022-02-22 20:45:34.958 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'set foreign_key_checks=1'. 
-2022-02-22 20:45:34.958 DEBUG [acme.framework.components.database.DatabaseUtil@main] Committing transaction '31245887'. 
-2022-02-22 20:45:34.965 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script. 
-2022-02-22 20:45:34.965 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting new transaction. 
-2022-02-22 20:45:34.965 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing command 'set transaction isolation level read uncommitted;'. 
-2022-02-22 20:45:34.966 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting transaction '13206856'. 
-2022-02-22 20:45:34.966 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'set foreign_key_checks=0'. 
-2022-02-22 20:45:34.966 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table administrator (id integer not null, version integer not null, user_account_id integer, primary key (id)) engine=InnoDB'. 
-2022-02-22 20:45:34.974 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table anonymous (id integer not null, version integer not null, user_account_id integer, primary key (id)) engine=InnoDB'. 
-2022-02-22 20:45:34.981 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table authenticated (id integer not null, version integer not null, user_account_id integer, primary key (id)) engine=InnoDB'. 
-2022-02-22 20:45:34.987 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table consumer (id integer not null, version integer not null, user_account_id integer, company varchar(255), sector varchar(255), primary key (id)) engine=InnoDB'. 
-2022-02-22 20:45:34.994 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table hibernate_sequence (next_val bigint) engine=InnoDB'. 
-2022-02-22 20:45:35.001 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'insert into hibernate_sequence values ( 1 )'. 
-2022-02-22 20:45:35.003 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table provider (id integer not null, version integer not null, user_account_id integer, company varchar(255), sector varchar(255), primary key (id)) engine=InnoDB'. 
-2022-02-22 20:45:35.010 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table user_account (id integer not null, version integer not null, enabled bit not null, identity blob, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB'. 
-2022-02-22 20:45:35.017 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table user_account add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (username)'. 
-2022-02-22 20:45:35.028 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table administrator add constraint FK_2a5vcjo3stlfcwadosjfq49l1 foreign key (user_account_id) references user_account (id)'. 
-2022-02-22 20:45:35.037 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table anonymous add constraint FK_6lnbc6fo3om54vugoh8icg78m foreign key (user_account_id) references user_account (id)'. 
-2022-02-22 20:45:35.047 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table authenticated add constraint FK_h52w0f3wjoi68b63wv9vwon57 foreign key (user_account_id) references user_account (id)'. 
-2022-02-22 20:45:35.057 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table consumer add constraint FK_6cyha9f1wpj0dpbxrrjddrqed foreign key (user_account_id) references user_account (id)'. 
-2022-02-22 20:45:35.066 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table provider add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd foreign key (user_account_id) references user_account (id)'. 
-2022-02-22 20:45:35.076 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'set foreign_key_checks=1'. 
-2022-02-22 20:45:35.076 DEBUG [acme.framework.components.database.DatabaseUtil@main] Committing transaction '13206856'. 
-2022-02-22 20:45:35.078 INFO  [acme.framework.components.database.DatabasePopulator@main] Reading entities from 'classpath:/WEB-INF/resources/initial-data' 
-2022-02-22 20:45:35.083 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\administrator.csv' 
-2022-02-22 20:45:35.147 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{key:user-account=user-account-administrator-01, key=administrator-01}' from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\administrator.csv' 
-2022-02-22 20:45:35.148 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\anonymous.csv' 
-2022-02-22 20:45:35.148 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{key:user-account=user-account-anonymous-01, key=anonymous-01}' from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\anonymous.csv' 
-2022-02-22 20:45:35.148 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\authenticated.csv' 
-2022-02-22 20:45:35.149 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{key:user-account=user-account-administrator-01, key=authenticated-administrator-01}' from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\authenticated.csv' 
-2022-02-22 20:45:35.149 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\user-account.csv' 
-2022-02-22 20:45:35.150 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{password=HIDDEN-PASSWORD, identity=UserIdentity{name: 'John', surname: 'Doe', email: 'john.doe@acme.com'}, key=user-account-anonymous-01, enabled=false, username=anonymous}' from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\user-account.csv' 
-2022-02-22 20:45:35.150 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{password=administrator, identity=UserIdentity{name: 'Administrator', surname: 'Acme', email: 'administrator@acme.com'}, key=user-account-administrator-01, enabled=true, username=administrator}' from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\user-account.csv' 
-2022-02-22 20:45:35.150 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.framework.roles.Anonymous 
-2022-02-22 20:45:35.151 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.framework.roles.Authenticated 
-2022-02-22 20:45:35.151 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.framework.roles.Administrator 
-2022-02-22 20:45:35.151 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.framework.entities.UserAccount 
-2022-02-22 20:45:35.277 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.framework.roles.Anonymous 
-2022-02-22 20:45:35.281 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.framework.roles.Authenticated 
-2022-02-22 20:45:35.283 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.framework.roles.Administrator 
-2022-02-22 20:45:35.286 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.framework.entities.UserAccount 
-2022-02-22 20:45:35.286 INFO  [acme.framework.components.database.DatabasePopulator@main] Reading entities from 'classpath:/WEB-INF/resources/sample-data' 
-2022-02-22 20:45:35.286 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\sample-data\consumer.csv' 
-2022-02-22 20:45:35.287 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{key:user-account=user-account-administrator-01, company=Macarena, Inc., sector=Telecommunications, key=consumer-01}' from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\sample-data\consumer.csv' 
-2022-02-22 20:45:35.287 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\sample-data\provider.csv' 
-2022-02-22 20:45:35.287 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{key:user-account=user-account-administrator-01, company=Terra Nets, S.A., sector=Internet, key=provider-01}' from 'C:\Users\gonza\Documents\ESTUDIOS\UNIVERSIDAD\3 II SOFTWARE\DP2\Workspace\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\sample-data\provider.csv' 
-2022-02-22 20:45:35.288 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.roles.Provider 
-2022-02-22 20:45:35.292 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.roles.Consumer 
-2022-02-22 20:45:35.294 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.roles.Provider 
-2022-02-22 20:45:35.295 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.roles.Consumer 
-2022-02-22 20:45:35.295 INFO  [acme.framework.components.database.DatabasePopulator@main] Validating your entities 
-2022-02-22 20:45:35.353 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.entities.UserAccount@user-account-anonymous-01' ... PASS 
-2022-02-22 20:45:35.360 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.roles.Anonymous@anonymous-01' ... PASS 
-2022-02-22 20:45:35.362 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.entities.UserAccount@user-account-administrator-01' ... PASS 
-2022-02-22 20:45:35.365 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.roles.Authenticated@authenticated-administrator-01' ... PASS 
-2022-02-22 20:45:35.368 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.roles.Provider@provider-01' ... PASS 
-2022-02-22 20:45:35.371 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.roles.Consumer@consumer-01' ... PASS 
-2022-02-22 20:45:35.373 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.roles.Administrator@administrator-01' ... PASS 
-2022-02-22 20:45:35.374 INFO  [acme.framework.components.database.DatabasePopulator@main] Sorting your entity classes 
-2022-02-22 20:45:35.374 DEBUG [acme.framework.components.database.DatabasePopulator@main] Best topological order for your entity clazzes: 
-2022-02-22 20:45:35.374 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.framework.entities.UserAccount 
-2022-02-22 20:45:35.374 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.roles.Provider 
-2022-02-22 20:45:35.374 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.roles.Consumer 
-2022-02-22 20:45:35.374 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.framework.roles.Anonymous 
-2022-02-22 20:45:35.374 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.framework.roles.Authenticated 
-2022-02-22 20:45:35.374 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.framework.roles.Administrator 
-2022-02-22 20:45:35.374 INFO  [acme.framework.components.database.DatabasePopulator@main] Persisting your entities 
-2022-02-22 20:45:35.374 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting new transaction. 
-2022-02-22 20:45:35.375 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing command 'set transaction isolation level read uncommitted;'. 
-2022-02-22 20:45:35.375 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting transaction '10317325'. 
-2022-02-22 20:45:35.375 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.framework.entities.UserAccount' 
-2022-02-22 20:45:35.384 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
-2022-02-22 20:45:35.397 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
-2022-02-22 20:45:35.438 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserAccount(username=anonymous) 
-2022-02-22 20:45:35.438 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
-2022-02-22 20:45:35.439 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
-2022-02-22 20:45:35.440 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserAccount(username=administrator) 
-2022-02-22 20:45:35.440 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.roles.Provider' 
-2022-02-22 20:45:35.440 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
-2022-02-22 20:45:35.441 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
-2022-02-22 20:45:35.442 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserRole(userAccount=UserAccount(username=administrator)) 
-2022-02-22 20:45:35.443 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.roles.Consumer' 
-2022-02-22 20:45:35.443 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
-2022-02-22 20:45:35.443 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
-2022-02-22 20:45:35.444 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserRole(userAccount=UserAccount(username=administrator)) 
-2022-02-22 20:45:35.444 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.framework.roles.Anonymous' 
-2022-02-22 20:45:35.444 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
-2022-02-22 20:45:35.445 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
-2022-02-22 20:45:35.446 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserRole(userAccount=UserAccount(username=anonymous)) 
-2022-02-22 20:45:35.446 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.framework.roles.Authenticated' 
-2022-02-22 20:45:35.446 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
-2022-02-22 20:45:35.446 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
-2022-02-22 20:45:35.447 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserRole(userAccount=UserAccount(username=administrator)) 
-2022-02-22 20:45:35.447 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.framework.roles.Administrator' 
-2022-02-22 20:45:35.447 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
-2022-02-22 20:45:35.448 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
-2022-02-22 20:45:35.449 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserRole(userAccount=UserAccount(username=administrator)) 
-2022-02-22 20:45:35.449 DEBUG [acme.framework.components.database.DatabaseUtil@main] Committing transaction '10317325'. 
-2022-02-22 20:45:35.466 DEBUG [org.hibernate.SQL@main] insert into user_account (version, enabled, identity, password, username, id) values (?, ?, ?, ?, ?, ?) 
-2022-02-22 20:45:35.468 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
-2022-02-22 20:45:35.469 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [BOOLEAN] - [false] 
-2022-02-22 20:45:35.469 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [BLOB] - [DefaultUserIdentity(name=John, surname=Doe, email=john.doe@acme.com)] 
-2022-02-22 20:45:35.470 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [4] as [VARCHAR] - [$2a$05$J9Y.vqA4/Qhdv4cWH5qaTO4DDP6dpKKULcdksJSbZsYGkuJkJgRQO] 
-2022-02-22 20:45:35.470 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [5] as [VARCHAR] - [anonymous] 
-2022-02-22 20:45:35.470 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [6] as [INTEGER] - [1] 
-2022-02-22 20:45:35.474 DEBUG [org.hibernate.SQL@main] insert into user_account (version, enabled, identity, password, username, id) values (?, ?, ?, ?, ?, ?) 
-2022-02-22 20:45:35.474 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
-2022-02-22 20:45:35.474 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [BOOLEAN] - [true] 
-2022-02-22 20:45:35.474 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [BLOB] - [DefaultUserIdentity(name=Administrator, surname=Acme, email=administrator@acme.com)] 
-2022-02-22 20:45:35.475 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [4] as [VARCHAR] - [$2a$05$N1SoVa96EpfI/q8dwg6d.Oh0lJpPKV6hWGOdGwyJ//VH.jab88Qay] 
-2022-02-22 20:45:35.475 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [5] as [VARCHAR] - [administrator] 
-2022-02-22 20:45:35.475 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [6] as [INTEGER] - [2] 
-2022-02-22 20:45:35.475 DEBUG [org.hibernate.SQL@main] insert into provider (version, user_account_id, company, sector, id) values (?, ?, ?, ?, ?) 
-2022-02-22 20:45:35.476 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
-2022-02-22 20:45:35.476 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [INTEGER] - [2] 
-2022-02-22 20:45:35.476 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [VARCHAR] - [Terra Nets, S.A.] 
-2022-02-22 20:45:35.476 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [4] as [VARCHAR] - [Internet] 
-2022-02-22 20:45:35.476 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [5] as [INTEGER] - [3] 
-2022-02-22 20:45:35.478 DEBUG [org.hibernate.SQL@main] insert into consumer (version, user_account_id, company, sector, id) values (?, ?, ?, ?, ?) 
-2022-02-22 20:45:35.479 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
-2022-02-22 20:45:35.479 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [INTEGER] - [2] 
-2022-02-22 20:45:35.479 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [VARCHAR] - [Macarena, Inc.] 
-2022-02-22 20:45:35.479 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [4] as [VARCHAR] - [Telecommunications] 
-2022-02-22 20:45:35.479 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [5] as [INTEGER] - [4] 
-2022-02-22 20:45:35.481 DEBUG [org.hibernate.SQL@main] insert into anonymous (version, user_account_id, id) values (?, ?, ?) 
-2022-02-22 20:45:35.481 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
-2022-02-22 20:45:35.481 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [INTEGER] - [1] 
-2022-02-22 20:45:35.481 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [INTEGER] - [5] 
-2022-02-22 20:45:35.484 DEBUG [org.hibernate.SQL@main] insert into authenticated (version, user_account_id, id) values (?, ?, ?) 
-2022-02-22 20:45:35.484 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
-2022-02-22 20:45:35.484 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [INTEGER] - [2] 
-2022-02-22 20:45:35.484 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [INTEGER] - [6] 
-2022-02-22 20:45:35.486 DEBUG [org.hibernate.SQL@main] insert into administrator (version, user_account_id, id) values (?, ?, ?) 
-2022-02-22 20:45:35.487 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
-2022-02-22 20:45:35.487 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [INTEGER] - [2] 
-2022-02-22 20:45:35.487 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [INTEGER] - [7] 
-2022-02-22 20:45:36.707 INFO  [acme.framework.configuration.ShutdownConfiguration@main] The system is shutting down... 
-2022-02-22 20:45:36.715 DEBUG [acme.Launcher@main] Exit code = 0 
+2022-02-22 21:18:26.394 INFO  [acme.Launcher@main] Starting Launcher using Java 1.8.0_281 on LAPTOP-PBMRDRB9 with PID 15272 (C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Frameworks\Acme-Framework-22.1\target\classes started by conde in C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits) 
+2022-02-22 21:18:26.395 DEBUG [acme.Launcher@main] Running with Spring Boot v2.4.2, Spring v5.3.3 
+2022-02-22 21:18:26.398 INFO  [acme.Launcher@main] The following profiles are active: development,populator 
+2022-02-22 21:18:30.175 DEBUG [org.apache.jasper.servlet.JasperInitializer@main] Initializing Jasper for context [application] 
+2022-02-22 21:18:36.470 DEBUG [org.apache.jasper.servlet.JspServlet@main] Scratch dir for the JSP engine is: [C:\Users\conde\AppData\Local\Temp\tomcat.8083.8141415612704437001\work\Tomcat\localhost\acme-toolkits-22.1] 
+2022-02-22 21:18:36.471 DEBUG [org.apache.jasper.servlet.JspServlet@main] IMPORTANT: Do not modify the generated servlets 
+2022-02-22 21:18:36.499 INFO  [acme.Launcher@main] Started Launcher in 11.135 seconds (JVM running for 12.183) 
+2022-02-22 21:18:36.511 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/OneDrive/Documents/UNIVERSIDAD/Workspace-22.0/Workspace-22.0/Projects/Acme-Toolkits/target/classes/' 
+2022-02-22 21:18:36.512 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/OneDrive/Documents/UNIVERSIDAD/Workspace-22.0/Workspace-22.0/Projects/Acme-Toolkits/target/test-classes/' 
+2022-02-22 21:18:36.514 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.4.2/spring-boot-starter-tomcat-2.4.2.jar' 
+2022-02-22 21:18:36.518 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar' 
+2022-02-22 21:18:36.519 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.41/tomcat-embed-core-9.0.41.jar' 
+2022-02-22 21:18:36.522 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar' 
+2022-02-22 21:18:36.523 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.41/tomcat-embed-websocket-9.0.41.jar' 
+2022-02-22 21:18:36.523 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/9.0.41/tomcat-embed-jasper-9.0.41.jar' 
+2022-02-22 21:18:36.524 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.41/tomcat-embed-el-9.0.41.jar' 
+2022-02-22 21:18:36.525 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/eclipse/jdt/ecj/3.18.0/ecj-3.18.0.jar' 
+2022-02-22 21:18:36.528 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar' 
+2022-02-22 21:18:36.531 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.4.2/spring-boot-starter-test-2.4.2.jar' 
+2022-02-22 21:18:36.535 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter/2.4.2/spring-boot-starter-2.4.2.jar' 
+2022-02-22 21:18:36.539 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot/2.4.2/spring-boot-2.4.2.jar' 
+2022-02-22 21:18:36.540 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.4.2/spring-boot-autoconfigure-2.4.2.jar' 
+2022-02-22 21:18:36.541 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.4.2/spring-boot-starter-logging-2.4.2.jar' 
+2022-02-22 21:18:36.543 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar' 
+2022-02-22 21:18:36.545 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar' 
+2022-02-22 21:18:36.547 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.jar' 
+2022-02-22 21:18:36.550 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar' 
+2022-02-22 21:18:36.551 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar' 
+2022-02-22 21:18:36.553 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar' 
+2022-02-22 21:18:36.554 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-test/2.4.2/spring-boot-test-2.4.2.jar' 
+2022-02-22 21:18:36.554 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.4.2/spring-boot-test-autoconfigure-2.4.2.jar' 
+2022-02-22 21:18:36.557 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar' 
+2022-02-22 21:18:36.558 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar' 
+2022-02-22 21:18:36.558 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar' 
+2022-02-22 21:18:36.559 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar' 
+2022-02-22 21:18:36.560 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar' 
+2022-02-22 21:18:36.560 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar' 
+2022-02-22 21:18:36.562 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/assertj/assertj-core/3.18.1/assertj-core-3.18.1.jar' 
+2022-02-22 21:18:36.563 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar' 
+2022-02-22 21:18:36.563 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.0/junit-jupiter-5.7.0.jar' 
+2022-02-22 21:18:36.564 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28.jar' 
+2022-02-22 21:18:36.565 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.19/byte-buddy-agent-1.10.19.jar' 
+2022-02-22 21:18:36.565 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar' 
+2022-02-22 21:18:36.568 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/mockito/mockito-junit-jupiter/3.6.28/mockito-junit-jupiter-3.6.28.jar' 
+2022-02-22 21:18:36.573 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar' 
+2022-02-22 21:18:36.576 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar' 
+2022-02-22 21:18:36.578 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-core/5.3.3/spring-core-5.3.3.jar' 
+2022-02-22 21:18:36.582 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-jcl/5.3.3/spring-jcl-5.3.3.jar' 
+2022-02-22 21:18:36.584 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-test/5.3.3/spring-test-5.3.3.jar' 
+2022-02-22 21:18:36.585 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/xmlunit/xmlunit-core/2.7.0/xmlunit-core-2.7.0.jar' 
+2022-02-22 21:18:36.586 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.4.2/spring-boot-starter-security-2.4.2.jar' 
+2022-02-22 21:18:36.587 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-aop/5.3.3/spring-aop-5.3.3.jar' 
+2022-02-22 21:18:36.590 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/security/spring-security-web/5.4.2/spring-security-web-5.4.2.jar' 
+2022-02-22 21:18:36.592 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/security/spring-security-core/5.4.2/spring-security-core-5.4.2.jar' 
+2022-02-22 21:18:36.594 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-beans/5.3.3/spring-beans-5.3.3.jar' 
+2022-02-22 21:18:36.595 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-context/5.3.3/spring-context-5.3.3.jar' 
+2022-02-22 21:18:36.597 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-expression/5.3.3/spring-expression-5.3.3.jar' 
+2022-02-22 21:18:36.598 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-web/5.3.3/spring-web-5.3.3.jar' 
+2022-02-22 21:18:36.599 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/security/spring-security-config/5.4.2/spring-security-config-5.4.2.jar' 
+2022-02-22 21:18:36.600 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/security/spring-security-taglibs/5.4.2/spring-security-taglibs-5.4.2.jar' 
+2022-02-22 21:18:36.602 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/security/spring-security-acl/5.4.2/spring-security-acl-5.4.2.jar' 
+2022-02-22 21:18:36.603 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-jdbc/5.3.3/spring-jdbc-5.3.3.jar' 
+2022-02-22 21:18:36.604 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-tx/5.3.3/spring-tx-5.3.3.jar' 
+2022-02-22 21:18:36.605 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.4.2/spring-boot-starter-web-2.4.2.jar' 
+2022-02-22 21:18:36.608 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.4.2/spring-boot-starter-json-2.4.2.jar' 
+2022-02-22 21:18:36.612 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar' 
+2022-02-22 21:18:36.613 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar' 
+2022-02-22 21:18:36.614 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar' 
+2022-02-22 21:18:36.618 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar' 
+2022-02-22 21:18:36.619 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar' 
+2022-02-22 21:18:36.621 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar' 
+2022-02-22 21:18:36.622 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-webmvc/5.3.3/spring-webmvc-5.3.3.jar' 
+2022-02-22 21:18:36.623 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tiles/tiles-jsp/3.0.8/tiles-jsp-3.0.8.jar' 
+2022-02-22 21:18:36.623 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tiles/tiles-servlet/3.0.8/tiles-servlet-3.0.8.jar' 
+2022-02-22 21:18:36.624 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tiles/tiles-core/3.0.8/tiles-core-3.0.8.jar' 
+2022-02-22 21:18:36.624 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/commons-digester/commons-digester/2.0/commons-digester-2.0.jar' 
+2022-02-22 21:18:36.625 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar' 
+2022-02-22 21:18:36.626 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tiles/tiles-request-servlet/1.0.7/tiles-request-servlet-1.0.7.jar' 
+2022-02-22 21:18:36.628 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tiles/tiles-template/3.0.8/tiles-template-3.0.8.jar' 
+2022-02-22 21:18:36.628 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tiles/tiles-api/3.0.8/tiles-api-3.0.8.jar' 
+2022-02-22 21:18:36.629 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tiles/tiles-autotag-core-runtime/1.2/tiles-autotag-core-runtime-1.2.jar' 
+2022-02-22 21:18:36.629 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar' 
+2022-02-22 21:18:36.630 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tiles/tiles-request-jsp/1.0.7/tiles-request-jsp-1.0.7.jar' 
+2022-02-22 21:18:36.632 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/tiles/tiles-request-api/1.0.7/tiles-request-api-1.0.7.jar' 
+2022-02-22 21:18:36.633 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.4.2/spring-boot-starter-data-jpa-2.4.2.jar' 
+2022-02-22 21:18:36.633 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.4.2/spring-boot-starter-aop-2.4.2.jar' 
+2022-02-22 21:18:36.634 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar' 
+2022-02-22 21:18:36.634 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.4.2/spring-boot-starter-jdbc-2.4.2.jar' 
+2022-02-22 21:18:36.634 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar' 
+2022-02-22 21:18:36.635 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar' 
+2022-02-22 21:18:36.635 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/hibernate/hibernate-core/5.4.27.Final/hibernate-core-5.4.27.Final.jar' 
+2022-02-22 21:18:36.640 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar' 
+2022-02-22 21:18:36.641 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar' 
+2022-02-22 21:18:36.642 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar' 
+2022-02-22 21:18:36.643 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/jboss/jandex/2.1.3.Final/jandex-2.1.3.Final.jar' 
+2022-02-22 21:18:36.643 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar' 
+2022-02-22 21:18:36.645 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar' 
+2022-02-22 21:18:36.648 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar' 
+2022-02-22 21:18:36.651 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar' 
+2022-02-22 21:18:36.654 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar' 
+2022-02-22 21:18:36.656 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar' 
+2022-02-22 21:18:36.658 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar' 
+2022-02-22 21:18:36.659 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/data/spring-data-jpa/2.4.3/spring-data-jpa-2.4.3.jar' 
+2022-02-22 21:18:36.659 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/data/spring-data-commons/2.4.3/spring-data-commons-2.4.3.jar' 
+2022-02-22 21:18:36.660 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-orm/5.3.3/spring-orm-5.3.3.jar' 
+2022-02-22 21:18:36.661 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/spring-aspects/5.3.3/spring-aspects-5.3.3.jar' 
+2022-02-22 21:18:36.661 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.4.2/spring-boot-starter-validation-2.4.2.jar' 
+2022-02-22 21:18:36.662 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/hibernate/validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar' 
+2022-02-22 21:18:36.663 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar' 
+2022-02-22 21:18:36.664 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/mysql/mysql-connector-java/8.0.22/mysql-connector-java-8.0.22.jar' 
+2022-02-22 21:18:36.664 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar' 
+2022-02-22 21:18:36.665 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar' 
+2022-02-22 21:18:36.669 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar' 
+2022-02-22 21:18:36.670 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar' 
+2022-02-22 21:18:36.670 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar' 
+2022-02-22 21:18:36.671 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar' 
+2022-02-22 21:18:36.671 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar' 
+2022-02-22 21:18:36.671 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.0/junit-jupiter-params-5.7.0.jar' 
+2022-02-22 21:18:36.674 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/junit/platform/junit-platform-launcher/1.7.0/junit-platform-launcher-1.7.0.jar' 
+2022-02-22 21:18:36.674 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar' 
+2022-02-22 21:18:36.675 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar' 
+2022-02-22 21:18:36.675 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar' 
+2022-02-22 21:18:36.676 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar' 
+2022-02-22 21:18:36.677 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar' 
+2022-02-22 21:18:36.677 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar' 
+2022-02-22 21:18:36.678 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar' 
+2022-02-22 21:18:36.678 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar' 
+2022-02-22 21:18:36.679 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar' 
+2022-02-22 21:18:36.679 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar' 
+2022-02-22 21:18:36.680 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/net/bytebuddy/byte-buddy/1.10.19/byte-buddy-1.10.19.jar' 
+2022-02-22 21:18:36.681 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar' 
+2022-02-22 21:18:36.681 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar' 
+2022-02-22 21:18:36.682 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar' 
+2022-02-22 21:18:36.682 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar' 
+2022-02-22 21:18:36.683 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar' 
+2022-02-22 21:18:36.683 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar' 
+2022-02-22 21:18:36.684 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar' 
+2022-02-22 21:18:36.684 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/squareup/okhttp3/okhttp/3.14.9/okhttp-3.14.9.jar' 
+2022-02-22 21:18:36.684 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar' 
+2022-02-22 21:18:36.685 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar' 
+2022-02-22 21:18:36.685 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/commons/commons-text/1.8/commons-text-1.8.jar' 
+2022-02-22 21:18:36.686 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar' 
+2022-02-22 21:18:36.686 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar' 
+2022-02-22 21:18:36.687 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar' 
+2022-02-22 21:18:36.687 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/com/opencsv/opencsv/5.4/opencsv-5.4.jar' 
+2022-02-22 21:18:36.688 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar' 
+2022-02-22 21:18:36.688 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar' 
+2022-02-22 21:18:36.688 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar' 
+2022-02-22 21:18:36.689 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar' 
+2022-02-22 21:18:36.689 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/OneDrive/Documents/UNIVERSIDAD/Workspace-22.0/Workspace-22.0/Frameworks/Acme-Framework-22.1/target/classes/' 
+2022-02-22 21:18:36.689 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/OneDrive/Documents/UNIVERSIDAD/Workspace-22.0/Workspace-22.0/Frameworks/Acme-Framework-22.1/target/test-classes/' 
+2022-02-22 21:18:36.689 DEBUG [acme.Launcher@main] Found classpath entry '/C:/Users/conde/OneDrive/Documents/UNIVERSIDAD/Workspace-22.0/Workspace-22.0/Tools/IDEs/eclipse-jee-2021-12-R/configuration/org.eclipse.osgi/418/0/.cp/lib/javaagent-shaded.jar' 
+2022-02-22 21:18:36.897 DEBUG [acme.Launcher@main] Found entity class 'acme.roles.Consumer 
+2022-02-22 21:18:36.897 DEBUG [acme.Launcher@main] Found entity class 'acme.roles.Provider 
+2022-02-22 21:18:36.898 DEBUG [acme.Launcher@main] Found entity class 'acme.framework.entities.UserAccount 
+2022-02-22 21:18:36.898 DEBUG [acme.Launcher@main] Found entity class 'acme.framework.roles.Administrator 
+2022-02-22 21:18:36.898 DEBUG [acme.Launcher@main] Found entity class 'acme.framework.roles.Anonymous 
+2022-02-22 21:18:36.898 DEBUG [acme.Launcher@main] Found entity class 'acme.framework.roles.Authenticated 
+2022-02-22 21:18:36.903 INFO  [acme.Launcher@main] Populating (initial data) 
+2022-02-22 21:18:36.905 INFO  [acme.framework.components.database.DatabasePopulator@main] Building database schema 
+2022-02-22 21:18:36.959 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script. 
+2022-02-22 21:18:36.959 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting new transaction. 
+2022-02-22 21:18:36.977 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing command 'set transaction isolation level read uncommitted;'. 
+2022-02-22 21:18:36.996 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting transaction '1950815744'. 
+2022-02-22 21:18:36.996 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'set foreign_key_checks=0'. 
+2022-02-22 21:18:36.997 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists administrator'. 
+2022-02-22 21:18:37.016 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists anonymous'. 
+2022-02-22 21:18:37.024 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists authenticated'. 
+2022-02-22 21:18:37.034 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists consumer'. 
+2022-02-22 21:18:37.040 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists hibernate_sequence'. 
+2022-02-22 21:18:37.047 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists provider'. 
+2022-02-22 21:18:37.056 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'drop table if exists user_account'. 
+2022-02-22 21:18:37.062 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'set foreign_key_checks=1'. 
+2022-02-22 21:18:37.063 DEBUG [acme.framework.components.database.DatabaseUtil@main] Committing transaction '1950815744'. 
+2022-02-22 21:18:37.080 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script. 
+2022-02-22 21:18:37.081 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting new transaction. 
+2022-02-22 21:18:37.082 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing command 'set transaction isolation level read uncommitted;'. 
+2022-02-22 21:18:37.082 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting transaction '1699908559'. 
+2022-02-22 21:18:37.082 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'set foreign_key_checks=0'. 
+2022-02-22 21:18:37.083 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table administrator (id integer not null, version integer not null, user_account_id integer, primary key (id)) engine=InnoDB'. 
+2022-02-22 21:18:37.102 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table anonymous (id integer not null, version integer not null, user_account_id integer, primary key (id)) engine=InnoDB'. 
+2022-02-22 21:18:37.115 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table authenticated (id integer not null, version integer not null, user_account_id integer, primary key (id)) engine=InnoDB'. 
+2022-02-22 21:18:37.128 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table consumer (id integer not null, version integer not null, user_account_id integer, company varchar(255), sector varchar(255), primary key (id)) engine=InnoDB'. 
+2022-02-22 21:18:37.141 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table hibernate_sequence (next_val bigint) engine=InnoDB'. 
+2022-02-22 21:18:37.158 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'insert into hibernate_sequence values ( 1 )'. 
+2022-02-22 21:18:37.167 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table provider (id integer not null, version integer not null, user_account_id integer, company varchar(255), sector varchar(255), primary key (id)) engine=InnoDB'. 
+2022-02-22 21:18:37.184 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'create table user_account (id integer not null, version integer not null, enabled bit not null, identity blob, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB'. 
+2022-02-22 21:18:37.197 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table user_account add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (username)'. 
+2022-02-22 21:18:37.216 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table administrator add constraint FK_2a5vcjo3stlfcwadosjfq49l1 foreign key (user_account_id) references user_account (id)'. 
+2022-02-22 21:18:37.236 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table anonymous add constraint FK_6lnbc6fo3om54vugoh8icg78m foreign key (user_account_id) references user_account (id)'. 
+2022-02-22 21:18:37.252 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table authenticated add constraint FK_h52w0f3wjoi68b63wv9vwon57 foreign key (user_account_id) references user_account (id)'. 
+2022-02-22 21:18:37.271 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table consumer add constraint FK_6cyha9f1wpj0dpbxrrjddrqed foreign key (user_account_id) references user_account (id)'. 
+2022-02-22 21:18:37.289 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'alter table provider add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd foreign key (user_account_id) references user_account (id)'. 
+2022-02-22 21:18:37.309 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing script command 'set foreign_key_checks=1'. 
+2022-02-22 21:18:37.310 DEBUG [acme.framework.components.database.DatabaseUtil@main] Committing transaction '1699908559'. 
+2022-02-22 21:18:37.314 INFO  [acme.framework.components.database.DatabasePopulator@main] Reading entities from 'classpath:/WEB-INF/resources/initial-data' 
+2022-02-22 21:18:37.327 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\administrator.csv' 
+2022-02-22 21:18:37.490 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{key:user-account=user-account-administrator-01, key=administrator-01}' from 'C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\administrator.csv' 
+2022-02-22 21:18:37.504 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\anonymous.csv' 
+2022-02-22 21:18:37.506 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{key:user-account=user-account-anonymous-01, key=anonymous-01}' from 'C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\anonymous.csv' 
+2022-02-22 21:18:37.507 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\authenticated.csv' 
+2022-02-22 21:18:37.509 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{key:user-account=user-account-administrator-01, key=authenticated-administrator-01}' from 'C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\authenticated.csv' 
+2022-02-22 21:18:37.510 DEBUG [acme.framework.components.database.Dataset@main] Reading dataset from 'C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\user-account.csv' 
+2022-02-22 21:18:37.512 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{password=HIDDEN-PASSWORD, identity=UserIdentity{name: 'John', surname: 'Doe', email: 'john.doe@acme.com'}, key=user-account-anonymous-01, enabled=false, username=anonymous}' from 'C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\user-account.csv' 
+2022-02-22 21:18:37.512 DEBUG [acme.framework.components.database.Dataset@main] Reading mapping '{password=administrator, identity=UserIdentity{name: 'Administrator', surname: 'Acme', email: 'administrator@acme.com'}, key=user-account-administrator-01, enabled=true, username=administrator}' from 'C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\resources\initial-data\user-account.csv' 
+2022-02-22 21:18:37.513 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.framework.roles.Anonymous 
+2022-02-22 21:18:37.513 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.framework.roles.Authenticated 
+2022-02-22 21:18:37.513 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.framework.entities.UserAccount 
+2022-02-22 21:18:37.767 DEBUG [acme.framework.components.database.EntityWeb@main] Setting attributes of entities of class acme.framework.roles.Administrator 
+2022-02-22 21:18:37.767 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.framework.roles.Anonymous 
+2022-02-22 21:18:37.772 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.framework.roles.Authenticated 
+2022-02-22 21:18:37.778 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.framework.entities.UserAccount 
+2022-02-22 21:18:37.778 DEBUG [acme.framework.components.database.EntityWeb@main] Linking entities of class acme.framework.roles.Administrator 
+2022-02-22 21:18:37.783 INFO  [acme.framework.components.database.DatabasePopulator@main] Validating your entities 
+2022-02-22 21:18:37.866 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.entities.UserAccount@user-account-anonymous-01' ... PASS 
+2022-02-22 21:18:37.876 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.roles.Anonymous@anonymous-01' ... PASS 
+2022-02-22 21:18:37.879 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.entities.UserAccount@user-account-administrator-01' ... PASS 
+2022-02-22 21:18:37.885 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.roles.Authenticated@authenticated-administrator-01' ... PASS 
+2022-02-22 21:18:37.891 DEBUG [acme.framework.components.database.DatabasePopulator@main] Validating 'acme.framework.roles.Administrator@administrator-01' ... PASS 
+2022-02-22 21:18:37.891 INFO  [acme.framework.components.database.DatabasePopulator@main] Sorting your entity classes 
+2022-02-22 21:18:37.892 DEBUG [acme.framework.components.database.DatabasePopulator@main] Best topological order for your entity clazzes: 
+2022-02-22 21:18:37.892 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.framework.entities.UserAccount 
+2022-02-22 21:18:37.892 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.framework.roles.Anonymous 
+2022-02-22 21:18:37.892 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.framework.roles.Authenticated 
+2022-02-22 21:18:37.893 DEBUG [acme.framework.components.database.DatabasePopulator@main] - acme.framework.roles.Administrator 
+2022-02-22 21:18:37.893 INFO  [acme.framework.components.database.DatabasePopulator@main] Persisting your entities 
+2022-02-22 21:18:37.893 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting new transaction. 
+2022-02-22 21:18:37.894 DEBUG [acme.framework.components.database.DatabaseUtil@main] Executing command 'set transaction isolation level read uncommitted;'. 
+2022-02-22 21:18:37.895 DEBUG [acme.framework.components.database.DatabaseUtil@main] Starting transaction '1353715924'. 
+2022-02-22 21:18:37.895 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.framework.entities.UserAccount' 
+2022-02-22 21:18:37.917 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
+2022-02-22 21:18:37.950 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
+2022-02-22 21:18:38.035 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserAccount(username=anonymous) 
+2022-02-22 21:18:38.036 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
+2022-02-22 21:18:38.037 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
+2022-02-22 21:18:38.048 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserAccount(username=administrator) 
+2022-02-22 21:18:38.049 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.framework.roles.Anonymous' 
+2022-02-22 21:18:38.050 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
+2022-02-22 21:18:38.051 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
+2022-02-22 21:18:38.055 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserRole(userAccount=UserAccount(username=anonymous)) 
+2022-02-22 21:18:38.060 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.framework.roles.Authenticated' 
+2022-02-22 21:18:38.061 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
+2022-02-22 21:18:38.062 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
+2022-02-22 21:18:38.066 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserRole(userAccount=UserAccount(username=administrator)) 
+2022-02-22 21:18:38.066 DEBUG [acme.framework.components.database.DatabasePopulator@main] Persising entities of clazz 'acme.framework.roles.Administrator' 
+2022-02-22 21:18:38.067 DEBUG [org.hibernate.SQL@main] select next_val as id_val from hibernate_sequence for update 
+2022-02-22 21:18:38.069 DEBUG [org.hibernate.SQL@main] update hibernate_sequence set next_val= ? where next_val=? 
+2022-02-22 21:18:38.071 DEBUG [acme.framework.components.database.DatabaseUtil@main] Persisting entity UserRole(userAccount=UserAccount(username=administrator)) 
+2022-02-22 21:18:38.071 DEBUG [acme.framework.components.database.DatabaseUtil@main] Committing transaction '1353715924'. 
+2022-02-22 21:18:38.119 DEBUG [org.hibernate.SQL@main] insert into user_account (version, enabled, identity, password, username, id) values (?, ?, ?, ?, ?, ?) 
+2022-02-22 21:18:38.123 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
+2022-02-22 21:18:38.125 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [BOOLEAN] - [false] 
+2022-02-22 21:18:38.127 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [BLOB] - [DefaultUserIdentity(name=John, surname=Doe, email=john.doe@acme.com)] 
+2022-02-22 21:18:38.133 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [4] as [VARCHAR] - [$2a$05$x14a3LOSToQXEmAQ2fH2O.GyXdVgBMEAHKwEH12rTL8o8XBvsBSCG] 
+2022-02-22 21:18:38.136 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [5] as [VARCHAR] - [anonymous] 
+2022-02-22 21:18:38.137 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [6] as [INTEGER] - [1] 
+2022-02-22 21:18:38.153 DEBUG [org.hibernate.SQL@main] insert into user_account (version, enabled, identity, password, username, id) values (?, ?, ?, ?, ?, ?) 
+2022-02-22 21:18:38.154 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
+2022-02-22 21:18:38.155 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [BOOLEAN] - [true] 
+2022-02-22 21:18:38.156 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [BLOB] - [DefaultUserIdentity(name=Administrator, surname=Acme, email=administrator@acme.com)] 
+2022-02-22 21:18:38.156 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [4] as [VARCHAR] - [$2a$05$M6lEnZQxINIf/75VfHwYP.cUf1aqLS9mFCnJPXE2zvJu4AkQ1z6Oe] 
+2022-02-22 21:18:38.157 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [5] as [VARCHAR] - [administrator] 
+2022-02-22 21:18:38.157 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [6] as [INTEGER] - [2] 
+2022-02-22 21:18:38.159 DEBUG [org.hibernate.SQL@main] insert into anonymous (version, user_account_id, id) values (?, ?, ?) 
+2022-02-22 21:18:38.160 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
+2022-02-22 21:18:38.160 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [INTEGER] - [1] 
+2022-02-22 21:18:38.160 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [INTEGER] - [3] 
+2022-02-22 21:18:38.170 DEBUG [org.hibernate.SQL@main] insert into authenticated (version, user_account_id, id) values (?, ?, ?) 
+2022-02-22 21:18:38.171 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
+2022-02-22 21:18:38.172 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [INTEGER] - [2] 
+2022-02-22 21:18:38.172 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [INTEGER] - [4] 
+2022-02-22 21:18:38.182 DEBUG [org.hibernate.SQL@main] insert into administrator (version, user_account_id, id) values (?, ?, ?) 
+2022-02-22 21:18:38.183 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [1] as [INTEGER] - [0] 
+2022-02-22 21:18:38.184 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [2] as [INTEGER] - [2] 
+2022-02-22 21:18:38.184 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@main] binding parameter [3] as [INTEGER] - [5] 
+2022-02-22 21:18:39.534 INFO  [acme.framework.configuration.ShutdownConfiguration@main] The system is shutting down... 
+2022-02-22 21:18:39.558 DEBUG [acme.Launcher@main] Exit code = 0 
