@@ -9,12 +9,12 @@
 # they accept any liabilities with respect to them.
 
 master.footer.title.about = About us
-master.footer.label.company = Company
+master.footer.label.company = Acme-Toolkits
 master.footer.label.license = License
 master.footer.title.social = Social
-master.footer.url.linkedin = http://www.linkedin.com
+master.footer.url.linkedin = https://www.linkedin.com/in/acme-toolkits-678177233/
 master.footer.label.linked-in = Linked-In
-master.footer.url.twitter = http://www.twitter.com
+master.footer.url.twitter = https://twitter.com/AcmeToolkits
 master.footer.label.twitter = Twitter
 master.footer.title.languages = Languages
 master.footer.label.english = English
