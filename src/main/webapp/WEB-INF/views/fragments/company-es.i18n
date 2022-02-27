@@ -8,12 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-master.company.title = La empresa
+master.company.title = Acme Toolkits
 master.company.text = \
-	Hello World, Inc. es una empresa ficticia que ofrece un proyecto starter para los \
-	estudiantes de la asignatura Diseño y Pruebas de la titulación de \
-	Ingeniería del Software en la Universidad de Sevilla. 
-master.company.name = Acme, Inc.
-master.company.address = 01 Acme Drive, Wondercity, Wonderland
-master.company.phone = +1 000 111 222
-master.company.email = contact@acme.com
+	Acme-Toolkits, Inc. es una empresa ficticia que se especializa en ayudar tanto a  \
+	inventores como a mecenas. Por una parte, los inventores pueden promocionar sus \
+	componentes y herramientas. Por otra parte, los mecenas pueden ofrecer mecenazgos.
+	
+master.company.name = Acme-Toolkits, Inc.
+master.company.address = Av. de Palmas Altas 1, 41012, Sevilla, España
+master.company.phone = +34 955 55 15 98
+master.company.email = petrisdp1@gmail.com

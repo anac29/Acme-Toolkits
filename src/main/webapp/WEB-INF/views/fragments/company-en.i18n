@@ -8,13 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-master.company.title = The company
+master.company.title = Acme Toolkits
 master.company.text = \
-	Hello World, Inc. is a fictitious company that provides a starter \
-	project for the students of the Design and Testing subject of the \
-	Software Engineering Curriculum of the University of Sevilla.
-master.company.name = Acme, Inc.
-master.company.address = 01 Acme Drive, Wondercity, Wonderland
-master.company.phone = +1 000 111 222
-master.company.email = contact@acme.com
+	Acme Toolkits, Inc. is a fictitious company that specialises in helping inventors \
+	and patrons.  On the one hand, inventors can advertise their components, tools, and \
+	toolkits; on the other hand patrons can offer patronages to them.
+master.company.name = Acme-Toolkits, Inc.
+master.company.address = 1 Av. de Palmas Altas, 41012, Seville, Spain
+master.company.phone = +34 955 55 15 98
+master.company.email = petrisdp1@gmail.com
 
