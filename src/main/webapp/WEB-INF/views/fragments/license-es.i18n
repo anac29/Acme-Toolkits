@@ -10,9 +10,10 @@
 
 master.license.title = Licencia
 master.license.text = \
-	Puede usar este sistema de forma completamente gratuita respetando las leyes \
-	que sean aplicables.  No compartimos ninguna información sobre Ud. con ninguna \
-	otra empresa.  Tan sólo usamos tres cookies, a saber: "JSESSIONID" para identificar \
+	Acme Toolkits se compromete a ofrecer de manera completamente gratuita \
+	su sistema siempre y cuando se cumplas las leyes que sean aplicables.\
+	La empresa se compromete a no compartir ningún tipo de información personal que no sea de carácter público. \
+	Tan sólo usamos tres cookies, a saber: "JSESSIONID" para identificar \
 	su sesión de trabajo, "remember" para mantener su información de autentificación \
 	durante un máximo de 31 días y "language" para almacenar sus preferencias de \
 	lenguage.  Además, almacenamos un ítem llamado "returnStack" en el almacenamiento \

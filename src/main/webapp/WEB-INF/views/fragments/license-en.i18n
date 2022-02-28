@@ -10,10 +10,9 @@
 
 master.license.title = License
 master.license.text = \
-	You may use this system free of charge, as long as you carefully observe the \
-	existing applicable laws.  Please, note that we do not share any information \
-	about you with any other company.  We only use three cookies, namely: \
-	"JSESSIONID" to identify your work session, "remember" to let you authenticate \
-	automatically for a maximum of 31 days, and "language" to store your language \
-	preferences. Additionally, we store an item called "returnStack" in your browser's \
-	local storage to keep track of the document to which some buttons must return.
+	Acme Toolkits its committed to providing its system completely free of charges as long as \
+	it complies with applicable laws. The company agrees not to share any non-public personal \
+	information. We only use three cookies namely:"JSESSIONID" to identify your work session,\
+	"remember" to let you authenticate automatically for a maximum of 31 days, and "language" \
+	to store your language preferences. Additionally, we store an item called "returnStack" in \
+	your browser's local storage to keep track of the document to which some buttons must return.
