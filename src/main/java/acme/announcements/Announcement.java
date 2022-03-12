@@ -7,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
-import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.AbstractEntity;
@@ -26,11 +26,11 @@ public class Announcement extends AbstractEntity {
 	private LocalDateTime creationMoment;
 	@NotNull
 	@NotBlank(message = "Title is mandatory")
-	@Range(min=0, max=101)
+	@Length(min=0, max=101)
 	private String title;
 	@NotNull
 	@NotBlank(message = "Body is mandatory")
-	@Range(min=0, max=256)
+	@Length(min=0, max=256)
 	private String body;
 	@NotNull
 	private Boolean flag;
