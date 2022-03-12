@@ -5,6 +5,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
@@ -24,17 +25,17 @@ public class Toolkit extends AbstractEntity {
 	@Pattern(regexp="^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
 	private String code;
 	
-	@Range(min=0, max=101)
+	@Length(min=0, max=101)
 	@NotBlank
 	@NotNull
 	private String title;
 	
-	@Range(min=0, max=256)
+	@Length(min=0, max=256)
 	@NotBlank
 	@NotNull
 	private String description;
 	
-	@Range(min=0, max=256)
+	@Length(min=0, max=256)
 	@NotBlank
 	@NotNull
 	private String assemblyNotes;
