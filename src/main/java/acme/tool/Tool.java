@@ -22,26 +22,27 @@ import lombok.Setter;
 		uniqueConstraints = @UniqueConstraint(columnNames = {"code"}))
 public class Tool extends AbstractEntity{
 
-	private static final long serialVersionUID = 1L;
+	protected static final long serialVersionUID = 1L;
 	
 	@NotBlank(message = "Name is mandatory")
 	@Length(max = 101)
-	private String name;
+	protected String name;
 	
 	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
-	private String code;
+	protected String code;
 	
 	@NotBlank(message = "Technology is mandatory")
 	@Length(max = 101)
-	private String technology;
+	protected String technology;
 	
 	@NotBlank(message = "Description is mandatory")
 	@Length(max = 256)
-	private String description;
+	protected String description;
 	
 	@Min(0)
-	private Money retailPrice;
+	protected Money retailPrice;
+
 	
 	@URL
-	private String moreInfo;
+	protected String moreInfo;
 }
