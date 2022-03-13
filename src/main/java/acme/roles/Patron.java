@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.URL;
+
 import acme.framework.roles.UserRole;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +28,7 @@ public class Patron extends UserRole {
 	@Size(min=1,max=256)
 	protected String			statement;
 	
-	protected String			link;
+	@URL
+	protected String			info;
 }
 
