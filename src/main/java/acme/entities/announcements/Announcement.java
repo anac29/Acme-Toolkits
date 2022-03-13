@@ -1,8 +1,10 @@
-package acme.announcements;
+package acme.entities.announcements;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -19,21 +21,28 @@ import lombok.Setter;
 @Setter
 public class Announcement extends AbstractEntity {
 
+	// Serialisation identifier -----------------------------------------------
+
 	protected static final long serialVersionUID = 1L;
 	
-	@NotNull
+	// Attributes -------------------------------------------------------------
+
+	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private LocalDateTime creationMoment;
 	@NotNull
+	protected Date creationMoment;
+	
 	@NotBlank(message = "Title is mandatory")
 	@Length(min=0, max=101)
-	private String title;
-	@NotNull
+	protected String title;
+
 	@NotBlank(message = "Body is mandatory")
 	@Length(min=0, max=256)
-	private String body;
+	protected String body;
+	
 	@NotNull
-	private Boolean flag;
+	protected Boolean flag;
+	
 	@URL
-	private String link;
+	protected String moreInfo;
 }
