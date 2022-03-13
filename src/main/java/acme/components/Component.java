@@ -11,8 +11,8 @@ import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
 import acme.currencies.Currency;
+import acme.entities.Toolkit;
 import acme.framework.entities.AbstractEntity;
-import acme.toolkits.Toolkit;
 import lombok.Getter;
 import lombok.Setter;
 
