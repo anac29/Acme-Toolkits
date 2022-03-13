@@ -44,5 +44,5 @@ public class Announcement extends AbstractEntity {
 	protected Boolean flag;
 	
 	@URL
-	protected String moreInfo;
+	protected String info;
 }
