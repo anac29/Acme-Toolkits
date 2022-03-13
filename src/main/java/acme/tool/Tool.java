@@ -10,7 +10,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.currencies.Currency;
+import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -40,7 +40,7 @@ public class Tool extends AbstractEntity{
 	private String description;
 	
 	@Min(0)
-	private Currency retailPrice;
+	private Money retailPrice;
 	
 	@URL
 	private String moreInfo;
