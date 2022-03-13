@@ -1,4 +1,4 @@
-package acme.entities.toolkits;
+package acme.toolkits;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
