@@ -1,4 +1,4 @@
-package acme.chirp;
+package acme.entities.chirp;
 
 import java.time.LocalDateTime;
 
@@ -23,23 +23,24 @@ public class Chirp extends AbstractEntity {
     /**
      * 
      */
-    private static final long serialVersionUID = 1L;
+    protected static final long serialVersionUID = 1L;
 
     @NotNull
     @Past
-    private LocalDateTime creationMoment;
-    @NotNull
+    protected LocalDateTime creationMoment;
+
     @NotBlank(message = "Title is mandatory")
     @Length(min=0, max=101)
-    private String title;
-    @NotNull
+    protected String title;
+    
     @NotBlank(message = "Author is mandatory")
     @Length(min=0, max=101)
-    private String author;
-    @NotNull
+    protected String author;
+
     @NotBlank(message = "Body is mandatory")
     @Length(min=0, max=256)
-    private String body;
+    protected String body;
+    
     @Email
-    private String email;
+    protected String email;
 }
