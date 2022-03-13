@@ -41,6 +41,7 @@ public class Tool extends AbstractEntity{
 	
 	@Min(0)
 	protected Money retailPrice;
+
 	
 	@URL
 	protected String moreInfo;
