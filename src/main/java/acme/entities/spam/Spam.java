@@ -3,7 +3,6 @@ package acme.entities.spam;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
-
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,14 +13,15 @@ import lombok.Setter;
 @Setter
 public class Spam extends AbstractEntity {
 
-    /**
-     * 
-     */
-    protected static final long serialVersionUID = 1L;
+	// Serialisation identifier -----------------------------------------------
 
-    @NotBlank(message = "Name is mandatory")
-    @Column(unique=true)
-    protected String name;
+	protected static final long serialVersionUID = 1L;
 
-    protected SpamType type;
+	// Attributes -------------------------------------------------------------
+
+	@NotBlank(message = "Name is mandatory")
+	@Column(unique = true)
+	protected String name;
+
+	protected SpamType type;
 }
