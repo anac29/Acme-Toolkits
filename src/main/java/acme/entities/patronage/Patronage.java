@@ -12,6 +12,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.entities.AbstractEntity;
 import acme.roles.Inventor;
 import acme.roles.Patron;
 import lombok.Getter;
@@ -19,7 +20,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Patronage 
+public class Patronage extends AbstractEntity
 {
 	private PatronageStatus status;
 	
@@ -30,7 +31,7 @@ public class Patronage
 	private String code;
 	
 	@Length(min=0,max=256)
-	@NotBlank
+	@NotBlank(message="legal stuff is mandatory")
 	@NotNull
 	protected String legalStuff;
 	

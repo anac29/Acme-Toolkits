@@ -1,4 +1,4 @@
-package acme.tool;
+package acme.entities.tool;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
