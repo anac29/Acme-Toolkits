@@ -1,6 +1,8 @@
 package acme.entities.tool;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Min;
@@ -10,6 +12,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.toolkits.Toolkit;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
@@ -39,10 +42,14 @@ public class Tool extends AbstractEntity{
 	@Length(max = 256)
 	protected String description;
 	
-	@Min(0)
+
 	protected Money retailPrice;
 
 	
 	@URL
-	protected String moreInfo;
+	protected String info;
+	
+	@OneToOne(optional=false)
+	protected Toolkit toolkit;
+	
 }

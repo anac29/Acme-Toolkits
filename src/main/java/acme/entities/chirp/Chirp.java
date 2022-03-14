@@ -1,8 +1,11 @@
 package acme.entities.chirp;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -25,9 +28,10 @@ public class Chirp extends AbstractEntity {
      */
     protected static final long serialVersionUID = 1L;
 
-    @NotNull
-    @Past
-    protected LocalDateTime creationMoment;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Past
+	@NotNull
+	protected Date creationMoment;
 
     @NotBlank(message = "Title is mandatory")
     @Length(min=0, max=101)
