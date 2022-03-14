@@ -40,7 +40,7 @@ public class Component extends AbstractEntity {
 	@Length(min=0,max=256)
 	protected String description;
 	
-	@Min(0)
+
 	protected Money retailPrice;
 	
 	@URL

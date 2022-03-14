@@ -2,6 +2,7 @@ package acme.entities.patronagereports;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -17,6 +18,7 @@ import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
 public class PatronageReport extends AbstractEntity{
@@ -28,7 +30,7 @@ public class PatronageReport extends AbstractEntity{
 	@NotNull
 	protected Date creationMoment;
 	
-	protected String code = this.getPatronage().getCode() + ":0001";
+	protected String code;
 	
 	@NotBlank(message="memorandum is mandatory")
 	@NotNull
