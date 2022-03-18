@@ -1,4 +1,4 @@
-key,key:user-account,company,statement,info
+key,key:user-account,company,statement,link
 inventor1,user-account-inventor1,"Glass,Inc.",Glassmaker,https://www.cylex.es/granada/cristaler%C3%ADa-pepe-11423705.html
 inventor2,user-account-inventor2,"Wine,Inc.",Viticulturist,http://www.quebodega.es/bodegas/capuchina.html
 inventor3,user-account-inventor3,"Wine,Inc.",Oenologist,https://www.joma-sport.com/

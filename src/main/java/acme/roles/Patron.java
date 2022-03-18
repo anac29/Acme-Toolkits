@@ -14,11 +14,12 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Patron extends UserRole {
-	// Serialisation identifier -----------------------------------------------
+    // Serialisation identifier -----------------------------------------------
 
-	protected static final long	serialVersionUID	= 1L;
+    protected static final long    serialVersionUID    = 1L;
 
-	// Attributes -------------------------------------------------------------
+    // Attributes -------------------------------------------------------------
+
 
 	@NotBlank
 	@Length(min=1,max=100)
@@ -31,4 +32,3 @@ public class Patron extends UserRole {
 	@URL
 	protected String			link;
 }
-
