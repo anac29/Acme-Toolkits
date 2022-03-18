@@ -32,16 +32,16 @@ public class Chirp extends AbstractEntity {
 	@NotNull
 	protected Date creationMoment;
 
-	@NotBlank(message = "Title is mandatory")
-	@Length(min = 0, max = 101)
+	@NotBlank()
+	@Length(min = 1, max = 100)
 	protected String title;
 
-	@NotBlank(message = "Author is mandatory")
-	@Length(min = 0, max = 101)
+	@NotBlank()
+	@Length(min = 1, max = 100)
 	protected String author;
 
-	@NotBlank(message = "Body is mandatory")
-	@Length(min = 0, max = 256)
+	@NotBlank()
+	@Length(min = 1, max = 255)
 	protected String body;
 
 	@Email
