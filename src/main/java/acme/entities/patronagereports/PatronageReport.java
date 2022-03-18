@@ -1,13 +1,16 @@
-package acme.entities.components;
+package acme.entities.patronagereports;
 
+import java.util.Date;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
-import acme.entities.toolkits.Toolkit;
-import acme.framework.datatypes.Money;
+import acme.entities.patronage.Patronage;
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +18,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Component extends AbstractEntity {
+public class PatronageReport extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -23,29 +26,23 @@ public class Component extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank(message = "name is mandatory")
-	@Length(min = 0, max = 101)
-	protected String name;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Past
+	@NotNull
+	protected Date creationMoment;
 
-	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
 	protected String code;
 
-	@NotBlank(message = "technology is mandatory")
-	@Length(min = 0, max = 101)
-	protected String technology;
-
-	@NotBlank(message = "description is mandatory")
+	@NotBlank(message = "memorandum is mandatory")
+	@NotNull
 	@Length(min = 0, max = 256)
-	protected String description;
-
-	protected Money retailPrice;
+	protected String memorandum;
 
 	@URL
 	protected String info;
 
 	// Relationships -------------------------------------------------------------
 
-	@ManyToOne(optional = false)
-	protected Toolkit toolkit;
-
+	@OneToOne
+	protected Patronage patronage;
 }

@@ -1,7 +1,9 @@
-package acme.entities.components;
+package acme.entities.tool;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
@@ -15,7 +17,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Component extends AbstractEntity {
+@Table(name = "tools", uniqueConstraints = @UniqueConstraint(columnNames = { "code" }))
+public class Tool extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -23,19 +26,19 @@ public class Component extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank(message = "name is mandatory")
-	@Length(min = 0, max = 101)
+	@NotBlank(message = "Name is mandatory")
+	@Length(max = 101)
 	protected String name;
 
 	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
 	protected String code;
 
-	@NotBlank(message = "technology is mandatory")
-	@Length(min = 0, max = 101)
+	@NotBlank(message = "Technology is mandatory")
+	@Length(max = 101)
 	protected String technology;
 
-	@NotBlank(message = "description is mandatory")
-	@Length(min = 0, max = 256)
+	@NotBlank(message = "Description is mandatory")
+	@Length(max = 256)
 	protected String description;
 
 	protected Money retailPrice;
@@ -45,7 +48,7 @@ public class Component extends AbstractEntity {
 
 	// Relationships -------------------------------------------------------------
 
-	@ManyToOne(optional = false)
+	@OneToOne(optional = false)
 	protected Toolkit toolkit;
 
 }

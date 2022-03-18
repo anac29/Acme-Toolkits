@@ -1,21 +1,26 @@
-package acme.entities.components;
+package acme.entities.patronage;
 
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
-import acme.entities.toolkits.Toolkit;
+import acme.datatypes.Period;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.AbstractEntity;
+import acme.roles.Inventor;
+import acme.roles.Patron;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Component extends AbstractEntity {
+public class Patronage extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -23,29 +28,30 @@ public class Component extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank(message = "name is mandatory")
-	@Length(min = 0, max = 101)
-	protected String name;
+	private PatronageStatus status;
 
+	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
-	protected String code;
+	private String code;
 
-	@NotBlank(message = "technology is mandatory")
-	@Length(min = 0, max = 101)
-	protected String technology;
-
-	@NotBlank(message = "description is mandatory")
 	@Length(min = 0, max = 256)
-	protected String description;
+	@NotBlank(message = "legal stuff is mandatory")
+	@NotNull
+	protected String legalStuff;
 
-	protected Money retailPrice;
+	protected Money budget;
 
 	@URL
 	protected String info;
 
+	protected Period period;
+
 	// Relationships -------------------------------------------------------------
 
-	@ManyToOne(optional = false)
-	protected Toolkit toolkit;
+	@ManyToOne
+	protected Inventor inventor;
+
+	@ManyToOne
+	protected Patron patron;
 
 }
