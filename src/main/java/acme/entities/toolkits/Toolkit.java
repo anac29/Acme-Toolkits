@@ -1,6 +1,7 @@
 package acme.entities.toolkits;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -24,23 +25,25 @@ public class Toolkit extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank(message = "Code ismandatory")
+	@NotBlank()
 	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
 	protected String code;
 
-	@Length(min = 0, max = 101)
+	@Length(min = 1, max = 100)
 	@NotBlank
 	protected String title;
 
-	@Length(min = 0, max = 256)
+	@Length(min = 1, max = 255)
 	@NotBlank
 	protected String description;
 
-	@Length(min = 0, max = 256)
+	@Length(min = 1, max = 255)
 	@NotBlank
 	protected String assemblyNotes;
 
 	@URL
-	protected String info;
+	protected String link;
+	
+	
 
 }
