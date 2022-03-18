@@ -1,2 +1,2 @@
-key,status,code,legal-stuff,budget,creationMomentDate,startMomentDate,finalMomentDate,link,key:inventor,key:patron
+key,status,code,legal-stuff,budget,creation-moment-date,start-moment-date,final-moment-date,link,key:inventor,key:patron
 patronage-01,ACCEPTED,ASD-123-B,Need some reports,"EUR 40039393.32",2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,https://es.wikipedia.org/wiki/Patronaje,inventor1,patron1
