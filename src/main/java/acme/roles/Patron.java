@@ -20,14 +20,15 @@ public class Patron extends UserRole {
 
     // Attributes -------------------------------------------------------------
 
-    @NotBlank
-    @Length(min=1,max=100)
-    protected String            company;
 
-    @NotBlank
-    @Length(min=1,max=255)
-    protected String            statement;
-    
-    @URL
-    protected String            link;
+	@NotBlank
+	@Length(min=1,max=100)
+	protected String			company;
+
+	@NotBlank
+	@Length(min=1,max=255)
+	protected String			statement;
+	
+	@URL
+	protected String			link;
 }
