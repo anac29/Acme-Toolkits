@@ -1,7 +1,11 @@
 package acme.forms;
 
 import java.io.Serializable;
+import java.util.Map;
 
+import org.springframework.data.util.Pair;
+
+import acme.entities.patronage.PatronageStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,21 +19,21 @@ public class AdministratorDashBoard implements Serializable {
 
     // Attributes -------------------------------------------------------------
     
-    Double						  totalNumberOfComponents;
-    Double                        averageRetailPriceOfComponentsByTechnologyCurrency;
-    Double                        deviationRetailPriceOfComponentsByTechnologyCurrency;
-    Double                        minimumRetailPriceOfComponentsByTechnologyCurrency;
-    Double                        maximumRetailPriceOfComponentsByTechnologyCurrency;
-    Double                        totalNumberOfTools;
-    Double                        averageRetailPriceOfToolsByCurrency;
-    Double                        deviationRetailPriceOfToolsByCurrency;
-    Double                        minimumRetailPriceOfToolsByCurrency;
-    Double                        maximumRetailPriceOfToolsByCurrency;
-    Double                        totalNumberOfPatronagesByType;
-    Double                        averagePatronagesBudgedByType;
-    Double                        deviationPatronagesBudgedByType;
-    Double                        minimumPatronagesBudgedByType;
-    Double                        maximumPatronagesBudgedByType;
+    int						             totalNumberOfComponents;
+    Map<Pair<String, String>, Double>    averageRetailPriceOfComponentsByTechnologyCurrency;
+    Map<Pair<String, String>, Double>    deviationRetailPriceOfComponentsByTechnologyCurrency;
+    Map<Pair<String, String>, Double>    minimumRetailPriceOfComponentsByTechnologyCurrency;
+    Map<Pair<String, String>, Double>    maximumRetailPriceOfComponentsByTechnologyCurrency;
+    int                                  totalNumberOfTools;
+    Map<String, Double>                  averageRetailPriceOfToolsByCurrency;
+    Map<String, Double>                  deviationRetailPriceOfToolsByCurrency;
+    Map<String, Double>                  minimumRetailPriceOfToolsByCurrency;
+    Map<String, Double>                  maximumRetailPriceOfToolsByCurrency;
+    int             	                 totalNumberOfPatronagesByType;
+    Map<PatronageStatus, Double>         averagePatronagesBudgetByStatus;
+    Map<PatronageStatus, Double>         deviationPatronagesBudgetByStatus;
+    Map<PatronageStatus, Double>         minimumPatronagesBudgetByStatus;
+    Map<PatronageStatus, Double>         maximumPatronagesBudgetByStatus;
 
     // Derived attributes -----------------------------------------------------
 

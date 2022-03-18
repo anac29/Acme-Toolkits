@@ -2,9 +2,11 @@ package acme.entities.patronagereports;
 
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -26,23 +28,26 @@ public class PatronageReport extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
+	@NotBlank
+	protected String automaticSecuenceNumber;
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
 	protected Date creationMoment;
 
-	protected String code;
-
-	@NotBlank(message = "memorandum is mandatory")
-	@NotNull
-	@Length(min = 0, max = 256)
+	@NotBlank()
+	@Length(min = 1, max = 255)
 	protected String memorandum;
 
 	@URL
-	protected String info;
+	protected String link;
 
 	// Relationships -------------------------------------------------------------
 
-	@OneToOne
+	
+	@Valid
+	@NotNull
+	@ManyToOne(optional=false)
 	protected Patronage patronage;
 }
