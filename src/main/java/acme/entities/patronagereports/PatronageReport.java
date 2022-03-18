@@ -1,17 +1,16 @@
-package acme.entities.announcements;
+package acme.entities.patronagereports;
 
 import java.util.Date;
-
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
-
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
-
+import acme.entities.patronage.Patronage;
 import acme.framework.entities.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,30 +18,31 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Announcement extends AbstractEntity {
+public class PatronageReport extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long serialVersionUID = 1L;
-	
+
 	// Attributes -------------------------------------------------------------
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	@NotNull
 	protected Date creationMoment;
-	
-	@NotBlank()
-	@Length(min=1, max=100)
-	protected String title;
 
-	@NotBlank()
-	@Length(min=1, max=255)
-	protected String body;
-	
+	protected String code;
+
+	@NotBlank(message = "memorandum is mandatory")
 	@NotNull
-	protected Boolean flag;
-	
+	@Length(min = 0, max = 256)
+	protected String memorandum;
+
 	@URL
-	protected String link;
+	protected String info;
+
+	// Relationships -------------------------------------------------------------
+
+	@OneToOne
+	protected Patronage patronage;
 }
