@@ -23,7 +23,7 @@ public class SystemConfiguration extends AbstractEntity {
 	protected String strongSpamTerms;
 	
 	@NotNull
-	protected String weakSpanTerms;
+	protected String weakSpamTerms;
 	
 	@NotBlank
 	protected String acceptedCurrencies;
@@ -31,10 +31,10 @@ public class SystemConfiguration extends AbstractEntity {
 	@NotBlank
 	protected String defaultCurrency;
 	
-	@Range(min=0,max=100)
+	@Range(min=0,max=1)
 	protected double weakThreshold;
 	
-	@Range(min=0,max=100)
+	@Range(min=0,max=1)
 	protected double strongThreshold;
 	
 }
