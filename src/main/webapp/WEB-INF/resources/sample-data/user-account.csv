@@ -1,0 +1,7 @@
+key,enabled,identity,password,username
+user-account-inventor1,true,"UserIdentity{name: 'Inventor', surname: 'One', email: 'inventor1@mail.com'}",inventor1,inventor1
+user-account-inventor2,true,"UserIdentity{name: 'Inventor', surname: 'Two', email: 'inventor2@mail.com'}",inventor2,inventor2
+user-account-inventor3,true,"UserIdentity{name: 'Inventor', surname: 'Three', email: 'inventor3@mail.com'}",inventor3,inventor3
+user-account-patron1,true,"UserIdentity{name: 'Patron', surname: 'One', email: 'patron1@mail.com'}",patron1,patron1
+user-account-patron2,true,"UserIdentity{name: 'Patron', surname: 'Two', email: 'patron2@mail.com'}",patron2,patron2
+user-account-patron3,true,"UserIdentity{name: 'Patron', surname: 'Three', email: 'patron3@mail.com'}",patron3,patron3
