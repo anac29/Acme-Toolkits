@@ -1,0 +1,30 @@
+<%--
+- list.jsp
+-
+- Copyright (C) 2012-2022 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+--%>
+
+<%@page language="java"%>
+
+<%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
+
+<acme:list readonly="true">
+	<acme:list-column code="any.item.list.label.name" path="name" width="20%"/>
+	<acme:list-column code="any.item.list.label.code" path="code" width="20%"/>
+	<acme:list-column code="any.item.list.label.technology" path="technology" width="20%"/>
+	<acme:list-column code="any.item.list.label.description" path="description" width="60%"/>
+	<acme:list-column code="any.item.list.label.retail-price" path="retailPrice" width="20%"/>
+	<acme:list-column code="any.item.list.label.link" path="link" width="20%"/>
+	<acme:list-column code="any.item.list.label.inventor" path="inventor.userAccount.username" width="20%"/>
+</acme:list>
+
+<acme:button code="any.item.list.button.create" action="/any/item/create"/>
+
+
