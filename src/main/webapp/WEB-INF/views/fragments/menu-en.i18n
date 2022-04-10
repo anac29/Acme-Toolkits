@@ -47,6 +47,11 @@ master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.user-account ####################################################
 
+master.menu.patron = Patron
+master.menu.patron.patronages = Patronage list
+
+# master.menu.user-account ####################################################
+
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
 master.menu.user-account.provider = Provider data
