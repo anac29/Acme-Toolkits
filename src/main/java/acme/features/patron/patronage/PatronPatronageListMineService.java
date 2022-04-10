@@ -12,7 +12,7 @@ import acme.framework.services.AbstractListService;
 import acme.roles.Patron;
 
 @Service
-public class PatronPatronageListAllService implements AbstractListService<Patron, Patronage> {
+public class PatronPatronageListMineService implements AbstractListService<Patron, Patronage> {
 
 	@Autowired
 	protected PatronPatronageRepository repository;
@@ -26,8 +26,9 @@ public class PatronPatronageListAllService implements AbstractListService<Patron
 	@Override
 	public Collection<Patronage> findMany(final Request<Patronage> request) {
 		assert request != null;
+		final Integer myId = request.getPrincipal().getActiveRoleId();
 		Collection<Patronage> result;
-		result = this.repository.findAllPatronages();
+		result = this.repository.findMyPatronages(myId);
 		return result;
 	}
 
