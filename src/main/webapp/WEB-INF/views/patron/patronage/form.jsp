@@ -18,7 +18,7 @@
 	<acme:input-textbox code="patron.patronage.form.label.finalMomentDate" path="finalMomentDate"/>
 	<acme:input-textbox code="patron.patronage.form.label.link" path="link"/>
 	
-	<acme:button code="patron.patronage.form.button.inventor" action="/anonymous/inventor/form?masterId=${ id }"/>
+	<acme:button code="patron.patronage.form.button.inventor" action="/any/user-account/show?id=${ inventorId }"/>
 	
 	<jstl:if test="${ !readonly }">
 		<acme:submit test="${command == 'create'}" code="patron.patronage.form.button.create" action="/authenticated/patron/patronage/create"/>
