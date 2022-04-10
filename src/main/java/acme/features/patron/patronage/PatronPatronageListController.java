@@ -15,7 +15,7 @@ public class PatronPatronageListController extends AbstractController<Patron, Pa
 	@Autowired
 	protected PatronPatronageListAllService listService;
 	
-	@Autowired
+//	@Autowired
 //	protected PatronPatronageShowService showService;
 	
 	@PostConstruct
