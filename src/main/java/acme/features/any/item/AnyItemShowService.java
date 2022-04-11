@@ -1,7 +1,5 @@
 package acme.features.any.item;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,17 +7,17 @@ import acme.entities.item.Item;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Any;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnyItemListService implements AbstractListService<Any, Item>  {
+public class AnyItemShowService implements AbstractShowService<Any, Item> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	protected AnyItemRepository repository;
 
-	// AbstractListService<Authenticated, Item> interface --------------
+	// AbstractShowService<Administrator, Announcement> interface --------------
 
 
 	@Override
@@ -30,23 +28,27 @@ public class AnyItemListService implements AbstractListService<Any, Item>  {
 	}
 
 	@Override
-	public Collection<Item> findMany(final Request<Item> request) {
+	public Item findOne(final Request<Item> request) {
 		assert request != null;
 
-		Collection<Item> result;
+		Item result;
+		int id;
 
-		result = this.repository.findMany();
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneItemById(id);
 
 		return result;
 	}
-
+	
 	@Override
 	public void unbind(final Request<Item> request, final Item entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "code", "technology","retailPrice");
+		request.unbind(entity, model, "name", "code", "technology","description","retailPrice", "link", "inventor.userAccount.username");		
 	}
+
+
 	
 }

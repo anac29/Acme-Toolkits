@@ -13,4 +13,7 @@ public interface AnyItemRepository extends AbstractRepository {
 
 	@Query("select i from Item i")
 	Collection<Item> findMany();
+	
+	@Query("select i from Item i where i.id = :id")
+	Item findOneItemById(int id);
 }
