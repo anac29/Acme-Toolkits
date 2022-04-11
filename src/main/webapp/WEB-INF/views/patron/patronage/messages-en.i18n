@@ -8,9 +8,9 @@ patron.patronage.list.button.create = Create
 
 
 patron.patronage.form.label.status = Status
-patron.patronage.form.label.proposed = Proposed
-patron.patronage.form.label.accepted = Accepted
-patron.patronage.form.label.denied = Denied
+patron.patronage.form.label.proposed = PROPOSED
+patron.patronage.form.label.accepted = ACCEPTED
+patron.patronage.form.label.denied = DENIED
 patron.patronage.form.label.code = Code
 patron.patronage.form.label.legalStuff = Legal Stuff
 patron.patronage.form.label.budget = Budget

@@ -7,9 +7,9 @@ patron.patronage.list.label.finalMomentDate = Fecha de finalización
 patron.patronage.list.button.create = Crear
 
 patron.patronage.form.label.status = Estado
-patron.patronage.form.label.proposed = Propuesto
-patron.patronage.form.label.accepted = Aceptado
-patron.patronage.form.label.denied = Rechazado
+patron.patronage.form.label.proposed = PROPUESTO
+patron.patronage.form.label.accepted = ACEPTADO
+patron.patronage.form.label.denied = RECHAZADO
 patron.patronage.form.label.code = Código
 patron.patronage.form.label.legalStuff = Temas legales
 patron.patronage.form.label.budget = Presupuesto

@@ -19,6 +19,7 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 	public boolean authorise(final Request<Patronage> request) {
 		assert request != null;
 		return request.getPrincipal().getActiveRole().isAssignableFrom(Patron.class);
+		// Comprobar que el id del patrocinio es del patrocinador.
 	}
 
 	@Override
@@ -40,7 +41,6 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 		int inventorId;
 		
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget", "creationMomentDate","startMomentDate","finalMomentDate","link");
-		model.setAttribute("confirmation", false);
 		model.setAttribute("readonly", true);
 		
 		inventorId = entity.getInventor().getUserAccount().getId();

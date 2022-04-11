@@ -20,7 +20,7 @@ public class PatronPatronageListMineService implements AbstractListService<Patro
 	@Override
 	public boolean authorise(final Request<Patronage> request) {
 		assert request != null;
-		return request.getPrincipal().getActiveRole().isAssignableFrom(Patron.class);
+		return true; // Devolver true.
 	}
 
 	@Override

@@ -1,5 +1,6 @@
 package acme.entities.toolkits;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -22,7 +23,7 @@ public class Toolkit extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank()
+	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$")
 	protected String code;
 
