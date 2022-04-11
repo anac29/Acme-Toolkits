@@ -16,6 +16,8 @@ public class AnyToolkitController  extends AbstractController<Any, Toolkit> {
 		@Autowired
 		protected AnyToolkitListService		listService;
 
+		@Autowired
+		protected AnyToolkitListItemService		listItemService;
 	
 
 		// Constructors -----------------------------------------------------------
@@ -24,6 +26,8 @@ public class AnyToolkitController  extends AbstractController<Any, Toolkit> {
 		@PostConstruct
 		protected void initialise() {
 			super.addCommand("list", this.listService);
+			super.addCommand("list-item", "list",this.listItemService);
+
 		
 		}
 

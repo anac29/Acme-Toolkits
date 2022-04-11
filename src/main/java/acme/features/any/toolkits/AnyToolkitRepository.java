@@ -13,5 +13,12 @@ public interface AnyToolkitRepository extends AbstractRepository {
 	
 	@Query("SELECT t FROM Toolkit t")
 	Collection<Toolkit> findMany();
+	
+	@Query("SELECT q.toolkit FROM Quantity q where q.item.id=:itemId")
+	Collection<Toolkit> findQuantityByItem(int itemId);
+	
+
+	
+	
 
 }
