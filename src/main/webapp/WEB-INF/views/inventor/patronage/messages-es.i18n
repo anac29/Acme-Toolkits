@@ -1,0 +1,36 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.job.list.label.reference = Referencia
+employer.job.list.label.deadline = Fecha límite
+employer.job.list.label.title = Título
+
+employer.job.list.button.create = Crear
+
+employer.job.form.label.reference = Referencia: 
+employer.job.form.label.title = Título:
+employer.job.form.label.deadline = Fecha límite:
+employer.job.form.label.salary = Salario:
+employer.job.form.label.score = Puntuación:
+employer.job.form.label.more-info = Más información: (Opcional)
+employer.job.form.label.description = Descripción:
+
+employer.job.form.placeholder.score = 0,00 - 100,00
+		
+employer.job.form.button.duties = Responsabilidades
+employer.job.form.button.update = Actualizar
+employer.job.form.button.delete = Borrar
+employer.job.form.button.publish = Publicar
+employer.job.form.button.create = Crear
+
+employer.job.form.error.duplicated = Esta referencia no está libre
+employer.job.form.error.too-close = La fecha límite debe ser en una semana como mínimo
+employer.job.form.error.bad-work-load = La carga de trabajo no es del 100%
+employer.job.form.error.negative-salary = El salario debe ser positivo
