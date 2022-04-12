@@ -18,8 +18,16 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 	@Override
 	public boolean authorise(final Request<Patronage> request) {
 		assert request != null;
-		return request.getPrincipal().getActiveRole().isAssignableFrom(Patron.class);
-		// Comprobar que el id del patrocinio es del patrocinador.
+		
+		boolean result;
+		
+		final int id = request.getModel().getInteger("id");
+		final Patronage patronage = this.repository.findOnePatronageById(id);
+		final int myId = request.getPrincipal().getActiveRoleId();
+		
+		result = (patronage.getPatron().getId() == myId || patronage.getInventor().getId() == myId);
+		
+		return result;
 	}
 
 	@Override

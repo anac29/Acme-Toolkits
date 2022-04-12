@@ -12,7 +12,7 @@ import acme.framework.services.AbstractListService;
 import acme.roles.Patron;
 
 @Service
-public class PatronPatronageListMineService implements AbstractListService<Patron, Patronage> {
+public class PatronPatronageListService implements AbstractListService<Patron, Patronage> {
 
 	@Autowired
 	protected PatronPatronageRepository repository;
@@ -20,7 +20,7 @@ public class PatronPatronageListMineService implements AbstractListService<Patro
 	@Override
 	public boolean authorise(final Request<Patronage> request) {
 		assert request != null;
-		return true; // Devolver true.
+		return true;
 	}
 
 	@Override

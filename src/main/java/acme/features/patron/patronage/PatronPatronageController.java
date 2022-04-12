@@ -10,17 +10,17 @@ import acme.framework.controllers.AbstractController;
 import acme.roles.Patron;
 
 @Controller
-public class PatronPatronageListController extends AbstractController<Patron, Patronage> {
+public class PatronPatronageController extends AbstractController<Patron, Patronage> {
 	
 	@Autowired
-	protected PatronPatronageListMineService listMineService;
+	protected PatronPatronageListService listService;
 	
 	@Autowired
 	protected PatronPatronageShowService showService;
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list-mine","list", this.listMineService);
+		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
 	}
 
