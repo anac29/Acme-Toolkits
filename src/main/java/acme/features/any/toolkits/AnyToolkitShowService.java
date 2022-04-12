@@ -52,14 +52,18 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit> 
 		assert entity != null;
 		assert model != null;
 		
+		final String defaultCurrency= this.repository.defaultCurrency();
+		
 		final Collection<Money> collectedMoneys= this.repository.collectPrices(entity.getId());
-		final Double totalPrice=collectedMoneys.stream().mapToDouble(m->this.moneyService.computeMoneyExchange(m, "EUR").getTarget().getAmount()).sum();
+		final Double totalPrice=collectedMoneys.stream().mapToDouble(m->this.moneyService.computeMoneyExchange(m,defaultCurrency ).getTarget().getAmount()).sum();
+		final Money money= new Money();
+		money.setAmount(totalPrice);
+		money.setCurrency(defaultCurrency);
 		
-		
-		model.setAttribute("totalPrice", totalPrice);
+		model.setAttribute("totalPrice", money);
 		model.setAttribute("toolkitId", entity.getId());
 		
-		request.unbind(entity, model, "code", "title", "description");
+		request.unbind(entity, model, "code", "title", "description","assemblyNotes","link");
 		
 	}
 
