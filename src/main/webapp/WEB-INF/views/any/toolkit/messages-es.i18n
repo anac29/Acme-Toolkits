@@ -13,8 +13,10 @@ any.toolkit.list.label.title = Título:
 any.toolkit.list.label.description = Descripción:
 any.toolkit.list.button.create= Crear
 
-any.toolkit.form.label.code = Código:
-any.toolkit.form.label.title = Título:
-any.toolkit.form.label.description = Descripción:
+any.toolkit.list.label.code = Código:
+any.toolkit.list.label.title = Título:
+any.toolkit.list.label.description = Descripción:
+any.toolkit.form.label.total-price = Precio Total:
+any.toolkit.form.label.items = Ítems:
 
 any.toolkit.form.button.create= Crear
