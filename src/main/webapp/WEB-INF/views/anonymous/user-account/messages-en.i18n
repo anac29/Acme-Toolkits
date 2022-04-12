@@ -1,0 +1,23 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+anonymous.user-account.form.label.username = Username:
+anonymous.user-account.form.label.password = Password:
+anonymous.user-account.form.label.confirmation = Confirmation:
+anonymous.user-account.form.label.name = Name:
+anonymous.user-account.form.label.surname = Surname:
+anonymous.user-account.form.label.email = Email:
+anonymous.user-account.form.label.accept = I do accept the license
+
+anonymous.user-account.form.button.create = Sign up
+
+anonymous.user-account.form.error.duplicated = This name is already taken
+anonymous.user-account.form.error.must-accept = Must accept the license
+anonymous.user-account.form.error.confirmation-no-match = Confirmation doesn't match
