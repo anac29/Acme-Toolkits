@@ -25,7 +25,8 @@ master.menu.anonymous.antcamgil-link = 79147298C: Campos Gil, Antonio
 master.menu.anonymous.anaconmar-link = 47258017D: Conde Marrón, Ana
 master.menu.anonymous.enrmunper-link = 49826048K: Muñoz Pérez, Enrique
 master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
-
+master.menu.anonymus.toolkit.list = Ver Kits de Herramientas
+master.menu.anonymus.toolkit.list-item = Ver Kits de Herramientas por ítem
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -53,3 +54,5 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+
+
