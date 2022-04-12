@@ -12,7 +12,7 @@ import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnyItemListService implements AbstractListService<Any, Item>  {
+public class AnyItemListComponentService implements AbstractListService<Any, Item>  {
 
 	// Internal state ---------------------------------------------------------
 
@@ -35,7 +35,7 @@ public class AnyItemListService implements AbstractListService<Any, Item>  {
 
 		Collection<Item> result;
 
-		result = this.repository.findMany();
+		result = this.repository.findManyComponents();
 
 		return result;
 	}
