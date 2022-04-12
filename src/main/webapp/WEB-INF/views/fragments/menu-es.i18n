@@ -34,6 +34,7 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.system-configuration= Configuración del Sistema
 
 # master.menu.provider ########################################################
 
@@ -47,9 +48,20 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 # master.menu.user-account ####################################################
 
+master.menu.patron = Patrocinador
+master.menu.patron.patronages = Lista de patrocinios
+
+# master.menu.user-account ####################################################
+
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+
+# master.menu.anonymous.item #################################################
+
+master.menu.anonymous.item = Ítem
+master.menu.anonymus.item.list-tool = Ver Herramientas
+master.menu.anonymus.item.list-component = Ver Componentes

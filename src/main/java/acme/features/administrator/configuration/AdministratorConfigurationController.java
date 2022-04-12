@@ -1,35 +1,27 @@
-package acme.features.any.item;
+package acme.features.administrator.configuration;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.item.Item;
+import acme.entities.configuration.SystemConfiguration;
 import acme.framework.controllers.AbstractController;
-import acme.framework.roles.Any;
+import acme.framework.roles.Administrator;
 
 @Controller
-public class AnyItemController extends AbstractController<Any, Item>{
+public class AdministratorConfigurationController extends AbstractController<Administrator, SystemConfiguration> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnyItemShowService			showService;
-	
-	@Autowired
-	protected AnyItemListToolService		listToolService;
-	
-	@Autowired
-	protected AnyItemListComponentService	listComponentService;
-	
+	protected AdministratorConfigurationShowService	showService;
+
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("show", this.showService);
-		super.addCommand("list-tool","list", this.listToolService);
-		super.addCommand("list-component","list", this.listComponentService);
 	}
 }
