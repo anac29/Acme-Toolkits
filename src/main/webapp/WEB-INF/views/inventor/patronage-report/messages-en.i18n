@@ -14,5 +14,8 @@ inventor.patronage-report.list.label.automatic-sequence-number=Sequence Number
 inventor.patronage-report.list.label.creation-moment = Creation Moment
 inventor.patronage-report.list.label.memorandum = Memorandum 
 
-
-
+inventor.patronage-report.form.label.automatic-sequence-number = Sequence Number:
+inventor.patronage-report.form.label.creation-moment = Creation Moment:
+inventor.patronage-report.form.label.memorandum = Memorandum:
+inventor.patronage-report.form.label.link = Link:
+inventor.patronage-report.form.label.patronage.code = Patronage Code:
