@@ -30,6 +30,11 @@
 			<acme:menu-suboption code="master.menu.anonymous.enrmunper-link" action="https://www.realbetisbalompie.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.jaiborcon-link" action="https://www.youtube.com/watch?v=vTOurabBRxY&ab_channel=LinkSpets"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.item.list-tool" action="/any/item/list-tool"/>
+	        <acme:menu-suboption code="master.menu.authenticated.item.list-component" action="/any/item/list-component"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show"/>
@@ -51,6 +56,10 @@
 		
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
 			<acme:menu-suboption code="master.menu.patron.patronages" action="/patron/patronage/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
+			<acme:menu-suboption code="master.menu.inventor.patronage-report" action="/inventor/patronage-report/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 
