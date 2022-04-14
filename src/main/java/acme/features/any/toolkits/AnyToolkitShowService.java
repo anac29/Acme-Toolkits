@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.quantity.Quantity;
 import acme.entities.toolkits.Toolkit;
 import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.framework.components.models.Model;
@@ -54,8 +55,8 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit> 
 		
 		final String defaultCurrency= this.repository.defaultCurrency();
 		
-		final Collection<Money> collectedMoneys= this.repository.collectPrices(entity.getId());
-		final Double totalPrice=collectedMoneys.stream().mapToDouble(m->this.moneyService.computeMoneyExchange(m,defaultCurrency ).getTarget().getAmount()).sum();
+		final Collection<Quantity> collectedMoneys= this.repository.collectPrices(entity.getId());
+		final Double totalPrice=collectedMoneys.stream().mapToDouble(q->this.moneyService.computeMoneyExchange(q.getItem().getRetailPrice(),defaultCurrency ).getTarget().getAmount()*q.getNumber()).sum();
 		final Money money= new Money();
 		money.setAmount(totalPrice);
 		money.setCurrency(defaultCurrency);
