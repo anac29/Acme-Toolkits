@@ -31,11 +31,19 @@ public boolean authorise(final Request<Toolkit> request) {
 //
 //	boolean result;
 //	int toolkitId;
-//	Toolkit toolkit;
+//	final Toolkit toolkit;
+//	Inventor inventor;
+//
 //
 //	toolkitId = request.getModel().getInteger("id");
-//	toolkit = this.repository.find(toolkitId);
-//	result = toolkit != null && toolkit.ggetId() == request.getPrincipal().getActiveRoleId();
+//	inventor = this.repository.findInventorByToolkitId(toolkitId);
+//	employer = job.getEmployer();
+//	principal = request.getPrincipal();
+//	currentMoment = new Date();
+//	result = (
+//		employer.getUserAccount().getId() == principal.getAccountId() ||
+//		!job.isDraftMode() && job.getDeadline().after(currentMoment) 
+//	);
 
 	return true;
 }

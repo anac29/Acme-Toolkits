@@ -28,4 +28,7 @@ public interface InventorToolkitRepository extends AbstractRepository {
 	
 	@Query("select c.defaultCurrency from SystemConfiguration c")
 	String defaultCurrency();
+	
+	@Query("SELECT q.inven FROM Toolkit t WHERE t.id = :id")
+	Toolkit findInventorByToolkitId(int id);
 }
