@@ -27,6 +27,10 @@ master.menu.anonymous.anaconmar-link = 47258017D: Conde Marrón, Ana
 master.menu.anonymous.enrmunper-link = 49826048K: Muñoz Pérez, Enrique
 master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
 
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated= Authenticated
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -35,6 +39,7 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
+master.menu.administrator.system-configuration= System Configuration
 
 # master.menu.provider ########################################################
 
@@ -48,9 +53,28 @@ master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.user-account ####################################################
 
+master.menu.patron = Patron
+master.menu.patron.patronages = Patronage list
+master.menu.inventor = Inventor
+master.menu.inventor.patronage-report = Patronage Report list
+
+# master.menu.user-account ####################################################
+
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
 master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+
+# master.menu.anonymous.item #################################################
+
+master.menu.anonymous.item = Item
+master.menu.anonymus.item.list-tool = List Tools
+master.menu.anonymus.item.list-component = List Component
+
+# master.menu.authenticated.item #################################################
+
+master.menu.authenticated.item = Item
+master.menu.authenticated.item.list-tool = List Tools
+master.menu.authenticated.item.list-component = List Component
