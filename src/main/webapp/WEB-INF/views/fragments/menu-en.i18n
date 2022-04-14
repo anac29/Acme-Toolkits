@@ -42,10 +42,14 @@ master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 master.menu.administrator.system-configuration= System Configuration
 
-# master.menu.user-account ####################################################
+# master.menu.patron ####################################################
 
 master.menu.patron = Patron
 master.menu.patron.patronages = Patronage list
+master.menu.patron.patronage-reports = Patronage Report list
+
+# master.menu.inventor ##################################################
+
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Patronage Report list
 

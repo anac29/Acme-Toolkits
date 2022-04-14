@@ -42,10 +42,14 @@ master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 master.menu.administrator.system-configuration= Configuración del Sistema
 
-# master.menu.user-account ####################################################
+# master.menu.patron ####################################################
 
 master.menu.patron = Patrocinador
 master.menu.patron.patronages = Lista de patrocinios
+master.menu.patron.patronage-reports = Lista de Informe de Patrocinios
+
+# master.menu.inventor ##################################################
+
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Lista de Informe de Patrocinios
 
