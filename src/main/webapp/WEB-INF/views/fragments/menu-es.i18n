@@ -18,6 +18,7 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
+master.menu.anonymous.list-chirp= Listado de Píos
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.gonmarfer2-link = 28985178A: Martínez Fernández, Gonzalo
 master.menu.anonymous.jaimosber-link = 30270882F: Moscoso Bernal, Jaime
