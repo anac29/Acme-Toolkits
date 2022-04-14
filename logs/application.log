@@ -416,3 +416,4 @@
 2022-04-14 11:33:14.293 DEBUG [org.apache.jasper.servlet.JspServlet@http-nio-8080-exec-6] RealPath: C:\Users\jaime\Desktop\Universidad\3ºAÑO\DP2\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\views\fragments\welcome.jsp 
 2022-04-14 11:33:14.302 DEBUG [org.apache.jasper.servlet.JspServlet@http-nio-8080-exec-6] RequestURI: /acme-toolkits-22.1/WEB-INF/views/master/page.jsp 
 2022-04-14 11:33:14.302 DEBUG [org.apache.jasper.servlet.JspServlet@http-nio-8080-exec-6] QueryString: null 
+
