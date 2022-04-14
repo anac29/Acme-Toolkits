@@ -14,7 +14,13 @@ inventor.toolkit.list.label.description = Description:
 inventor.toolkit.list.button.create= Create
  
 
-inventor.toolkit.form.label.code = Code:
-inventor.toolkit.form.label.title = Title:
-inventor.toolkit.form.label.description = Description:
-inventor.toolkit.form.button.create= Create
+
+any.toolkit.form.label.code = Code:
+any.toolkit.form.label.title = Title:
+any.toolkit.form.label.description = Description:
+any.toolkit.form.label.total-price = Total Price:
+any.toolkit.form.label.assembly-notes = Assembly Notes:
+any.toolkit.form.label.link = Link:
+any.toolkit.form.button.items = Items
+
+any.toolkit.form.button.create= Create
