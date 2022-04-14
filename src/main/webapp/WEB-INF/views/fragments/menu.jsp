@@ -22,6 +22,8 @@
 
 	        <acme:menu-suboption code="master.menu.anonymus.item.list-tool" action="/any/item/list-tool"/>
 	        <acme:menu-suboption code="master.menu.anonymus.item.list-component" action="/any/item/list-component"/>
+	        <acme:menu-suboption code="master.menu.anonymus.toolkit.list" action="/any/toolkit/list"/>
+			<acme:menu-suboption code="master.menu.anonymus.toolkit.list-item" action="/any/toolkit/list-item"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.gonmarfer2-link" action="https://www.youtube.com/watch?v=idn2UdOu5bE&list=PLkYgGmsQ2duxgqf7SI43cStQVXHCbRF9a&index=7"/>
 			<acme:menu-suboption code="master.menu.anonymous.jaimosber-link" action="https://www.twitch.com/alexelcapo"/>
@@ -34,6 +36,8 @@
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.item.list-tool" action="/any/item/list-tool"/>
 	        <acme:menu-suboption code="master.menu.authenticated.item.list-component" action="/any/item/list-component"/>
+	        <acme:menu-suboption code="master.menu.anonymus.toolkit.list" action="/any/toolkit/list"/>
+			<acme:menu-suboption code="master.menu.anonymus.toolkit.list-item" action="/any/toolkit/list-item"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -60,6 +64,8 @@
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
 			<acme:menu-suboption code="master.menu.inventor.patronage-report" action="/inventor/patronage-report/list"/>
+			<acme:menu-suboption code="master.menu.inventor.toolkit.list" action="/inventor/toolkit/list"/>
+			
 		</acme:menu-option>
 	</acme:menu-left>
 
@@ -78,4 +84,3 @@
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
 	</acme:menu-right>
 </acme:menu-bar>
-

@@ -56,6 +56,7 @@ master.menu.patron = Patrocinador
 master.menu.patron.patronages = Lista de patrocinios
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Lista de Informe de Patrocinios
+master.menu.inventor.toolkit.list = Ver Kits de Herramientas de Inventor
 
 # master.menu.user-account ####################################################
 
@@ -71,6 +72,8 @@ master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.anonymous.item = Ítem
 master.menu.anonymus.item.list-tool = Lista de Herramientas
 master.menu.anonymus.item.list-component = Lista de Componentes
+master.menu.anonymus.toolkit.list = Ver Kits de Herramientas
+master.menu.anonymus.toolkit.list-item = Ver kits de Herramientas por Ítem
 
 # master.menu.authenticated.item #################################################
 

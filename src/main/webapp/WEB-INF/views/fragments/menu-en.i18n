@@ -56,6 +56,7 @@ master.menu.patron = Patron
 master.menu.patron.patronages = Patronage list
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Patronage Report list
+master.menu.inventor.toolkit.list = List Toolkits from Inventor
 
 # master.menu.user-account ####################################################
 
@@ -71,6 +72,8 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.anonymous.item = Item
 master.menu.anonymus.item.list-tool = List Tools
 master.menu.anonymus.item.list-component = List Component
+master.menu.anonymus.toolkit.list = List Toolkits
+master.menu.anonymus.toolkit.list-item = List Items By Toolkit
 
 # master.menu.authenticated.item #################################################
 
