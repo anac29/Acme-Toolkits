@@ -1,4 +1,4 @@
-package acme.features.administrator.configuration;
+package acme.features.authenticated.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -6,36 +6,25 @@ import org.springframework.stereotype.Service;
 import acme.entities.configuration.SystemConfiguration;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.roles.Administrator;
+import acme.framework.roles.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorConfigurationShowService implements AbstractShowService<Administrator, SystemConfiguration> {
-
-	// Internal state ---------------------------------------------------------
+public class AuthenticatedConfigurationShowService implements AbstractShowService<Authenticated,SystemConfiguration>{
 
 	@Autowired
-	protected AdministratorConfigurationRepository repository;
-
-	// AbstractShowService<Administrator, SystemConfiguration> interface ----------------
-
-
+	protected AuthenticatedConfigurationRepository repo;
+	
 	@Override
 	public boolean authorise(final Request<SystemConfiguration> request) {
 		assert request != null;
-
 		return true;
 	}
 
 	@Override
 	public SystemConfiguration findOne(final Request<SystemConfiguration> request) {
 		assert request != null;
-
-		SystemConfiguration result;
-		
-		result = this.repository.findSystemConfiguration();
-
-		return result;
+		return this.repo.getSystemConfiguration();
 	}
 
 	@Override
@@ -43,8 +32,11 @@ public class AdministratorConfigurationShowService implements AbstractShowServic
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "strongSpamTerms", "weakSpamTerms", "acceptedCurrencies","defaultCurrency","weakThreshold", "strongThreshold");
+		
+		model.setAttribute("enlace", "https://exchangeratesapi.io/documentation/");
+		
+		request.unbind(entity, model, "acceptedCurrencies","defaultCurrency");
+		
 	}
-	
+
 }
