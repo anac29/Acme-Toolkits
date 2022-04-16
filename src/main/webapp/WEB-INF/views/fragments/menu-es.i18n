@@ -51,6 +51,12 @@ master.menu.consumer.favourite-link = Enlace favorito
 master.menu.patron = Patrocinador
 master.menu.patron.patronages = Lista de patrocinios
 
+
+# master.menu.inventor ##################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.patronage-report = Lista de Informe de Patrocinios
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

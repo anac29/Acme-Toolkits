@@ -51,6 +51,11 @@ master.menu.consumer.favourite-link = Favourite link
 master.menu.patron = Patron
 master.menu.patron.patronages = Patronage list
 
+# master.menu.inventor ##################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.patronage-report = Patronage Report list
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
