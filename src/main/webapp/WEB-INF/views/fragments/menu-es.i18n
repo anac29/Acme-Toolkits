@@ -56,6 +56,11 @@ master.menu.inventor.patronage-report = Lista de Informe de Patrocinios
 
 # master.menu.user-account ####################################################
 
+master.menu.inventor = Inventor
+master.menu.inventor.item = Lista de ítems
+
+# master.menu.user-account ####################################################
+
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor
