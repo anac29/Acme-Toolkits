@@ -20,8 +20,10 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 
-	        <acme:menu-suboption code="master.menu.anonymus.item.list-tool" action="/any/item/list-tool"/>
-	        <acme:menu-suboption code="master.menu.anonymus.item.list-component" action="/any/item/list-component"/>
+			<acme:menu-suboption code="master.menu.anonymus.toolkit.list" action="/any/toolkit/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-chirp" action="/any/chirp/list"/>
+	    <acme:menu-suboption code="master.menu.anonymus.item.list-tool" action="/any/item/list-tool"/>
+	    <acme:menu-suboption code="master.menu.anonymus.item.list-component" action="/any/item/list-component"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.gonmarfer2-link" action="https://www.youtube.com/watch?v=idn2UdOu5bE&list=PLkYgGmsQ2duxgqf7SI43cStQVXHCbRF9a&index=7"/>
 			<acme:menu-suboption code="master.menu.anonymous.jaimosber-link" action="https://www.twitch.com/alexelcapo"/>
@@ -29,6 +31,12 @@
 			<acme:menu-suboption code="master.menu.anonymous.anaconmar-link" action="https://www.zalando.es/mujer-home/"/>
 			<acme:menu-suboption code="master.menu.anonymous.enrmunper-link" action="https://www.realbetisbalompie.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.jaiborcon-link" action="https://www.youtube.com/watch?v=vTOurabBRxY&ab_channel=LinkSpets"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.item.list-tool" action="/any/item/list-tool"/>
+	        <acme:menu-suboption code="master.menu.authenticated.item.list-component" action="/any/item/list-component"/>
+	        <acme:menu-suboption code="master.menu.authenticated.configuration" action="/authenticated/system-configuration/show"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -41,16 +49,13 @@
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
-		</acme:menu-option>
-
-		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
-		</acme:menu-option>
-		
 		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
 			<acme:menu-suboption code="master.menu.patron.patronages" action="/patron/patronage/list"/>
+			<acme:menu-suboption code="master.menu.patron.patronage-reports" action="/patron/patronage-report/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
+			<acme:menu-suboption code="master.menu.inventor.patronage-report" action="/inventor/patronage-report/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">

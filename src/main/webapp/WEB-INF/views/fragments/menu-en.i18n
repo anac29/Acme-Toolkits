@@ -17,7 +17,9 @@ master.menu.sign-out = Sign out
 
 # master.menu.anonymous #######################################################
 
+master.menu.anonymus.toolkit.list= Toolkit List
 master.menu.anonymous = Anonymous
+master.menu.anonymous.list-chirp= Chirp List
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.gonmarfer2-link = 28985178A: Martínez Fernández, Gonzalo
 master.menu.anonymous.jaimosber-link = 30270882F: Moscoso Bernal, Jaime
@@ -25,6 +27,11 @@ master.menu.anonymous.antcamgil-link = 79147298C: Campos Gil, Antonio
 master.menu.anonymous.anaconmar-link = 47258017D: Conde Marrón, Ana
 master.menu.anonymous.enrmunper-link = 49826048K: Muñoz Pérez, Enrique
 master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated= Authenticated
+master.menu.authenticated.configuration = System Configuration
 
 # master.menu.administrator ###################################################
 
@@ -36,20 +43,16 @@ master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
 master.menu.administrator.system-configuration= System Configuration
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
-
-# master.menu.user-account ####################################################
+# master.menu.patron ####################################################
 
 master.menu.patron = Patron
 master.menu.patron.patronages = Patronage list
+master.menu.patron.patronage-reports = Patronage Report list
+
+# master.menu.inventor ##################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.patronage-report = Patronage Report list
 
 # master.menu.user-account ####################################################
 
@@ -70,3 +73,9 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.anonymous.item = Item
 master.menu.anonymus.item.list-tool = List Tools
 master.menu.anonymus.item.list-component = List Component
+
+# master.menu.authenticated.item #################################################
+
+master.menu.authenticated.item = Item
+master.menu.authenticated.item.list-tool = List Tools
+master.menu.authenticated.item.list-component = List Component

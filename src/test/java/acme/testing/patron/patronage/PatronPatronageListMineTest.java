@@ -10,7 +10,7 @@ public class PatronPatronageListMineTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/patron/patronage/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(10) 
 	public void positiveTest(final int recordIndex, final String status, final String code, 
 		final String legalStuff, final String budget, final String creationMomentDate, final String startMomentDate, 
 		final String finalMomentDate, final String link, final String inventor, final String patron ) {

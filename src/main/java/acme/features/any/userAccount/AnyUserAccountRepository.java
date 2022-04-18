@@ -1,4 +1,4 @@
-package acme.features.any.useraccount;
+package acme.features.any.userAccount;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
