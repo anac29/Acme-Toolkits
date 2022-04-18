@@ -1,34 +1,42 @@
 package acme.features.inventor.items;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.item.Item;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorItemListService implements AbstractListService<Inventor, Item>{
+public class InventorItemShowService  implements AbstractShowService<Inventor, Item> {
 
 	@Autowired
 	protected InventorItemRepository repository;
-
+	
 	@Override
 	public boolean authorise(final Request<Item> request) {
 		assert request != null;
-		return true;
+		
+		boolean result;
+		
+		final int id = request.getModel().getInteger("id");
+		final Item item = this.repository.findOneItemById(id);
+		final int myId = request.getPrincipal().getActiveRoleId();
+		
+		result = (item.getId() == myId || item.getInventor().getId() == myId);
+		
+		return result;
 	}
 
 	@Override
-	public Collection<Item> findMany(final Request<Item> request) {
+	public Item findOne(final Request<Item> request) {
 		assert request != null;
-		final Integer myId = request.getPrincipal().getActiveRoleId();
-		Collection<Item> result;
-		result = this.repository.findMyItems(myId);
+		Item result;
+		int id;
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneItemById(id);
 		return result;
 	}
 
@@ -37,7 +45,13 @@ public class InventorItemListService implements AbstractListService<Inventor, It
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "itemType", "link");
 		
+		int inventorId;
+		
+		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "itemType", "link");
+		model.setAttribute("readonly", true);
+		
+		inventorId = entity.getInventor().getUserAccount().getId();
+		model.setAttribute("inventorId", inventorId);
 	}
 }

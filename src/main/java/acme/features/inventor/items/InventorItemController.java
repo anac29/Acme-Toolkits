@@ -11,11 +11,16 @@ import acme.roles.Inventor;
 
 @Controller
 public class InventorItemController extends AbstractController<Inventor, Item> {
+	
 	@Autowired
 	protected InventorItemListService listService;
 
+	@Autowired
+	protected InventorItemShowService showService;
+	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.listService);
+		super.addCommand("show", this.showService);
 	}
 }
