@@ -8,8 +8,5 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.chirp.list.label.creation_moment = Fecha de creación
-any.chirp.list.label.title = Título
-any.chirp.list.label.author = Autor
-any.chirp.list.label.body = Cuerpo
-any.chirp.list.label.email = Correo electrónico
+authenticated.announcement.list.label.creation_moment = Fecha de creación
+authenticated.announcement.list.label.title = Título

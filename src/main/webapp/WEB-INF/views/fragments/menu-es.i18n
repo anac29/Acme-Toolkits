@@ -28,6 +28,7 @@ master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
 
 # master.menu.authenticated ###################################################
 
+master.menu.authenticated = Autenticado
 master.menu.authenticated.announcement = Anuncios
 
 # master.menu.administrator ###################################################
