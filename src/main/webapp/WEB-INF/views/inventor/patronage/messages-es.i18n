@@ -8,29 +8,22 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-employer.job.list.label.reference = Referencia
-employer.job.list.label.deadline = Fecha límite
-employer.job.list.label.title = Título
+inventor.patronage.list.label.status = Estado
+inventor.patronage.list.label.legalStuff = Asuntos legales
+inventor.patronage.list.label.budget = Presupuesto
+inventor.patronage.list.label.creationMomentDate = Fecha de creación
+inventor.patronage.list.label.startMomentDate = Fecha de comienzo
+inventor.patronage.list.label.finalMomentDate = Fecha límite
+inventor.patronage.list.label.link = Enlace
+inventor.patronage.list.label.inventor = Inventor
+inventor.patronage.list.label.patron = Patrón
 
-employer.job.list.button.create = Crear
-
-employer.job.form.label.reference = Referencia: 
-employer.job.form.label.title = Título:
-employer.job.form.label.deadline = Fecha límite:
-employer.job.form.label.salary = Salario:
-employer.job.form.label.score = Puntuación:
-employer.job.form.label.more-info = Más información: (Opcional)
-employer.job.form.label.description = Descripción:
-
-employer.job.form.placeholder.score = 0,00 - 100,00
-		
-employer.job.form.button.duties = Responsabilidades
-employer.job.form.button.update = Actualizar
-employer.job.form.button.delete = Borrar
-employer.job.form.button.publish = Publicar
-employer.job.form.button.create = Crear
-
-employer.job.form.error.duplicated = Esta referencia no está libre
-employer.job.form.error.too-close = La fecha límite debe ser en una semana como mínimo
-employer.job.form.error.bad-work-load = La carga de trabajo no es del 100%
-employer.job.form.error.negative-salary = El salario debe ser positivo
+inventor.patronage.form.label.status = Estado
+inventor.patronage.form.label.legalStuff = Asuntos legales
+inventor.patronage.form.label.budget = Presupuesto
+inventor.patronage.form.label.creationMomentDate = Fecha de creación
+inventor.patronage.form.label.startMomentDate = Fecha de comienzo
+inventor.patronage.form.label.finalMomentDate = Fecha límite
+inventor.patronage.form.label.link = Enlace
+inventor.patronage.form.label.inventor = Inventor
+inventor.patronage.form.label.patron = Patrón

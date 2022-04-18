@@ -22,13 +22,9 @@
 	<acme:list-column code="inventor.patronage.list.label.creationMomentDate" path="creationMomentDate" width="10%"/>
 	<acme:list-column code="inventor.patronage.list.label.startMomentDate" path="startMomentDate" width="10%"/>
 	<acme:list-column code="inventor.patronage.list.label.finalMomentDate" path="finalMomentDate" width="10%"/>
-	<acme:list-column code="inventor.patronage.list.label.link" path="link" width="10%"/>
+	<acme:list-column code="inventor.patronage.list.label.link" path="link" width="20%"/>
 	<acme:list-column code="inventor.patronage.list.label.inventor" path="inventor.userAccount.username" width="10%"/>
-	<acme:list-column code="inventor.patronage.list.label.patron" path="patron.userAccount.username" width="20%"/>
-</acme:list>
-
-<jstl:if test="${acme:anyOf(command, 'list')}">
-	<acme:button code="inventor.patronage.list.button.create" action="/employer/job/create"/>
-</jstl:if>		
+	<acme:list-column code="inventor.patronage.list.label.patron" path="patron.userAccount.username" width="10%"/>
+</acme:list>	
 	
 

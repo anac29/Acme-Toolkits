@@ -18,25 +18,12 @@ inventor.patronage.list.label.link = Link
 inventor.patronage.list.label.inventor = Inventor
 inventor.patronage.list.label.patron = Patron
 
-inventor.patronage.list.button.create = Create
-
-inventor.patronage.form.label.reference = Reference: 
-inventor.patronage.form.label.title = Title:
-inventor.patronage.form.label.deadline = Deadline:
-inventor.patronage.form.label.salary = Salary:
-inventor.patronage.form.label.score = Score:
-inventor.patronage.form.label.more-info = More info: (Optional)
-inventor.patronage.form.label.description = Description:
-
-inventor.patronage.form.placeholder.score = 0.00 - 100.00
-		
-inventor.patronage.form.button.duties = Duties
-inventor.patronage.form.button.update = Update
-inventor.patronage.form.button.delete = Delete
-inventor.patronage.form.button.publish = Publish
-inventor.patronage.form.button.create = Create
-
-inventor.patronage.form.error.duplicated = This reference is taken
-inventor.patronage.form.error.too-close = Deadline must be at least one week ahead
-inventor.patronage.form.error.bad-work-load = The work load is not 100%
-inventor.patronage.form.error.negative-salary = The salary must be positive
+inventor.patronage.form.label.status = Status
+inventor.patronage.form.label.legalStuff = Legal Stuff
+inventor.patronage.form.label.budget = Budget
+inventor.patronage.form.label.creationMomentDate = Creation Moment Date
+inventor.patronage.form.label.startMomentDate = Start Moment Date
+inventor.patronage.form.label.finalMomentDate = Final Moment Date
+inventor.patronage.form.label.link = Link
+inventor.patronage.form.label.inventor = Inventor
+inventor.patronage.form.label.patron = Patron
