@@ -53,6 +53,8 @@ master.menu.patron.patronage-reports = Lista de Informe de Patrocinios
 
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Lista de Informe de Patrocinios
+master.menu.inventor.patronage = Lista de patrocinios
+
 
 # master.menu.user-account ####################################################
 

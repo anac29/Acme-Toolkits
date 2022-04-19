@@ -53,6 +53,7 @@ master.menu.patron.patronage-reports = Patronage Report list
 
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Patronage Report list
+master.menu.inventor.patronage = Patronage List
 
 # master.menu.user-account ####################################################
 
