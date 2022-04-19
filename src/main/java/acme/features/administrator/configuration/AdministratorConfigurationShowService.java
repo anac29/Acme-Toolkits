@@ -32,7 +32,7 @@ public class AdministratorConfigurationShowService implements AbstractShowServic
 		assert request != null;
 
 		SystemConfiguration result;
-;
+		
 		result = this.repository.findSystemConfiguration();
 
 		return result;
