@@ -15,7 +15,7 @@ public interface AnyToolkitRepository extends AbstractRepository {
 	
 	@Query("SELECT t FROM Toolkit t")
 	Collection<Toolkit> findMany();
-	
+
 	@Query("SELECT t FROM Toolkit t WHERE t.id = :id")
 	Toolkit findOneToolkitById(int id);
 	
@@ -28,5 +28,13 @@ public interface AnyToolkitRepository extends AbstractRepository {
 	
 	@Query("select c.defaultCurrency from SystemConfiguration c")
 	String defaultCurrency();
+
+	@Query("SELECT q.toolkit FROM Quantity q where q.item.id=:itemId")
+	Collection<Toolkit> findQuantityByItem(int itemId);
+	
+
+	
+	
+
 
 }
