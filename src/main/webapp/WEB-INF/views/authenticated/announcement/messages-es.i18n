@@ -1,0 +1,12 @@
+# LIST ###################################################
+
+authenticated.announcement.list.label.creationMoment = Fecha de creación
+authenticated.announcement.list.label.title = Título
+
+# FORM ###################################################
+
+authenticated.announcement.form.label.creationMoment = Fecha de creación
+authenticated.announcement.form.label.title = Título
+authenticated.announcement.form.label.body = Cuerpo
+authenticated.announcement.form.label.flag = Crítico
+authenticated.announcement.form.label.link = Enlace

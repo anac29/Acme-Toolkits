@@ -21,7 +21,7 @@ public class AnyToolkitListService implements AbstractListService<Any, Toolkit> 
 	@Autowired
 	protected AnyToolkitRepository repository;
 
-	// AbstractListService<Administrator, Shout> interface --------------
+	// AbstractListService<Any, Toolkit> interface --------------
 		
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
