@@ -1,0 +1,22 @@
+inventor.item.list.label.name = Name
+inventor.item.list.label.code = Code
+inventor.item.list.label.technology = Technology
+inventor.item.list.label.description = Description
+inventor.item.list.label.retailPrice = Retail Price
+inventor.item.list.label.itemType = Item Type
+inventor.item.list.label.link = Link
+inventor.item.list.button.create = Create
+
+
+inventor.item.form.label.name = Name
+inventor.item.form.label.itemType = Item Type
+inventor.item.form.label.technology = Technology
+inventor.item.form.label.description = Description
+inventor.item.form.label.retailPrice = Retail Price
+inventor.item.form.label.tool = TOOL
+inventor.item.form.label.component = COMPONENT
+inventor.item.form.label.code = Code
+inventor.item.form.label.link = Link
+inventor.item.form.button.inventor = Inventor
+inventor.item.form.button.create = Create
+authenticated.consumer.consumer.form.button.update = Update
