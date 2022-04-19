@@ -63,6 +63,7 @@ master.menu.inventor.item = Item list
 
 # master.menu.user-account ####################################################
 
+master.menu.any.user-account.list = User Account list
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
 master.menu.user-account.provider = Provider data

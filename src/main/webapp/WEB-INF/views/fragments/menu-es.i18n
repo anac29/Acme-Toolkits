@@ -63,6 +63,7 @@ master.menu.inventor.item = Lista de ítems
 
 # master.menu.user-account ####################################################
 
+master.menu.any.user-account.list = Lista de usuarios
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor
