@@ -14,4 +14,7 @@ public interface AuthenticatedAnnouncementRepository extends AbstractRepository 
 
 	@Query("SELECT a FROM Announcement a WHERE a.creationMoment > :deadline")
 	Collection<Announcement> findRecentAnnouncements(Date deadline);
+	
+	@Query("SELECT a FROM Announcement a WHERE a.id = :id")
+	Announcement findOneAnnouncementById(int id);
 }

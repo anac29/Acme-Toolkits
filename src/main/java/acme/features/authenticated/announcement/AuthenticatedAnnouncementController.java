@@ -15,8 +15,12 @@ public class AuthenticatedAnnouncementController extends AbstractController<Auth
 	@Autowired
 	protected AuthenticatedAnnouncementListService listService;
 	
+	@Autowired
+	protected AuthenticatedAnnouncementShowService showService;
+	
 	@PostConstruct
 	protected void initialise() {
 		super.addCommand("list", this.listService);
+		super.addCommand("show", this.showService);
 	}
 }
