@@ -1,0 +1,23 @@
+patron.patronage.list.label.status = Status
+patron.patronage.list.label.code = Code
+patron.patronage.list.label.budget = Budget
+patron.patronage.list.label.creationMomentDate = Creation Date
+patron.patronage.list.label.startMomentDate = Start Date
+patron.patronage.list.label.finalMomentDate = End Date
+patron.patronage.list.button.create = Create
+
+
+patron.patronage.form.label.status = Status
+patron.patronage.form.label.proposed = PROPOSED
+patron.patronage.form.label.accepted = ACCEPTED
+patron.patronage.form.label.denied = DENIED
+patron.patronage.form.label.code = Code
+patron.patronage.form.label.legalStuff = Legal Stuff
+patron.patronage.form.label.budget = Budget
+patron.patronage.form.label.creationMomentDate = Creation Date
+patron.patronage.form.label.startMomentDate = Start Date
+patron.patronage.form.label.finalMomentDate = End Date
+patron.patronage.form.label.link = Link
+patron.patronage.form.button.inventor = Inventor
+patron.patronage.form.button.create = Create
+authenticated.consumer.consumer.form.button.update = Update

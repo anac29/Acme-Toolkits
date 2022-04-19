@@ -34,6 +34,7 @@ public class Patronage extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
+	@NotNull
 	protected PatronageStatus status;
 
 	@Column(unique = true)
@@ -45,6 +46,7 @@ public class Patronage extends AbstractEntity {
 	@NotNull
 	protected String legalStuff;
 
+	@NotNull
 	protected Money budget;
 
 	@Temporal(TemporalType.TIMESTAMP)
