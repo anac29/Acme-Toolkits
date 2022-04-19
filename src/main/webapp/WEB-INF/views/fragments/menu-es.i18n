@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-﻿# master.menu #################################################################
+# master.menu #################################################################
 
 master.menu.home = Inicio
 master.menu.sign-up = Registrarse
@@ -28,9 +28,11 @@ master.menu.anonymous.anaconmar-link = 47258017D: Conde Marrón, Ana
 master.menu.anonymous.enrmunper-link = 49826048K: Muñoz Pérez, Enrique
 master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
 
-# master.menu.authenticated #######################################################
 
-master.menu.authenticated= Autenticado
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.announcement = Anuncios
 master.menu.authenticated.configuration = Configuración del sistema
 
 # master.menu.administrator ###################################################
