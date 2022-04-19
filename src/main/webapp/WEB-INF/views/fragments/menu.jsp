@@ -19,6 +19,11 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.any.user-account.list" action="/any/user-account/list"/>
+			<acme:menu-suboption code="master.menu.anonymus.toolkit.list" action="/any/toolkit/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-chirp" action="/any/chirp/list"/>
+	    <acme:menu-suboption code="master.menu.anonymus.item.list-tool" action="/any/item/list-tool"/>
+	    <acme:menu-suboption code="master.menu.anonymus.item.list-component" action="/any/item/list-component"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.gonmarfer2-link" action="https://www.youtube.com/watch?v=idn2UdOu5bE&list=PLkYgGmsQ2duxgqf7SI43cStQVXHCbRF9a&index=7"/>
 			<acme:menu-suboption code="master.menu.anonymous.jaimosber-link" action="https://www.twitch.com/alexelcapo"/>
@@ -27,8 +32,16 @@
 			<acme:menu-suboption code="master.menu.anonymous.enrmunper-link" action="https://www.realbetisbalompie.es/"/>
 			<acme:menu-suboption code="master.menu.anonymous.jaiborcon-link" action="https://www.youtube.com/watch?v=vTOurabBRxY&ab_channel=LinkSpets"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.announcement" action="/authenticated/announcement/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.item.list-tool" action="/any/item/list-tool"/>
+	    <acme:menu-suboption code="master.menu.authenticated.item.list-component" action="/any/item/list-component"/>
+	    <acme:menu-suboption code="master.menu.authenticated.configuration" action="/authenticated/system-configuration/show"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show"/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/administrator/populate-initial"/>
@@ -37,16 +50,18 @@
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
 		</acme:menu-option>
 
+		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
+			<acme:menu-suboption code="master.menu.patron.patronages" action="/patron/patronage/list"/>
+      <acme:menu-suboption code="master.menu.patron.patronage-reports" action="/patron/patronage-report/list"/>
+		</acme:menu-option>
+
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
-
-		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
-		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.patron" access="hasRole('Patron')">
-			<acme:menu-suboption code="master.menu.patron.patronages" action="/patron/patronage/list"/>
+		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
+			<acme:menu-suboption code="master.menu.inventor.patronage-report" action="/inventor/patronage-report/list"/>
+      <acme:menu-suboption code="master.menu.inventor.item" action="/inventor/item/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 
@@ -55,6 +70,7 @@
 		<acme:menu-option code="master.menu.sign-in" action="/master/sign-in" access="isAnonymous()"/>
 
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.any.user-account.list" action="/any/user-account/list"/>
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
 			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create" access="!hasRole('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
