@@ -12,7 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 public interface AnyUserAccountRepository extends AbstractRepository{
 
 	@Query("SELECT ua FROM UserAccount ua "
-		+ "join ua.roles r where ua.enabled = true and(type(r) = Inventor or type(r) = Patron) "
+		+ "join FETCH ua.roles r where ua.enabled = true "
 		+ "and Administrator not in (select type(r) from UserAccount ua2 join ua2.roles r where ua2.id = ua.id)")
 	Collection<UserAccount> findAllPrincipals();
 }

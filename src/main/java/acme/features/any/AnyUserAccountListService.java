@@ -33,30 +33,8 @@ public class AnyUserAccountListService implements AbstractListService<Any,UserAc
 		Collection<UserAccount> res;
 		
 		res = this.repository.findAllPrincipals();
-		for(final UserAccount userAccount:res) 
-		{
-			userAccount.getRoles().forEach(r -> {;});
-		}
 		return res.stream().collect(Collectors.toSet());
 	}
-	
-	/*public Collection<String> findRoles()
-	{
-		Integer i = 0;
-		final Collection<String> roles = new ArrayList<>();
-		final List<UserAccount> aux = (List<UserAccount>) this.repository.findAllPrincipals();
-		while(i < aux.size()) 
-		{
-			final String[] rol = aux.get(i).getAuthorityString().split(", ");
-			final Integer duplicado = rol.length;
-			for(int j=0;j<duplicado;j++) 
-			{
-				roles.add(rol[j]);
-			}
-			i = i + duplicado;
-		}
-		return roles;
-	}*/
 	
 	@Override
 	public void unbind(final Request<UserAccount> request, final UserAccount entity, final Model model) {
