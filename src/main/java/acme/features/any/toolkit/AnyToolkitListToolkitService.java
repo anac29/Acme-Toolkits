@@ -12,7 +12,7 @@ import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnyToolkitListItemService  implements AbstractListService<Any, Toolkit>{
+public class AnyToolkitListToolkitService  implements AbstractListService<Any, Toolkit>{
 	
 	
 	// Internal state ---------------------------------------------------------
@@ -51,6 +51,8 @@ public class AnyToolkitListItemService  implements AbstractListService<Any, Tool
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		model.setAttribute("itemId", entity.getId());
 
 		request.unbind(entity, model, "code", "title", "description");
 	}
