@@ -1,4 +1,5 @@
 
+
 2022-04-14 12:12:12.796 INFO  [acme.Launcher@main] Starting Launcher using Java 1.8.0_281 on LAPTOP-PBMRDRB9 with PID 3332 (C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Frameworks\Acme-Framework-22.3\target\classes started by conde in C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Projects\Acme-Toolkits) 
 2022-04-14 12:12:12.799 DEBUG [acme.Launcher@main] Running with Spring Boot v2.4.2, Spring v5.3.3 
 2022-04-14 12:12:12.803 INFO  [acme.Launcher@main] The following profiles are active: development,default 
@@ -279,6 +280,7 @@
 2022-04-14 12:14:07.273 DEBUG [org.apache.jasper.servlet.JspServlet@http-nio-8080-exec-8] RealPath: C:\Users\conde\OneDrive\Documents\UNIVERSIDAD\Workspace-22.0\Projects\Acme-Toolkits\target\classes\WEB-INF\views\inventor\toolkit\list.jsp 
 2022-04-14 12:14:07.274 DEBUG [org.apache.jasper.servlet.JspServlet@http-nio-8080-exec-8] RequestURI: /acme-toolkits-22.1/WEB-INF/views/master/page.jsp 
 2022-04-14 12:14:07.275 DEBUG [org.apache.jasper.servlet.JspServlet@http-nio-8080-exec-8] QueryString: null 
+
 
 
 2022-04-15 19:44:00.148 INFO  [acme.Launcher@main] Starting Launcher using Java 1.8.0_281 on DESKTOP-5JLGSM0 with PID 23096 (C:\Users\Usuario\Desktop\UNIVERSIDAD\DP2\Workspace-22.0\Frameworks\Acme-Framework-22.3\target\classes started by Usuario in C:\Users\Usuario\Desktop\UNIVERSIDAD\DP2\Workspace-22.0\Projects\Acme-Toolkits) 
@@ -816,6 +818,10 @@
 2022-04-11 14:17:44.132 DEBUG [org.hibernate.SQL@http-nio-8080-exec-5] select useraccoun0_.id as id1_0_, useraccoun0_.version as version2_0_, useraccoun0_.enabled as enabled1_17_, useraccoun0_.identity as identity2_17_, useraccoun0_.password as password3_17_, useraccoun0_.username as username4_17_ from user_account useraccoun0_ where useraccoun0_.username=? 
 2022-04-11 14:17:44.133 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@http-nio-8080-exec-5] binding parameter [1] as [VARCHAR] - [anonymous] 
 2022-04-11 14:17:44.134 DEBUG [org.hibernate.SQL@http-nio-8080-exec-5] select roles0_.user_account_id as user_acc1_18_0_, roles0_.id as id1_18_0_, roles0_.id as id1_0_1_, roles0_.version as version2_0_1_, roles0_.user_account_id as user_acc1_18_1_, roles0_.company as company1_7_1_, roles0_.sector as sector2_7_1_, roles0_.company as company1_8_1_, roles0_.link as link2_8_1_, roles0_.statement as statemen3_8_1_, roles0_.company as company1_10_1_, roles0_.link as link2_10_1_, roles0_.statement as statemen3_10_1_, roles0_.company as company1_13_1_, roles0_.sector as sector2_13_1_, roles0_.clazz_ as clazz_1_ from ( select id, version, user_account_id, company, sector, null as link, null as statement, 10 as clazz_ from consumer union all select id, version, user_account_id, company, null as sector, link, statement, 11 as clazz_ from inventor union all select id, version, user_account_id, company, null as sector, link, statement, 12 as clazz_ from patron union all select id, version, user_account_id, company, sector, null as link, null as statement, 13 as clazz_ from provider union all select id, version, user_account_id, null as company, null as sector, null as link, null as statement, 15 as clazz_ from administrator union all select id, version, user_account_id, null as company, null as sector, null as link, null as statement, 16 as clazz_ from anonymous union all select id, version, user_account_id, null as company, null as sector, null as link, null as statement, 17 as clazz_ from any union all select id, version, user_account_id, null as company, null as sector, null as link, null as statement, 18 as clazz_ from authenticated ) roles0_ where roles0_.user_account_id=? 
+
 2022-04-11 14:17:44.135 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@http-nio-8080-exec-5] binding parameter [1] as [INTEGER] - [1] 
 
+
+
+2022-04-11 14:17:44.135 TRACE [org.hibernate.type.descriptor.sql.BasicBinder@http-nio-8080-exec-5] binding parameter [1] as [INTEGER] - [1] 
 

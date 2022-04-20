@@ -11,7 +11,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AdministratorDashBoard implements Serializable {
+public class AdministratorDashboard implements Serializable {
 
     // Serialisation identifier -----------------------------------------------
 
@@ -19,17 +19,17 @@ public class AdministratorDashBoard implements Serializable {
 
     // Attributes -------------------------------------------------------------
     
-    int						             totalNumberOfComponents;
+    Long						         totalNumberOfComponents;
     Map<Pair<String, String>, Double>    averageRetailPriceOfComponentsByTechnologyCurrency;
     Map<Pair<String, String>, Double>    deviationRetailPriceOfComponentsByTechnologyCurrency;
     Map<Pair<String, String>, Double>    minimumRetailPriceOfComponentsByTechnologyCurrency;
     Map<Pair<String, String>, Double>    maximumRetailPriceOfComponentsByTechnologyCurrency;
-    int                                  totalNumberOfTools;
+    Long                                 totalNumberOfTools;
     Map<String, Double>                  averageRetailPriceOfToolsByCurrency;
     Map<String, Double>                  deviationRetailPriceOfToolsByCurrency;
     Map<String, Double>                  minimumRetailPriceOfToolsByCurrency;
     Map<String, Double>                  maximumRetailPriceOfToolsByCurrency;
-    int             	                 totalNumberOfPatronagesByType;
+    Map<PatronageStatus, Long>        	 totalNumberOfPatronagesByStatus;
     Map<PatronageStatus, Double>         averagePatronagesBudgetByStatus;
     Map<PatronageStatus, Double>         deviationPatronagesBudgetByStatus;
     Map<PatronageStatus, Double>         minimumPatronagesBudgetByStatus;
