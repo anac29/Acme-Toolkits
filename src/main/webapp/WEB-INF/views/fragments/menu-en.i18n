@@ -60,11 +60,13 @@ master.menu.patron.patronage-reports = Patronage Report list
 
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Patronage Report list
-
-# master.menu.user-account ####################################################
-
-master.menu.inventor = Inventor
 master.menu.inventor.item = Item list
+
+# master.menu.patron ####################################################
+
+master.menu.patron = Patron
+master.menu.patron.patronages = Patronage list
+master.menu.patron.dashboard = Dashboard
 
 # master.menu.user-account ####################################################
 
