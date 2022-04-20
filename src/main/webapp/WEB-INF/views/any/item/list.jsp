@@ -15,16 +15,12 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
-<acme:list readonly="true">
+<acme:list>
 	<acme:list-column code="any.item.list.label.name" path="name" width="20%"/>
 	<acme:list-column code="any.item.list.label.code" path="code" width="20%"/>
 	<acme:list-column code="any.item.list.label.technology" path="technology" width="20%"/>
-	<acme:list-column code="any.item.list.label.description" path="description" width="60%"/>
 	<acme:list-column code="any.item.list.label.retail-price" path="retailPrice" width="20%"/>
-	<acme:list-column code="any.item.list.label.link" path="link" width="20%"/>
-	<acme:list-column code="any.item.list.label.inventor" path="inventor.userAccount.username" width="20%"/>
 </acme:list>
 
-<acme:button code="any.item.list.button.create" action="/any/item/create"/>
 
 

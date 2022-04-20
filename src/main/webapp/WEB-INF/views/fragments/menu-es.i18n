@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-﻿# master.menu #################################################################
+# master.menu #################################################################
 
 master.menu.home = Inicio
 master.menu.sign-up = Registrarse
@@ -17,7 +17,9 @@ master.menu.sign-out = Salir
 
 # master.menu.anonymous #######################################################
 
+master.menu.anonymus.toolkit.list= Lista de kit de Herramientas
 master.menu.anonymous = Anónimo
+master.menu.anonymous.list-chirp= Listado de Píos
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.gonmarfer2-link = 28985178A: Martínez Fernández, Gonzalo
 master.menu.anonymous.jaimosber-link = 30270882F: Moscoso Bernal, Jaime
@@ -25,6 +27,18 @@ master.menu.anonymous.antcamgil-link = 79147298C: Campos Gil, Antonio
 master.menu.anonymous.anaconmar-link = 47258017D: Conde Marrón, Ana
 master.menu.anonymous.enrmunper-link = 49826048K: Muñoz Pérez, Enrique
 master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
+
+
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.announcement = Anuncios
+master.menu.authenticated.configuration = Configuración del sistema
+
+
+master.menu.anonymus.toolkit.list = Ver Kits de Herramientas
+master.menu.anonymus.toolkit.list-item = Ver Kits de Herramientas por ítem
 
 # master.menu.administrator ###################################################
 
@@ -34,22 +48,44 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.system-configuration= Configuración del Sistema
 
-# master.menu.provider ########################################################
+# master.menu.patron ####################################################
 
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+master.menu.patron = Patrocinador
+master.menu.patron.patronages = Lista de patrocinios
+master.menu.patron.patronage-reports = Lista de Informe de Patrocinios
 
-# master.menu.consumer ##########################################################
+# master.menu.inventor ##################################################
 
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
+master.menu.inventor = Inventor
+master.menu.inventor.patronage-report = Lista de Informe de Patrocinios
 
 # master.menu.user-account ####################################################
 
+master.menu.inventor = Inventor
+master.menu.inventor.item = Lista de ítems
+
+# master.menu.user-account ####################################################
+
+master.menu.any.user-account.list = Lista de usuarios
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+
+
+# master.menu.anonymous.item #################################################
+
+master.menu.anonymous.item = Ítem
+master.menu.anonymus.item.list-tool = Lista de Herramientas
+master.menu.anonymus.item.list-component = Lista de Componentes
+
+# master.menu.authenticated.item #################################################
+
+master.menu.authenticated.item = Ítem
+master.menu.authenticated.item.list-tool = Lista de Herramientas
+master.menu.authenticated.item.list-component =  Lista de Componentes
+
