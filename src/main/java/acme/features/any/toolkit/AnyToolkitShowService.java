@@ -1,4 +1,5 @@
-package acme.features.any.toolkits;
+package acme.features.any.toolkit;
+
 
 import java.util.Collection;
 
@@ -30,7 +31,13 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit> 
 	public boolean authorise(final Request<Toolkit> request) {
 		assert request != null;
 
-		return true;
+		Toolkit toolkit;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		toolkit = this.repository.findOneToolkitById(id);
+		
+		return toolkit.isPublished();
 	}
 
 	@Override
@@ -42,6 +49,7 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit> 
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneToolkitById(id);
+		
 
 		return result;
 	}

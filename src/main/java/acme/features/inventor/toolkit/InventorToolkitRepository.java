@@ -13,7 +13,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface InventorToolkitRepository extends AbstractRepository {
 	
-	@Query("SELECT q.toolkit FROM Quantity q where q.item.inventor.id = :inventorId")
+	@Query("SELECT t FROM Toolkit t where t.inventor.id = :inventorId ")
 	Collection<Toolkit> findManyToolkitsByInventorId(int inventorId);
 	
 	@Query("SELECT t FROM Toolkit t WHERE t.id = :id")
@@ -29,6 +29,6 @@ public interface InventorToolkitRepository extends AbstractRepository {
 	@Query("select c.defaultCurrency from SystemConfiguration c")
 	String defaultCurrency();
 	
-	@Query("SELECT q.inven FROM Toolkit t WHERE t.id = :id")
+	@Query("SELECT t.inventor FROM Toolkit t WHERE t.id = :id")
 	Toolkit findInventorByToolkitId(int id);
 }

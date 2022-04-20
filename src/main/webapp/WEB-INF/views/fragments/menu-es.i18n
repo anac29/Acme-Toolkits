@@ -60,6 +60,7 @@ master.menu.patron.patronage-reports = Lista de Informe de Patrocinios
 
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Lista de Informe de Patrocinios
+master.menu.inventor.toolkit= Lista de kits de herramientas
 
 # master.menu.user-account ####################################################
 

@@ -52,8 +52,7 @@ public class Item extends AbstractEntity {
 	@URL
 	protected String link;
 	
-	@NotNull
-	protected Boolean isPublished;
+	protected boolean published;
 	
 	// Relations ---------------------------------------------------------
 	
