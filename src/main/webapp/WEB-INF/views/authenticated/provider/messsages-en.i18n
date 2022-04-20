@@ -16,3 +16,5 @@ authenticated.provider.form.label.sector = Sector:
 
 authenticated.provider.form.button.create = Register
 authenticated.provider.form.button.update = Update
+
+authenticated.form.label.link = Money exchange service information 

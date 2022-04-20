@@ -35,7 +35,7 @@ public class AnyItemListComponentService implements AbstractListService<Any, Ite
 
 		Collection<Item> result;
 
-		result = this.repository.findManyComponents();
+		result = this.repository.findManyComponentsPublished();
 
 		return result;
 	}
@@ -47,6 +47,7 @@ public class AnyItemListComponentService implements AbstractListService<Any, Ite
 		assert model != null;
 
 		request.unbind(entity, model, "name", "code", "technology","retailPrice");
+
 	}
 	
 }
