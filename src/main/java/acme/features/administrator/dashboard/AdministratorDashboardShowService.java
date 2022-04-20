@@ -15,20 +15,22 @@ package acme.features.administrator.dashboard;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
 import acme.entities.patronage.PatronageStatus;
-import acme.forms.AdministratorDashBoard;
+import acme.forms.AdministratorDashboard;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.roles.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorDashboardShowService implements AbstractShowService<Administrator, AdministratorDashBoard> {
+public class AdministratorDashboardShowService implements AbstractShowService<Administrator, AdministratorDashboard> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -38,16 +40,16 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	// AbstractShowService<Administrator, AdministratorDashBoard> interface ----------------
 
 	@Override
-	public boolean authorise(final Request<AdministratorDashBoard> request) {
+	public boolean authorise(final Request<AdministratorDashboard> request) {
 		assert request != null;
 		return true;
 	}
 
 	@Override
-	public AdministratorDashBoard findOne(final Request<AdministratorDashBoard> request) {
+	public AdministratorDashboard findOne(final Request<AdministratorDashboard> request) {
 		assert request != null;
 
-		final AdministratorDashBoard result;
+		final AdministratorDashboard result;
 		
 		//Components
 		
@@ -58,11 +60,12 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	    final Map<Pair<String, String>, Double>    deviationRetailPriceOfComponentsByTechnologyCurrency = new HashMap<>();
 	    final Map<Pair<String, String>, Double>    minimumRetailPriceOfComponentsByTechnologyCurrency = new HashMap<>();
 	    final Map<Pair<String, String>, Double>    maximumRetailPriceOfComponentsByTechnologyCurrency = new HashMap<>();
-		
+	
+	    
 		final List<Object[]> metricsComponentsByTechnologyCurrency = this.repository.findMetricsComponentsByTechnologyCurrency();
 	    for(final Object[] fila : metricsComponentsByTechnologyCurrency) {
-			final String currency = (String) fila[0];
-			final String technology = (String) fila[1];
+			final String currency = (String) fila[1];
+			final String technology = (String) fila[0];
 			final Double avg = (Double) fila[2];
 			final Double stdev = (Double) fila[3];
 			final Double min = (Double) fila[4];
@@ -120,19 +123,19 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	    final List<Object[]> metricsPatronagesBudgetByStatus = this.repository.findMetricsPatronagesBudgetByStatus();
 	    
 	    for(final Object[] fila : metricsPatronagesBudgetByStatus) {
-			final String status = (String) fila[0];
+			final PatronageStatus status = (PatronageStatus) fila[0];
 			final Double avg = (Double) fila[1];
 			final Double stdev = (Double) fila[2];
 			final Double min = (Double) fila[3];
 			final Double max = (Double) fila[4];
 			
-			averageRetailPriceOfToolsByCurrency.put(status, avg);
-			deviationRetailPriceOfToolsByCurrency.put(status, stdev);
-			minimumRetailPriceOfToolsByCurrency.put(status, min);
-			maximumRetailPriceOfToolsByCurrency.put(status, max);
+			averagePatronagesBudgetByStatus.put(status, avg);
+			deviationPatronagesBudgetByStatus.put(status, stdev);
+			minimumPatronagesBudgetByStatus.put(status, min);
+			maximumPatronagesBudgetByStatus.put(status, max);
 	    }
 	    
-		result = new AdministratorDashBoard();
+		result = new AdministratorDashboard();
 		result.setTotalNumberOfComponents(totalNumberOfComponents);
 		result.setAverageRetailPriceOfComponentsByTechnologyCurrency(averageRetailPriceOfComponentsByTechnologyCurrency);
 		result.setDeviationRetailPriceOfComponentsByTechnologyCurrency(deviationRetailPriceOfComponentsByTechnologyCurrency);
@@ -149,11 +152,13 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setMinimumPatronagesBudgetByStatus(minimumPatronagesBudgetByStatus);
 		result.setMaximumPatronagesBudgetByStatus(maximumPatronagesBudgetByStatus);
 
+		
+		
 		return result;
 	}
 
 	@Override
-	public void unbind(final Request<AdministratorDashBoard> request, final AdministratorDashBoard entity, final Model model) {
+	public void unbind(final Request<AdministratorDashboard> request, final AdministratorDashboard entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -163,9 +168,15 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			"minimumRetailPriceOfComponentsByTechnologyCurrency", "maximumRetailPriceOfComponentsByTechnologyCurrency", //
 			"totalNumberOfTools", "averageRetailPriceOfToolsByCurrency", //
 			"deviationRetailPriceOfToolsByCurrency", "minimumRetailPriceOfToolsByCurrency", //
-			"maximumRetailPriceOfToolsByCurrency", "totalNumberOfPatronagesByType", //
+			"maximumRetailPriceOfToolsByCurrency", "totalNumberOfPatronagesByStatus", //
 			"averagePatronagesBudgetByStatus", "deviationPatronagesBudgetByStatus", //
 			"minimumPatronagesBudgetByStatus", "maximumPatronagesBudgetByStatus");
+		
+		final Set<String> technologies = entity.getMinimumRetailPriceOfComponentsByTechnologyCurrency().keySet().stream().map(Pair::getFirst).collect(Collectors.toSet());
+		model.setAttribute("technology", technologies);
+		
+		final Set<String> currencies = entity.getDeviationRetailPriceOfToolsByCurrency().keySet();
+		model.setAttribute("currency", currencies);
 	}
 
 }

@@ -17,12 +17,12 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.forms.AdministratorDashBoard;
+import acme.forms.AdministratorDashboard;
 import acme.framework.controllers.AbstractController;
 import acme.framework.roles.Administrator;
 
 @Controller
-public class AdministratorDashboardController extends AbstractController<Administrator, AdministratorDashBoard> {
+public class AdministratorDashboardController extends AbstractController<Administrator, AdministratorDashboard> {
 
 	// Internal state ---------------------------------------------------------
 

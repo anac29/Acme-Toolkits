@@ -1,2 +1,25 @@
 administrator.dashboard.form.title = Administrator Dashboard
 administrator.dashboard.form.label.totalNumberOfComponents = Total Number of Components 
+administrator.dashboard.form.label.averageRetailPriceOfComponentsByTechnologyCurrency = Average Retail Price Of Components By Technology Currency
+administrator.dashboard.form.label.maximumRetailPriceOfComponentsByTechnologyCurrency = Maximum Retail Price Of Components By Technology Currency
+administrator.dashboard.form.label.deviationRetailPriceOfComponentsByTechnologyCurrency = Deviation Retail Price Of Components By Technology Currency
+administrator.dashboard.form.label.minimumRetailPriceOfComponentsByTechnologyCurrency = Minimum Retail Price Of Components By Technology Currency
+administrator.dashboard.form.technology.beta = Beta
+administrator.dashboard.form.technology.alpha = Alpha
+administrator.dashboard.form.technology.zeta = Zeta
+administrator.dashboard.form.technology.gamma = Gamma
+administrator.dashboard.form.label.averageRetailPriceOfToolsByCurrency = Average Retail Price Of Tools By Currency
+administrator.dashboard.form.label.deviationRetailPriceOfToolsByCurrency = Deviation Retail Price Of Tools By Currency
+administrator.dashboard.form.label.minimumRetailPriceOfToolsByCurrency = Minimum Retail Price Of Tools By Currency
+administrator.dashboard.form.label.maximumRetailPriceOfToolsByCurrency = Maximum Retail Price Of Tools By Currency
+administrator.dashboard.form.label.totalNumberOfTools = Total Number of Tools
+administrator.dashboard.form.status.PROPOSED = PROPOSED
+administrator.dashboard.form.status.ACCEPTED = ACCEPTED
+administrator.dashboard.form.status.DENIED = DENIED
+administrator.dashboard.form.label.totalNumberOfPatronagesByStatus = Total Number Of Patronages By Status
+administrator.dashboard.form.label.averagePatronagesBudgetByStatus = Average Patronages Budget By Status
+administrator.dashboard.form.label.deviationPatronagesBudgetByStatus = Deviation Patronages Budget By Status
+administrator.dashboard.form.label.maximumPatronagesBudgetByStatus = Maximum Patronages Budget By Status
+administrator.dashboard.form.label.minimumPatronagesBudgetByStatus = Minimum Patronages Budget By Status
+
+

@@ -25,13 +25,13 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT count(i) FROM Item i WHERE i.itemType = 'COMPONENT'")
 	Long totalNumberOfComponents();
 
-	@Query("SELECT i.retailPrice.currency, i.technology,avg(i.retailPrice.amount),stddev(i.retailPrice.amount),min(i.retailPrice.amount),max(i.retailPrice.amount) FROM Item i GROUP BY i.technology, i.retailPrice.currency")
+	@Query("SELECT i.technology, i.retailPrice.currency ,avg(i.retailPrice.amount),stddev(i.retailPrice.amount),min(i.retailPrice.amount),max(i.retailPrice.amount) FROM Item i WHERE i.itemType = acme.entities.item.ItemType.COMPONENT GROUP BY  i.retailPrice.currency,  i.technology")
 	List<Object[]> findMetricsComponentsByTechnologyCurrency();
 
 	@Query("SELECT count(i) FROM Item i WHERE i.itemType = 'TOOL'")
 	Long totalNumberOfTools();
 
-	@Query("SELECT i.retailPrice.currency ,avg(i.retailPrice.amount),stddev(i.retailPrice.amount),min(i.retailPrice.amount),max(i.retailPrice.amount) FROM Item i GROUP BY i.retailPrice.currency")
+	@Query("SELECT i.retailPrice.currency ,avg(i.retailPrice.amount),stddev(i.retailPrice.amount),min(i.retailPrice.amount),max(i.retailPrice.amount) FROM Item i WHERE i.itemType = acme.entities.item.ItemType.TOOL GROUP BY i.retailPrice.currency")
 	List<Object[]> findMetricsToolsByCurrency();
 
 	@Query("SELECT p.status,count(p) FROM Patronage p GROUP BY p.status")
