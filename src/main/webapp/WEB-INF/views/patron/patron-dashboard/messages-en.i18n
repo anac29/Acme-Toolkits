@@ -1,0 +1,9 @@
+patron.dashboard.form.title = Patron Dashboard
+patron.dashboard.form.label.totalNumberOfPatronagesByStatus = Total Number of Patronages by Status
+patron.dashboard.form.label.averageBudgetOfPatronagesStatusByCurrency = Average Budgets by Patronage Status and Currency
+patron.dashboard.form.label.deviationBudgetOfPatronagesStatusByCurrency = Standard Deviation of Budgets by Patronage Status and Currency
+patron.dashboard.form.label.minimumBudgetOfPatronagesStatusByCurrency = Minimum Budget by Patronage Status and Currency
+patron.dashboard.form.label.maximumBudgetOfPatronagesStatusByCurrency = Maximum Budget by Patronage Status and Currency
+patron.dashboard.form.status.PROPOSED = PROPOSED
+patron.dashboard.form.status.ACCEPTED = ACCEPTED
+patron.dashboard.form.status.DENIED = DENIED
