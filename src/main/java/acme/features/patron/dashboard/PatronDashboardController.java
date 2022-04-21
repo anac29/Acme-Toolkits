@@ -1,26 +1,22 @@
-package acme.features.inventor.items;
+package acme.features.patron.dashboard;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.item.Item;
+import acme.forms.PatronDashboard;
 import acme.framework.controllers.AbstractController;
-import acme.roles.Inventor;
+import acme.roles.Patron;
 
 @Controller
-public class InventorItemController extends AbstractController<Inventor, Item> {
-	
-	@Autowired
-	protected InventorItemListService listService;
+public class PatronDashboardController extends AbstractController<Patron, PatronDashboard> {
 
 	@Autowired
-	protected InventorItemShowService showService;
+	protected PatronDashboardShowService showService;
 	
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list", this.listService);
 		super.addCommand("show", this.showService);
 	}
 }
