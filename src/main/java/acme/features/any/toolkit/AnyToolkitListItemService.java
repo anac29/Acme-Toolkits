@@ -1,4 +1,4 @@
-package acme.features.any.toolkits;
+package acme.features.any.toolkit;
 
 import java.util.Collection;
 

@@ -1,4 +1,4 @@
-package acme.features.any.toolkits;
+package acme.features.inventor.toolkit;
 
 import java.util.Collection;
 
@@ -8,20 +8,19 @@ import org.springframework.stereotype.Service;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
-
+import acme.roles.Inventor;
 
 @Service
-public class AnyToolkitListService implements AbstractListService<Any, Toolkit> {
+public class InventorToolkitListService implements AbstractListService<Inventor, Toolkit>{
 
-	
+
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AnyToolkitRepository repository;
+	protected InventorToolkitRepository repository;
 
-	// AbstractListService<Any, Toolkit> interface --------------
+	// AbstractListService<Administrator, Shout> interface --------------
 		
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
@@ -35,8 +34,10 @@ public class AnyToolkitListService implements AbstractListService<Any, Toolkit> 
 		assert request != null;
 
 		Collection<Toolkit> result;
+		int inventorId;
 
-		result = this.repository.findMany();
+		inventorId = request.getPrincipal().getActiveRoleId();
+		result = this.repository.findManyToolkitsByInventorId(inventorId);
 
 		return result;
 	}
@@ -48,6 +49,7 @@ public class AnyToolkitListService implements AbstractListService<Any, Toolkit> 
 		assert model != null;
 
 		request.unbind(entity, model, "code", "title", "description");
+		
 	}
 
 }
