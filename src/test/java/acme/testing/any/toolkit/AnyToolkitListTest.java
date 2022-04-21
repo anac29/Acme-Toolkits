@@ -17,7 +17,7 @@ public class AnyToolkitListTest extends TestHarness{
 		
 
 		
-		super.clickOnMenu("Anonymous","Toolkit List");
+		super.clickOnMenu("Anonymous","List Toolkits");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		
