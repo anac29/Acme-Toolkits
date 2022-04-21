@@ -60,6 +60,8 @@ master.menu.patron.patronage-reports = Patronage Report list
 
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Patronage Report list
+master.menu.inventor.item.list-component = Component list
+master.menu.inventor.item.list-tool = Tool list
 master.menu.inventor.item = Item list
 master.menu.inventor.toolkit= Toolkit List
 
