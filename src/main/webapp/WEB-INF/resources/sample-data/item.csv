@@ -1,4 +1,8 @@
-key,name,code,technology,description,retail-price,item-type,link,published,key:inventor
-item-01,drill,AGH-153-H,alpha,Morbi non placerat leo ut elementum justo,EUR 43.32,TOOL,https://www.lipsum.com/feed/html,true,inventor1
-item-02,stone,AAA-123,beta,It's night and day,EUR 4.62,COMPONENT,https://genius.com/Rosalia-diablo-lyrics,false,inventor2
-item-03,brava,AUE-827,mm,Deconstructed Club,GBP 10.00,COMPONENT,https://https://pr.gov/Pages/default.aspx,true,inventor3
+key,name,code,technology,description,retail-price,item-type,link,key:inventor
+item-01,drill,AGH-153-H,alpha,Morbi non placerat leo ut elementum justo,EUR 43.32,TOOL,https://www.lipsum.com/feed/html,inventor1
+item-02,stone,AAA-123,beta,It's night and day,EUR 4.62,COMPONENT,https://genius.com/Rosalia-diablo-lyrics,inventor2
+item-03,brava,AUE-827,zeta,Deconstructed Club,EUR 1.05,COMPONENT,https://https://pr.gov/Pages/default.aspx,inventor3
+item-04,hammer,HAM-134,alpha,Just a hammer,USD 1.99,TOOL,https://es.wikipedia.org/wiki/Martillo,inventor1
+item-05,pliers,PLI-574,alpha,Does anyone need some pliers?,GBP 9.88,TOOL,https://es.wikipedia.org/wiki/Alicate,inventor2
+item-06,stick,STI-236,alpha,A stick,GBP 12.99,COMPONENT,https://es.wiktionary.org/wiki/palo,inventor3
+item-07,mouse,MOU-237,gamma,A Mouse,EUR 7.88,COMPONENT,https://es.wiktionary.org/wiki/palo,inventor2

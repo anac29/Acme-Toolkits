@@ -11,7 +11,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class PatronDashBoard implements Serializable{
+public class PatronDashboard implements Serializable{
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -19,9 +19,9 @@ public class PatronDashBoard implements Serializable{
 
 	// Attributes -------------------------------------------------------------
 
-		Map<PatronageStatus, Integer>								totalNumberOfPatronagesByStatus;
+		Map<PatronageStatus, Long>									totalNumberOfPatronagesByStatus;
 		Map<Pair<String, PatronageStatus>,Double>					averageBudgetOfPatronagesStatusByCurrency;
-		Map<Pair<String, PatronageStatus>,Double>					desviationBudgetOfPatronagesStatusByCurrency;
+		Map<Pair<String, PatronageStatus>,Double>					deviationBudgetOfPatronagesStatusByCurrency;
 		Map<Pair<String, PatronageStatus>,Double>					minimumBudgetOfPatronagesStatusByCurrency;
 		Map<Pair<String, PatronageStatus>,Double>					maximumBudgetOfPatronagesStatusByCurrency;
 }
