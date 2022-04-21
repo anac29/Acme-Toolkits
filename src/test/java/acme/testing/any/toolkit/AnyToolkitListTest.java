@@ -8,12 +8,11 @@ import acme.testing.TestHarness;
 
 public class AnyToolkitListTest extends TestHarness{
 
-
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String code, final String title, 
-		final String description, final String assemblyNotes, final String link, final String totalPrice) 
+		final String description, final String assemblyNotes, final String link, final String totalPrice) {
 		super.clickOnMenu("Anonymous","List Toolkits");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -33,8 +32,21 @@ public class AnyToolkitListTest extends TestHarness{
 		
 		super.clickOnButton("Items");
 		super.checkListingExists();
-		super.signOut();
+		super.sortListing(0, "asc");
 		
-
+//		this.positiveTestItems();
+		
+		super.signOut();
 	}
+	
+//	private final String getItemResourcePath(final int id) {
+//		final String path = "/any/toolkit/list-item-"+id+".csv";
+//		return path;
+//	}
+//	
+//	@ParameterizedTest
+//	@CsvFileSource(resources = this.getItemResourcePath(0), encoding = "utf-8", numLinesToSkip = 1)
+//	private void positiveTestItems(final String recordIndex, final String name, final String code, final String technology final String retailPrice) {
+//		
+//	}
 }
