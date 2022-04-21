@@ -22,7 +22,7 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 		boolean result;
 		
 		final int id = request.getModel().getInteger("id");
-		final Item item = this.repository.findOneToolById(id);
+		final Item item = this.repository.findOneById(id);
 		final int myId = request.getPrincipal().getActiveRoleId();
 		
 		result = (item.getId() == myId || item.getInventor().getId() == myId);
@@ -36,7 +36,7 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 		Item result;
 		int id;
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneToolById(id);
+		result = this.repository.findOneById(id);
 		return result;
 	}
 
