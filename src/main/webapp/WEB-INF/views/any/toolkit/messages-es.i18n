@@ -19,6 +19,7 @@ any.toolkit.list.label.description = Descripción:
 any.toolkit.form.label.assembly-notes = Notas de Montaje:
 any.toolkit.form.label.link = Enlace:
 any.toolkit.form.label.total-price = Precio Total:
-any.toolkit.form.button.items = Ítems
+any.toolkit.form.button.tool=Ver Herramientas
+any.toolkit.form.button.component= Ver Componentes
 
 any.toolkit.form.button.create= Crear
