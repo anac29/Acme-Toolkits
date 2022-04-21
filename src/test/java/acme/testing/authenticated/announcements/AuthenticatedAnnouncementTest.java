@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class AuthenticatedAnnouncementShowTest extends TestHarness{
+public class AuthenticatedAnnouncementTest extends TestHarness{
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/announcement/list.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -30,9 +30,7 @@ public class AuthenticatedAnnouncementShowTest extends TestHarness{
 		super.checkInputBoxHasValue("body", body);
 		super.checkInputBoxHasValue("flag", flag);
 		super.checkInputBoxHasValue("link", link);
-	
 		
-		super.signOut();
 	}
 
 }
