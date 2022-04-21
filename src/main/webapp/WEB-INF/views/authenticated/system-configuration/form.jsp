@@ -18,5 +18,5 @@
 <acme:form>
 	<acme:input-textbox code="authenticated.form.label.acceptedCurrencies" path="acceptedCurrencies" readonly="true"/>
 	<acme:input-textbox code="authenticated.form.label.defaultCurrency" path="defaultCurrency" readonly="true"/>
-	<acme:input-url code="authenticated.form.label.link" path="enlace"/>	
+	<acme:input-url code="authenticated.form.label.link" path="link"/>	
 </acme:form>
