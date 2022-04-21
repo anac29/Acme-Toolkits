@@ -2,3 +2,5 @@ key,number,key:item,key:toolkit
 quantity-01,5,item-01,toolkit-01
 quantity-02,9,item-02,toolkit-01
 quantity-03,25,item-03,toolkit-01
+quantity-04,3,item-01,toolkit-02
+quantity-05,8,item-01,toolkit-04

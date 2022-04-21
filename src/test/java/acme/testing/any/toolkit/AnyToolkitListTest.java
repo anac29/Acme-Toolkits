@@ -12,7 +12,8 @@ public class AnyToolkitListTest extends TestHarness{
 	@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String code, final String title, 
-		final String description, final String assemblyNotes, final String link, final String totalPrice) {
+		final String description, final String assemblyNotes, final String link, final String totalPrice,
+		final String toolName, final String toolCode, final String toolTechnology, final String toolRetailPrice) {
 		super.clickOnMenu("Anonymous","List Toolkits");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -30,23 +31,13 @@ public class AnyToolkitListTest extends TestHarness{
 		super.checkInputBoxHasValue("link", link);
 		super.checkInputBoxHasValue("totalPrice", totalPrice);
 		
-		super.clickOnButton("Items");
+		super.clickOnButton("See Tool");
 		super.checkListingExists();
-		super.sortListing(0, "asc");
-		
-//		this.positiveTestItems();
-		
-		super.signOut();
+			
+		super.checkColumnHasValue(recordIndex, 0, toolName);
+		super.checkColumnHasValue(recordIndex, 1, toolCode);
+		super.checkColumnHasValue(recordIndex, 2, toolTechnology);
+		super.checkColumnHasValue(recordIndex, 3, toolRetailPrice);
 	}
 	
-//	private final String getItemResourcePath(final int id) {
-//		final String path = "/any/toolkit/list-item-"+id+".csv";
-//		return path;
-//	}
-//	
-//	@ParameterizedTest
-//	@CsvFileSource(resources = this.getItemResourcePath(0), encoding = "utf-8", numLinesToSkip = 1)
-//	private void positiveTestItems(final String recordIndex, final String name, final String code, final String technology final String retailPrice) {
-//		
-//	}
 }
