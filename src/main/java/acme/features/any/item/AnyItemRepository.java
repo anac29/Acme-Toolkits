@@ -22,9 +22,12 @@ public interface AnyItemRepository extends AbstractRepository {
 	@Query("select i from Item i where i.id = :id")
 	Item findOneItemById(int id);
 	
-	@Query("select q.item from Quantity q WHERE q.toolkit.id = :toolkitId ")
-	Collection<Item> findItemByToolkit(int toolkitId);
+	@Query("select q.item from Quantity q WHERE q.toolkit.id = :toolkitId and q.item.itemType = 0")
+	Collection<Item> findToolsByToolkit(int toolkitId);
 	
+	
+	@Query("select q.item from Quantity q WHERE q.toolkit.id = :toolkitId and q.item.itemType = 1")
+	Collection<Item> findComponentByToolkit(int toolkitId);
 	
 	
 	
