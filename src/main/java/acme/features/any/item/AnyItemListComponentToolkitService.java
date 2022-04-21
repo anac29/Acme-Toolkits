@@ -12,7 +12,7 @@ import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnyItemListToolkitService implements AbstractListService<Any, Item>  {
+public class AnyItemListComponentToolkitService implements AbstractListService<Any, Item>  {
 	
 
 	// Internal state ---------------------------------------------------------
@@ -36,7 +36,7 @@ public class AnyItemListToolkitService implements AbstractListService<Any, Item>
 
 		Collection<Item> result;
 		final int toolkitId= request.getModel().getInteger("id");
-		result = this.repository.findItemByToolkit( toolkitId);
+		result = this.repository.findComponentByToolkit( toolkitId);
 
 		return result;
 	}
