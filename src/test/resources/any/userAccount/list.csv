@@ -1,0 +1,7 @@
+recordIndex,enabled,name,surname,email,password,username,roles,rolesShow
+0,true,Inventor,One,inventor1@mail.com,inventor1,inventor1,Inventor,Inventor
+1,true,Inventor,Two,inventor2@mail.com,inventor2,inventor2,"Patron, Inventor","Inventor, Patron"
+2,true,Inventor,Three,inventor3@mail.com,inventor3,inventor3,Inventor,Inventor
+3,true,Patron,One,patron1@mail.com,patron1,patron1,Patron,Patron
+4,true,Patron,Two,patron2@mail.com,patron2,patron2,Patron,Patron
+5,true,Patron,Three,patron3@mail.com,patron3,patron3,Patron,Patron
