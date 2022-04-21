@@ -72,9 +72,9 @@
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
 			<acme:menu-suboption code="master.menu.inventor.patronage-report" action="/inventor/patronage-report/list"/>
-      		<acme:menu-suboption code="master.menu.inventor.item" action="/inventor/item/list"/>
-			<acme:menu-suboption code="master.menu.inventor.toolkit" action="/inventor/toolkit/list"/>
-			
+      		<acme:menu-suboption code="master.menu.inventor.item.list-tool" action="/inventor/item/list-tool"/>
+      		<acme:menu-suboption code="master.menu.inventor.item.list-component" action="/inventor/item/list-component"/>
+			    <acme:menu-suboption code="master.menu.inventor.toolkit" action="/inventor/toolkit/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 <acme:message code=""/>
