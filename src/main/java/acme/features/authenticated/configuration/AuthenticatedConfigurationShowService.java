@@ -33,7 +33,7 @@ public class AuthenticatedConfigurationShowService implements AbstractShowServic
 		assert entity != null;
 		assert model != null;
 		
-		model.setAttribute("enlace", "https://exchangeratesapi.io/documentation/");
+		model.setAttribute("link", "https://exchangeratesapi.io/documentation/");
 		
 		request.unbind(entity, model, "acceptedCurrencies","defaultCurrency");
 		
