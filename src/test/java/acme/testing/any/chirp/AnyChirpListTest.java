@@ -15,9 +15,9 @@ public class AnyChirpListTest extends TestHarness {
 		final String body, final String email ) {
 
 		
-		super.clickOnMenu("Anonymous","Chirp List");
+		super.clickOnMenu("Anonymous","List Chirp");
 		super.checkListingExists();
-		super.sortListing(1, "asc");
+		super.sortListing(0, "asc");
 		
 		super.checkColumnHasValue(recordIndex, 0, creationMoment);
 		super.checkColumnHasValue(recordIndex, 1, title);
