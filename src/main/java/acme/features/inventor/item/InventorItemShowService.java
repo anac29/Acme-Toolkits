@@ -1,4 +1,4 @@
-package acme.features.inventor.items;
+package acme.features.inventor.item;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 		boolean result;
 		
 		final int id = request.getModel().getInteger("id");
-		final Item item = this.repository.findOneItemById(id);
+		final Item item = this.repository.findOneToolById(id);
 		final int myId = request.getPrincipal().getActiveRoleId();
 		
 		result = (item.getId() == myId || item.getInventor().getId() == myId);
@@ -36,7 +36,7 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 		Item result;
 		int id;
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneItemById(id);
+		result = this.repository.findOneToolById(id);
 		return result;
 	}
 
