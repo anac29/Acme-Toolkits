@@ -15,8 +15,6 @@ public class AnyToolkitListTest extends TestHarness{
 	public void positiveTest(final int recordIndex, final String code, final String title, 
 		final String description, final String assemblyNotes, final String link, final String totalPrice) {
 		
-
-		
 		super.clickOnMenu("Anonymous","Toolkit List");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -24,8 +22,6 @@ public class AnyToolkitListTest extends TestHarness{
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.checkColumnHasValue(recordIndex, 1, title);
 		super.checkColumnHasValue(recordIndex, 2, description);
-
-
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
@@ -38,6 +34,7 @@ public class AnyToolkitListTest extends TestHarness{
 		
 		super.clickOnButton("Items");
 		super.checkListingExists();
+		super.signOut();
 		
 
 	}

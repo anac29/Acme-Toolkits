@@ -1,4 +1,4 @@
-package acme.features.any;
+package acme.features.any.userAccount;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
