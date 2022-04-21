@@ -5,7 +5,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.patronagereports.PatronageReport;
+import acme.entities.patronageReport.PatronageReport;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
