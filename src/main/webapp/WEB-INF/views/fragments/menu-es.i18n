@@ -69,7 +69,7 @@ master.menu.inventor.toolkit= Lista de kits de herramientas
 
 master.menu.patron = Patrocinador
 master.menu.patron.patronages = Lista de patrocinios
-master.menu.patron.dashboard = Tablero
+master.menu.patron.dashboard = Panel
 
 # master.menu.inventor ####################################################
 
