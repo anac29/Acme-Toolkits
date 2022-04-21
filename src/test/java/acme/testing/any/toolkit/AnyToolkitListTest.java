@@ -31,9 +31,11 @@ public class AnyToolkitListTest extends TestHarness{
 		super.checkInputBoxHasValue("link", link);
 		super.checkInputBoxHasValue("totalPrice", totalPrice);
 		
-		super.clickOnButton("Items");
+		super.clickOnButton("See Tools");
 		super.checkListingExists();
-		super.signOut();
+		super.clickOnButton("Return");
+		super.clickOnButton("See Components");
+		super.checkListingExists();
 		
 
 	}
