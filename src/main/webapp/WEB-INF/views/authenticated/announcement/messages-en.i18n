@@ -1,0 +1,13 @@
+# LIST ###################################################
+
+authenticated.announcement.list.label.creationMoment = Creation moment
+authenticated.announcement.list.label.title = Title
+
+# FORM ###################################################
+
+authenticated.announcement.form.label.creationMoment = Creation moment
+authenticated.announcement.form.label.title = Title
+authenticated.announcement.form.label.body = Body
+authenticated.announcement.form.label.flag = Critical
+authenticated.announcement.form.label.link = Link
+
