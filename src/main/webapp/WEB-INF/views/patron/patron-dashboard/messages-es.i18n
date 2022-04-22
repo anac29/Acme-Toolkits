@@ -1,4 +1,4 @@
-patron.dashboard.form.title = Tablero de Patrocinador
+patron.dashboard.form.title = Panel de Patrocinador
 patron.dashboard.form.label.totalNumberOfPatronagesByStatus = Número de Patrocinios por Estado
 patron.dashboard.form.label.averageBudgetOfPatronagesStatusByCurrency = Presupuesto Medio por Estado de Patrocinio y Divisa
 patron.dashboard.form.label.deviationBudgetOfPatronagesStatusByCurrency = Desviación Estándar de los Presupuestos por Estados de Patrocinios y Divisa

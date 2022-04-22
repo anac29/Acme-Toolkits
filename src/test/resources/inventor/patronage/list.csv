@@ -1,0 +1,10 @@
+recordIndex,status,legal-stuff,budget,creation-moment-date,start-moment-date,final-moment-date,link,key:inventor,key:patron
+0,ACCEPTED,Fine,EUR 14725836.99,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,inventor1,patron1
+1,DENIED,Not documented enough,EUR 25654565.54,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,inventor1,patron1
+2,ACCEPTED,Need some reports,GBP 1598475.66,2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,null,inventor1,patron1
+3,ACCEPTED,Need some reports,GBP 1598475.66,2022/02/25 12:33,2022/04/25 00:00,2022/05/31 23:59,null,inventor1,patron1
+4,ACCEPTED,Need some reports,GBP 1598475.66,2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,null,inventor1,patron1
+5,ACCEPTED,Need some reports,GBP 1598475.66,2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,null,inventor1,patron2
+6,ACCEPTED,Need some reports,EUR 40039393.32,2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,https://es.wikipedia.org/wiki/Patronaje,inventor1,patron1
+7,PROPOSED,Assortment pending,EUR 12345678.90,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,inventor1,patron1
+8,DENIED,Not documented enough,EUR 25654565.54,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,inventor1,patron1
