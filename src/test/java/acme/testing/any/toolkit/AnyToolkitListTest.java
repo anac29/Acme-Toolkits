@@ -12,8 +12,7 @@ public class AnyToolkitListTest extends TestHarness{
 	@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String code, final String title, 
-		final String description, final String assemblyNotes, final String link, final String totalPrice,
-		final String toolName, final String toolCode, final String toolTechnology, final String toolRetailPrice) {
+		final String description, final String assemblyNotes, final String link, final String totalPrice) {
 		super.clickOnMenu("Anonymous","List Toolkits");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -33,11 +32,11 @@ public class AnyToolkitListTest extends TestHarness{
 		
 		super.clickOnButton("See Tool");
 		super.checkListingExists();
+		super.checkNotListingEmpty();
 			
-		super.checkColumnHasValue(recordIndex, 0, toolName);
-		super.checkColumnHasValue(recordIndex, 1, toolCode);
-		super.checkColumnHasValue(recordIndex, 2, toolTechnology);
-		super.checkColumnHasValue(recordIndex, 3, toolRetailPrice);
+		super.clickOnButton("Return");
+		super.clickOnButton("See Components");
+		super.checkListingExists();
 	}
 	
 }
