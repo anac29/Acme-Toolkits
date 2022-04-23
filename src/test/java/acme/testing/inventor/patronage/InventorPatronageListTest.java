@@ -1,4 +1,4 @@
-package acme.testing.patron.patronage;
+package acme.testing.inventor.patronage;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,18 +6,18 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class PatronPatronageListMineTest extends TestHarness {
+public class InventorPatronageListTest extends TestHarness {
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/patron/patronage/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/inventor/patronage/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10) 
 	public void positiveTest(final int recordIndex, final String status, final String code, 
 		final String legalStuff, final String budget, final String creationMomentDate, final String startMomentDate, 
 		final String finalMomentDate, final String link, final String inventor, final String patron ) {
 		
-		super.signIn("patron1", "patron1");
+		super.signIn("inventor1", "inventor1");
 		
-		super.clickOnMenu("Patron","Patronage list");
+		super.clickOnMenu("Inventor","Patronage List");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -39,10 +39,9 @@ public class PatronPatronageListMineTest extends TestHarness {
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
 		super.checkInputBoxHasValue("link", link);
 		
+	 
 		super.clickOnButton("Inventor");
 		super.checkFormExists();
-		
-	
 		
 		super.signOut();
 	}

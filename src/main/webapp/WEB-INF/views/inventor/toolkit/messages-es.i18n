@@ -11,14 +11,18 @@
 inventor.toolkit.list.label.code = Código:
 inventor.toolkit.list.label.title = Título:
 inventor.toolkit.list.label.description = Descripción:
-inventor.toolkit.list.button.create= Crear
+inventor.toolkit.list.label.published=Publicado:
 
-any.toolkit.list.label.code = Código:
-any.toolkit.list.label.title = Título:
-any.toolkit.list.label.description = Descripción:
-any.toolkit.form.label.assembly-notes = Notas de Montaje:
-any.toolkit.form.label.link = Enlace:
-any.toolkit.form.label.total-price = Precio Total:
-any.toolkit.form.button.items = Ítems
 
-any.toolkit.form.button.create= Crear
+
+
+inventor.toolkit.list.label.code = Código:
+inventor.toolkit.list.label.title = Título:
+inventor.toolkit.list.label.description = Descripción:
+inventor.toolkit.form.label.assembly-notes = Notas de Montaje:
+inventor.toolkit.form.label.link = Enlace:
+inventor.toolkit.form.label.total-price = Precio Total:
+inventor.toolkit.form.label.published=Publicado
+inventor.toolkit.form.button.tool=Ver Herramientas
+inventor.toolkit.form.button.component= Ver Componentes
+

@@ -1,4 +1,4 @@
-package acme.testing.any.toolkit;
+package acme.testing.inventor.toolkit;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,14 +6,18 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class AnyToolkitListTest extends TestHarness{
+public class InventorToolkitListTest extends TestHarness{
+
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/inventor/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String code, final String title, 
 		final String description, final String assemblyNotes, final String link, final String totalPrice) { 
-		super.clickOnMenu("Anonymous","List Toolkits");
+		
+		super.signIn("inventor1", "inventor1");
+		
+		super.clickOnMenu("Inventor","List Toolkits");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		
@@ -36,7 +40,6 @@ public class AnyToolkitListTest extends TestHarness{
 		super.clickOnButton("See Components");
 		super.checkListingExists();
 		
-
+		super.signOut();
 	}
-	
 }
