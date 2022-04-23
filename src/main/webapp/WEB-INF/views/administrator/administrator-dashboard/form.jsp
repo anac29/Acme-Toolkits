@@ -3,6 +3,9 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
+
+<acme:form readonly="true">
+
 <h1>
 	<acme:message code="administrator.dashboard.form.title" />
 </h1>
@@ -47,7 +50,6 @@
 	</jstl:forEach>
 </table>
 
-
 <h3>
 	<acme:message
 		code="administrator.dashboard.form.label.deviationRetailPriceOfComponentsByTechnologyCurrency" />
@@ -58,6 +60,7 @@
 	<caption>
 		<acme:message
 			code="administrator.dashboard.form.label.deviationRetailPriceOfComponentsByTechnologyCurrency" />
+
 	</caption>
 
 	<jstl:forEach items="${ technology }" var="technology">
@@ -147,7 +150,6 @@
 		</tr>
 	</jstl:forEach>
 </table>
-
 <h2>
 	<acme:message
 		code="administrator.dashboard.form.label.totalNumberOfTools" />
@@ -273,7 +275,6 @@
 		</tr>
 	</jstl:forEach>
 </table>
-
 <h2>
 	<acme:message
 		code="administrator.dashboard.form.label.totalNumberOfPatronagesByStatus" />
@@ -395,3 +396,4 @@
 		</tr>
 	</jstl:forEach>
 </table>
+</acme:form>

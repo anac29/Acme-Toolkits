@@ -14,7 +14,7 @@ any.toolkit.list.label.description = Description:
  
 
 any.toolkit.form.label.code = Code:
-any.toolkit.form.label.title = Title:
+any.toolkit.form.label.inventor-title = Title:
 any.toolkit.form.label.description = Description:
 any.toolkit.form.label.total-price = Total Price:
 any.toolkit.form.label.assembly-notes = Assembly Notes:

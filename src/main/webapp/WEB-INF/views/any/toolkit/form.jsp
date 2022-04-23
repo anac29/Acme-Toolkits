@@ -27,7 +27,7 @@
 	
 
 	<hr>
-	<h3><acme:message code="any.toolkit.form.label.title"/></h3>
+	<h3><acme:message code="any.toolkit.form.label.inventor-title"/></h3>
 	<acme:input-textbox code="any.toolkit.form.label.name" path="inventorName"/>
 	<acme:input-textbox code="any.toolkit.form.label.surname" path="inventorSurname"/>
 	<acme:input-email code="any.toolkit.form.label.email" path="inventorEmail"/>
