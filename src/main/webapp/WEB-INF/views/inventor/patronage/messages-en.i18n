@@ -27,6 +27,8 @@ inventor.patronage.form.label.creationMomentDate = Creation Date
 inventor.patronage.form.label.startMomentDate = Start Date
 inventor.patronage.form.label.finalMomentDate = End Date
 inventor.patronage.form.label.link = Link
-inventor.patronage.form.button.inventor = Inventor
-inventor.patronage.form.button.create = Create
-authenticated.consumer.consumer.form.button.update = Update
+
+inventor.patronage.form.label.title=Patron's Profile
+inventor.patronage.form.label.name=Name
+inventor.patronage.form.label.surname=Surname
+inventor.patronage.form.label.email=E-mail
