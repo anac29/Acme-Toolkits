@@ -23,6 +23,7 @@
 	<acme:input-money code="any.item.form.label.retail-price" path="retailPrice"/>
 	<acme:input-url code="any.item.form.label.link" path="link"/>
 	<acme:input-textbox code="any.item.form.label.inventor" path="inventor.userAccount.username"/>	
+	<acme:button code="any.item.form.button.toolkit" action="/any/toolkit/list-toolkit?id=${itemId}"/>	
 </acme:form>
 
 

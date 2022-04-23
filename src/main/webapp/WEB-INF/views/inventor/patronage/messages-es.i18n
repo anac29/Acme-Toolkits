@@ -1,0 +1,34 @@
+# i18n-es.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+inventor.patronage.list.label.status = Estado
+inventor.patronage.list.label.code = Código
+inventor.patronage.list.label.budget = Presupuesto
+inventor.patronage.list.label.creationMomentDate = Fecha de creación
+inventor.patronage.list.label.startMomentDate = Fecha de inicio
+inventor.patronage.list.label.finalMomentDate = Fecha de finalización
+inventor.patronage.list.button.create = Crear
+
+inventor.patronage.form.label.status = Estado
+inventor.patronage.form.label.proposed = PROPUESTO
+inventor.patronage.form.label.accepted = ACEPTADO
+inventor.patronage.form.label.denied = RECHAZADO
+inventor.patronage.form.label.code = Código
+inventor.patronage.form.label.legalStuff = Temas legales
+inventor.patronage.form.label.budget = Presupuesto
+inventor.patronage.form.label.creationMomentDate = Fecha de creación
+inventor.patronage.form.label.startMomentDate = Fecha de inicio
+inventor.patronage.form.label.finalMomentDate = Fecha de finalización
+inventor.patronage.form.label.link = Enlace
+
+inventor.patronage.form.label.title=Perfil del Patrón
+inventor.patronage.form.label.name=Nombre
+inventor.patronage.form.label.surname=Apellidos
+inventor.patronage.form.label.email=Correo

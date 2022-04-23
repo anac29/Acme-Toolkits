@@ -10,7 +10,7 @@ public class PatronPatronageListMineTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/patron/patronage/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(10) 
 	public void positiveTest(final int recordIndex, final String status, final String code, 
 		final String legalStuff, final String budget, final String creationMomentDate, final String startMomentDate, 
 		final String finalMomentDate, final String link, final String name, final String surname, final String email,
@@ -20,7 +20,7 @@ public class PatronPatronageListMineTest extends TestHarness {
 		
 		super.clickOnMenu("Patron","Patronage list");
 		super.checkListingExists();
-		super.sortListing(1, "asc");
+		super.sortListing(1, "asc"); 
 		
 		super.checkColumnHasValue(recordIndex, 0, status);
 		super.checkColumnHasValue(recordIndex, 1, code);
@@ -42,6 +42,7 @@ public class PatronPatronageListMineTest extends TestHarness {
 		
 		super.clickOnButton("Inventor");
 		super.checkFormExists();
+    
 		super.checkInputBoxHasValue("identity.name", name);
 		super.checkInputBoxHasValue("identity.surname", surname);
 		super.checkInputBoxHasValue("identity.email", email);

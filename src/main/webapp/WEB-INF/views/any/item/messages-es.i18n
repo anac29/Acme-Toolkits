@@ -20,7 +20,7 @@ any.item.list.label.name = Nombre
 any.item.list.label.code = Código
 any.item.list.label.technology = Tecnología
 any.item.list.label.description = Descripción
-any.item.list.label.retail-price = Precio de Salida
+any.item.list.label.retail-price = Precio de salida
 any.item.list.label.link = Enlace
 any.item.list.label.inventor = Inventor
 
@@ -32,4 +32,4 @@ any.item.form.label.retail-price = Precio de Salida
 any.item.form.label.link = Enlace
 any.item.form.label.inventor = Inventor
 
-any.item.list.button.create = Item!
+any.item.form.button.toolkit= Ver kits de herramientas
