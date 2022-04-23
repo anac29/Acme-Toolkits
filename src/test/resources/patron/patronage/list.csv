@@ -1,10 +1,10 @@
-recordIndex,status,code,legal-stuff,budget,creation-moment-date,start-moment-date,final-moment-date,link,key:inventor,key:patron
-0,ACCEPTED,ASD-123-B,Need some reports,"EUR 40,039,393.32",2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,https://es.wikipedia.org/wiki/Patronaje,inventor1,patron1
-1,PROPOSED,ASD-123-C,Assortment pending,"EUR 12,345,678.90",2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,"",inventor1,patron1
-2,DENIED,ASD-123-D,Not documented enough,"EUR 25,654,565.54",2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,"",inventor1,patron1
-3,ACCEPTED,ASD-123-E,Fine,"EUR 14,725,836.99",2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,"",inventor1,patron1
-4,DENIED,ASD-123-F,Not documented enough,"EUR 25,654,565.54",2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,"",inventor1,patron1
-5,ACCEPTED,ASD-123-G,Need some reports,"GBP 1,598,475.66",2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,"",inventor1,patron1
-6,ACCEPTED,ASD-123-H,Need some reports,"GBP 1,598,475.66",2022/02/25 12:33,2022/04/25 00:00,2022/05/31 23:59,"",inventor1,patron1
-7,ACCEPTED,ASD-123-I,Need some reports,"GBP 1,598,475.66",2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,"",inventor1,patron1
-8,ACCEPTED,ASD-123-J,Need some reports,"GBP 1,598,475.66",2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,"",inventor2,patron1
+recordIndex,status,code,legal-stuff,budget,creation-moment-date,start-moment-date,final-moment-date,link,name,surname,email
+0,ACCEPTED,ASD-123-B,Need some reports,"EUR 40,039,393.32",2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,https://es.wikipedia.org/wiki/Patronaje,Inventor,One,inventor1@mail.com
+1,PROPOSED,ASD-123-C,Assortment pending,"EUR 12,345,678.90",2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,"",Inventor,One,inventor1@mail.com
+2,DENIED,ASD-123-D,Not documented enough,"EUR 25,654,565.54",2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,"",Inventor,One,inventor1@mail.com
+3,ACCEPTED,ASD-123-E,Fine,"EUR 14,725,836.99",2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,"",Inventor,One,inventor1@mail.com
+4,DENIED,ASD-123-F,Not documented enough,"EUR 25,654,565.54",2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,"",Inventor,One,inventor1@mail.com
+5,ACCEPTED,ASD-123-G,Need some reports,"GBP 1,598,475.66",2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,"",Inventor,One,inventor1@mail.com
+6,ACCEPTED,ASD-123-H,Need some reports,"GBP 1,598,475.66",2022/02/25 12:33,2022/04/25 00:00,2022/05/31 23:59,"",Inventor,One,inventor1@mail.com
+7,ACCEPTED,ASD-123-I,Need some reports,"GBP 1,598,475.66",2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,"",Inventor,One,inventor1@mail.com
+8,ACCEPTED,ASD-123-J,Need some reports,"GBP 1,598,475.66",2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,"",Inventor,Two,inventor2@mail.com
