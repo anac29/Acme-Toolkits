@@ -17,7 +17,7 @@ public class InventorItemShowTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","Tool list");
+		super.clickOnMenu("Inventor","List Tools");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -49,7 +49,7 @@ public class InventorItemShowTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","Component list");
+		super.clickOnMenu("Inventor","List Components");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
