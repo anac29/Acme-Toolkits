@@ -26,7 +26,6 @@
 		    <acme:menu-suboption code="master.menu.anonymus.item.list-tool" action="/any/item/list-tool"/>
 		    <acme:menu-suboption code="master.menu.anonymus.item.list-component" action="/any/item/list-component"/>
 			<acme:menu-suboption code="master.menu.anonymus.toolkit.list" action="/any/toolkit/list"/>
-			<acme:menu-suboption code="master.menu.anonymus.toolkit.list-item" action="/any/toolkit/list-item"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.gonmarfer2-link" action="https://www.youtube.com/watch?v=idn2UdOu5bE&list=PLkYgGmsQ2duxgqf7SI43cStQVXHCbRF9a&index=7"/>

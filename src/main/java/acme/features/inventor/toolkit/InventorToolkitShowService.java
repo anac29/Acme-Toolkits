@@ -27,23 +27,7 @@ public class InventorToolkitShowService implements AbstractShowService<Inventor,
 
 @Override
 public boolean authorise(final Request<Toolkit> request) {
-//	assert request != null;
-//
-//	boolean result;
-//	int toolkitId;
-//	final Toolkit toolkit;
-//	Inventor inventor;
-//
-//
-//	toolkitId = request.getModel().getInteger("id");
-//	inventor = this.repository.findInventorByToolkitId(toolkitId);
-//	employer = job.getEmployer();
-//	principal = request.getPrincipal();
-//	currentMoment = new Date();
-//	result = (
-//		employer.getUserAccount().getId() == principal.getAccountId() ||
-//		!job.isDraftMode() && job.getDeadline().after(currentMoment) 
-//	);
+	assert request != null;
 
 	return true;
 }
@@ -79,6 +63,6 @@ public void unbind(final Request<Toolkit> request, final Toolkit entity, final M
 	model.setAttribute("totalPrice", money);
 	model.setAttribute("toolkitId", entity.getId());
 	
-	request.unbind(entity, model, "code", "title", "description","assemblyNotes","link");
+	request.unbind(entity, model, "code", "title", "description","assemblyNotes","link","published");
 	
 }}

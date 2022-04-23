@@ -71,6 +71,7 @@ public class AnyToolkitShowService implements AbstractShowService<Any, Toolkit> 
 		
 		model.setAttribute("totalPrice", money);
 		model.setAttribute("toolkitId", entity.getId());
+		model.setAttribute("inventor", entity.getInventor().getUserAccount().getUsername());
 		
 		request.unbind(entity, model, "code", "title", "description","assemblyNotes","link");
 		
