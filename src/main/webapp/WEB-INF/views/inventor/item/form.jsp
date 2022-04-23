@@ -15,7 +15,6 @@
 		<acme:input-option code="inventor.item.form.label.component" value="COMPONENT" selected="${ itemType == 'COMPONENT' }"/>
 	</acme:input-select>
 	<acme:input-url code="inventor.item.form.label.link" path="link"/>
-	
-	<acme:button code="inventor.item.form.button.inventor" action="/any/user-account/show?id=${ inventorId }"/>
+	<acme:input-checkbox code="inventor.item.form.label.published" path="published"/>	
 	
 </acme:form>

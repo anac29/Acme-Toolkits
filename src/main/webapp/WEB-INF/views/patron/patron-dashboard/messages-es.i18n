@@ -1,0 +1,9 @@
+patron.dashboard.form.title = Panel de Patrocinador
+patron.dashboard.form.label.totalNumberOfPatronagesByStatus = Número de Patrocinios por Estado
+patron.dashboard.form.label.averageBudgetOfPatronagesStatusByCurrency = Presupuesto Medio por Estado de Patrocinio y Divisa
+patron.dashboard.form.label.deviationBudgetOfPatronagesStatusByCurrency = Desviación Estándar de los Presupuestos por Estados de Patrocinios y Divisa
+patron.dashboard.form.label.minimumBudgetOfPatronagesStatusByCurrency = Presupuesto Mínimo por Estados de Patrocinios y Divisa
+patron.dashboard.form.label.maximumBudgetOfPatronagesStatusByCurrency = Presupuesto Máximo por Estados de Patrocinios y Divisa
+patron.dashboard.form.status.PROPOSED = PROPUESTO
+patron.dashboard.form.status.ACCEPTED = ACEPTADO
+patron.dashboard.form.status.DENIED = RECHAZADO

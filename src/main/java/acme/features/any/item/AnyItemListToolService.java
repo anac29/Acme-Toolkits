@@ -35,7 +35,7 @@ public class AnyItemListToolService implements AbstractListService<Any, Item>  {
 
 		Collection<Item> result;
 
-		result = this.repository.findManyTools();
+		result = this.repository.findManyToolsPublished();
 
 		return result;
 	}

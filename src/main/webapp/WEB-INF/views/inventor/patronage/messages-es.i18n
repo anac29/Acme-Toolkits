@@ -9,21 +9,24 @@
 # they accept any liabilities with respect to them.
 
 inventor.patronage.list.label.status = Estado
-inventor.patronage.list.label.legalStuff = Asuntos legales
+inventor.patronage.list.label.code = Código
 inventor.patronage.list.label.budget = Presupuesto
 inventor.patronage.list.label.creationMomentDate = Fecha de creación
-inventor.patronage.list.label.startMomentDate = Fecha de comienzo
-inventor.patronage.list.label.finalMomentDate = Fecha límite
-inventor.patronage.list.label.link = Enlace
-inventor.patronage.list.label.inventor = Inventor
-inventor.patronage.list.label.patron = Patrón
+inventor.patronage.list.label.startMomentDate = Fecha de inicio
+inventor.patronage.list.label.finalMomentDate = Fecha de finalización
+inventor.patronage.list.button.create = Crear
 
 inventor.patronage.form.label.status = Estado
-inventor.patronage.form.label.legalStuff = Asuntos legales
+inventor.patronage.form.label.proposed = PROPUESTO
+inventor.patronage.form.label.accepted = ACEPTADO
+inventor.patronage.form.label.denied = RECHAZADO
+inventor.patronage.form.label.code = Código
+inventor.patronage.form.label.legalStuff = Temas legales
 inventor.patronage.form.label.budget = Presupuesto
 inventor.patronage.form.label.creationMomentDate = Fecha de creación
-inventor.patronage.form.label.startMomentDate = Fecha de comienzo
-inventor.patronage.form.label.finalMomentDate = Fecha límite
+inventor.patronage.form.label.startMomentDate = Fecha de inicio
+inventor.patronage.form.label.finalMomentDate = Fecha de finalización
 inventor.patronage.form.label.link = Enlace
-inventor.patronage.form.label.inventor = Inventor
-inventor.patronage.form.label.patron = Patrón
+inventor.patronage.form.button.inventor = Inventor
+inventor.patronage.form.button.create = Crear
+authenticated.consumer.consumer.form.button.update = Actualizar

@@ -86,12 +86,12 @@ bg=green
 Administrator DashBoard
 --
 
-+ totalNumberOfComponents: int
++ totalNumberOfComponents: Long
 + averageRetailPriceOfComponentsByTechnologyCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
 + deviationRetailPriceOfComponentsByTechnologyCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
 + minimumRetailPriceOfComponentsByTechnologyCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
 + maximumRetailPriceOfComponentsByTechnologyCurrency: Map&lt;Pair&lt;String,String&gt;,Double&gt;
-+ totalNumberOfTools: int
++ totalNumberOfTools: Long
 + averageRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;
 + deviationRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;
 + minimumRetailPriceOfToolsByCurrency: Map&lt;String,Double&gt;

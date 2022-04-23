@@ -40,14 +40,14 @@ public class AnyItemListTest extends TestHarness {
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/item/component/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(20)
 	public void positiveTestComponents(final int recordIndex, final String name,final String code, final String technology,final String description, 
 		 final String retailPrice, final String itemType, final String link,final String inventor ) {
 
 		
 		super.clickOnMenu("Anonymous","List Component");
 		super.checkListingExists();
-		super.sortListing(1, "asc");
+		super.sortListing(0, "asc");
 		
 		super.checkColumnHasValue(recordIndex, 0, name);
 		super.checkColumnHasValue(recordIndex, 1, code);

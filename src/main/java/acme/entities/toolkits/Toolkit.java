@@ -46,8 +46,8 @@ public class Toolkit extends AbstractEntity {
 	@URL
 	protected String link;
 	
-	@NotNull
-	protected Boolean isPublished;
+
+	protected boolean published;
 	
 	
 	
