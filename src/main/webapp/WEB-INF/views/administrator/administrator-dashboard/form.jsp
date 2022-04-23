@@ -14,7 +14,6 @@
 </h2>
 
 
-<table class="table table-sm">
 
 	<h3>
 		<acme:message
@@ -48,9 +47,9 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
 
-<table class="table table-sm">
+
+
 
 	<h3>
 		<acme:message
@@ -84,9 +83,7 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
 
-<table class="table table-sm">
 
 	<h3>
 		<acme:message
@@ -120,9 +117,7 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
 
-<table class="table table-sm">
 
 	<h3>
 		<acme:message
@@ -156,7 +151,7 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
+
 
 <h2>
 	<acme:message
@@ -164,7 +159,7 @@
 	<acme:print value="${totalNumberOfTools}" />
 </h2>
 
-<table class="table table-sm">
+
 
 	<h3>
 		<acme:message
@@ -195,9 +190,7 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
 
-<table class="table table-sm">
 
 	<h3>
 		<acme:message
@@ -228,9 +221,6 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
-
-<table class="table table-sm">
 
 	<h3>
 		<acme:message
@@ -261,9 +251,7 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
 
-<table class="table table-sm">
 
 	<h3>
 		<acme:message
@@ -294,7 +282,7 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
+
 
 <h2>
 	<acme:message
@@ -321,7 +309,7 @@
 	</jstl:forEach>
 </table>
 
-<table class="table table-sm">
+
 
 	<h3>
 		<acme:message
@@ -346,9 +334,7 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
 
-<table class="table table-sm">
 
 	<h3>
 		<acme:message
@@ -373,9 +359,7 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
 
-<table class="table table-sm">
 
 	<h3>
 		<acme:message
@@ -400,9 +384,7 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
 
-<table class="table table-sm">
 
 	<h3>
 		<acme:message
@@ -427,4 +409,3 @@
 			</tr>
 		</jstl:forEach>
 	</table>
-</table>
