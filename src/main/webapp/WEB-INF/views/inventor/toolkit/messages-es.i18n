@@ -11,7 +11,9 @@
 inventor.toolkit.list.label.code = Código:
 inventor.toolkit.list.label.title = Título:
 inventor.toolkit.list.label.description = Descripción:
-inventor.toolkit.list.label.published=Publicado 
+inventor.toolkit.list.label.published=Publicado:
+
+
 
 
 inventor.toolkit.list.label.code = Código:
