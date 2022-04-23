@@ -19,27 +19,29 @@ public class InventorPatronageListTest extends TestHarness {
 		
 		super.clickOnMenu("Inventor","Patronage List");
 		super.checkListingExists();
-		super.sortListing(1, "asc");
+		super.sortListing(1, "asc"); 
 		
 		super.checkColumnHasValue(recordIndex, 0, status);
-		super.checkColumnHasValue(recordIndex, 1, legalStuff);
+		super.checkColumnHasValue(recordIndex, 1, code);
 		super.checkColumnHasValue(recordIndex, 2, budget);
 		super.checkColumnHasValue(recordIndex, 3, creationMomentDate);
 		super.checkColumnHasValue(recordIndex, 4, startMomentDate);
 		super.checkColumnHasValue(recordIndex, 5, finalMomentDate);
 		
-//		super.clickOnListingRecord(recordIndex);
-//		super.checkFormExists();
-//		super.checkInputBoxHasValue("status", status);
-//		super.checkInputBoxHasValue("legalStuff", legalStuff);
-//		super.checkInputBoxHasValue("budget", budget);
-//		super.checkInputBoxHasValue("creationMomentDate", creationMomentDate);
-//		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
-//		super.checkInputBoxHasValue("link", link);
-//		super.checkInputBoxHasValue("inventor", inventor);
-//		super.checkInputBoxHasValue("patron", patron);
-
-
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.checkInputBoxHasValue("status", status);
+		super.checkInputBoxHasValue("code", code);
+		super.checkInputBoxHasValue("legalStuff", legalStuff);
+		super.checkInputBoxHasValue("budget", budget);
+		super.checkInputBoxHasValue("creationMomentDate", creationMomentDate);
+		super.checkInputBoxHasValue("startMomentDate", startMomentDate);
+		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
+		super.checkInputBoxHasValue("link", link);
+		
+	 
+		super.clickOnButton("Inventor");
+		super.checkFormExists();
 		
 		super.signOut();
 	}
