@@ -6,4 +6,3 @@ item-04,hammer,HAM-134,alpha,Just a hammer,USD 1.99,TOOL,https://es.wikipedia.or
 item-05,pliers,PLI-574,alpha,Does anyone need some pliers?,GBP 9.88,TOOL,https://es.wikipedia.org/wiki/Alicate,inventor2,false
 item-06,stick,STI-236,alpha,A stick,GBP 12.99,COMPONENT,https://es.wiktionary.org/wiki/palo,inventor3,false
 item-07,mouse,MOU-237,gamma,A Mouse,EUR 7.88,COMPONENT,https://es.wiktionary.org/wiki/palo,inventor2,true
-

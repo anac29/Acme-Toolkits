@@ -11,8 +11,8 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnyUserAccountRepository extends AbstractRepository{
 
-	@Query("SELECT ua FROM UserAccount ua WHERE ua.id = :id")
-	UserAccount findOneUserAccountById(int id);
+    @Query("SELECT ua FROM UserAccount ua WHERE ua.id = :id")
+    UserAccount findOneUserAccountById(int id);
 
 	@Query("SELECT ua FROM UserAccount ua "
 		+ "join FETCH ua.roles r where ua.enabled = true "

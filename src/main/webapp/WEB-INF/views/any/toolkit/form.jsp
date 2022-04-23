@@ -22,6 +22,7 @@
 	<acme:input-textarea code="any.toolkit.form.label.assembly-notes" path="assemblyNotes"/>
 	<acme:input-url code="any.toolkit.form.label.link" path="link"/>
 	<acme:input-money code="any.toolkit.form.label.total-price" path="totalPrice"/> 
+	<acme:input-money code="any.toolkit.form.label.inventor" path="inventor"/> 
 	<acme:button code="any.toolkit.form.button.tool" action="/any/item/list-tool-toolkit?id=${ toolkitId }"/>		
 	<acme:button code="any.toolkit.form.button.component" action="/any/item/list-component-toolkit?id=${ toolkitId }"/>		
 	

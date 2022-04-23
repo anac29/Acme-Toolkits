@@ -22,4 +22,3 @@
 
 </acme:list>
 
-<acme:button code="any.toolkit.list.button.create" action="/any/toolkit/create"/>

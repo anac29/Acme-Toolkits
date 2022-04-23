@@ -16,12 +16,18 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form> 
-	<acme:input-textbox code="inventor.patronage.form.label.status" path="status"/>
+	<acme:input-select code="inventor.patronage.form.label.status" path="status">
+		<acme:input-option code="inventor.patronage.form.label.proposed" value="PROPOSED" selected="${ status == 'PROPOSED' }"/>
+		<acme:input-option code="inventor.patronage.form.label.accepted" value="ACCEPTED" selected="${ status == 'ACCEPTED' }"/>
+		<acme:input-option code="inventor.patronage.form.label.denied" value="DENIED" selected="${ status == 'DENIED' }"/>
+	</acme:input-select>
+	<acme:input-textbox code="inventor.patronage.form.label.code" path="code"/>
 	<acme:input-textbox code="inventor.patronage.form.label.legalStuff" path="legalStuff"/>
 	<acme:input-money code="inventor.patronage.form.label.budget" path="budget"/>
 	<acme:input-moment code="inventor.patronage.form.label.creationMomentDate" path="creationMomentDate"/>
+	<acme:input-moment code="inventor.patronage.form.label.startMomentDate" path="startMomentDate"/>
 	<acme:input-moment code="inventor.patronage.form.label.finalMomentDate" path="finalMomentDate"/>
 	<acme:input-url code="inventor.patronage.form.label.link" path="link"/>
-	<acme:input-textbox code="inventor.patronage.form.label.inventor" path="inventor"/>
-	<acme:input-textbox code="inventor.patronage.form.label.patron" path="patron"/>
+	
+	<acme:button code="inventor.patronage.form.button.inventor" action="/any/user-account/show?id=${ inventorId }"/>
 </acme:form>
