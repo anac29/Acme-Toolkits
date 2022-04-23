@@ -17,10 +17,12 @@ master.menu.sign-out = Salir
 
 # master.menu.anonymous #######################################################
 
-master.menu.anonymus.toolkit.list= Lista de kit de Herramientas
 master.menu.anonymous = Anónimo
-master.menu.anonymous.list-chirp= Listado de Píos
-master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymus.item.list-tool = Listado de Herramientas
+master.menu.anonymus.item.list-component = Listado de Componentes
+master.menu.anonymus.toolkit.list = Listado de Kits de Herramientas
+master.menu.anonymous.list-chirp= Listado de Píos 
+master.menu.anonymous.favourite-link = Enlace Favorito
 master.menu.anonymous.gonmarfer2-link = 28985178A: Martínez Fernández, Gonzalo
 master.menu.anonymous.jaimosber-link = 30270882F: Moscoso Bernal, Jaime
 master.menu.anonymous.antcamgil-link = 79147298C: Campos Gil, Antonio
@@ -30,15 +32,17 @@ master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
 
 
 
+
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado
-master.menu.authenticated.announcement = Anuncios
-master.menu.authenticated.configuration = Configuración del sistema
-
-
-master.menu.anonymus.toolkit.list = Ver Kits de Herramientas
-master.menu.anonymus.toolkit.list-item = Ver Kits de Herramientas por ítem
+master.menu.authenticated.user-account.list=Listado de Cuentas de Usuario
+master.menu.authenticated.list-chirp=Listado de Píos
+master.menu.authenticated.announcement =  Listado de Anuncios
+master.menu.authenticated.configuration = Configuración del Sistema
+master.menu.authenticated.toolkit.list = Listado de Kits de Herramientas
+master.menu.authenticated.item.list-tool = Listado de Herramientas
+master.menu.authenticated.item.list-component = Listado de Componentes
 
 # master.menu.administrator ###################################################
 
@@ -50,35 +54,31 @@ master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 master.menu.administrator.system-configuration= Configuración del Sistema
 
+
+
 # master.menu.patron ####################################################
 
 master.menu.patron = Patrocinador
-master.menu.patron.patronages = Lista de patrocinios
-master.menu.patron.patronage-reports = Lista de Informe de Patrocinios
+master.menu.patron.patronages = Listado de Patrocinios
+master.menu.patron.patronage-reports = Listado de Informe de Patrocinios
+master.menu.patron.dashboard = Panel
+
 
 # master.menu.inventor ##################################################
 
 master.menu.inventor = Inventor
-master.menu.inventor.patronage-report = Lista de Informe de Patrocinios
-master.menu.inventor.patronage = Lista de patrocinios
-master.menu.inventor.item.list-component = Lista de componentes
-master.menu.inventor.item.list-tool = Lista de herramientas
-master.menu.inventor.toolkit= Lista de kits de herramientas
+master.menu.inventor.patronage-report = Listado de Informe de Patrocinios
+master.menu.inventor.patronage = Listado de Patrocinios
+master.menu.inventor.item.list-component = Listado de Componentes
+master.menu.inventor.item.list-tool = Listado de Herramientas
+master.menu.inventor.toolkit= Listado de Kits de Herramientas
 
-# master.menu.patron ####################################################
 
-master.menu.patron = Patrocinador
-master.menu.patron.patronages = Lista de patrocinios
-master.menu.patron.dashboard = Panel
 
-# master.menu.inventor ####################################################
-
-master.menu.inventor = Inventor
-master.menu.inventor.item = Lista de ítems
 
 # master.menu.user-account ####################################################
 
-master.menu.any.user-account.list = Lista de usuarios
+master.menu.any.user-account.list = Listado de Usuarios
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor
@@ -87,15 +87,4 @@ master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 
 
-# master.menu.anonymous.item #################################################
-
-master.menu.anonymous.item = Ítem
-master.menu.anonymus.item.list-tool = Lista de Herramientas
-master.menu.anonymus.item.list-component = Lista de Componentes
-
-# master.menu.authenticated.item #################################################
-
-master.menu.authenticated.item = Ítem
-master.menu.authenticated.item.list-tool = Lista de Herramientas
-master.menu.authenticated.item.list-component =  Lista de Componentes
 
