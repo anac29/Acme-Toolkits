@@ -34,7 +34,6 @@ public class InventorItemShowTest extends TestHarness {
 		super.checkInputBoxHasValue("retailPrice", retailPrice);
 		super.checkInputBoxHasValue("itemType", itemType);
 		super.checkInputBoxHasValue("link", link);
-		//inventor
 		
 		super.signOut();
 
@@ -66,7 +65,6 @@ public class InventorItemShowTest extends TestHarness {
 		super.checkInputBoxHasValue("retailPrice", retailPrice);
 		super.checkInputBoxHasValue("itemType", itemType);
 		super.checkInputBoxHasValue("link", link);
-		//inventor
 		
 		super.signOut();
 
