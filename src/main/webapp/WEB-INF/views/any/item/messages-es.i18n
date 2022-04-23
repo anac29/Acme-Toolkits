@@ -30,6 +30,8 @@ any.item.form.label.technology = Tecnología
 any.item.form.label.description = Descripción
 any.item.form.label.retail-price = Precio de Salida
 any.item.form.label.link = Enlace
-any.item.form.label.inventor = Inventor
-
+any.item.form.label.title=Perfil del Inventor
+any.item.form.label.name=Nombre
+any.item.form.label.surname=Apellidos
+any.item.form.label.email=Correo
 any.item.form.button.toolkit= Ver kits de herramientas
