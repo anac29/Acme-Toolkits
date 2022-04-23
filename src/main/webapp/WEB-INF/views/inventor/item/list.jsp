@@ -9,7 +9,7 @@
 	<acme:list-column code="inventor.item.list.label.technology" path="technology"/>
 	<acme:list-column code="inventor.item.list.label.description" path="description"/>
 	<acme:list-column code="inventor.item.list.label.retailPrice" path="retailPrice"/>
-	<acme:list-column code="inventor.item.list.label.itemType" path="itemType"/>
 	<acme:list-column code="inventor.item.list.label.link" path="link"/>
+	<acme:list-column code="inventor.item.list.label.published" path="published"/>
 	
 </acme:list>

@@ -1,4 +1,4 @@
-package acme.features.any.item;
+package acme.features.inventor.item;
 
 import java.util.Collection;
 
@@ -6,13 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.item.Item;
+import acme.features.any.item.AnyItemRepository;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
+import acme.roles.Inventor;
+
 
 @Service
-public class AnyItemListToolkitService implements AbstractListService<Any, Item>  {
+public class InventorItemListToolToolkitService implements AbstractListService<Inventor, Item>  {
 	
 
 	// Internal state ---------------------------------------------------------
@@ -36,7 +38,7 @@ public class AnyItemListToolkitService implements AbstractListService<Any, Item>
 
 		Collection<Item> result;
 		final int toolkitId= request.getModel().getInteger("id");
-		result = this.repository.findItemByToolkit( toolkitId);
+		result = this.repository.findToolsByToolkit( toolkitId);
 
 		return result;
 	}

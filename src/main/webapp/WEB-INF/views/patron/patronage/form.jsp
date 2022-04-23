@@ -17,6 +17,9 @@
 	<acme:input-moment code="patron.patronage.form.label.finalMomentDate" path="finalMomentDate"/>
 	<acme:input-url code="patron.patronage.form.label.link" path="link"/>
 	
-	<acme:button code="patron.patronage.form.button.inventor" action="/any/user-account/show?id=${ inventorId }"/>
-	
+	<hr>
+    <h3><acme:message code="patron.patronage.form.label.title"/></h3>
+    <acme:input-textbox code="patron.patronage.form.label.name" path="inventorName"/>
+    <acme:input-textbox code="patron.patronage.form.label.surname" path="inventorSurname"/>
+    <acme:input-email code="patron.patronage.form.label.email" path="inventorEmail"/>	
 </acme:form>

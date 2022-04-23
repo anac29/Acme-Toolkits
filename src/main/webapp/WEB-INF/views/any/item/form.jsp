@@ -22,7 +22,16 @@
 	<acme:input-textarea code="any.item.form.label.description" path="description"/>
 	<acme:input-money code="any.item.form.label.retail-price" path="retailPrice"/>
 	<acme:input-url code="any.item.form.label.link" path="link"/>
-	<acme:input-textbox code="any.item.form.label.inventor" path="inventor.userAccount.username"/>	
+	<hr>
+	<h3><acme:message code="any.item.form.label.title"/></h3>
+	<acme:input-textbox code="any.item.form.label.name" path="inventorName"/>
+	<acme:input-textbox code="any.item.form.label.surname" path="inventorSurname"/>
+	<acme:input-email code="any.item.form.label.email" path="inventorEmail"/>	
+	<acme:button code="any.item.form.button.toolkit" action="/any/toolkit/list-toolkit?id=${itemId}"/>	
+
+
+
+
 </acme:form>
 
 

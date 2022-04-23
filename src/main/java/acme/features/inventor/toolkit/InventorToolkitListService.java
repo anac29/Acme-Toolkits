@@ -1,4 +1,4 @@
-package acme.features.any.toolkits;
+package acme.features.inventor.toolkit;
 
 import java.util.Collection;
 
@@ -8,20 +8,20 @@ import org.springframework.stereotype.Service;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
-import acme.framework.roles.Any;
 import acme.framework.services.AbstractListService;
+import acme.roles.Inventor;
 
 @Service
-public class AnyToolkitListItemService  implements AbstractListService<Any, Toolkit>{
-	
-	
+public class InventorToolkitListService implements AbstractListService<Inventor, Toolkit>{
+
+
 	// Internal state ---------------------------------------------------------
 
-		@Autowired
-		protected AnyToolkitRepository repository;
+	@Autowired
+	protected InventorToolkitRepository repository;
 
-		// AbstractListService<Administrator, Shout> interface --------------
-
+	// AbstractListService<Administrator, Shout> interface --------------
+		
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
 		assert request != null;
@@ -31,30 +31,26 @@ public class AnyToolkitListItemService  implements AbstractListService<Any, Tool
 
 	@Override
 	public Collection<Toolkit> findMany(final Request<Toolkit> request) {
-		
-		
 		assert request != null;
 
 		Collection<Toolkit> result;
-		final Integer itemId=request.getModel().getInteger("id");
+		int inventorId;
 
-		result = this.repository.findQuantityByItem(itemId);
+		inventorId = request.getPrincipal().getActiveRoleId();
+		result = this.repository.findManyToolkitsByInventorId(inventorId);
 
 		return result;
-		
-
 	}
 
 	@Override
-	public void unbind(final Request<Toolkit> request, final Toolkit entity,final Model model) {
-
+	public void unbind(final Request<Toolkit> request, final Toolkit entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "code", "title", "description");
+		
+		
+		request.unbind(entity, model, "code", "title", "description","published");
+		
 	}
-	
-	
 
 }

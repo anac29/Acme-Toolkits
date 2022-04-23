@@ -13,13 +13,14 @@ public class PatronPatronageListMineTest extends TestHarness {
 	@Order(10) 
 	public void positiveTest(final int recordIndex, final String status, final String code, 
 		final String legalStuff, final String budget, final String creationMomentDate, final String startMomentDate, 
-		final String finalMomentDate, final String link, final String inventor, final String patron ) {
+		final String finalMomentDate, final String link, final String name, final String surname, final String email,
+		final String company, final String statement, final String inventorLink, final String patron ) {
 		
 		super.signIn("patron1", "patron1");
 		
 		super.clickOnMenu("Patron","Patronage list");
 		super.checkListingExists();
-		super.sortListing(1, "asc");
+		super.sortListing(1, "asc"); 
 		
 		super.checkColumnHasValue(recordIndex, 0, status);
 		super.checkColumnHasValue(recordIndex, 1, code);
@@ -39,7 +40,12 @@ public class PatronPatronageListMineTest extends TestHarness {
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
 		super.checkInputBoxHasValue("link", link);
 		
-		// Falta comprobar el perfil del inventor
+		super.clickOnButton("Inventor");
+		super.checkFormExists();
+    
+		super.checkInputBoxHasValue("identity.name", name);
+		super.checkInputBoxHasValue("identity.surname", surname);
+		super.checkInputBoxHasValue("identity.email", email);
 		
 		super.signOut();
 	}

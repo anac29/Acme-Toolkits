@@ -11,7 +11,6 @@
 any.toolkit.list.label.code = Code:
 any.toolkit.list.label.title = Title:
 any.toolkit.list.label.description = Description:
-any.toolkit.list.button.create= Create
  
 
 any.toolkit.form.label.code = Code:
@@ -20,6 +19,12 @@ any.toolkit.form.label.description = Description:
 any.toolkit.form.label.total-price = Total Price:
 any.toolkit.form.label.assembly-notes = Assembly Notes:
 any.toolkit.form.label.link = Link:
-any.toolkit.form.button.items = Items
+any.toolkit.form.label.title=Inventor's Profile
+any.toolkit.form.label.name=Name
+any.toolkit.form.label.surname=Surname
+any.toolkit.form.label.email=E-mail
+
+any.toolkit.form.button.tool=See Tools
+any.toolkit.form.button.component= See Components
 
 any.toolkit.form.button.create= Create

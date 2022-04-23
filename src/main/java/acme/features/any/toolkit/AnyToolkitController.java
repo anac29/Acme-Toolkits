@@ -1,4 +1,4 @@
-package acme.features.any.toolkits;
+package acme.features.any.toolkit;
 
 import javax.annotation.PostConstruct;
 
@@ -18,9 +18,9 @@ public class AnyToolkitController  extends AbstractController<Any, Toolkit> {
 		
 		@Autowired
 		protected AnyToolkitShowService		showService;
-
+	
 		@Autowired
-		protected AnyToolkitListItemService		listItemService;
+		protected AnyToolkitListToolkitService		listToolkitService;
 	
 
 		// Constructors -----------------------------------------------------------
@@ -31,8 +31,7 @@ public class AnyToolkitController  extends AbstractController<Any, Toolkit> {
 			super.addCommand("list", this.listService);
 
 			super.addCommand("show", this.showService);
-
-			super.addCommand("list-item", "list",this.listItemService);
+			super.addCommand("list-toolkit", "list",this.listToolkitService);
 
 
 		}

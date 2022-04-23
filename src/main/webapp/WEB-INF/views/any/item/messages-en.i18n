@@ -30,6 +30,8 @@ any.item.form.label.technology = Technology
 any.item.form.label.description = Description
 any.item.form.label.retail-price = Retail Price
 any.item.form.label.link = Link
-any.item.form.label.inventor = Inventor
-
-any.item.list.button.create = Item!
+any.item.form.label.title=Inventor's Profile
+any.item.form.label.name=Name
+any.item.form.label.surname=Surname
+any.item.form.label.email=E-mail
+any.item.form.button.toolkit= See Toolkits

@@ -1,4 +1,4 @@
-package acme.features.inventor.items;
+package acme.features.inventor.item;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +22,7 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 		boolean result;
 		
 		final int id = request.getModel().getInteger("id");
-		final Item item = this.repository.findOneItemById(id);
+		final Item item = this.repository.findOneById(id);
 		final int myId = request.getPrincipal().getActiveRoleId();
 		
 		result = (item.getId() == myId || item.getInventor().getId() == myId);
@@ -36,7 +36,7 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 		Item result;
 		int id;
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneItemById(id);
+		result = this.repository.findOneById(id);
 		return result;
 	}
 
@@ -45,13 +45,7 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		int inventorId;
-		
-		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "itemType", "link");
-		model.setAttribute("readonly", true);
-		
-		inventorId = entity.getInventor().getUserAccount().getId();
-		model.setAttribute("inventorId", inventorId);
+
+		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "itemType", "link", "published");
 	}
 }
