@@ -37,8 +37,8 @@ public class InventorPatronageListService implements AbstractListService<Invento
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "status", "legalStuff", "budget", "creationMomentDate", "startMomentDate", "finalMomentDate", "link", "inventor.userAccount.username", "patron.userAccount.username");
+		
+		request.unbind(entity, model, "status", "code", "budget", "creationMomentDate", "startMomentDate", "finalMomentDate");
 		
 	}
 

@@ -16,15 +16,12 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="inventor.patronage.list.label.status" path="status" width="10%"/>
-	<acme:list-column code="inventor.patronage.list.label.legalStuff" path="legalStuff" width="10%"/>
-	<acme:list-column code="inventor.patronage.list.label.budget" path="budget" width="10%"/>
-	<acme:list-column code="inventor.patronage.list.label.creationMomentDate" path="creationMomentDate" width="10%"/>
-	<acme:list-column code="inventor.patronage.list.label.startMomentDate" path="startMomentDate" width="10%"/>
-	<acme:list-column code="inventor.patronage.list.label.finalMomentDate" path="finalMomentDate" width="10%"/>
-	<acme:list-column code="inventor.patronage.list.label.link" path="link" width="20%"/>
-	<acme:list-column code="inventor.patronage.list.label.inventor" path="inventor.userAccount.username" width="10%"/>
-	<acme:list-column code="inventor.patronage.list.label.patron" path="patron.userAccount.username" width="10%"/>
+	<acme:list-column code="inventor.patronage.list.label.status" path="status"/>
+	<acme:list-column code="inventor.patronage.list.label.code" path="code"/>
+	<acme:list-column code="inventor.patronage.list.label.budget" path="budget"/>
+	<acme:list-column code="inventor.patronage.list.label.creationMomentDate" path="creationMomentDate"/>
+	<acme:list-column code="inventor.patronage.list.label.startMomentDate" path="startMomentDate"/>
+	<acme:list-column code="inventor.patronage.list.label.finalMomentDate" path="finalMomentDate"/>
 </acme:list>	
 	
 

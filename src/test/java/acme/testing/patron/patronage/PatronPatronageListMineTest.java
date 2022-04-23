@@ -39,7 +39,10 @@ public class PatronPatronageListMineTest extends TestHarness {
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
 		super.checkInputBoxHasValue("link", link);
 		
-		// Falta comprobar el perfil del inventor
+		super.clickOnButton("Inventor");
+		super.checkFormExists();
+		
+	
 		
 		super.signOut();
 	}
