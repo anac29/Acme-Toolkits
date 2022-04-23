@@ -6,8 +6,10 @@ inventor.item.list.label.retailPrice = Retail Price
 inventor.item.list.label.itemType = Item Type
 inventor.item.list.label.link = Link
 inventor.item.list.button.create = Create
+inventor.item.list.label.published = Published
 
 
+inventor.item.form.label.published = Published
 inventor.item.form.label.name = Name
 inventor.item.form.label.itemType = Item Type
 inventor.item.form.label.technology = Technology
