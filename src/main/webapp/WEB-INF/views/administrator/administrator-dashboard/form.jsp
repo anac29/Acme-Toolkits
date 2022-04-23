@@ -396,3 +396,4 @@
 		</tr>
 	</jstl:forEach>
 </table>
+</acme:form>
