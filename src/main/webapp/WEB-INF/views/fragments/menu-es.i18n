@@ -30,9 +30,6 @@ master.menu.anonymous.anaconmar-link = 47258017D: Conde Marrón, Ana
 master.menu.anonymous.enrmunper-link = 49826048K: Muñoz Pérez, Enrique
 master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
 
-
-
-
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado
@@ -54,15 +51,12 @@ master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-down = Parar el sistema
 master.menu.administrator.system-configuration= Configuración del Sistema
 
-
-
 # master.menu.patron ####################################################
 
 master.menu.patron = Patrocinador
 master.menu.patron.patronages = Listado de Patrocinios
 master.menu.patron.patronage-reports = Listado de Informe de Patrocinios
 master.menu.patron.dashboard = Panel
-
 
 # master.menu.inventor ##################################################
 
@@ -73,18 +67,12 @@ master.menu.inventor.item.list-component = Listado de Componentes
 master.menu.inventor.item.list-tool = Listado de Herramientas
 master.menu.inventor.toolkit= Listado de Kits de Herramientas
 
-
-
-
 # master.menu.user-account ####################################################
 
 master.menu.any.user-account.list = Listado de Usuarios
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
-
-
-
+master.menu.user-account.inventor = Datos de inventor
+master.menu.user-account.become-inventor = Hazte inventor
+master.menu.user-account.patron = Datos de patrocinador
+master.menu.user-account.become-patron = Hazte patrocinador
