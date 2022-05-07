@@ -22,3 +22,5 @@ any.chirp.form.label.body= Cuerpo:
 any.chirp.form.label.email= Correo electrónico:
 
 any.chirp.form.button.create= Crear
+
+any.chirp.form.error.spam = El texto contiene demasiados términos spam

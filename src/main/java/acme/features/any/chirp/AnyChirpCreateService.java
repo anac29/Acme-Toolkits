@@ -3,9 +3,11 @@ package acme.features.any.chirp;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
 import acme.entities.chirp.Chirp;
+import acme.entities.configuration.SystemConfiguration;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -21,7 +23,6 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 	protected AnyChirpRepository repository;
 
 	// AbstractCreateService<Administrator, Shout> interface --------------
-
 
 	@Override
 	public boolean authorise(final Request<Chirp> request) {
@@ -60,6 +61,13 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 		assert entity != null;
 		assert errors != null;
 
+		if(!errors.hasErrors("body")) {
+			final SystemConfiguration sc = this.repository.findSystemConfiguration();
+			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+			final boolean isBodySpam = sd.isSpam(entity.getBody());
+			errors.state(request, !isBodySpam, "body", "any.chirp.form.error.spam");
+		}
+		
 	}
 
 	@Override
