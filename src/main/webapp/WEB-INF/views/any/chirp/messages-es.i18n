@@ -13,3 +13,12 @@ any.chirp.list.label.title = Título
 any.chirp.list.label.author = Autor
 any.chirp.list.label.body = Cuerpo
 any.chirp.list.label.email = Correo electrónico
+
+any.chirp.list.button.create= Crear Pío
+
+any.chirp.form.label.title= Título:
+any.chirp.form.label.author= Autor:
+any.chirp.form.label.body= Cuerpo:
+any.chirp.form.label.email= Correo electrónico:
+
+any.chirp.form.button.create= Crear
