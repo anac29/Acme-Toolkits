@@ -30,6 +30,9 @@ patron.patronage.form.label.inventor= Inventor
 patron.patronage.form.button.update= Actualizar
 patron.patronage.form.button.delete= Borrar
 patron.patronage.form.button.create= Crear
+patron.patronage.form.button.publish= Publicar
+
+
 
 patron.patronage.form.error.duplicated= ¡Este código ya existe!
 patron.patronage.form.error.too-close-start-date= La fecha de inicio debe emepzar al menos un mes después de la creación del patrocinio

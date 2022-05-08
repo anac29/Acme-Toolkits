@@ -6,7 +6,7 @@
 <acme:form>
 
 	<jstl:choose>
-		<jstl:when test="${command!='create'}">
+		<jstl:when test="${published==true}">
 			<acme:input-select code="patron.patronage.form.label.status" path="status">
 				<acme:input-option code="patron.patronage.form.label.proposed" value="PROPOSED" selected="${ status == 'PROPOSED' }"/>
 				<acme:input-option code="patron.patronage.form.label.accepted" value="ACCEPTED" selected="${ status == 'ACCEPTED' }"/>
@@ -50,9 +50,10 @@
 	</jstl:choose>
 	
 	<jstl:choose>
-		<jstl:when test="${acme:anyOf(command,'show, update, delete') && published == false}"> 
+		<jstl:when test="${acme:anyOf(command,'show, update, delete, publish') && published == false}"> 
 			<acme:submit code="patron.patronage.form.button.update" action="/patron/patronage/update"/>
 			<acme:submit code="patron.patronage.form.button.delete" action="/patron/patronage/delete"/>
+			<acme:submit code="patron.patronage.form.button.publish" action="/patron/patronage/publish"/>
 		</jstl:when>
 		<jstl:when test="${command=='create'}">
 			<acme:submit code="patron.patronage.form.button.create" action="/patron/patronage/create"/>

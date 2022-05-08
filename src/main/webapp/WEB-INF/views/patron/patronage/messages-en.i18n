@@ -28,6 +28,7 @@ patron.patronage.form.label.inventor= Inventor
 patron.patronage.form.button.update= Update
 patron.patronage.form.button.delete= Delete
 patron.patronage.form.button.create= Create
+patron.patronage.form.button.publish= Publish
 
 
 patron.patronage.form.error.duplicated= This code already exist!

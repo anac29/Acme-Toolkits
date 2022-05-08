@@ -1,11 +1,9 @@
 package acme.features.patron.patronage;
 
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
+import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.batch.BatchProperties.Job;
 import org.springframework.stereotype.Service;
 
 import acme.entities.patronage.Patronage;
@@ -13,7 +11,6 @@ import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractUpdateService;
-import acme.roles.Employer;
 import acme.roles.Patron;
 
 @Service
@@ -32,27 +29,25 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 		assert request != null;
 
 		boolean result;
-		int jobId;
-		Job job;
-		Employer employer;
+		int patronageId;
+		Patronage patronage;
 
-		jobId = request.getModel().getInteger("id");
-		job = this.repository.findOneJobById(jobId);
-		employer = job.getEmployer();
-		result = job.isDraftMode() && request.isPrincipal(employer);
+		patronageId = request.getModel().getInteger("id");
+		patronage = this.repository.findOnePatronageById(patronageId);
+		result = (patronage != null && !patronage.isPublished() && request.isPrincipal(patronage.getPatron()));
 
 		return result;
 	}
 
 	@Override
-	public Job findOne(final Request<Patronage> request) {
+	public Patronage findOne(final Request<Patronage> request) {
 		assert request != null;
-
-		Job result;
+		
+		Patronage result;
 		int id;
 
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneJobById(id);
+		result = this.repository.findOnePatronageById(id);
 
 		return result;
 	}
@@ -62,8 +57,10 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		entity.setInventor(this.repository.findInventorById(Integer.valueOf(request.getModel().getAttribute("inventorId").toString())).orElse(null));
 
-		request.bind(entity, errors, "reference", "title", "deadline", "salary", "score", "moreInfo", "description");
+
+		request.bind(entity, errors, "code", "legalStuff", "budget", "startMomentDate", "finalMomentDate","link");
 	}
 
 	@Override
@@ -71,47 +68,54 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		if (!errors.hasErrors("code")) {
+			Patronage existing;
 
-		if (!errors.hasErrors("deadline")) {
-			Calendar calendar;
-			Date minimumDeadline;
+			existing = this.repository.findOnePatronageByCode(entity.getCode());
+			if(existing!=null) {
+			errors.state(request, existing.getId()==entity.getId() , "code", "patron.patronage.form.error.duplicated");
+			}
+		}
+		
+		if(!errors.hasErrors("startMomentDate")) {
+			final Date minimumStartDate=DateUtils.addMonths(entity.getCreationMomentDate(), 1);
 
-			calendar = new GregorianCalendar();
-			calendar.add(Calendar.WEEK_OF_MONTH, 1);
-			minimumDeadline = calendar.getTime();
-			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "employer.job.form.error.too-close");
+			
+			errors.state(request, entity.getStartMomentDate().after(minimumStartDate), "startMomentDate", "patron.patronage.form.error.too-close-start-date");
+			
+		}
+		if(!errors.hasErrors("finalMomentDate")) {
+			final Date minimumFinishDate=DateUtils.addMonths(entity.getStartMomentDate(), 1);
+
+			errors.state(request, entity.getFinalMomentDate().after(minimumFinishDate), "finalMomentDate", "patron.patronage.form.error.one-month");
+			
+		}
+		
+		
+		if (!errors.hasErrors("budget")) {
+			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "patron.patronage.form.error.negative-budget");
 		}
 
-		if (!errors.hasErrors("reference")) {
-			Job existing;
-
-			existing = this.repository.findOneJobByReference(entity.getReference());
-			errors.state(request, existing == null || existing.getId() == entity.getId(), "reference", "employer.job.form.error.duplicated");
-		}
-
-		{
-			Double workLoad;
-
-			workLoad = this.repository.computeWorkLoadByJobId(entity.getId());
-			errors.state(request, workLoad != null && workLoad == 100.0, "*", "employer.job.form.error.bad-work-load");
-		}
 	}
 
 	@Override
-	public void unbind(final Request<Job> request, final Job entity, final Model model) {
+	public void unbind(final Request<Patronage> request, final Patronage entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "reference", "title", "deadline", "salary", "score", "moreInfo", "description", "draftMode");
+		request.unbind(entity, model, "code", "legalStuff", "budget", "startMomentDate", "finalMomentDate","link","published");
+		model.setAttribute("inventors", this.repository.findInventors());
+		model.setAttribute("inventId", entity.getInventor().getId());
 	}
 
 	@Override
-	public void update(final Request<Job> request, final Job entity) {
+	public void update(final Request<Patronage> request, final Patronage entity) {
 		assert request != null;
 		assert entity != null;
 
-		entity.setDraftMode(false);
+		entity.setPublished(true);
 		this.repository.save(entity);
 	}
 
