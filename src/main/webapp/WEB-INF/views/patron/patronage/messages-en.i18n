@@ -28,3 +28,9 @@ patron.patronage.form.label.inventor= Inventor
 patron.patronage.form.button.update= Update
 patron.patronage.form.button.delete= Delete
 patron.patronage.form.button.create= Create
+
+
+patron.patronage.form.error.duplicated= This code already exist!
+patron.patronage.form.error.too-close-start-date= The start date must start at least one month after patronage creation date
+patron.patronage.form.error.one-month= The final date must start at least one month after start date
+patron.patronage.form.error.negative-budget= The budget amount must be positive

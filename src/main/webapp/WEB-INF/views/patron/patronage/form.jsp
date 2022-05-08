@@ -19,7 +19,7 @@
 	<acme:input-money code="patron.patronage.form.label.budget" path="budget"/>
 	
 	<jstl:choose>
-		<jstl:when test="${command=='show'}">
+		<jstl:when test="${published==true}">
 	<acme:input-moment code="patron.patronage.form.label.creationMomentDate" path="creationMomentDate"/>
 		</jstl:when>
 	</jstl:choose>
@@ -30,6 +30,15 @@
 	<hr>
     <h3><acme:message code="patron.patronage.form.label.title"/></h3>
     <jstl:choose>
+    
+    	<jstl:when test="${acme:anyOf(command,'show, update, delete, create') && published==false}">
+	   		<acme:input-select code="patron.patronage.form.label.inventor" path="inventorId">
+	   			<jstl:forEach items="${inventors}" var="inventor">
+					<acme:input-option code="${inventor.getUserAccount().getUsername()}" value="${inventor.getId()}" selected="${ inventor.getId() == inventId }"/>
+				</jstl:forEach>
+			</acme:input-select>
+   		
+   		</jstl:when>
 		<jstl:when test="${command=='show'}">
     
 		    <acme:input-textbox code="patron.patronage.form.label.name" path="inventorName"/>
@@ -37,18 +46,11 @@
 		    <acme:input-email code="patron.patronage.form.label.email" path="inventorEmail"/>
     
    		</jstl:when>
-   		<jstl:when test="${acme:anyOf(command,'update, delete, create')}">
-   		<acme:input-select code="patron.patronage.form.label.inventor" path="inventorId">
-   			<jstl:forEach items="${inventors}" var="inventor">
-				<acme:input-option code="${inventor.getUserAccount().getUsername()}" value="${inventor.getId()}"/>
-			</jstl:forEach>
-			</acme:input-select>
    		
-   		</jstl:when>
 	</jstl:choose>
 	
 	<jstl:choose>
-		<jstl:when test="${acme:anyOf(command,'show, update, delete')}"> 
+		<jstl:when test="${acme:anyOf(command,'show, update, delete') && published == false}"> 
 			<acme:submit code="patron.patronage.form.button.update" action="/patron/patronage/update"/>
 			<acme:submit code="patron.patronage.form.button.delete" action="/patron/patronage/delete"/>
 		</jstl:when>
