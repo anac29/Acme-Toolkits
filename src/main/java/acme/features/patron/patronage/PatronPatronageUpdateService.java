@@ -41,7 +41,8 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 
 	@Override
 	public Patronage findOne(final Request<Patronage> request) {
-
+		assert request != null;
+		
 		Patronage result;
 		int id;
 
