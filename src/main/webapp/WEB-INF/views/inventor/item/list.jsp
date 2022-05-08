@@ -11,5 +11,13 @@
 	<acme:list-column code="inventor.item.list.label.retailPrice" path="retailPrice"/>
 	<acme:list-column code="inventor.item.list.label.link" path="link"/>
 	<acme:list-column code="inventor.item.list.label.published" path="published"/>
+
 	
 </acme:list>
+
+	
+	<jstl:choose>
+		<jstl:when test="${acme:anyOf(command,'list-tool')}">
+			<acme:button code="inventor.item.list.button.create.tool" action="/inventor/item/create-tool"/>
+		</jstl:when>
+	</jstl:choose>
