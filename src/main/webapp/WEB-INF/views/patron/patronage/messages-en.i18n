@@ -1,6 +1,7 @@
 patron.patronage.list.label.status = Status
 patron.patronage.list.label.code = Code
 patron.patronage.list.label.budget = Budget
+patron.patronage.list.label.publish= Publish
 patron.patronage.list.label.creationMomentDate = Creation Date
 patron.patronage.list.label.startMomentDate = Start Date
 patron.patronage.list.label.finalMomentDate = End Date
@@ -22,3 +23,8 @@ patron.patronage.form.label.title=Inventor's Profile
 patron.patronage.form.label.name=Name
 patron.patronage.form.label.surname=Surname
 patron.patronage.form.label.email=E-mail
+patron.patronage.form.label.inventor= Inventor
+
+patron.patronage.form.button.update= Update
+patron.patronage.form.button.delete= Delete
+patron.patronage.form.button.create= Create

@@ -1,6 +1,7 @@
 patron.patronage.list.label.status = Estado
 patron.patronage.list.label.code = Código
 patron.patronage.list.label.budget = Presupuesto
+patron.patronage.list.label.publish= Publicado
 patron.patronage.list.label.creationMomentDate = Fecha de creación
 patron.patronage.list.label.startMomentDate = Fecha de inicio
 patron.patronage.list.label.finalMomentDate = Fecha de finalización
@@ -24,3 +25,8 @@ patron.patronage.form.label.surname=Apellidos
 patron.patronage.form.label.email=Correo
 patron.patronage.form.button.create = Crear
 authenticated.consumer.consumer.form.button.update = Actualizar
+patron.patronage.form.label.inventor= Inventor
+
+patron.patronage.form.button.update= Actualizar
+patron.patronage.form.button.delete= Borrar
+patron.patronage.form.button.create= Crear
