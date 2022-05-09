@@ -4,8 +4,10 @@ import java.util.Date;
 
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.SystemConfiguration;
 import acme.entities.patronage.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -21,7 +23,7 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 	@Autowired
 	protected PatronPatronageRepository repository;
 
-	// AbstractUpdateService<Employer, Job> interface ---------------------------
+	// AbstractUpdateService<Patron, Patronage> -------------------------------------
 
 
 	@Override
@@ -96,6 +98,13 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 		if (!errors.hasErrors("budget")) {
 			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "patron.patronage.form.error.negative-budget");
 		}
+		
+		if(!errors.hasErrors("legalStuff")) {
+			final SystemConfiguration sc = this.repository.findSystemConfiguration();
+			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+			final boolean isLegalStuffSpam = sd.isSpam(entity.getLegalStuff());
+			errors.state(request, !isLegalStuffSpam, "legalStuff", "patron.patronage.form.error.spam");
+		}
 
 	}
 
@@ -114,9 +123,10 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 	public void update(final Request<Patronage> request, final Patronage entity) {
 		assert request != null;
 		assert entity != null;
-
 		entity.setPublished(true);
+
 		this.repository.save(entity);
+
 	}
 
 	

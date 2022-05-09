@@ -4,8 +4,10 @@ import java.util.Date;
 
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.SystemConfiguration;
 import acme.entities.patronage.Patronage;
 import acme.entities.patronage.PatronageStatus;
 import acme.framework.components.models.Model;
@@ -36,10 +38,18 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 	public Patronage instantiate(final Request<Patronage> request) {
 		assert request != null;
 
-		Patronage result;
+		final Patronage result;
+		Date initialD;
+		Date finalD;
+
+		initialD =DateUtils.addMonths( new Date(System.currentTimeMillis() - 1),1);
+		finalD= DateUtils.addMonths( initialD,1);
 
 
 		result = new Patronage();
+		result.setLegalStuff("");
+		result.setStartMomentDate(initialD);
+		result.setFinalMomentDate(finalD);
 		result.setPatron(this.repository.findPatronById(request.getPrincipal().getActiveRoleId()).orElse(null));
 
 
@@ -58,7 +68,6 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		entity.setStatus(PatronageStatus.PROPOSED);
 		entity.setPublished(false);
 		entity.setInventor(this.repository.findInventorById(Integer.valueOf(request.getModel().getAttribute("inventorId").toString())).orElse(null));
-		
 
 		request.bind(entity, errors, "code", "legalStuff", "budget", "startMomentDate", "finalMomentDate","link");
 	}
@@ -80,19 +89,26 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 			final Date minimumStartDate=DateUtils.addMonths(entity.getCreationMomentDate(), 1);
 
 			
-			errors.state(request, entity.getStartMomentDate().after(minimumStartDate), "startMomentDate", "patron.patronage.form.error.too-close-start-date");
+			errors.state(request,entity.getStartMomentDate().after(minimumStartDate), "startMomentDate", "patron.patronage.form.error.too-close-start-date");
 			
 		}
 		if(!errors.hasErrors("finalMomentDate")) {
 			final Date minimumFinishDate=DateUtils.addMonths(entity.getStartMomentDate(), 1);
 
-			errors.state(request, entity.getFinalMomentDate().after(minimumFinishDate), "finalMomentDate", "patron.patronage.form.error.one-month");
+			errors.state(request,entity.getFinalMomentDate().after(minimumFinishDate), "finalMomentDate", "patron.patronage.form.error.one-month");
 			
 		}
 		
 		
 		if (!errors.hasErrors("budget")) {
 			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "patron.patronage.form.error.negative-budget");
+		}
+		
+		if(!errors.hasErrors("legalStuff")) {
+			final SystemConfiguration sc = this.repository.findSystemConfiguration();
+			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+			final boolean isLegalStuffSpam = sd.isSpam(entity.getLegalStuff());
+			errors.state(request, !isLegalStuffSpam, "legalStuff", "patron.patronage.form.error.spam");
 		}
 
 	}

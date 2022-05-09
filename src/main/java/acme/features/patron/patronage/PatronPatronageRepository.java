@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.configuration.SystemConfiguration;
 import acme.entities.patronage.Patronage;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Inventor;
@@ -31,4 +32,7 @@ public interface PatronPatronageRepository extends AbstractRepository {
 	
     @Query("select patron from Patron patron WHERE patron.id=:id")
     Optional<Patron> findPatronById(int id);
+    
+	@Query("select sc from SystemConfiguration sc")
+	SystemConfiguration findSystemConfiguration();
 }
