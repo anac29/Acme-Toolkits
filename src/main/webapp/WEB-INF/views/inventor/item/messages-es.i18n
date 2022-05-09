@@ -5,6 +5,8 @@ inventor.item.list.label.description = Descripción
 inventor.item.list.label.retailPrice = Precio
 inventor.item.list.label.itemType = Tipo
 inventor.item.list.button.create.tool = Crear Herramienta
+inventor.item.list.button.create.component = Crear Componente
+
 inventor.item.list.label.published = Publicado
 
 

@@ -44,7 +44,6 @@ public class InventorToolCreateService implements AbstractCreateService<Inventor
 
 		
 		
-		
 
 		return result;
 	}

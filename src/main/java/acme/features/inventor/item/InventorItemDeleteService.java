@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.item.Item;
-import acme.entities.item.ItemType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -12,7 +11,7 @@ import acme.framework.services.AbstractDeleteService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorToolDeleteService implements AbstractDeleteService<Inventor, Item> {
+public class InventorItemDeleteService implements AbstractDeleteService<Inventor, Item> {
 	
 	// Internal state ---------------------------------------------------------
 
@@ -31,9 +30,9 @@ public class InventorToolDeleteService implements AbstractDeleteService<Inventor
 		Inventor inventor;
 
 		masterId = request.getModel().getInteger("id");
-		item = this.repository.findOneToolById(masterId);
+		item = this.repository.findOneById(masterId);
 		inventor = item.getInventor();
-		result = !item.isPublished() && request.isPrincipal(inventor);
+		result = (item!=null && !item.isPublished() && request.isPrincipal(inventor));
 
 		return result;
 	}
@@ -43,7 +42,6 @@ public class InventorToolDeleteService implements AbstractDeleteService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		entity.setItemType(ItemType.TOOL);
 		
 		
 
@@ -57,7 +55,6 @@ public class InventorToolDeleteService implements AbstractDeleteService<Inventor
 		assert entity != null;
 		assert model != null;
 
-		entity.setItemType(ItemType.TOOL);
 
 
 
@@ -72,7 +69,7 @@ public class InventorToolDeleteService implements AbstractDeleteService<Inventor
 		int id;
 
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneToolById(id);
+		result = this.repository.findOneById(id);
 		return result;
 	}
 

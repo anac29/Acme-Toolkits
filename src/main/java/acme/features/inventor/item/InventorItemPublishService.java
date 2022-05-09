@@ -12,14 +12,15 @@ import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorToolUpdateService implements AbstractUpdateService<Inventor, Item>{
-	
+public class InventorItemPublishService implements AbstractUpdateService<Inventor, Item> {
+
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected InventorItemRepository repository;
+	protected  InventorItemRepository repository;
 
-	// AbstractUpdateService<Inventor, Item> -------------------------------------
+	// AbstractUpdateService<Employer, Job> interface ---------------------------
+
 
 	@Override
 	public boolean authorise(final Request<Item> request) {
@@ -33,33 +34,9 @@ public class InventorToolUpdateService implements AbstractUpdateService<Inventor
 		masterId = request.getModel().getInteger("id");
 		item = this.repository.findOneById(masterId);
 		inventor = item.getInventor();
-		result =!item.isPublished() && request.isPrincipal(inventor);
+		result =  !item.isPublished() && request.isPrincipal(inventor);
 
 		return result;
-	}
-
-	@Override
-	public void bind(final Request<Item> request, final Item entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
-		entity.setItemType(ItemType.TOOL);
-		
-		
-
-		request.bind(entity, errors, "name", "code", "technology", "description", "retailPrice","link");		
-	}
-
-	@Override
-	public void unbind(final Request<Item> request, final Item entity, final Model model) {
-		assert request != null;
-		assert entity != null;
-		assert model != null;
-
-		entity.setItemType(ItemType.TOOL);
-
-
-		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice","link","published");		
 	}
 
 	@Override
@@ -76,35 +53,45 @@ public class InventorToolUpdateService implements AbstractUpdateService<Inventor
 	}
 
 	@Override
+	public void bind(final Request<Item> request, final Item entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+		request.bind(entity, errors, "name", "code", "technology", "description", "link");
+	}
+
+	@Override
 	public void validate(final Request<Item> request, final Item entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		if(!errors.hasErrors("code")) {
-			Item existing;
-			existing=this.repository.findOneById(entity.getId());
-			if(existing!=null) {
-				errors.state(request,existing.getId()==entity.getId() , "code", "inventor.item.form.error.duplicated-code");
 
-			}
-
-		}
-		
 		if (!errors.hasErrors("retailPrice")) {
 			errors.state(request, entity.getRetailPrice().getAmount() > 0, "retailPrice", "inventor.item.form.error.negative-salary");
 		}
+		
+	}
 
-	}		
-	
+	@Override
+	public void unbind(final Request<Item> request, final Item entity, final Model model) {
+		assert request != null;
+		assert entity != null;
+		assert model != null;
+
+		entity.setItemType(ItemType.TOOL);
+
+
+		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice","link","published");		
+	}
 
 	@Override
 	public void update(final Request<Item> request, final Item entity) {
 		assert request != null;
 		assert entity != null;
 
+		entity.setPublished(true);
 		this.repository.save(entity);
-		
 	}
 
 }

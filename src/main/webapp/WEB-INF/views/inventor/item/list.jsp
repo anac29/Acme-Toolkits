@@ -20,4 +20,7 @@
 		<jstl:when test="${acme:anyOf(command,'list-tool')}">
 			<acme:button code="inventor.item.list.button.create.tool" action="/inventor/item/create-tool"/>
 		</jstl:when>
+		<jstl:when test="${acme:anyOf(command,'list-component')}">
+			<acme:button code="inventor.item.list.button.create.component" action="/inventor/item/create-component"/>
+		</jstl:when>
 	</jstl:choose>

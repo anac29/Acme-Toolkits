@@ -8,46 +8,42 @@ import acme.entities.item.ItemType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
-import acme.framework.services.AbstractUpdateService;
+import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorToolPublishService implements AbstractUpdateService<Inventor, Item> {
+public class InventorComponentCreateService implements AbstractCreateService<Inventor, Item> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected  InventorItemRepository repository;
+	protected InventorItemRepository repository;
+	
 
-	// AbstractUpdateService<Employer, Job> interface ---------------------------
+	// AbstractCreateService<Inventor, Item> interface -------------------------
 
 
 	@Override
 	public boolean authorise(final Request<Item> request) {
 		assert request != null;
 
-		boolean result;
-		int masterId;
-		Item item;
-		Inventor inventor;
 
-		masterId = request.getModel().getInteger("id");
-		item = this.repository.findOneById(masterId);
-		inventor = item.getInventor();
-		result =  !item.isPublished() && request.isPrincipal(inventor);
 
-		return result;
+		return true;
 	}
 
 	@Override
-	public Item findOne(final Request<Item> request) {
+	public Item instantiate(final Request<Item> request) {
 		assert request != null;
 
 		Item result;
-		int id;
+	
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		result = new Item();
+		result.setInventor(this.repository.findInventorById(request.getPrincipal().getActiveRoleId()).orElse(null));
+		
+		
+		
 
 		return result;
 	}
@@ -57,8 +53,12 @@ public class InventorToolPublishService implements AbstractUpdateService<Invento
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		entity.setPublished(false);
+		entity.setItemType(ItemType.COMPONENT);
 
-		request.bind(entity, errors, "name", "code", "technology", "description", "link");
+		
+		
+		request.bind(entity, errors, "name", "code", "technology", "description", "retailPrice","link");
 	}
 
 	@Override
@@ -66,11 +66,17 @@ public class InventorToolPublishService implements AbstractUpdateService<Invento
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-
+		
+		final Item equalCode=this.repository.findOneByCode(entity.getCode()).orElse(null);
+		
+		if(!errors.hasErrors("code")) {
+			errors.state(request, equalCode==null, "code", "inventor.item.form.error.duplicated-code");
+		}
+		
 		if (!errors.hasErrors("retailPrice")) {
 			errors.state(request, entity.getRetailPrice().getAmount() > 0, "retailPrice", "inventor.item.form.error.negative-salary");
 		}
-		
+
 	}
 
 	@Override
@@ -78,19 +84,19 @@ public class InventorToolPublishService implements AbstractUpdateService<Invento
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
 
-		entity.setItemType(ItemType.TOOL);
+		request.unbind( entity,model,"name", "code", "technology", "description","retailPrice", "link","published");
 
-
-		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice","link","published");		
 	}
 
 	@Override
-	public void update(final Request<Item> request, final Item entity) {
+	public void create(final Request<Item> request, final Item entity) {
 		assert request != null;
 		assert entity != null;
 
-		entity.setPublished(true);
+		
+
 		this.repository.save(entity);
 	}
 
