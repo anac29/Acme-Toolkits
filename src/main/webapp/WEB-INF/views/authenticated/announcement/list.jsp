@@ -6,4 +6,4 @@
 <acme:list>
 	<acme:list-column code="authenticated.announcement.list.label.creationMoment" path="creationMoment" width="30%"/>
 	<acme:list-column code="authenticated.announcement.list.label.title" path="title" width="70%"/>
-</acme:list>	
+</acme:list>
