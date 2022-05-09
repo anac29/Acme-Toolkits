@@ -28,3 +28,5 @@ inventor.item.form.button.publish= Publicar
 
 inventor.item.form.error.negative-salary = El precio debe ser positivo
 inventor.item.form.error.duplicated-code= Este código ya existe para una herramienta
+item.inventor.form.error.spam= El texto contiene demasiados términos spam
+

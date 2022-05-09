@@ -1,8 +1,10 @@
 package acme.features.inventor.item;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.SystemConfiguration;
 import acme.entities.item.Item;
 import acme.entities.item.ItemType;
 import acme.framework.components.models.Model;
@@ -65,6 +67,25 @@ public class InventorToolCreateService implements AbstractCreateService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		  if(!errors.hasErrors("name")) {
+	            final SystemConfiguration sc = this.repository.findSystemConfiguration();
+	            final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+	            final boolean isNameSpam = sd.isSpam(entity.getName());
+	            errors.state(request, !isNameSpam, "name", "item.inventor.form.error.spam");
+	        }
+	      if(!errors.hasErrors("technology")) {
+	            final SystemConfiguration sc = this.repository.findSystemConfiguration();
+	            final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+	            final boolean isTechnologySpam = sd.isSpam(entity.getTechnology());
+	            errors.state(request, !isTechnologySpam, "technology", "item.inventor.form.error.spam");
+	        }
+	      if(!errors.hasErrors("description")) {
+	            final SystemConfiguration sc = this.repository.findSystemConfiguration();
+	            final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+	            final boolean isDescriptionSpam = sd.isSpam(entity.getDescription());
+	            errors.state(request, !isDescriptionSpam, "description", "item.inventor.form.error.spam");
+	        }
 		
 		final Item equalCode=this.repository.findOneByCode(entity.getCode()).orElse(null);
 		

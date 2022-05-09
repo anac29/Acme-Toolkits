@@ -29,5 +29,7 @@ inventor.item.form.button.publish= Publish
 
 
 inventor.item.form.error.negative-salary = The retail price must be positive
-inventor.item.form.error.duplicated-code= This code already exists in a tool.
+inventor.item.form.error.duplicated-code= This code already exists in a tool
+item.inventor.form.error.spam= The text contains too many spam terms
+
 
