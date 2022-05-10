@@ -24,3 +24,4 @@ any.chirp.form.label.email= Correo electrónico:
 any.chirp.form.button.create= Crear
 
 any.chirp.form.error.spam = El texto contiene demasiados términos spam
+any.chirp.form.label.confirmation= Porfavor, es necesario confirmar para crear el Pío

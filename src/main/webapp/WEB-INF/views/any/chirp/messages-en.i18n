@@ -23,5 +23,6 @@ any.chirp.form.label.email= Email:
 
 any.chirp.form.button.create = Create
 
-any.chirp.form.error.spam = The text contains too many spam terms 
+any.chirp.form.error.spam = The text contains too many spam terms
+any.chirp.form.label.confirmation= Please, confirm in order to create the Chirp
 

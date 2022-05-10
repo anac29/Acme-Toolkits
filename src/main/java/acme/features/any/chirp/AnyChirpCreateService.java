@@ -60,7 +60,26 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		boolean confirmation;
 
+		confirmation = request.getModel().getBoolean("confirmation");
+		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+
+		if(!errors.hasErrors("title")) {
+			final SystemConfiguration sc = this.repository.findSystemConfiguration();
+			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+			final boolean isBodySpam = sd.isSpam(entity.getBody());
+			errors.state(request, !isBodySpam, "title", "any.chirp.form.error.spam");
+		}
+		
+		if(!errors.hasErrors("author")) {
+			final SystemConfiguration sc = this.repository.findSystemConfiguration();
+			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+			final boolean isBodySpam = sd.isSpam(entity.getBody());
+			errors.state(request, !isBodySpam, "author", "any.chirp.form.error.spam");
+		}
+		
 		if(!errors.hasErrors("body")) {
 			final SystemConfiguration sc = this.repository.findSystemConfiguration();
 			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
@@ -77,6 +96,7 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 		assert model != null;
 
 		request.unbind(entity, model, "title", "author", "body", "email");
+		model.setAttribute("confirmation", false);
 	}
 
 	@Override
