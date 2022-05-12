@@ -45,5 +45,10 @@
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-22.1/target/classes</locationURI>
 		</link>
+		<link>
+			<name>spam-detector</name>
+			<type>2</type>
+			<locationURI>WORKSPACE_LOC/spam-detector/target/classes</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>
