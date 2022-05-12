@@ -18,3 +18,6 @@ inventor.patronage-report.form.label.creation-moment = Fecha de Creación:
 inventor.patronage-report.form.label.memorandum = Memorándum:
 inventor.patronage-report.form.label.link = Enlace:
 inventor.patronage-report.form.label.patronage.code = Código del Patrocinio:
+inventor.patronage-report.form.button.create = Crear
+
+inventor.patronage-report.form.label.confirmation = Por favor, es necesario confirmar para crear el Informe de Patronaje

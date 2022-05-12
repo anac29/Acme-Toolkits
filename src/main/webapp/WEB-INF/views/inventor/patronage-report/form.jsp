@@ -17,12 +17,26 @@
 
 <acme:form>
 	<acme:input-textbox code="inventor.patronage-report.form.label.automatic-sequence-number" path="automaticSequenceNumber"/>
-	<acme:input-moment code="inventor.patronage-report.form.label.creation-moment" path="creationMoment"/>
+	<%-- <acme:input-moment code="inventor.patronage-report.form.label.creation-moment" path="creationMoment"/>--%>
 	<acme:input-textarea code="inventor.patronage-report.form.label.memorandum" path="memorandum"/>
 	<acme:input-url code="inventor.patronage-report.form.label.link" path="link"/>
-	<acme:input-textbox code="inventor.patronage-report.form.label.patronage.code" path="patronage.code"/>	
 	
-	<acme:submit code="inventor.patronage-report.form.button.create" action="/inventor/patronage-report/create"/>			
+	<jstl:choose>
+    
+        <jstl:when test="${acme:anyOf(command,'show, update, delete, create, publish')}">
+               <acme:input-select code="inventor.patronage-report.form.label.patronage.code" path="patronageId">
+                   <jstl:forEach items="${patronages}" var="patronage">
+                    <acme:input-option code="${patronage.getCode()}" value="${patronage.getId()}" selected="${ patronage.getId() == patId }"/>
+                </jstl:forEach>
+            </acme:input-select>
+           
+           </jstl:when>
+</jstl:choose>
+
+
+<acme:input-checkbox code="inventor.patronage-report.form.label.confirmation" path="confirmation"/>
+<acme:submit code="inventor.patronage-report.form.button.create" action="/inventor/patronage-report/create"/>			
+	
 	
 </acme:form>
 

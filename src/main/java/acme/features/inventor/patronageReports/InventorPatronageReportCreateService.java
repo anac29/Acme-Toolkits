@@ -38,12 +38,13 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		PatronageReport result;
 
 		result = new PatronageReport();
-
+		
 		return result;
 	}
 
 	@Override
 	public void bind(final Request<PatronageReport> request, final PatronageReport entity, final Errors errors) {
+		
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -51,8 +52,10 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		Date moment;
 
 		moment = new Date(System.currentTimeMillis() - 1);
-		request.bind(entity, errors, "title", "author", "body", "email");
+		request.bind(entity, errors, "automaticSequenceNumber", "memorandum", "link");
 		entity.setCreationMoment(moment);
+		
+		entity.setPatronage(this.repository.findOnePatronageById(Integer.valueOf(request.getModel().getAttribute("patronageId").toString())));
 	}
 
 	@Override
@@ -61,12 +64,10 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		assert entity != null;
 		assert errors != null;
 
-//		if (!errors.hasErrors("body")) {
-//			final SystemConfiguration sc = this.repository.findSystemConfiguration();
-//			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-//			final boolean isBodySpam = sd.isSpam(entity.getBody());
-//			errors.state(request, !isBodySpam, "body", "any.chirp.form.error.spam");
-//		}
+		boolean confirmation;
+
+		confirmation = request.getModel().getBoolean("confirmation");
+		errors.state(request, confirmation, "confirmation", "inventor.patronage-report.form.label.confirmation");
 
 	}
 
@@ -76,7 +77,10 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "automaticSequenceNumber", "creationMoment", "memorandum", "link", "patronage.code");
+		
+		request.unbind(entity, model, "automaticSequenceNumber", "memorandum", "link");
+		model.setAttribute("patronages", this.repository.findAllPatronages());
+		model.setAttribute("confirmation", false);
 	}
 
 	@Override

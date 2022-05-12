@@ -20,8 +20,10 @@
 	<acme:list-column code="inventor.patronage-report.list.label.creation-moment" path="creationMoment" width="20%"/>
 	<acme:list-column code="inventor.patronage-report.list.label.memorandum" path="memorandum" width="20%"/>
 		
-	<acme:button code="inventor.patronage-report.list.button.create" action="/inventor/patronage-report/create"/>
+	
 </acme:list>
+
+<acme:button code="inventor.patronage-report.list.button.create" action="/inventor/patronage-report/create"/>
 
 
 
