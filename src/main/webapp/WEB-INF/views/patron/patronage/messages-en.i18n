@@ -1,6 +1,7 @@
 patron.patronage.list.label.status = Status
 patron.patronage.list.label.code = Code
 patron.patronage.list.label.budget = Budget
+patron.patronage.list.label.publish= Publish
 patron.patronage.list.label.creationMomentDate = Creation Date
 patron.patronage.list.label.startMomentDate = Start Date
 patron.patronage.list.label.finalMomentDate = End Date
@@ -22,3 +23,16 @@ patron.patronage.form.label.title=Inventor's Profile
 patron.patronage.form.label.name=Name
 patron.patronage.form.label.surname=Surname
 patron.patronage.form.label.email=E-mail
+patron.patronage.form.label.inventor= Inventor
+
+patron.patronage.form.button.update= Update
+patron.patronage.form.button.delete= Delete
+patron.patronage.form.button.create= Create
+patron.patronage.form.button.publish= Publish
+
+
+patron.patronage.form.error.duplicated= This code already exist
+patron.patronage.form.error.too-close-start-date= The start date must start at least one month after patronage creation date
+patron.patronage.form.error.one-month= The final date must be established at least one month after start date
+patron.patronage.form.error.negative-budget= The budget amount must be positive
+patron.patronage.form.error.spam= The text contains too many spam terms

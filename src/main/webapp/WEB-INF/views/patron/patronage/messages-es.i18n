@@ -1,6 +1,7 @@
 patron.patronage.list.label.status = Estado
 patron.patronage.list.label.code = Código
 patron.patronage.list.label.budget = Presupuesto
+patron.patronage.list.label.publish= Publicado
 patron.patronage.list.label.creationMomentDate = Fecha de creación
 patron.patronage.list.label.startMomentDate = Fecha de inicio
 patron.patronage.list.label.finalMomentDate = Fecha de finalización
@@ -24,3 +25,17 @@ patron.patronage.form.label.surname=Apellidos
 patron.patronage.form.label.email=Correo
 patron.patronage.form.button.create = Crear
 authenticated.consumer.consumer.form.button.update = Actualizar
+patron.patronage.form.label.inventor= Inventor
+
+patron.patronage.form.button.update= Actualizar
+patron.patronage.form.button.delete= Borrar
+patron.patronage.form.button.create= Crear
+patron.patronage.form.button.publish= Publicar
+
+
+
+patron.patronage.form.error.duplicated= Este código ya existe
+patron.patronage.form.error.too-close-start-date= La fecha de inicio debe empezar al menos un mes después de la creación del patrocinio
+patron.patronage.form.error.one-month= La fecha de finalización debe establecerse al menos un mes después de la fecha de inicio
+patron.patronage.form.error.negative-budget= El presupuesto debe ser positivo
+patron.patronage.form.error.spam= El texto contiene demasiados términos spam

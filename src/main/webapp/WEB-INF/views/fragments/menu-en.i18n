@@ -29,8 +29,6 @@ master.menu.anonymous.anaconmar-link = 47258017D: Conde Marrón, Ana
 master.menu.anonymous.enrmunper-link = 49826048K: Muñoz Pérez, Enrique
 master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
 
-
-
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Authenticated
@@ -41,8 +39,6 @@ master.menu.authenticated.configuration = System Configuration
 master.menu.authenticated.toolkit.list = List Toolkits
 master.menu.authenticated.item.list-tool = List Tools
 master.menu.authenticated.item.list-component = List Component
-
-
 
 # master.menu.administrator ###################################################
 
@@ -61,7 +57,6 @@ master.menu.patron.patronages =List Patronages
 master.menu.patron.patronage-reports = List Patronage Reports
 master.menu.patron.dashboard = Dashboard
 
-
 # master.menu.inventor ##################################################
 
 master.menu.inventor = Inventor
@@ -71,20 +66,12 @@ master.menu.inventor.item.list-component = List Components
 master.menu.inventor.item.list-tool = List Tools 
 master.menu.inventor.toolkit=List Toolkits
 
-
-
-
 # master.menu.user-account ####################################################
 
 master.menu.any.user-account.list = List User Account
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
-
-
-
-
-
+master.menu.user-account.inventor = Inventor data
+master.menu.user-account.become-inventor = Become an inventor
+master.menu.user-account.patron = Patron data
+master.menu.user-account.become-patron = Become a patron
