@@ -95,7 +95,17 @@ public class InventorComponentCreateService implements AbstractCreateService<Inv
 		}
 		
 		if (!errors.hasErrors("retailPrice")) {
+			
+			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
+			Boolean acceptedCurrency=false;
+			for(int i=0;i<currencies.length;i++) {
+				if(entity.getRetailPrice().getCurrency().equals(currencies[i].trim())) {
+					acceptedCurrency=true;
+				}
+			}
 			errors.state(request, entity.getRetailPrice().getAmount() > 0, "retailPrice", "inventor.item.form.error.negative-salary");
+			errors.state(request, acceptedCurrency, "retailPrice", "inventor.item.form.error.non-accepted-currency");
+
 		}
 
 	}

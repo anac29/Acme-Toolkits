@@ -43,9 +43,10 @@ public interface InventorItemRepository extends AbstractRepository{
 	@Query("select item from Item item where item.code=:code")
 	Optional<Item> findOneByCode(String code);
 	
-	  @Query("select sc from SystemConfiguration sc")
-	  SystemConfiguration findSystemConfiguration();
-	
+	 @Query("select sc from SystemConfiguration sc")
+	 SystemConfiguration findSystemConfiguration();
+	 
+	 
 
 	
 	
