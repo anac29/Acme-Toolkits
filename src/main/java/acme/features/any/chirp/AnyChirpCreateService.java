@@ -64,7 +64,7 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 		boolean confirmation;
 
 		confirmation = request.getModel().getBoolean("confirmation");
-		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
+		errors.state(request, confirmation, "confirmation", "any.chirp.form.label.confirmation");
 
 		if(!errors.hasErrors("title")) {
 			final SystemConfiguration sc = this.repository.findSystemConfiguration();
