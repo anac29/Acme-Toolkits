@@ -15,5 +15,5 @@ administrator.configuration.form.label.default-currency = Default Currency:
 administrator.configuration.form.label.weak-threshold = Weak Threshold:
 administrator.configuration.form.label.strong-threshold= Strong Threshold:
 
- 
+administrator.configuration.form.button.update = Update
 
