@@ -36,3 +36,4 @@ patron.patronage.form.error.too-close-start-date= The start date must start at l
 patron.patronage.form.error.one-month= The final date must be established at least one month after start date
 patron.patronage.form.error.negative-budget= The budget amount must be positive
 patron.patronage.form.error.spam= The text contains too many spam terms
+patron.patronage.form.error.non-accepted-currency= This is not an accepted currency
