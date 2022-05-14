@@ -4,8 +4,7 @@ inventor.item.list.label.technology = Tecnología
 inventor.item.list.label.description = Descripción
 inventor.item.list.label.retailPrice = Precio
 inventor.item.list.label.itemType = Tipo
-inventor.item.list.button.create.tool = Crear Herramienta
-inventor.item.list.button.create.component = Crear Componente
+inventor.item.list.button.create = Crear
 
 inventor.item.list.label.published = Publicado
 
@@ -23,10 +22,12 @@ inventor.item.form.label.link = Link
 inventor.item.form.button.inventor = Inventor
 inventor.item.form.button.create = Crear
 inventor.item.form.button.update = Actualizar
+inventor.item.form.button.delete = Eliminar
+
 inventor.item.form.button.publish= Publicar
 
 
 inventor.item.form.error.negative-salary = El precio debe ser positivo
-inventor.item.form.error.duplicated-code= Este código ya existe para una herramienta
+inventor.item.form.error.duplicated-code= Este código ya existe para un ítem
 item.inventor.form.error.spam= El texto contiene demasiados términos spam
 inventor.item.form.error.non-accepted-currency= Esta unidad monetaria no está aceptada

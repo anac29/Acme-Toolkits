@@ -5,8 +5,7 @@ inventor.item.list.label.description = Description
 inventor.item.list.label.retailPrice = Retail Price
 inventor.item.list.label.itemType = Item Type
 inventor.item.list.label.link = Link
-inventor.item.list.button.create.tool = Create Tool
-inventor.item.list.button.create.component = Create Component
+inventor.item.list.button.create= Create
 
 inventor.item.list.label.published = Published
 
@@ -29,7 +28,7 @@ inventor.item.form.button.publish= Publish
 
 
 inventor.item.form.error.negative-salary = The retail price must be positive
-inventor.item.form.error.duplicated-code= This code already exists in a tool
+inventor.item.form.error.duplicated-code= This code already exists in an item
 item.inventor.form.error.spam= The text contains too many spam terms
 inventor.item.form.error.non-accepted-currency= This is not an accepted currency
 
