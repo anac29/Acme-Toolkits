@@ -16,3 +16,5 @@ administrator.configuration.form.label.weak-threshold = Umbral Debil:
 administrator.configuration.form.label.strong-threshold= Umbral Fuerte:
 
 administrator.configuration.form.button.update = Actualizar
+
+administrator.configuration.form.error.non-accepted-currency= Esta unidad monetaria no está aceptada

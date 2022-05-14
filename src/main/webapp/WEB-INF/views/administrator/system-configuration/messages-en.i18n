@@ -17,3 +17,4 @@ administrator.configuration.form.label.strong-threshold= Strong Threshold:
 
 administrator.configuration.form.button.update = Update
 
+administrator.configuration.form.error.non-accepted-currency= This is not an accepted currency
