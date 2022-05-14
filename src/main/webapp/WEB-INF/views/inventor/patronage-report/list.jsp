@@ -23,7 +23,7 @@
 	
 </acme:list>
 
-<acme:button code="inventor.patronage-report.list.button.create" action="/inventor/patronage-report/create"/>
+
 
 
 

@@ -29,6 +29,9 @@ public interface InventorPatronageReportRepository extends AbstractRepository {
 	@Query("SELECT p FROM Patronage p WHERE p.published = 1 and p.inventor.id = :id")
 	Collection<Patronage> findAcceptedPatronagesByInventorId(int id);
 	
+	@Query("SELECT max(pr.serialNumber) FROM PatronageReport pr WHERE pr.patronage.id = :patronageid")
+	Integer findMaximumSerialNumberByPatronage(int patronageid);
+	
 	@Query("select inventor from Inventor inventor WHERE inventor.id=:id")
     Inventor findInventorById(int id);
 }

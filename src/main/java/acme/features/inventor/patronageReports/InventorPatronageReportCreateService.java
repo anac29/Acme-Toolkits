@@ -38,13 +38,26 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		PatronageReport result;
 
 		result = new PatronageReport();
+
+		result.setPatronage(this.repository.findOnePatronageById(request.getModel().getInteger("masterId")));
+
+		Integer serialNumber = this.repository.findMaximumSerialNumberByPatronage(request.getModel().getInteger("masterId"));
+
+		if (serialNumber != null) {
+			serialNumber = serialNumber + 1;
+
+		} else {
+			serialNumber = 1;
+		}
+		result.setSerialNumber(serialNumber);
+		result.setAutomaticSequenceNumber(this.repository.findOnePatronageById(request.getModel().getInteger("masterId")).getCode() + ":" + String.format("%04d", serialNumber));  
 		
 		return result;
 	}
 
 	@Override
 	public void bind(final Request<PatronageReport> request, final PatronageReport entity, final Errors errors) {
-		
+
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -52,10 +65,11 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		Date moment;
 
 		moment = new Date(System.currentTimeMillis() - 1);
-		request.bind(entity, errors, "automaticSequenceNumber", "memorandum", "link");
+
 		entity.setCreationMoment(moment);
-		
-		entity.setPatronage(this.repository.findOnePatronageById(Integer.valueOf(request.getModel().getAttribute("patronageId").toString())));
+
+		entity.setPatronage(this.repository.findOnePatronageById(Integer.valueOf(request.getModel().getAttribute("masterId").toString())));
+		request.bind(entity, errors, "memorandum", "link");
 	}
 
 	@Override
@@ -76,12 +90,13 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		final Inventor inventor = this.repository.findInventorById(request.getPrincipal().getActiveRoleId());
-		
-		request.unbind(entity, model, "automaticSequenceNumber", "memorandum", "link");
-		model.setAttribute("patronages", this.repository.findAcceptedPatronagesByInventorId(inventor.getId()));
+
+		request.unbind(entity, model, "memorandum", "link");
+
+		model.setAttribute("automaticSequenceNumber", entity.getAutomaticSequenceNumber());
+		model.setAttribute("patronageCode", this.repository.findOnePatronageById(request.getModel().getInteger("masterId")).getCode());
 		model.setAttribute("confirmation", false);
+		model.setAttribute("patronageId", request.getModel().getInteger("masterId").toString());
 	}
 
 	@Override

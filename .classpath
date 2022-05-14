@@ -46,6 +46,5 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/jaime/Desktop/Universidad/3ºAÑO/DP2/Workspace-22.0/spam-detector-0.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
