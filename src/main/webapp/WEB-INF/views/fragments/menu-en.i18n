@@ -59,9 +59,12 @@ master.menu.patron.dashboard = Dashboard
 
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report =List Patronage Reports
-master.menu.inventor.patronage =List Patronages 
+
 master.menu.inventor.item = List Items
 master.menu.inventor.toolkit = List Toolkits
+master.menu.inventor.patronage.accepted =List Accepted Patronages 
+master.menu.inventor.patronage.pending =List Pending Patronages
+
 
 # master.menu.user-account ####################################################
 
