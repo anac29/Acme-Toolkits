@@ -13,11 +13,11 @@ public interface AnyItemRepository extends AbstractRepository {
 
 	@Query("select i from Item i")
 	Collection<Item> findMany();
-	@Query("select i from Item i WHERE i.itemType = 0 and i.published= 1")
-	Collection<Item> findManyToolsPublished();
 	
-	@Query("select i from Item i WHERE i.itemType = 1 and i.published= 1 ")
-	Collection<Item> findManyComponentsPublished();
+	@Query("select i from Item i where i.published= 1")
+	Collection<Item> findManyPublished();
+	
+
 	
 	@Query("select i from Item i where i.id = :id")
 	Item findOneItemById(int id);

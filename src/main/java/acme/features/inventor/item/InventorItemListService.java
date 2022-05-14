@@ -12,7 +12,7 @@ import acme.framework.services.AbstractListService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorToolListService implements AbstractListService<Inventor, Item>{
+public class InventorItemListService implements AbstractListService<Inventor, Item>{
 
 	@Autowired
 	protected InventorItemRepository repository;
@@ -28,7 +28,7 @@ public class InventorToolListService implements AbstractListService<Inventor, It
 		assert request != null;
 		final Integer myId = request.getPrincipal().getActiveRoleId();
 		Collection<Item> result;
-		result = this.repository.findMyTools(myId);
+		result = this.repository.findMyItems(myId);
 		return result;
 	}
 
@@ -40,4 +40,5 @@ public class InventorToolListService implements AbstractListService<Inventor, It
 		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "itemType", "link", "published");
 		
 	}
+
 }

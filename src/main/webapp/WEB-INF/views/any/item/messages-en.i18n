@@ -20,9 +20,10 @@ any.item.list.label.name = Name
 any.item.list.label.code = Code
 any.item.list.label.technology = Technology
 any.item.list.label.description = Description
-any.item.list.label.retail-price = Retail Price
+any.item.list.label.retailPrice = Retail Price
+any.item.list.label.itemType = Item Type
 any.item.list.label.link = Link
-any.item.list.label.inventor = Inventor
+any.item.list.label.published = Published
 
 any.item.form.label.name = Name
 any.item.form.label.code = Code
