@@ -15,7 +15,10 @@ public class InventorPatronageController extends AbstractController<Inventor, Pa
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected InventorPatronageListService		listService;
+	protected InventorPatronageListAcceptedService		listAcceptedService;
+	
+	@Autowired
+	protected InventorPatronageListPendingService		listPendingService;
 
 	@Autowired
 	protected InventorPatronageShowService		showService;
@@ -24,7 +27,8 @@ public class InventorPatronageController extends AbstractController<Inventor, Pa
 
 	@PostConstruct
 	protected void initialise() {
-		super.addCommand("list", this.listService);
+		super.addCommand("list-accepted","list", this.listAcceptedService);
+		super.addCommand("list-pending","list", this.listPendingService);
 		super.addCommand("show", this.showService);
 	}
 	
