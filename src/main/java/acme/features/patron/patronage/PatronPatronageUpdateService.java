@@ -21,7 +21,7 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 	@Autowired
 	protected PatronPatronageRepository repository;
 
-	// AbstractUpdateService<Employer, Duty> -------------------------------------
+	// AbstractUpdateService<Patron, Patronage> -------------------------------------
 
 
 	@Override
@@ -94,8 +94,18 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		
 		
 		if (!errors.hasErrors("budget")) {
+			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
+            Boolean acceptedCurrency=false;
+            for(int i=0;i<currencies.length;i++) {
+                if(entity.getBudget().getCurrency().equals(currencies[i].trim())) {
+                    acceptedCurrency=true;
+                }
+            }
+			
 			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "patron.patronage.form.error.negative-budget");
+			errors.state(request, acceptedCurrency, "budget", "patron.patronage.form.error.non-accepted-currency");
 		}
+		
 
 	}
 

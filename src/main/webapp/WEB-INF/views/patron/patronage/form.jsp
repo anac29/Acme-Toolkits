@@ -31,7 +31,7 @@
     <h3><acme:message code="patron.patronage.form.label.title"/></h3>
     <jstl:choose>
     
-    	<jstl:when test="${acme:anyOf(command,'show, update, delete, create') && published==false}">
+    	<jstl:when test="${acme:anyOf(command,'show, update, delete, create, publish') && published==false}">
 	   		<acme:input-select code="patron.patronage.form.label.inventor" path="inventorId">
 	   			<jstl:forEach items="${inventors}" var="inventor">
 					<acme:input-option code="${inventor.getUserAccount().getUsername()}" value="${inventor.getId()}" selected="${ inventor.getId() == inventId }"/>

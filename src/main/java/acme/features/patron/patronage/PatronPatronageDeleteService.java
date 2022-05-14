@@ -18,7 +18,7 @@ public class PatronPatronageDeleteService implements AbstractDeleteService<Patro
 	@Autowired
 	protected PatronPatronageRepository repository;
 
-	// AbstractDeleteService<Employer, Duty> interface -------------------------
+	// AbstractDeleteService<Patron, Patronage> -------------------------------------
 
 
 	@Override

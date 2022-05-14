@@ -42,8 +42,7 @@ public class Patronage extends AbstractEntity {
 	protected String code;
 
 	@Length(min = 1, max = 255)
-	@NotBlank()
-	@NotNull
+	@NotBlank
 	protected String legalStuff;
 
 	@NotNull
@@ -51,12 +50,15 @@ public class Patronage extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
+	@NotNull
 	protected Date creationMomentDate;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
 	protected Date startMomentDate;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
 	protected Date finalMomentDate;
 
 	@URL
