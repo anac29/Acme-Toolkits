@@ -54,9 +54,9 @@ public class AnyToolkitListService implements AbstractListService<Any, Toolkit> 
 		int counter=0;
 		for(final Item item: items) {
 			if(counter==items.size()-1) {
-				payload+= item.getCode()+";"+item.getName();
+				payload+= item.getCode()+"; "+item.getName();
 			}else {
-				payload+= item.getCode()+";"+item.getName()+";";
+				payload+= item.getCode()+"; "+item.getName()+";";
 			}
 			counter ++;
 
