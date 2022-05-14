@@ -64,15 +64,11 @@ public class AdministratorConfigurationUpdateService implements AbstractUpdateSe
 		assert errors != null;
 		
 		if(!errors.hasErrors("defaultCurrency")) {
-			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
-            Boolean defaultCurrency=false;
-            for(int i=0;i<currencies.length;i++) {
-                if(entity.getDefaultCurrency().equals(currencies[i].trim())) {
-                    defaultCurrency=true;
-                }
-            }
+			final String acceptedCurrencies=entity.getAcceptedCurrencies();
+			final String defaultCurrency="(.*)"+entity.getDefaultCurrency()+"(.*)";
+            final boolean dc=acceptedCurrencies.matches(defaultCurrency);            
 			
-			errors.state(request, defaultCurrency, "defaultCurrency", "administrator.configuration.form.error.non-accepted-currency");
+			errors.state(request, dc, "defaultCurrency", "administrator.configuration.form.error.non-accepted-currency");
 		}
 		
 	}
