@@ -62,7 +62,8 @@ master.menu.patron.dashboard = Panel
 
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Listado de Informe de Patrocinios
-master.menu.inventor.patronage = Listado de Patrocinios
+master.menu.inventor.patronage.accepted = Listado de Patrocinios Aceptados
+master.menu.inventor.patronage.pending = Listado de Patrocinios Pendientes
 master.menu.inventor.item.list-component = Listado de Componentes
 master.menu.inventor.item.list-tool = Listado de Herramientas
 master.menu.inventor.toolkit= Listado de Kits de Herramientas

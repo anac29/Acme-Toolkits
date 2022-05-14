@@ -69,7 +69,8 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
-			<acme:menu-suboption code="master.menu.inventor.patronage" action="/inventor/patronage/list"/>
+			<acme:menu-suboption code="master.menu.inventor.patronage.accepted" action="/inventor/patronage/list-accepted"/>
+						<acme:menu-suboption code="master.menu.inventor.patronage.pending" action="/inventor/patronage/list-pending"/>
 			<acme:menu-suboption code="master.menu.inventor.patronage-report" action="/inventor/patronage-report/list"/>
 			<acme:menu-separator/>
       		<acme:menu-suboption code="master.menu.inventor.item.list-tool" action="/inventor/item/list-tool"/>
