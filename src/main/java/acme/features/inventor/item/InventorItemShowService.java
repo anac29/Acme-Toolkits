@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.item.Item;
+import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
 
@@ -14,6 +16,9 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 
 	@Autowired
 	protected InventorItemRepository repository;
+	
+	@Autowired
+	protected AuthenticatedMoneyExchangePerformService moneyService;
 	
 	@Override
 	public boolean authorise(final Request<Item> request) {
@@ -45,6 +50,14 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		
+		 final String defaultCurrency= this.repository.defaultCurrency();
+	        final Double defaultPrice= this.moneyService.computeMoneyExchange(entity.getRetailPrice(),defaultCurrency).getTarget().getAmount();
+	        final Money retailPriceDefault= new Money();
+	        retailPriceDefault.setAmount(defaultPrice);
+	        retailPriceDefault.setCurrency(defaultCurrency);
+	        
+	        model.setAttribute("retailPriceDefault", retailPriceDefault);
 
 		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "itemType", "link", "published");
 	}

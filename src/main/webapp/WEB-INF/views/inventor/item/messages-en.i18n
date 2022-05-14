@@ -25,6 +25,7 @@ inventor.item.form.button.create = Create
 inventor.item.form.button.delete = Delete
 inventor.item.form.button.update = Update
 inventor.item.form.button.publish= Publish
+patron.patronage.form.label.budget.default= Retail Price in default currency
 
 
 inventor.item.form.error.negative-salary = The retail price must be positive
