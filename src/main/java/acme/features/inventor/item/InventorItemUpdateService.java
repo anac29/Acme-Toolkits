@@ -46,8 +46,7 @@ public class InventorItemUpdateService implements AbstractUpdateService<Inventor
 		assert errors != null;
 		
 		
-		
-
+	
 		request.bind(entity, errors, "name", "code", "technology", "description", "retailPrice","link");		
 	}
 
@@ -57,7 +56,7 @@ public class InventorItemUpdateService implements AbstractUpdateService<Inventor
 		assert entity != null;
 		assert model != null;
 
-
+		model.setAttribute("acceptedCurrency", this.acceptedCurrencyChecker(entity));
 
 		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice","link","published");		
 	}
@@ -112,19 +111,20 @@ public class InventorItemUpdateService implements AbstractUpdateService<Inventor
 		
 		if (!errors.hasErrors("retailPrice")) {
 			
-			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
-			Boolean acceptedCurrency=false;
-			for(int i=0;i<currencies.length;i++) {
-				if(entity.getRetailPrice().getCurrency().equals(currencies[i].trim())) {
-					acceptedCurrency=true;
-				}
-			}
-			errors.state(request, entity.getRetailPrice().getAmount() > 0, "retailPrice", "inventor.item.form.error.negative-salary");
-			errors.state(request, acceptedCurrency, "retailPrice", "inventor.item.form.error.non-accepted-currency");
+			errors.state(request, entity.getRetailPrice().getAmount() > 0 , "retailPrice", "inventor.item.form.error.negative-salary");
+			errors.state(request, this.acceptedCurrencyChecker(entity), "retailPrice", "inventor.item.form.error.non-accepted-currency");
 
 		}
 
-	}		
+	}
+	
+	public Boolean acceptedCurrencyChecker(final Item entity) {
+		
+		return this.repository.findSystemConfiguration().getAcceptedCurrencies()
+			.matches("(.*)"+entity.getRetailPrice().getCurrency()+"(.*)");
+		
+		
+	}
 	
 
 	@Override

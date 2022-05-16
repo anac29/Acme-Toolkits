@@ -10,6 +10,12 @@
 	<acme:input-textbox code="inventor.item.form.label.technology" path="technology"/>
 	<acme:input-textbox code="inventor.item.form.label.description" path="description"/>
 	<acme:input-money code="inventor.item.form.label.retailPrice" path="retailPrice"/>
+	 <jstl:choose>
+        <jstl:when test="${acme:anyOf(command,'show, update, delete, publish') && acceptedCurrency && retailPriceDefault.getCurrency()!=retailPrice.getCurrency()}">
+            <acme:input-money code="patron.patronage.form.label.budget.default" path="retailPriceDefault" readonly="true"/>
+        </jstl:when>
+    </jstl:choose>
+	
 	<jstl:choose>
 	<jstl:when test="${acme:anyOf(command,'create') || published}">
 	

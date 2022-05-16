@@ -95,13 +95,8 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		
 		
 		if (!errors.hasErrors("budget")) {
-			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
-            Boolean acceptedCurrency=false;
-            for(int i=0;i<currencies.length;i++) {
-                if(entity.getBudget().getCurrency().equals(currencies[i].trim())) {
-                    acceptedCurrency=true;
-                }
-            }
+			final Boolean acceptedCurrency=this.repository.findSystemConfiguration().getAcceptedCurrencies()
+				.matches("(.*)"+entity.getBudget().getCurrency()+"(.*)");
 			
 			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "patron.patronage.form.error.negative-budget");
 			errors.state(request, acceptedCurrency, "budget", "patron.patronage.form.error.non-accepted-currency");

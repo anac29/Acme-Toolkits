@@ -99,13 +99,9 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 		
 		if (!errors.hasErrors("retailPrice")) {
 			
-			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
-			Boolean acceptedCurrency=false;
-			for(int i=0;i<currencies.length;i++) {
-				if(entity.getRetailPrice().getCurrency().equals(currencies[i].trim())) {
-					acceptedCurrency=true;
-				}
-			}
+			final Boolean acceptedCurrency= this.repository.findSystemConfiguration().getAcceptedCurrencies()
+				.matches("(.*)"+entity.getRetailPrice().getCurrency()+"(.*)");
+			
 			
 			
 			errors.state(request, entity.getRetailPrice().getAmount() > 0 , "retailPrice", "inventor.item.form.error.negative-salary");
