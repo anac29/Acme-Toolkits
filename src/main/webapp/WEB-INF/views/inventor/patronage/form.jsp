@@ -34,4 +34,14 @@
     <acme:input-textbox code="inventor.patronage.form.label.name" path="patronName"/>
     <acme:input-textbox code="inventor.patronage.form.label.surname" path="patronSurname"/>
     <acme:input-email code="inventor.patronage.form.label.email" path="patronEmail"/>
+    
+	
+	<jstl:choose>
+    <jstl:when test="${ status=='ACCEPTED' }">
+ 		    <acme:button code="inventor.patronage.list.button.create" action="/inventor/patronage-report/create?masterId=${ patronageId }"/>
+    </jstl:when>
+
+    </jstl:choose>
 </acme:form>
+
+
