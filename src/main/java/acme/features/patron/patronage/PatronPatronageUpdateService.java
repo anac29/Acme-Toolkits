@@ -20,6 +20,7 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 
 	@Autowired
 	protected PatronPatronageRepository repository;
+	
 
 	// AbstractUpdateService<Patron, Patronage> -------------------------------------
 
