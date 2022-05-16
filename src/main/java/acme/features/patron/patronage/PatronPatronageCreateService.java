@@ -40,8 +40,9 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 		Date initialD;
 		Date finalD;
 
-		initialD =DateUtils.addMonths( new Date(System.currentTimeMillis() - 1),1);
+		initialD =DateUtils.addMonths( new Date(System.currentTimeMillis() + 300000),1);
 		finalD= DateUtils.addMonths( initialD,1);
+		finalD= DateUtils.addMinutes(finalD, 1);
 
 
 		result = new Patronage();

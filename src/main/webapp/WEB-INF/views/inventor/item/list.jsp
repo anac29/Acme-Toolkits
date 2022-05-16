@@ -6,10 +6,17 @@
 <acme:list>
 	<acme:list-column code="inventor.item.list.label.name" path="name"/>
 	<acme:list-column code="inventor.item.list.label.code" path="code"/>
+	<acme:list-column code="any.item.list.label.itemType" path="itemType" width="20%"/>
 	<acme:list-column code="inventor.item.list.label.technology" path="technology"/>
 	<acme:list-column code="inventor.item.list.label.description" path="description"/>
 	<acme:list-column code="inventor.item.list.label.retailPrice" path="retailPrice"/>
 	<acme:list-column code="inventor.item.list.label.link" path="link"/>
 	<acme:list-column code="inventor.item.list.label.published" path="published"/>
+
 	
 </acme:list>
+
+	
+
+	<acme:button code="inventor.item.list.button.create" action="/inventor/item/create"/>
+	

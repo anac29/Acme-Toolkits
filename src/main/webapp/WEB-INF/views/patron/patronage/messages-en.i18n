@@ -15,6 +15,7 @@ patron.patronage.form.label.denied = DENIED
 patron.patronage.form.label.code = Code
 patron.patronage.form.label.legalStuff = Legal Stuff
 patron.patronage.form.label.budget = Budget
+patron.patronage.form.label.budget.default = Budget in Default Currency
 patron.patronage.form.label.creationMomentDate = Creation Date
 patron.patronage.form.label.startMomentDate = Start Date
 patron.patronage.form.label.finalMomentDate = End Date
