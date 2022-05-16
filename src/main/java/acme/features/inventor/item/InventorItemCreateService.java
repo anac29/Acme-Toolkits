@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.configuration.SystemConfiguration;
 import acme.entities.item.Item;
-import acme.entities.item.ItemType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -14,7 +13,7 @@ import acme.framework.services.AbstractCreateService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorToolCreateService implements AbstractCreateService<Inventor, Item> {
+public class InventorItemCreateService implements AbstractCreateService<Inventor, Item> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -57,11 +56,12 @@ public class InventorToolCreateService implements AbstractCreateService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		entity.setItemType(ItemType.TOOL);
+		
+		
 		entity.setPublished(false);
 		
 		
-		request.bind(entity, errors, "name", "code", "technology", "description", "retailPrice","link");
+		request.bind(entity, errors, "name", "code","itemType", "technology", "description", "retailPrice","link");
 	}
 
 	@Override
@@ -122,7 +122,7 @@ public class InventorToolCreateService implements AbstractCreateService<Inventor
 		assert model != null;
 		
 
-		request.unbind( entity,model,"name", "code", "technology", "description","retailPrice", "link","published");
+		request.unbind( entity,model,"name", "code","itemType", "technology", "description","retailPrice", "link","published");
 
 	}
 

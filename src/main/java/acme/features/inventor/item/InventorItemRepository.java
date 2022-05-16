@@ -46,6 +46,12 @@ public interface InventorItemRepository extends AbstractRepository{
 	 @Query("select sc from SystemConfiguration sc")
 	 SystemConfiguration findSystemConfiguration();
 	 
+	@Query("SELECT i FROM Item i WHERE i.inventor.id = :inventorid ")
+	Collection<Item> findMyItems(Integer inventorid);
+
+	 
+	 
+	 
 	 
 
 	
