@@ -1,4 +1,4 @@
-package acme.features.patron.patronage;
+package acme.features.inventor.patronages;
 
 import java.util.Collection;
 
@@ -9,26 +9,26 @@ import acme.entities.patronage.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
 import acme.framework.services.AbstractListService;
-import acme.roles.Patron;
+import acme.roles.Inventor;
 
 @Service
-public class PatronPatronageListService implements AbstractListService<Patron, Patronage> {
+public class InventorPatronageListPendingService implements AbstractListService<Inventor,Patronage>{
 
 	@Autowired
-	protected PatronPatronageRepository repository;
-
+	protected InventorPatronageRepository repository;
+	
 	@Override
 	public boolean authorise(final Request<Patronage> request) {
-		assert request != null;
+		assert request!=null;
 		return true;
 	}
 
 	@Override
 	public Collection<Patronage> findMany(final Request<Patronage> request) {
-		assert request != null;
+		assert request!=null;
 		final Integer myId = request.getPrincipal().getActiveRoleId();
 		Collection<Patronage> result;
-		result = this.repository.findMyPatronages(myId);
+		result = this.repository.findPatronagesPendingByInventorId(myId);
 		return result;
 	}
 
@@ -38,8 +38,8 @@ public class PatronPatronageListService implements AbstractListService<Patron, P
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "status", "code", "budget", "creationMomentDate", "startMomentDate", "finalMomentDate","published");
+		request.unbind(entity, model, "status", "code", "budget", "creationMomentDate", "startMomentDate", "finalMomentDate");
 		
 	}
-	
+
 }

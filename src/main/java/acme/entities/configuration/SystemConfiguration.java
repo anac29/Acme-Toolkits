@@ -31,7 +31,7 @@ public class SystemConfiguration extends AbstractEntity {
 	protected String weakSpamTerms;
 	
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{3}(,( )*[A-Z]{3})*")
+	@Pattern(regexp = "[A-Z]{3}(,( )*[A-Z]{3})*+")
 	protected String acceptedCurrencies;
 	
 	@NotBlank
