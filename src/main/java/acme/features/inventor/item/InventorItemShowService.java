@@ -58,7 +58,16 @@ public class InventorItemShowService  implements AbstractShowService<Inventor, I
 	        retailPriceDefault.setCurrency(defaultCurrency);
 	        
 	        model.setAttribute("retailPriceDefault", retailPriceDefault);
+	        model.setAttribute("acceptedCurrency", this.acceptedCurrencyChecker(entity));
 
 		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice", "itemType", "link", "published");
+	}
+	
+	public Boolean acceptedCurrencyChecker(final Item entity) {
+		
+		return this.repository.findSystemConfiguration().getAcceptedCurrencies()
+			.matches("(.*)"+entity.getRetailPrice().getCurrency()+"(.*)");
+		
+		
 	}
 }

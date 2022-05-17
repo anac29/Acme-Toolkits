@@ -59,7 +59,8 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 		budgetDefault.setCurrency(defaultCurrency);
 		
 		model.setAttribute("budgetDefault", budgetDefault);
-		
+        model.setAttribute("acceptedCurrency", this.acceptedCurrencyChecker(entity));
+
 
 		model.setAttribute("inventors", this.repository.findInventors());
 		model.setAttribute("inventId", entity.getInventor().getId());
@@ -68,6 +69,13 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 		model.setAttribute("inventorEmail", entity.getInventor().getUserAccount().getIdentity().getEmail());
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget", "creationMomentDate","startMomentDate","finalMomentDate","link","published");
 
+	}
+	public Boolean acceptedCurrencyChecker(final Patronage entity) {
+		
+		return this.repository.findSystemConfiguration().getAcceptedCurrencies()
+			.matches("(.*)"+entity.getBudget().getCurrency()+"(.*)");
+		
+		
 	}
 
 	
