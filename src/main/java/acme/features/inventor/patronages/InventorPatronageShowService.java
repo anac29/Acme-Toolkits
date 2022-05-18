@@ -58,13 +58,12 @@ public class InventorPatronageShowService implements AbstractShowService<Invento
 		assert entity != null;
 		assert model != null;
 		
-		int inventorId;
-		
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget", "creationMomentDate","startMomentDate","finalMomentDate","link");
 		model.setAttribute("readonly", true);
-		
-		inventorId = entity.getInventor().getUserAccount().getId();
-		model.setAttribute("inventorId", inventorId);
+		model.setAttribute("patronageId", entity.getId());
+        model.setAttribute("patronName", entity.getPatron().getUserAccount().getIdentity().getName());
+        model.setAttribute("patronSurname", entity.getPatron().getUserAccount().getIdentity().getSurname());
+        model.setAttribute("patronEmail", entity.getPatron().getUserAccount().getIdentity().getEmail());
 	}
 
 }

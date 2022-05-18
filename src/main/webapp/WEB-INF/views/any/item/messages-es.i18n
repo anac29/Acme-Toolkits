@@ -20,9 +20,11 @@ any.item.list.label.name = Nombre
 any.item.list.label.code = Código
 any.item.list.label.technology = Tecnología
 any.item.list.label.description = Descripción
-any.item.list.label.retail-price = Precio de Salida
-any.item.list.label.link = Enlace
-any.item.list.label.inventor = Inventor
+any.item.list.label.retailPrice = Precio
+any.item.list.label.itemType = Tipo
+any.item.list.button.create = Crear
+any.item.list.label.published = Publicado
+
 
 any.item.form.label.name = Nombre
 any.item.form.label.code = Código
@@ -30,6 +32,8 @@ any.item.form.label.technology = Tecnología
 any.item.form.label.description = Descripción
 any.item.form.label.retail-price = Precio de Salida
 any.item.form.label.link = Enlace
-any.item.form.label.inventor = Inventor
-
+any.item.form.label.title=Perfil del Inventor
+any.item.form.label.name=Nombre
+any.item.form.label.surname=Apellidos
+any.item.form.label.email=Correo
 any.item.form.button.toolkit= Ver kits de herramientas

@@ -8,12 +8,11 @@ import acme.testing.TestHarness;
 
 public class AnyToolkitListTest extends TestHarness{
 
-
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/toolkit/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String code, final String title, 
-		final String description, final String assemblyNotes, final String link, final String totalPrice) { 
+		final String description, final String assemblyNotes, final String link, final String totalPrice,final String inventorName,final String inventorSurname,final String inventorEmail) { 
 		super.clickOnMenu("Anonymous","List Toolkits");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
@@ -30,6 +29,9 @@ public class AnyToolkitListTest extends TestHarness{
 		super.checkInputBoxHasValue("assemblyNotes", assemblyNotes);
 		super.checkInputBoxHasValue("link", link);
 		super.checkInputBoxHasValue("totalPrice", totalPrice);
+        super.checkInputBoxHasValue("inventorName", inventorName);
+        super.checkInputBoxHasValue("inventorSurname", inventorSurname);
+        super.checkInputBoxHasValue("inventorEmail", inventorEmail);
 		
 		super.clickOnButton("See Tools");
 		super.checkListingExists();
@@ -39,4 +41,5 @@ public class AnyToolkitListTest extends TestHarness{
 		
 
 	}
+	
 }

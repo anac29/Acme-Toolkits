@@ -13,12 +13,15 @@ any.toolkit.list.label.title = Título:
 any.toolkit.list.label.description = Descripción:
 
 any.toolkit.list.label.code = Código:
-any.toolkit.list.label.title = Título:
+any.toolkit.list.label.inventor-title = Título:
 any.toolkit.list.label.description = Descripción:
 any.toolkit.form.label.assembly-notes = Notas de Montaje:
 any.toolkit.form.label.link = Enlace:
 any.toolkit.form.label.total-price = Precio Total:
-any.toolkit.form.label.inventor=Inventor
+any.toolkit.form.label.title=Perfil del Inventor
+any.toolkit.form.label.name=Nombre
+any.toolkit.form.label.surname=Apellidos
+any.toolkit.form.label.email=Correo
 any.toolkit.form.button.tool=Ver Herramientas
 any.toolkit.form.button.component= Ver Componentes
 

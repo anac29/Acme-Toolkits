@@ -5,7 +5,8 @@ inventor.item.list.label.description = Description
 inventor.item.list.label.retailPrice = Retail Price
 inventor.item.list.label.itemType = Item Type
 inventor.item.list.label.link = Link
-inventor.item.list.button.create = Create
+inventor.item.list.button.create= Create
+
 inventor.item.list.label.published = Published
 
 
@@ -21,4 +22,15 @@ inventor.item.form.label.code = Code
 inventor.item.form.label.link = Link
 inventor.item.form.button.inventor = Inventor
 inventor.item.form.button.create = Create
-authenticated.consumer.consumer.form.button.update = Update
+inventor.item.form.button.delete = Delete
+inventor.item.form.button.update = Update
+inventor.item.form.button.publish= Publish
+patron.patronage.form.label.budget.default= Retail Price in default currency
+
+
+inventor.item.form.error.negative-salary = The retail price must be positive
+inventor.item.form.error.duplicated-code= This code already exists in an item
+item.inventor.form.error.spam= The text contains too many spam terms
+inventor.item.form.error.non-accepted-currency= This is not an accepted currency
+
+

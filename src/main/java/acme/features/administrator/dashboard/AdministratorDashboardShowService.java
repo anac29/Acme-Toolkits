@@ -12,6 +12,7 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -107,17 +108,17 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	    final List<Object[]>         			   totalNumberOfPatronagesByStatus;
 	    totalNumberOfPatronagesByStatus = this.repository.totalNumberOfPatronagesByStatus();
 	    
-    	final Map<PatronageStatus, Long> mapTotalNumberOfPatronagesByStatus = new HashMap<>();
+    	final Map<PatronageStatus, Long> mapTotalNumberOfPatronagesByStatus = new EnumMap<>(PatronageStatus.class);
 	    for(final Object[] fila : totalNumberOfPatronagesByStatus) {
 	    	final PatronageStatus status = (PatronageStatus) fila[0];
 	    	final Long number = (Long) fila[1];
 	    	mapTotalNumberOfPatronagesByStatus.put(status, number);
 	    }
 	    
-	    final Map<PatronageStatus, Double>         averagePatronagesBudgetByStatus= new HashMap<>();
-	    final Map<PatronageStatus, Double>         deviationPatronagesBudgetByStatus= new HashMap<>();
-	    final Map<PatronageStatus, Double>         minimumPatronagesBudgetByStatus= new HashMap<>();
-	    final Map<PatronageStatus, Double>         maximumPatronagesBudgetByStatus= new HashMap<>();
+	    final Map<PatronageStatus, Double>         averagePatronagesBudgetByStatus= new EnumMap<>(PatronageStatus.class);
+	    final Map<PatronageStatus, Double>         deviationPatronagesBudgetByStatus= new EnumMap<>(PatronageStatus.class);
+	    final Map<PatronageStatus, Double>         minimumPatronagesBudgetByStatus= new EnumMap<>(PatronageStatus.class);
+	    final Map<PatronageStatus, Double>         maximumPatronagesBudgetByStatus= new EnumMap<>(PatronageStatus.class);
 
 
 	    final List<Object[]> metricsPatronagesBudgetByStatus = this.repository.findMetricsPatronagesBudgetByStatus();

@@ -15,7 +15,7 @@ public class AnyUserAccountTest extends TestHarness{
 		final String surname,final String email ,final String password, final String username, 
 		final String roles, final String rolesShow) {
 		
-		super.clickOnMenu("Anonymous","User Account list");
+		super.clickOnMenu("Anonymous","List User Account");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		

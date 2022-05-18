@@ -16,9 +16,9 @@ master.menu.sign-in = Sign in
 master.menu.sign-out = Sign out
 
 # master.menu.anonymous #######################################################
-
-master.menu.anonymus.toolkit.list= Toolkit List
 master.menu.anonymous = Anonymous
+master.menu.anonymus.item.list = List Items
+master.menu.anonymus.toolkit.list = List Toolkits
 master.menu.anonymous.list-chirp= List Chirp 
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.gonmarfer2-link = 28985178A: Martínez Fernández, Gonzalo
@@ -28,17 +28,15 @@ master.menu.anonymous.anaconmar-link = 47258017D: Conde Marrón, Ana
 master.menu.anonymous.enrmunper-link = 49826048K: Muñoz Pérez, Enrique
 master.menu.anonymous.jaiborcon-link = 77926303A: Borrego Conde, Jaime
 
-
-
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Authenticated
-master.menu.authenticated.announcement = Announcements
+master.menu.authenticated.user-account.list=List User-Accounts
+master.menu.authenticated.list-chirp=List Chirp
+master.menu.authenticated.announcement =  List Announcements
 master.menu.authenticated.configuration = System Configuration
-
-
-master.menu.anonymus.toolkit.list = List Toolkits
-master.menu.anonymus.toolkit.list-item = List Toolkits by Item
+master.menu.authenticated.toolkit.list = List Toolkits
+master.menu.authenticated.item.list = List Items
 
 # master.menu.administrator ###################################################
 
@@ -53,46 +51,27 @@ master.menu.administrator.system-configuration= System Configuration
 # master.menu.patron ####################################################
 
 master.menu.patron = Patron
-master.menu.patron.patronages = Patronage list
-master.menu.patron.patronage-reports = Patronage Report list
+master.menu.patron.patronages =List Patronages
+master.menu.patron.patronage-reports = List Patronage Reports
+master.menu.patron.dashboard = Dashboard
 
 # master.menu.inventor ##################################################
 
 master.menu.inventor = Inventor
-master.menu.inventor.patronage-report = Patronage Report list
-master.menu.inventor.patronage = Patronage List
-master.menu.inventor.item.list-component = Component list
-master.menu.inventor.item.list-tool = Tool list
-master.menu.inventor.item = Item list
-master.menu.inventor.toolkit= Toolkit List
+master.menu.inventor.patronage-report =List Patronage Reports
 
+master.menu.inventor.item = List Items
+master.menu.inventor.toolkit = List Toolkits
+master.menu.inventor.patronage.accepted =List Accepted Patronages 
+master.menu.inventor.patronage.pending =List Pending Patronages
 
-# master.menu.patron ####################################################
-
-master.menu.patron = Patron
-master.menu.patron.patronages = Patronage list
-master.menu.patron.dashboard = Dashboard
 
 # master.menu.user-account ####################################################
 
-master.menu.any.user-account.list = User Account list
+master.menu.any.user-account.list = List User Account
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
-
-
-# master.menu.anonymous.item #################################################
-
-master.menu.anonymous.item = Item
-master.menu.anonymus.item.list-tool = List Tools
-master.menu.anonymus.item.list-component = List Component
-
-# master.menu.authenticated.item #################################################
-
-master.menu.authenticated.item = Item
-master.menu.authenticated.item.list-tool = List Tools
-master.menu.authenticated.item.list-component = List Component
-
+master.menu.user-account.inventor = Inventor data
+master.menu.user-account.become-inventor = Become an inventor
+master.menu.user-account.patron = Patron data
+master.menu.user-account.become-patron = Become a patron

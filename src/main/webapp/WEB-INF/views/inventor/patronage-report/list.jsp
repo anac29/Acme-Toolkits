@@ -19,8 +19,11 @@
 	<acme:list-column code="inventor.patronage-report.list.label.automatic-sequence-number" path="automaticSequenceNumber" width="20%"/>
 	<acme:list-column code="inventor.patronage-report.list.label.creation-moment" path="creationMoment" width="20%"/>
 	<acme:list-column code="inventor.patronage-report.list.label.memorandum" path="memorandum" width="20%"/>
-
+		
+	
 </acme:list>
+
+
 
 
 
