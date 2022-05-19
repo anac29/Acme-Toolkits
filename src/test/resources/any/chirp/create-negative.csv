@@ -1,0 +1,9 @@
+recordIndex,title,author,body,email,confirmation
+0,"","","","",false
+1,"título","","","",false
+2,"título","buen autor","","",false
+3,"title","good author","good body for a chirp","",false
+4,"título","buen autor","good body for a chirp","",false
+5,"","","","",true
+6,"título","","","",true
+7,"título","buen autor","","",true
