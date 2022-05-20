@@ -1,4 +1,4 @@
-key,creation-moment,automatic-sequence-number,memorandum,link,key:patronage
-patronage-report-01,2021/03/22 12:45,ASD-123-B:0001,Confidential,https://yoen.es/,patronage-01
-patronage-report-02,2022/01/22 16:17,ASD-123-C:0001,Initial negotiation,null,patronage-02
-patronage-report-03,2022/02/01 08:30,ASD-123-C:0002,Addendum,null,patronage-02
+key,creation-moment,automatic-sequence-number,serial-number,memorandum,link,key:patronage
+patronage-report-01,2021/03/22 12:45,ASD-123-B:0001,0001,Confidential,https://yoen.es/,patronage-01
+patronage-report-02,2022/01/22 16:17,ASD-123-C:0001,0001,Initial negotiation,null,patronage-02
+patronage-report-03,2022/02/01 08:30,ASD-123-C:0002,0002,Addendum,null,patronage-02

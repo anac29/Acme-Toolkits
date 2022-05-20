@@ -23,8 +23,7 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.list-chirp" action="/any/chirp/list"/>
 			<acme:menu-separator/>
-		    <acme:menu-suboption code="master.menu.anonymus.item.list-tool" action="/any/item/list-tool"/>
-		    <acme:menu-suboption code="master.menu.anonymus.item.list-component" action="/any/item/list-component"/>
+		    <acme:menu-suboption code="master.menu.anonymus.item.list" action="/any/item/list"/>
 			<acme:menu-suboption code="master.menu.anonymus.toolkit.list" action="/any/toolkit/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
@@ -43,14 +42,14 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.list-chirp" action="/any/chirp/list"/>
 			<acme:menu-separator/>
-		    <acme:menu-suboption code="master.menu.authenticated.item.list-tool" action="/any/item/list-tool"/>
-		    <acme:menu-suboption code="master.menu.authenticated.item.list-component" action="/any/item/list-component"/>
+		    <acme:menu-suboption code="master.menu.authenticated.item.list" action="/any/item/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.toolkit.list" action="/any/toolkit/list"/>
 		    <acme:menu-suboption code="master.menu.authenticated.configuration" action="/authenticated/system-configuration/show"/>
 		</acme:menu-option>
 
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
+			<acme:menu-suboption code = "master.menu.administrator.announcement" action="/administrator/announcement/create/"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/administrator-dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.system-configuration" action="/administrator/system-configuration/show"/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
@@ -69,11 +68,11 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRole('Inventor')">
-			<acme:menu-suboption code="master.menu.inventor.patronage" action="/inventor/patronage/list"/>
+			<acme:menu-suboption code="master.menu.inventor.patronage.accepted" action="/inventor/patronage/list-accepted"/>
+						<acme:menu-suboption code="master.menu.inventor.patronage.pending" action="/inventor/patronage/list-pending"/>
 			<acme:menu-suboption code="master.menu.inventor.patronage-report" action="/inventor/patronage-report/list"/>
 			<acme:menu-separator/>
-      		<acme:menu-suboption code="master.menu.inventor.item.list-tool" action="/inventor/item/list-tool"/>
-      		<acme:menu-suboption code="master.menu.inventor.item.list-component" action="/inventor/item/list-component"/>
+      		<acme:menu-suboption code="master.menu.inventor.item" action="/inventor/item/list"/>
 			<acme:menu-suboption code="master.menu.inventor.toolkit" action="/inventor/toolkit/list"/>
 		</acme:menu-option>
 	</acme:menu-left>

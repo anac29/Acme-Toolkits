@@ -17,6 +17,11 @@
 	<acme:input-textbox code="patron.patronage.form.label.code" path="code"/>
 	<acme:input-textbox code="patron.patronage.form.label.legalStuff" path="legalStuff"/>
 	<acme:input-money code="patron.patronage.form.label.budget" path="budget"/>
+	<jstl:choose>
+		<jstl:when test="${acme:anyOf(command,'show, update, delete, publish') && acceptedCurrency && budgetDefault.getCurrency()!=budget.getCurrency() }">
+			<acme:input-money code="patron.patronage.form.label.budget.default" path="budgetDefault" readonly="true"/>
+		</jstl:when>
+	</jstl:choose>
 	
 	<jstl:choose>
 		<jstl:when test="${published==true}">

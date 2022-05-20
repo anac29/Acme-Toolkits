@@ -1,12 +1,15 @@
 package acme.features.inventor.item;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.configuration.SystemConfiguration;
 import acme.entities.item.Item;
 import acme.framework.repositories.AbstractRepository;
+import acme.roles.Inventor;
 
 @Repository
 public interface InventorItemRepository extends AbstractRepository{
@@ -16,6 +19,9 @@ public interface InventorItemRepository extends AbstractRepository{
 	
 	@Query("SELECT i FROM Item i WHERE i.id = :id")
 	Item findOneById(int id);
+	
+	@Query("select i from Item i where i.inventor.id = :id")
+	Item findOneInventorById(int id);
 	
 	@Query("SELECT i FROM Item i WHERE i.inventor.id = :inventorid and i.itemType = 0")
 	Collection<Item> findMyTools(Integer inventorid);
@@ -29,5 +35,30 @@ public interface InventorItemRepository extends AbstractRepository{
 	
 	@Query("select q.item from Quantity q WHERE q.toolkit.id = :toolkitId and q.item.itemType = 1")
 	Collection<Item> findComponentByToolkit(int toolkitId);
+	
+	
+	@Query("select inventor from Inventor inventor WHERE inventor.id=:id")
+	Optional<Inventor> findInventorById(int id);
+	
+	@Query("select item from Item item where item.code=:code")
+	Optional<Item> findOneByCode(String code);
+	
+	 @Query("select sc from SystemConfiguration sc")
+	 SystemConfiguration findSystemConfiguration();
+	 
+	@Query("SELECT i FROM Item i WHERE i.inventor.id = :inventorid ")
+	Collection<Item> findMyItems(Integer inventorid);
+	
+    @Query("select c.defaultCurrency from SystemConfiguration c")
+    String defaultCurrency();
+
+
+	 
+	 
+	 
+	 
+
+	
+	
 
 }

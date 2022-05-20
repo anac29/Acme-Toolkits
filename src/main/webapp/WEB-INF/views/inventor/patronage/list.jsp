@@ -22,6 +22,8 @@
 	<acme:list-column code="inventor.patronage.list.label.creationMomentDate" path="creationMomentDate"/>
 	<acme:list-column code="inventor.patronage.list.label.startMomentDate" path="startMomentDate"/>
 	<acme:list-column code="inventor.patronage.list.label.finalMomentDate" path="finalMomentDate"/>
+
+	
 </acme:list>	
 	
 

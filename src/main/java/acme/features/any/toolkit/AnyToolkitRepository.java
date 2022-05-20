@@ -26,7 +26,7 @@ public interface AnyToolkitRepository extends AbstractRepository {
 	Collection<Quantity> collectPrices(int id);
 	
 	@Query("SELECT q.item FROM Quantity q WHERE q.toolkit.id = :id")
-	Collection<Item> finItemsByToolkit(int id);
+	Collection<Item> findItemsByToolkit(int id);
 	
 	@Query("select c.defaultCurrency from SystemConfiguration c")
 	String defaultCurrency();

@@ -18,8 +18,7 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymus.item.list-tool = Listado de Herramientas
-master.menu.anonymus.item.list-component = Listado de Componentes
+master.menu.anonymus.item.list = Listado de Ítems
 master.menu.anonymus.toolkit.list = Listado de Kits de Herramientas
 master.menu.anonymous.list-chirp= Listado de Píos 
 master.menu.anonymous.favourite-link = Enlace Favorito
@@ -38,8 +37,7 @@ master.menu.authenticated.list-chirp=Listado de Píos
 master.menu.authenticated.announcement =  Listado de Anuncios
 master.menu.authenticated.configuration = Configuración del Sistema
 master.menu.authenticated.toolkit.list = Listado de Kits de Herramientas
-master.menu.authenticated.item.list-tool = Listado de Herramientas
-master.menu.authenticated.item.list-component = Listado de Componentes
+master.menu.authenticated.item.list = Listado de Ítems
 
 # master.menu.administrator ###################################################
 
@@ -62,9 +60,14 @@ master.menu.patron.dashboard = Panel
 
 master.menu.inventor = Inventor
 master.menu.inventor.patronage-report = Listado de Informe de Patrocinios
+
 master.menu.inventor.patronage = Listado de Patrocinios
-master.menu.inventor.item.list-component = Listado de Componentes
-master.menu.inventor.item.list-tool = Listado de Herramientas
+master.menu.inventor.item = Listado de Ítems
+
+master.menu.inventor.patronage.accepted = Listado de Patrocinios Aceptados
+master.menu.inventor.patronage.pending = Listado de Patrocinios Pendientes
+
+
 master.menu.inventor.toolkit= Listado de Kits de Herramientas
 
 # master.menu.user-account ####################################################

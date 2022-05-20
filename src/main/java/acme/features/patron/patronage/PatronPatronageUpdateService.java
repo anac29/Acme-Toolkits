@@ -4,10 +4,8 @@ import java.util.Date;
 
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
-import acme.entities.configuration.SystemConfiguration;
 import acme.entities.patronage.Patronage;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -22,6 +20,7 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 
 	@Autowired
 	protected PatronPatronageRepository repository;
+	
 
 	// AbstractUpdateService<Patron, Patronage> -------------------------------------
 
@@ -96,15 +95,13 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 		
 		
 		if (!errors.hasErrors("budget")) {
+			final Boolean acceptedCurrency=this.repository.findSystemConfiguration().getAcceptedCurrencies()
+				.matches("(.*)"+entity.getBudget().getCurrency()+"(.*)");
+			
 			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "patron.patronage.form.error.negative-budget");
+			errors.state(request, acceptedCurrency, "budget", "patron.patronage.form.error.non-accepted-currency");
 		}
 		
-		if(!errors.hasErrors("legalStuff")) {
-			final SystemConfiguration sc = this.repository.findSystemConfiguration();
-			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-			final boolean isLegalStuffSpam = sd.isSpam(entity.getLegalStuff());
-			errors.state(request, !isLegalStuffSpam, "legalStuff", "patron.patronage.form.error.spam");
-		}
 
 	}
 

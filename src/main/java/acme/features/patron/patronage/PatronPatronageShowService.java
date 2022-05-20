@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.patronage.Patronage;
+import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractShowService;
 import acme.roles.Patron;
 
@@ -14,6 +16,9 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 
 	@Autowired
 	protected PatronPatronageRepository repository;
+	
+	@Autowired
+	protected AuthenticatedMoneyExchangePerformService moneyService;
 	
 	@Override
 	public boolean authorise(final Request<Patronage> request) {
@@ -46,6 +51,16 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 		assert entity != null;
 		assert model != null;
 		
+		
+		final String defaultCurrency= this.repository.defaultCurrency();
+		final Double defaultPrice= this.moneyService.computeMoneyExchange(entity.getBudget(),defaultCurrency).getTarget().getAmount();
+		final Money budgetDefault= new Money();
+		budgetDefault.setAmount(defaultPrice);
+		budgetDefault.setCurrency(defaultCurrency);
+		
+		model.setAttribute("budgetDefault", budgetDefault);
+        model.setAttribute("acceptedCurrency", this.acceptedCurrencyChecker(entity));
+
 
 		model.setAttribute("inventors", this.repository.findInventors());
 		model.setAttribute("inventId", entity.getInventor().getId());
@@ -54,6 +69,13 @@ public class PatronPatronageShowService implements AbstractShowService<Patron, P
 		model.setAttribute("inventorEmail", entity.getInventor().getUserAccount().getIdentity().getEmail());
 		request.unbind(entity, model, "status", "code", "legalStuff", "budget", "creationMomentDate","startMomentDate","finalMomentDate","link","published");
 
+	}
+	public Boolean acceptedCurrencyChecker(final Patronage entity) {
+		
+		return this.repository.findSystemConfiguration().getAcceptedCurrencies()
+			.matches("(.*)"+entity.getBudget().getCurrency()+"(.*)");
+		
+		
 	}
 
 	
