@@ -25,17 +25,17 @@ public class AnyChirpCreateTest extends TestHarness {
 		
 		super.clickOnMenu("Anonymous", "List Chirp");
 		super.checkListingExists();
-		super.sortListing(0, "desc");
-		super.checkColumnHasValue(recordIndex+3, 1, title);
-		super.checkColumnHasValue(recordIndex+3, 2, author);
-		super.checkColumnHasValue(recordIndex+3, 3, body);
-		super.checkColumnHasValue(recordIndex+3, 4, email);
+		super.sortListing(1, "asc");
+		super.checkColumnHasValue(recordIndex, 1, title);
+		super.checkColumnHasValue(recordIndex, 2, author);
+		super.checkColumnHasValue(recordIndex, 3, body);
+		super.checkColumnHasValue(recordIndex, 4, email);
 		
 	}
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/any/chirp/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(20)
 	public void negativeTest(final int recordIndex, final String title, final String author,
 			final String body, final String email, final String confirmation) {
 		super.clickOnMenu("Anonymous", "List Chirp");
