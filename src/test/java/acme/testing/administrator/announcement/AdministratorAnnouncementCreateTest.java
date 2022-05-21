@@ -47,8 +47,8 @@ public class AdministratorAnnouncementCreateTest extends TestHarness{
 	
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/announcement/form.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@CsvFileSource(resources = "/administrator/announcement/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(20)
 	public void negativeTest(final int recordIndex, final String title, final String body, final String critical, final String link) {
 		
 		super.signIn("administrator", "administrator");
