@@ -23,6 +23,13 @@
 	<acme:input-textarea
 		code="inventor.patronage-report.form.label.memorandum"
 		path="memorandum" />
+		
+			<jstl:choose>
+		<jstl:when test="${command=='show'}">
+		<acme:input-url code="inventor.patronage-report.form.label.creation-moment"
+		path="creationMoment" />
+		</jstl:when>
+		</jstl:choose>
 	<acme:input-url code="inventor.patronage-report.form.label.link"
 		path="link" />
 	<acme:input-textbox
