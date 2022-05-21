@@ -1,11 +1,10 @@
 package acme.features.inventor.item;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
-import acme.entities.configuration.SystemConfiguration;
 import acme.entities.item.Item;
+import acme.features.spam.SpamDetectorService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -19,19 +18,15 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 
 	@Autowired
 	protected InventorItemRepository repository;
-	
-	
-	
+
+	@Autowired
+	protected SpamDetectorService spamService;
 
 	// AbstractCreateService<Inventor, Item> interface -------------------------
-
 
 	@Override
 	public boolean authorise(final Request<Item> request) {
 		assert request != null;
-
-
-
 		return true;
 	}
 
@@ -40,13 +35,9 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 		assert request != null;
 
 		Item result;
-	
 
 		result = new Item();
 		result.setInventor(this.repository.findInventorById(request.getPrincipal().getActiveRoleId()).orElse(null));
-
-		
-		
 
 		return result;
 	}
@@ -56,12 +47,10 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		
+
 		entity.setPublished(false);
-		
-		
-		request.bind(entity, errors, "name", "code","itemType", "technology", "description", "retailPrice","link");
+
+		request.bind(entity, errors, "name", "code", "itemType", "technology", "description", "retailPrice", "link");
 	}
 
 	@Override
@@ -69,42 +58,34 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		  if(!errors.hasErrors("name")) {
-	            final SystemConfiguration sc = this.repository.findSystemConfiguration();
-	            final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-	            final boolean isNameSpam = sd.isSpam(entity.getName());
-	            errors.state(request, !isNameSpam, "name", "item.inventor.form.error.spam");
-	        }
-	      if(!errors.hasErrors("technology")) {
-	            final SystemConfiguration sc = this.repository.findSystemConfiguration();
-	            final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-	            final boolean isTechnologySpam = sd.isSpam(entity.getTechnology());
-	            errors.state(request, !isTechnologySpam, "technology", "item.inventor.form.error.spam");
-	        }
-	      
-	   
-	      if(!errors.hasErrors("description")) {
-	            final SystemConfiguration sc = this.repository.findSystemConfiguration();
-	            final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-	            final boolean isDescriptionSpam = sd.isSpam(entity.getDescription());
-	            errors.state(request, !isDescriptionSpam, "description", "item.inventor.form.error.spam");
-	        }
-		
-		final Item equalCode=this.repository.findOneByCode(entity.getCode()).orElse(null);
-		
-		if(!errors.hasErrors("code")) {
-			errors.state(request, equalCode==null, "code", "inventor.item.form.error.duplicated-code");
+
+		if (!errors.hasErrors("name")) {
+			final boolean isNameSpam = this.spamService.isSpam(entity.getName());
+			errors.state(request, !isNameSpam, "name", "item.inventor.form.error.spam");
 		}
-		
+		if (!errors.hasErrors("technology")) {
+			final boolean isTechnologySpam = this.spamService.isSpam(entity.getTechnology());
+			errors.state(request, !isTechnologySpam, "technology", "item.inventor.form.error.spam");
+		}
+
+		if (!errors.hasErrors("description")) {
+			final boolean isDescriptionSpam = this.spamService.isSpam(entity.getDescription());
+			errors.state(request, !isDescriptionSpam, "description", "item.inventor.form.error.spam");
+		}
+
+		final Item equalCode = this.repository.findOneByCode(entity.getCode()).orElse(null);
+
+		if (!errors.hasErrors("code")) {
+			errors.state(request, equalCode == null, "code", "inventor.item.form.error.duplicated-code");
+		}
+
 		if (!errors.hasErrors("retailPrice")) {
-			
-			final Boolean acceptedCurrency= this.repository.findSystemConfiguration().getAcceptedCurrencies()
-				.matches("(.*)"+entity.getRetailPrice().getCurrency()+"(.*)");
-			
-			
-			
-			errors.state(request, entity.getRetailPrice().getAmount() > 0 , "retailPrice", "inventor.item.form.error.negative-salary");
+
+			final Boolean acceptedCurrency = this.repository.findSystemConfiguration().getAcceptedCurrencies()
+					.matches("(.*)" + entity.getRetailPrice().getCurrency() + "(.*)");
+
+			errors.state(request, entity.getRetailPrice().getAmount() > 0, "retailPrice",
+					"inventor.item.form.error.negative-salary");
 			errors.state(request, acceptedCurrency, "retailPrice", "inventor.item.form.error.non-accepted-currency");
 
 		}
@@ -116,17 +97,15 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
 
-		request.unbind( entity,model,"name", "code","itemType", "technology", "description","retailPrice", "link","published");
-
+		request.unbind(entity, model, "name", "code", "itemType", "technology", "description", "retailPrice", "link",
+				"published");
 	}
 
 	@Override
 	public void create(final Request<Item> request, final Item entity) {
 		assert request != null;
 		assert entity != null;
-		
 
 		this.repository.save(entity);
 	}
