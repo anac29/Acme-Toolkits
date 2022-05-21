@@ -1,6 +1,7 @@
 package acme.testing.patron.patronage;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -13,9 +14,9 @@ public class PatronPatronageListMineTest extends TestHarness {
 	@Order(10) 
 	public void positiveTest(final int recordIndex, final String status, final String code, 
 		final String legalStuff, final String budget, final String creationMomentDate, final String startMomentDate, 
-		final String finalMomentDate, final String link, final String name, final String surname, final String email ) {
+		final String finalMomentDate, final String link, final String name, final String surname, final String email,final String publish ) {
 		
-		super.signIn("patron1", "patron1");
+super.signIn("patron1", "patron1");
 		
 		super.clickOnMenu("Patron","List Patronages");
 		super.checkListingExists();
@@ -24,24 +25,42 @@ public class PatronPatronageListMineTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 0, status);
 		super.checkColumnHasValue(recordIndex, 1, code);
 		super.checkColumnHasValue(recordIndex, 2, budget);
-		super.checkColumnHasValue(recordIndex, 3, creationMomentDate);
-		super.checkColumnHasValue(recordIndex, 4, startMomentDate);
-		super.checkColumnHasValue(recordIndex, 5, finalMomentDate);
+		super.checkColumnHasValue(recordIndex, 3, publish);
+		super.checkColumnHasValue(recordIndex, 4, creationMomentDate);
+		super.checkColumnHasValue(recordIndex, 5, startMomentDate);
+		super.checkColumnHasValue(recordIndex, 6, finalMomentDate);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.checkInputBoxHasValue("status", status);
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("legalStuff", legalStuff);
 		super.checkInputBoxHasValue("budget", budget);
-		super.checkInputBoxHasValue("creationMomentDate", creationMomentDate);
+		if(publish.equals("true")) {
+			super.checkInputBoxHasValue("creationMomentDate", creationMomentDate);
+			super.checkInputBoxHasValue("inventorName", name);
+			super.checkInputBoxHasValue("inventorSurname", surname);
+			super.checkInputBoxHasValue("inventorEmail", email);
+		}
 		super.checkInputBoxHasValue("startMomentDate", startMomentDate);
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
 		super.checkInputBoxHasValue("link", link);
-		super.checkInputBoxHasValue("inventorName", name);
-		super.checkInputBoxHasValue("inventorSurname", surname);
-		super.checkInputBoxHasValue("inventorEmail", email);
-		
+	}
+	
+	@Test
+	@Order(30)
+	public void hackingTest() {
+		super.checkNotLinkExists("Patron");
+		super.navigate("/patron/patronage/list");
+		super.checkPanicExists();
+
+		super.signIn("inventor1", "inventor1");
+		super.navigate("/patron/patronage/list");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("administrator", "administrator");
+		super.navigate("/patron/patronage/list");
+		super.checkPanicExists();
 		super.signOut();
 	}
 }
