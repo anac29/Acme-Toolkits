@@ -1,6 +1,6 @@
 package acme.features.administrator.announcement;
 
-import java.util.Calendar;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.spam_detector.SpamDetector;
@@ -31,6 +31,9 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		final Date moment= new Date(System.currentTimeMillis()-1);
+		
+		entity.setCreationMoment(moment);
 		
 		request.bind(entity, errors, "title","body","flag","link");
 		
@@ -44,17 +47,18 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		
 		request.unbind(entity, model,"title","body","flag","link");
 		
+		model.setAttribute("confirmation", false);
+		
 	}
 
 	@Override
 	public Announcement instantiate(final Request<Announcement> request) {
 		assert request != null;
 		
-		final Announcement res;
+		Announcement res;
 		
 		res = new Announcement();
 		res.setFlag(false);
-		res.setCreationMoment(Calendar.getInstance().getTime());
 		return res;
 	}
 
@@ -64,8 +68,8 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		assert entity != null;
 		assert errors != null;
 		
-		final boolean confirmation = request.getModel().getBoolean("confirm");
-		errors.state(request, confirmation, "confirm", "javax.validation.constraints.AssertTrue.message");
+		final boolean confirmation = request.getModel().getBoolean("confirmation");
+		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
 		
 		if(!errors.hasErrors("body")) {
 			final SystemConfiguration sc = this.repo.findSystemConfiguration();

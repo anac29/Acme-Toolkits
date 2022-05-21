@@ -8,7 +8,7 @@ import acme.testing.TestHarness;
 
 public class AdministratorAnnouncementCreateTest extends TestHarness{
 	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/announcement/form.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/administrator/announcement/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String title, final String body, final String critical, final String link) {
 		
@@ -20,7 +20,7 @@ public class AdministratorAnnouncementCreateTest extends TestHarness{
 		super.fillInputBoxIn("body", body);
 		super.fillInputBoxIn("flag", critical);
 		super.fillInputBoxIn("link", link);
-		super.fillInputBoxIn("confirm", "true");
+		super.fillInputBoxIn("confirmation", "true");
 		
 		super.clickOnSubmit("Create");
 
@@ -39,6 +39,30 @@ public class AdministratorAnnouncementCreateTest extends TestHarness{
 		super.checkInputBoxHasValue("link", link);
 		
 		super.clickOnButton("Return");
+		
+		super.signOut();
+
+
+	}
+	
+	
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/announcement/form.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void negativeTest(final int recordIndex, final String title, final String body, final String critical, final String link) {
+		
+		super.signIn("administrator", "administrator");
+		
+		super.clickOnMenu("Administrator", "Create announcement");
+
+		super.fillInputBoxIn("title", title);
+		super.fillInputBoxIn("body", body);
+		super.fillInputBoxIn("flag", critical);
+		super.fillInputBoxIn("link", link);
+		super.fillInputBoxIn("confirmation", "true");
+		
+		super.clickOnSubmit("Create");
+		super.checkErrorsExist();
 		
 		super.signOut();
 
