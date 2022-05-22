@@ -8,25 +8,25 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-inventor.patronage.list.label.status = Status
-inventor.patronage.list.label.code = Code
-inventor.patronage.list.label.budget = Budget
-inventor.patronage.list.label.creationMomentDate = Creation Date
-inventor.patronage.list.label.startMomentDate = Start Date
-inventor.patronage.list.label.finalMomentDate = End Date
-inventor.patronage.list.button.create = Create
+inventor.patronage.list.label.status=Status
+inventor.patronage.list.label.code=Code
+inventor.patronage.list.label.budget=Budget
+inventor.patronage.list.label.creationMomentDate=Creation Date
+inventor.patronage.list.label.startMomentDate=Start Date
+inventor.patronage.list.label.finalMomentDate=End Date
+inventor.patronage.list.button.create=Create
 
-inventor.patronage.form.label.status = Status
-inventor.patronage.form.label.proposed = PROPOSED
-inventor.patronage.form.label.accepted = ACCEPTED
-inventor.patronage.form.label.denied = DENIED
-inventor.patronage.form.label.code = Code
-inventor.patronage.form.label.legalStuff = Legal Stuff
-inventor.patronage.form.label.budget = Budget
-inventor.patronage.form.label.creationMomentDate = Creation Date
-inventor.patronage.form.label.startMomentDate = Start Date
-inventor.patronage.form.label.finalMomentDate = End Date
-inventor.patronage.form.label.link = Link
+inventor.patronage.form.label.status=Status
+inventor.patronage.form.label.proposed=PROPOSED
+inventor.patronage.form.label.accepted=ACCEPTED
+inventor.patronage.form.label.denied=DENIED
+inventor.patronage.form.label.code=Code
+inventor.patronage.form.label.legalStuff=Legal Stuff
+inventor.patronage.form.label.budget=Budget
+inventor.patronage.form.label.creationMomentDate=Creation Date
+inventor.patronage.form.label.startMomentDate=Start Date
+inventor.patronage.form.label.finalMomentDate=End Date
+inventor.patronage.form.label.link=Link
 
 inventor.patronage.form.label.title=Patron's Profile
 inventor.patronage.form.label.name=Name

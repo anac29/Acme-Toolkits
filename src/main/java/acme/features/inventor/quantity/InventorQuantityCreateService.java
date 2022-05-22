@@ -21,12 +21,11 @@ public class InventorQuantityCreateService implements AbstractCreateService<Inve
 	@Autowired
 	protected InventorQuantityRepository repo;
 	
-	
 	@Override
 	public boolean authorise(final Request<Quantity> request) {
 		assert request != null;
-		Toolkit toolkit;
-		toolkit = this.repo.findToolkitById(request.getModel().getInteger("masterId"));
+		
+		final Toolkit toolkit = this.repo.findToolkitById(request.getModel().getInteger("masterId"));
 		return !toolkit.isPublished() && request.isPrincipal(toolkit.getInventor());
 	}
 
@@ -38,12 +37,15 @@ public class InventorQuantityCreateService implements AbstractCreateService<Inve
 		
 		final Toolkit toolkit = this.repo.findToolkitById(request.getModel().getInteger("masterId"));
 		entity.setToolkit(toolkit);
+		
 		final Item item = this.repo.findItemById(request.getModel().getInteger("item"));
 		entity.setItem(item);
-		if(request.getModel().getInteger("type") == 0) 
-		{entity.setNumber(1);request.bind(entity, errors);}
-		else 
-		{
+		
+		if(request.getModel().getInteger("type") == 0) {
+			entity.setNumber(1);
+			request.bind(entity, errors);
+		
+		} else {
 			request.bind(entity, errors, "number");
 		}
 	}
@@ -58,16 +60,16 @@ public class InventorQuantityCreateService implements AbstractCreateService<Inve
 		final int type = request.getModel().getInteger("type");
 		model.setAttribute("type", type);
 		model.setAttribute("masterId", masterid);
-		if(type == 0) 
-		{
+		
+		if(type == 0) {
 			final List<Item> items = this.repo.findTools();
 			final List<Item>itemsAdded = this.repo.findToolsByToolkit(masterid);
 			items.removeAll(itemsAdded);
 			model.setAttribute("items", items);
 			request.unbind(entity, model,"item");
-		}else 
-		{
-			final List<Item>items = this.repo.findComponents();
+		
+		} else {
+			final List<Item> items = this.repo.findComponents();
 			final List<Item> itemsAdded = this.repo.findComponentsByToolkit(masterid);
 			items.removeAll(itemsAdded);
 			model.setAttribute("items", items);

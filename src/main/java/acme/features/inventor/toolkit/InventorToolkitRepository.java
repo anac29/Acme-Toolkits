@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import acme.entities.configuration.SystemConfiguration;
 import acme.entities.quantity.Quantity;
 import acme.entities.toolkits.Toolkit;
-import acme.framework.datatypes.Money;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Inventor;
 
@@ -25,8 +24,8 @@ public interface InventorToolkitRepository extends AbstractRepository {
 	@Query("SELECT t FROM Toolkit t WHERE t.inventor.id = :id")
 	Toolkit findOneToolkitByInventorId(int id);
 	
-	@Query("SELECT q.item.retailPrice FROM Quantity q WHERE q.toolkit.id = :id")
-	Collection<Money> collectPrices(int id);
+	@Query("SELECT q FROM Quantity q WHERE q.toolkit.id = :id")
+	Collection<Quantity> collectPrices(int id);
 	
 	@Query("select c.defaultCurrency from SystemConfiguration c")
 	String defaultCurrency();

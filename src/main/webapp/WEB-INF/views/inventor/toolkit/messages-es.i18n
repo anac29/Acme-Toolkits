@@ -8,33 +8,33 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-inventor.toolkit.list.label.code = Código:
-inventor.toolkit.list.label.title = Título:
-inventor.toolkit.list.label.description = Descripción:
+inventor.toolkit.list.label.code=Código:
+inventor.toolkit.list.label.title=Título:
+inventor.toolkit.list.label.description=Descripción:
 inventor.toolkit.list.label.published=Publicado:
 
-inventor.toolkit.item.error = El kit debe contener al menos una herramienta y un componente
+inventor.toolkit.item.error=El kit debe contener al menos una herramienta y un componente
 
-inventor.item.tool.toolkit.create = Añadir herramienta
+inventor.item.tool.toolkit.create=Añadir herramienta
 
-inventor.item.amount = Cantidad
+inventor.item.amount=Cantidad
 
-inventor.toolkit.form.button.update = Actualizar
-inventor.toolkit.form.button.delete = Borrar
-inventor.toolkit.form.button.publish = Publicar
-inventor.toolkit.form.button.create = Crear
+inventor.toolkit.form.button.update=Actualizar
+inventor.toolkit.form.button.delete=Borrar
+inventor.toolkit.form.button.publish=Publicar
+inventor.toolkit.form.button.create=Crear
 
-inventor.toolkit.form.label.confirm = Confirmar
+inventor.toolkit.form.label.confirm=Confirmar
 
-inventor.toolkit.form.error.spam = El texto contiene demasiados terminos spam
+inventor.toolkit.form.error.spam=El texto contiene demasiados terminos spam
 
-inventor.toolkit.list.label.code = Código:
-inventor.toolkit.list.label.title = Título:
-inventor.toolkit.list.label.description = Descripción:
-inventor.toolkit.form.label.assembly-notes = Notas de Montaje:
-inventor.toolkit.form.label.link = Enlace:
-inventor.toolkit.form.label.total-price = Precio Total:
+inventor.toolkit.list.label.code=Código:
+inventor.toolkit.list.label.title=Título:
+inventor.toolkit.list.label.description=Descripción:
+inventor.toolkit.form.label.assembly-notes=Notas de Montaje:
+inventor.toolkit.form.label.link=Enlace:
+inventor.toolkit.form.label.total-price=Precio Total:
 inventor.toolkit.form.label.published=Publicado
 inventor.toolkit.form.button.tool=Ver Herramientas
-inventor.toolkit.form.button.component= Ver Componentes
+inventor.toolkit.form.button.component=Ver Componentes
 
