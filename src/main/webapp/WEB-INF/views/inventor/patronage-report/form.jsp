@@ -16,12 +16,35 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:input-textbox code="inventor.patronage-report.form.label.automatic-sequence-number" path="automaticSequenceNumber" readonly="true"/>
-	<acme:input-moment code="inventor.patronage-report.form.label.creation-moment" path="creationMoment" readonly="true"/>
-	<acme:input-textarea code="inventor.patronage-report.form.label.memorandum" path="memorandum" readonly="true"/>
-	<acme:input-url code="inventor.patronage-report.form.label.link" path="link" readonly="true"/>
-	<acme:input-textbox code="inventor.patronage-report.form.label.patronage.code" path="patronage.code" readonly="true"/>				
-	
+	<acme:input-textbox
+		code="inventor.patronage-report.form.label.automatic-sequence-number"
+		path="automaticSequenceNumber" readonly="true"/>
+	<%-- <acme:input-moment code="inventor.patronage-report.form.label.creation-moment" path="creationMoment"/>--%>
+	<acme:input-textarea
+		code="inventor.patronage-report.form.label.memorandum"
+		path="memorandum" />
+		
+			<jstl:choose>
+		<jstl:when test="${command=='show'}">
+		<acme:input-url code="inventor.patronage-report.form.label.creation-moment"
+		path="creationMoment" />
+		</jstl:when>
+		</jstl:choose>
+	<acme:input-url code="inventor.patronage-report.form.label.link"
+		path="link" />
+	<acme:input-textbox
+		code="inventor.patronage-report.form.label.patronage.code"
+		path="patronageCode" readonly="true"/>
+
+	<jstl:choose>
+
+		<jstl:when test="${command=='create'}">
+			<acme:input-checkbox
+				code="inventor.patronage-report.form.label.confirmation"
+				path="confirmation" />
+			<acme:submit code="inventor.patronage-report.form.button.create"
+				action="/inventor/patronage-report/create?masterId=${ patronageId }" />
+
+		</jstl:when>
+	</jstl:choose>
 </acme:form>
-
-

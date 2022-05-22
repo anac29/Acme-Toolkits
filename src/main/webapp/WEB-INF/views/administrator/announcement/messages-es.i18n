@@ -1,0 +1,4 @@
+admin.announcement.form.button.create = Confirmar
+master.menu.administrator.announcement = Crear anuncio
+authenticated.announcement.form.label.confirm = Confirmar
+administrator.announcement.form.error.spam = El texto contiene demasiados términos spam

@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.configuration.SystemConfiguration;
 import acme.entities.item.Item;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Inventor;
@@ -42,6 +43,20 @@ public interface InventorItemRepository extends AbstractRepository{
 	@Query("select item from Item item where item.code=:code")
 	Optional<Item> findOneByCode(String code);
 	
+	 @Query("select sc from SystemConfiguration sc")
+	 SystemConfiguration findSystemConfiguration();
+	 
+	@Query("SELECT i FROM Item i WHERE i.inventor.id = :inventorid ")
+	Collection<Item> findMyItems(Integer inventorid);
+	
+    @Query("select c.defaultCurrency from SystemConfiguration c")
+    String defaultCurrency();
+
+
+	 
+	 
+	 
+	 
 
 	
 	

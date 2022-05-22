@@ -1,10 +1,11 @@
 package acme.features.inventor.item;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.SystemConfiguration;
 import acme.entities.item.Item;
-import acme.entities.item.ItemType;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -12,7 +13,7 @@ import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorToolUpdateService implements AbstractUpdateService<Inventor, Item>{
+public class InventorItemUpdateService implements AbstractUpdateService<Inventor, Item>{
 	
 	// Internal state ---------------------------------------------------------
 
@@ -43,10 +44,9 @@ public class InventorToolUpdateService implements AbstractUpdateService<Inventor
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		entity.setItemType(ItemType.TOOL);
 		
 		
-
+	
 		request.bind(entity, errors, "name", "code", "technology", "description", "retailPrice","link");		
 	}
 
@@ -56,8 +56,7 @@ public class InventorToolUpdateService implements AbstractUpdateService<Inventor
 		assert entity != null;
 		assert model != null;
 
-		entity.setItemType(ItemType.TOOL);
-
+		model.setAttribute("acceptedCurrency", this.acceptedCurrencyChecker(entity));
 
 		request.unbind(entity, model, "name", "code", "technology", "description", "retailPrice","link","published");		
 	}
@@ -81,6 +80,25 @@ public class InventorToolUpdateService implements AbstractUpdateService<Inventor
 		assert entity != null;
 		assert errors != null;
 		
+		  if(!errors.hasErrors("name")) {
+	            final SystemConfiguration sc = this.repository.findSystemConfiguration();
+	            final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+	            final boolean isNameSpam = sd.isSpam(entity.getName());
+	            errors.state(request, !isNameSpam, "name", "item.inventor.form.error.spam");
+	        }
+	      if(!errors.hasErrors("technology")) {
+	            final SystemConfiguration sc = this.repository.findSystemConfiguration();
+	            final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+	            final boolean isTechnologySpam = sd.isSpam(entity.getTechnology());
+	            errors.state(request, !isTechnologySpam, "technology", "item.inventor.form.error.spam");
+	        }
+	      if(!errors.hasErrors("description")) {
+	            final SystemConfiguration sc = this.repository.findSystemConfiguration();
+	            final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
+	            final boolean isDescriptionSpam = sd.isSpam(entity.getDescription());
+	            errors.state(request, !isDescriptionSpam, "description", "item.inventor.form.error.spam");
+	        }
+		
 		if(!errors.hasErrors("code")) {
 			Item existing;
 			existing=this.repository.findOneById(entity.getId());
@@ -92,10 +110,21 @@ public class InventorToolUpdateService implements AbstractUpdateService<Inventor
 		}
 		
 		if (!errors.hasErrors("retailPrice")) {
-			errors.state(request, entity.getRetailPrice().getAmount() > 0, "retailPrice", "inventor.item.form.error.negative-salary");
+			
+			errors.state(request, entity.getRetailPrice().getAmount() > 0 , "retailPrice", "inventor.item.form.error.negative-salary");
+			errors.state(request, this.acceptedCurrencyChecker(entity), "retailPrice", "inventor.item.form.error.non-accepted-currency");
+
 		}
 
-	}		
+	}
+	
+	public Boolean acceptedCurrencyChecker(final Item entity) {
+		
+		return this.repository.findSystemConfiguration().getAcceptedCurrencies()
+			.matches("(.*)"+entity.getRetailPrice().getCurrency()+"(.*)");
+		
+		
+	}
 	
 
 	@Override

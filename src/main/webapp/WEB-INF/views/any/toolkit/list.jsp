@@ -16,9 +16,10 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="any.toolkit.list.label.code" path="code" width="20%"/>
-	<acme:list-column code="any.toolkit.list.label.title" path="title" width="20%"/>
-	<acme:list-column code="any.toolkit.list.label.description" path="description" width="60%"/>
+	<acme:list-column code="any.toolkit.list.label.code" path="code" width="10%"/>
+	<acme:list-column code="any.toolkit.list.label.title" path="title" width="10%"/>
+	<acme:list-column code="any.toolkit.list.label.description" path="description" width="80%"/>
+	<acme:list-payload  path="payload"/>
 
 </acme:list>
 

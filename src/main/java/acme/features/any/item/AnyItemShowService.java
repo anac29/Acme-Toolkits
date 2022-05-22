@@ -57,7 +57,7 @@ public class AnyItemShowService implements AbstractShowService<Any, Item> {
 		model.setAttribute("inventorName", entity.getInventor().getUserAccount().getIdentity().getName());
 		model.setAttribute("inventorSurname", entity.getInventor().getUserAccount().getIdentity().getSurname());
 		model.setAttribute("inventorEmail", entity.getInventor().getUserAccount().getIdentity().getEmail());
-		request.unbind(entity, model, "name", "code", "technology","description","retailPrice", "link", "inventor.userAccount.username");		
+		request.unbind(entity, model, "name", "code", "technology","description","itemType","retailPrice", "link", "inventor.userAccount.username");		
 	}
 
 
