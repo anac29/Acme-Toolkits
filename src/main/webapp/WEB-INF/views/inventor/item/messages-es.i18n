@@ -8,7 +8,14 @@ inventor.item.list.button.create = Crear
 
 
 inventor.item.list.label.published = Publicado
+inventor.item.tool.toolkit.delete = Quitar Herramienta
+inventor.toolkit.tool = Item
 
+inventor.item.toolkit.create = Añadir
+inventor.item.toolkit.delete = Quitar
+
+inventor.item.comp.toolkit.create = Añadir Componente
+inventor.item.comp.toolkit.delete = Quitar Componente
 
 inventor.item.form.label.published = Publicado
 inventor.item.form.label.name = Nombre

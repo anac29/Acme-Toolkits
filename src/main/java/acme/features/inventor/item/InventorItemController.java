@@ -42,7 +42,7 @@ public class InventorItemController extends AbstractController<Inventor, Item> {
 	protected void initialise() {
 		super.addCommand("show", this.showService);
 		super.addCommand("list", this.listComponentService);
-		super.addCommand("list-tool-toolkit","list", this.listComponentToolkitService);
+		super.addCommand("list-tool-toolkit","list", this.listToolToolkitService);
 		super.addCommand("list-component-toolkit","list", this.listComponentToolkitService);
 		
 		super.addCommand("create", this.createService);

@@ -42,12 +42,26 @@ public class InventorItemListComponentToolkitService  implements AbstractListSer
 	}
 
 	@Override
+	public void unbind(final Request<Item> request, final Collection<Item> entities, final Model model) {
+		assert request != null;
+		assert entities != null;
+		assert model != null;
+		
+		final int masterId = request.getModel().getInteger("id");
+		model.setAttribute("masterId", masterId);
+		model.setAttribute("type", 1);
+	}
+	
+	@Override
 	public void unbind(final Request<Item> request, final Item entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "name", "code", "technology","retailPrice");
+		
+		final int masterId = request.getModel().getInteger("id");
+		final Integer amount = this.repository.findQuantity(masterId,entity.getId());
+		model.setAttribute("amount", amount);
+		request.unbind(entity, model, "name", "code", "technology","retailPrice","description","link");
 	}
 	
 

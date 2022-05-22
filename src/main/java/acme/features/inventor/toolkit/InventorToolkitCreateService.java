@@ -50,8 +50,6 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 		assert entity != null;
 		assert errors != null;
 		
-		final boolean confirmation = request.getModel().getBoolean("confirm");
-		errors.state(request, confirmation, "confirm", "javax.validation.constraints.AssertTrue.message");
 
 		if(!errors.hasErrors("description")) {
 			final SystemConfiguration sc = this.repo.findSystemConfiguration();

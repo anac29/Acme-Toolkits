@@ -13,6 +13,12 @@ inventor.toolkit.list.label.title = Título:
 inventor.toolkit.list.label.description = Descripción:
 inventor.toolkit.list.label.published=Publicado:
 
+inventor.toolkit.item.error = El kit debe contener al menos una herramienta y un componente
+
+inventor.item.tool.toolkit.create = Añadir herramienta
+
+inventor.item.amount = Cantidad
+
 inventor.toolkit.form.button.update = Actualizar
 inventor.toolkit.form.button.delete = Borrar
 inventor.toolkit.form.button.publish = Publicar

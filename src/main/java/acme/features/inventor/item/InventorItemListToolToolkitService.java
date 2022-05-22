@@ -37,9 +37,20 @@ public class InventorItemListToolToolkitService implements AbstractListService<I
 
 		Collection<Item> result;
 		final int toolkitId= request.getModel().getInteger("id");
-		result = this.repository.findToolsByToolkit( toolkitId);
+		result = this.repository.findToolsByToolkit(toolkitId);
 
 		return result;
+	}
+
+	@Override
+	public void unbind(final Request<Item> request, final Collection<Item> entities, final Model model) {
+		assert request != null;
+		assert entities != null;
+		assert model != null;
+		
+		final int masterId = request.getModel().getInteger("id");
+		model.setAttribute("masterId", masterId);
+		model.setAttribute("type", 0);
 	}
 
 	@Override
@@ -47,8 +58,9 @@ public class InventorItemListToolToolkitService implements AbstractListService<I
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "name", "code", "technology","retailPrice");
+		
+		request.unbind(entity, model,"name", "code", "technology","retailPrice","description","link");
+		
 	}
 	
 

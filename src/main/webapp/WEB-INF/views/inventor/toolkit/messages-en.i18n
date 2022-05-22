@@ -11,7 +11,13 @@
 inventor.toolkit.list.label.code = Code:
 inventor.toolkit.list.label.title = Title:
 inventor.toolkit.list.label.description = Description:
-inventor.toolkit.list.label.published = Published: 
+inventor.toolkit.list.label.published = Published:
+
+inventor.toolkit.item.error = Toolkit must include one component and one tool
+
+inventor.item.amount = Amount 
+
+inventor.item.tool.toolkit.create = Add tool
 
 inventor.toolkit.form.button.update = Update
 inventor.toolkit.form.button.delete = Delete

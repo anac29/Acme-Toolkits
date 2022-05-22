@@ -21,9 +21,10 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
 		assert request != null;
+		final Toolkit toolkit = this.repo.findOneToolkitById(request.getModel().getInteger("id"));
 		final int a = request.getPrincipal().getActiveRoleId();
 		final int b = this.repo.findInventorByToolkitId(request.getModel().getInteger("id")).getId();
-		return  a == b;
+		return  !toolkit.isPublished() && a == b;
 	}
 
 	@Override

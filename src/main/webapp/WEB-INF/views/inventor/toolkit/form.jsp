@@ -24,19 +24,18 @@
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(command,'show, delete, publish') && published == false}">
-			<acme:input-checkbox code="inventor.toolkit.form.label.published" path="published"/>
+			<acme:input-checkbox code="inventor.toolkit.form.label.published" path="published" readonly="true"/>
 			<acme:input-money code="inventor.toolkit.form.label.total-price" path="totalPrice" readonly="true"/>
-			<acme:button code="inventor.toolkit.form.button.tool" action="/inventor/item/list-tool-toolkit?id=${ toolkitId }"/>
-			<acme:button code="inventor.toolkit.form.button.component" action="/inventor/item/list-component-toolkit?id=${ toolkitId }"/> 
+			<acme:button code="inventor.toolkit.form.button.tool" action="/inventor/item/list-tool-toolkit?id=${toolkitId}&type=${0}"/>
+			<acme:button code="inventor.toolkit.form.button.component" action="/inventor/item/list-component-toolkit?id=${toolkitId}&type=${1}"/> 
 			<acme:submit code="inventor.toolkit.form.button.update" action="/inventor/toolkit/update"/>
 			<acme:submit code="inventor.toolkit.form.button.delete" action="/inventor/toolkit/delete"/>
-			<acme:submit code="inventor.toolkit.form.button.publish" action="/inventor/toolkit/publish"/>	
+			<acme:submit code="inventor.toolkit.form.button.publish" action="/inventor/toolkit/publish?id=${toolkitId}"/>	
 		</jstl:when>
 		<jstl:when test="${command == update }">
 			<acme:submit code="inventor.toolkit.form.button.update" action="/inventor/toolkit/update"/>
 		</jstl:when>
 		<jstl:when test="${command=='create'}">
-			<acme:input-checkbox code="inventor.toolkit.form.label.confirm" path="confirm"/>
 			<acme:submit code="inventor.toolkit.form.button.create" action="/inventor/toolkit/create"/>
 		</jstl:when>
 	</jstl:choose>	

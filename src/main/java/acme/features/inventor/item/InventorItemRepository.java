@@ -51,6 +51,9 @@ public interface InventorItemRepository extends AbstractRepository{
 	
     @Query("select c.defaultCurrency from SystemConfiguration c")
     String defaultCurrency();
+    
+    @Query("SELECT q.number FROM Quantity q WHERE q.toolkit.id = :masterId AND q.item.id = :id")
+	Integer findQuantity(int masterId, int id);
 
 
 	 
