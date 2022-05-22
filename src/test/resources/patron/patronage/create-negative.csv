@@ -1,8 +1,9 @@
 recordIndex,status,code,legal-stuff,budget,start-moment-date,final-moment-date,link,userId
 0,PROPOSED,ASD-123-E,Mandatory passport,"EUR 32,039,393.32",2022/11/30 23:12,2022/12/31 12:56,https://es.wikipedia.org/wiki/Patronaje,9
 1,PROPOSED,AAA-000-W,,"USD 44,039,393.32",2022/12/30 23:12,2023/01/31 12:56,https://www.youtube.com/,9
-2,PROPOSED,AAA-222-W,Change profile,GBP -44,2023/08/30 23:12,2022/09/30 23:13,https://www.youtube.com/,9
+2,PROPOSED,AAA-222-W,Change profile,GBP -44.00,2023/08/30 23:12,2022/09/30 23:13,https://www.youtube.com/,9
 3,PROPOSED,AAA-999-W,Change profile,AAA,2022/08/30 23:12,2022/09/30 23:13,https://www.youtube.com/,9
-4,PROPOSED,AAA-100-W,Something,EUR 45,2023/04/30 23:12,2022/09/30 23:13,https://www.youtube.com/,9
-5,PROPOSED,AAA-200-W,Something,EUR 45,2022/09/12 23:12,2022/09/24 23:13,https://www.youtube.com/,9
-6,PROPOSED,AAA-300-W,Something,EUR 45,2023/09/12 23:12,2023/11/24 23:13,nananan,9
+4,PROPOSED,AAA-100-W,Something,EUR 45.00,2023/04/30 23:12,2022/09/30 23:13,https://www.youtube.com/,9
+5,PROPOSED,AAA-200-W,Something,EUR 45.00,2022/09/12 23:12,2022/09/24 23:13,https://www.youtube.com/,9
+6,PROPOSED,AAA-300-W,Something,EUR 45.00,2023/09/12 23:12,2023/11/24 23:13,nananan,9
+7,PROPOSED,AAA-400-W,Something,EUR 45.00,2023/09/12 23:12,2023/10/12 23:12,,9

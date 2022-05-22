@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.entities.configuration.SystemConfiguration;
 import acme.entities.item.Item;
+import acme.entities.quantity.Quantity;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Inventor;
 
@@ -51,6 +52,11 @@ public interface InventorItemRepository extends AbstractRepository{
 	
     @Query("select c.defaultCurrency from SystemConfiguration c")
     String defaultCurrency();
+    
+	@Query("select q from  Quantity q where q.item.id = :itemId")
+	Collection<Quantity> findManyQuantityByItemId(int itemId);
+    
+    
 
 
 	 

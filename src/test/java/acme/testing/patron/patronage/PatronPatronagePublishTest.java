@@ -14,7 +14,7 @@ public class PatronPatronagePublishTest extends TestHarness {
 	public void positiveTest(final int recordIndex, final String code) {
 		super.signIn("patron1", "patron1");
 
-		super.clickOnMenu("Patron", "List Patronages");
+		super.clickOnMenu("Patron", "List my Patronages");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
 		super.checkColumnHasValue(recordIndex, 1, code);
@@ -30,18 +30,19 @@ public class PatronPatronagePublishTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/patron/patronage/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void negativeTest(final int recordIndex, final String code) {
+	public void negativeTest(final int recordIndex, final String code,final String newCode) {
 		super.signIn("patron1", "patron1");
 
-		super.clickOnMenu("Patron", "List Patronages");
+		super.clickOnMenu("Patron", "List my Patronages");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
 
 		super.checkColumnHasValue(recordIndex, 1, code);
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.checkNotButtonExists("Publish");
-		
+		super.fillInputBoxIn("code", newCode);
+		super.clickOnSubmit("Publish");
+		super.checkErrorsExist();		
 
 		super.signOut();
 	}

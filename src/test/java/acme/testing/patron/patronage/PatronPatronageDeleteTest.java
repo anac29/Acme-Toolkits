@@ -1,36 +1,35 @@
 package acme.testing.patron.patronage;
 
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.springframework.core.annotation.Order;
 
 import acme.testing.TestHarness;
 
-
-public class PatronPatronageUpdateTest extends TestHarness{
+public class PatronPatronageDeleteTest extends TestHarness { 
 	
-
 	@ParameterizedTest
-	@CsvFileSource(resources = "/patron/patronage/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/patron/patronage/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex, final String status,final String code, final String legalStuff, final String budget, final String startMomentDate,final String finalMomentDate,
-		final String link) {
+		final String link, final String statusAd,final String codeAd, final String legalStuffAd, final String budgetAd, final String startMomentDateAd,final String finalMomentDateAd,
+		final String linkAd) {
 		super.signIn("patron1", "patron1");
 
 		super.clickOnMenu("Patron", "List my Patronages");
+		super.checkListingExists();
 		super.sortListing(1, "asc");
-
-		super.checkColumnHasValue(recordIndex, 1, code);
-		super.clickOnListingRecord(recordIndex);
-		super.checkFormExists();
+		
+		super.clickOnButton("Create");
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("legalStuff", legalStuff);
 		super.fillInputBoxIn("budget", budget);
 		super.fillInputBoxIn("startMomentDate", startMomentDate);
 		super.fillInputBoxIn("finalMomentDate", finalMomentDate);
 		super.fillInputBoxIn("link", link);
-		super.clickOnSubmit("Update");
-
+		super.clickOnSubmit("Create");
+		
+		super.clickOnMenu("Patron", "List my Patronages");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
 		super.checkColumnHasValue(recordIndex, 0, status);
@@ -41,19 +40,40 @@ public class PatronPatronageUpdateTest extends TestHarness{
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
+		
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("legalStuff", legalStuff);
 		super.checkInputBoxHasValue("budget", budget);
 		super.checkInputBoxHasValue("startMomentDate", startMomentDate);
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
-		super.checkInputBoxHasValue("link", link);
+
+
+
+
+		
+		super.clickOnSubmit("Delete");
+		super.checkNotErrorsExist();
+		
+		super.clickOnMenu("Patron", "List my Patronages");
+		super.checkListingExists();
+		super.sortListing(1, "asc");
+	
+		super.checkColumnHasValue(recordIndex, 0, statusAd);
+		super.checkColumnHasValue(recordIndex, 1, codeAd);
+		super.checkColumnHasValue(recordIndex, 2, budgetAd);
+		super.checkColumnHasValue(recordIndex, 5, startMomentDateAd);
+		super.checkColumnHasValue(recordIndex, 6, finalMomentDateAd);
+		
+		
+		
+		
 
 		super.signOut();
 	}
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/patron/patronage/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(20)
+	@CsvFileSource(resources = "/patron/patronage/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
 	public void negativeTest(final int recordIndex, final String status,final String code, final String legalStuff, final String budget, final String startMomentDate,final String finalMomentDate,
 		final String link) {
 		super.signIn("patron1", "patron1");
@@ -61,19 +81,43 @@ public class PatronPatronageUpdateTest extends TestHarness{
 		super.clickOnMenu("Patron", "List my Patronages");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
-
-		super.checkColumnHasValue(recordIndex, 1, code);
-		super.clickOnListingRecord(recordIndex);
-		super.checkFormExists();
+		
+		super.clickOnButton("Create");
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("legalStuff", legalStuff);
 		super.fillInputBoxIn("budget", budget);
 		super.fillInputBoxIn("startMomentDate", startMomentDate);
 		super.fillInputBoxIn("finalMomentDate", finalMomentDate);
 		super.fillInputBoxIn("link", link);
-		super.clickOnSubmit("Update");
+		super.clickOnSubmit("Create");
+		
+		super.clickOnMenu("Patron", "List my Patronages");
+		super.checkListingExists();
+		super.sortListing(1, "asc");
+		super.checkColumnHasValue(recordIndex, 0, status);
+		super.checkColumnHasValue(recordIndex, 1, code);
+		super.checkColumnHasValue(recordIndex, 2, budget);
+		super.checkColumnHasValue(recordIndex, 5, startMomentDate);
+		super.checkColumnHasValue(recordIndex, 6, finalMomentDate);
+		
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.clickOnSubmit("Publish");
+		
+		super.clickOnMenu("Patron", "List my Patronages");
+		super.checkListingExists();
+		super.sortListing(1, "asc");
+		super.clickOnListingRecord(recordIndex);
+		super.checkNotButtonExists("Delete");
 
-		super.checkErrorsExist();
+		
+		
+		
+		
+		
+		
+		
+		
 
 		super.signOut();
 	}

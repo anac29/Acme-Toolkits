@@ -14,7 +14,7 @@ public class PatronPatronageCreateTest  extends TestHarness{
 	public void positiveTest(final int recordIndex, final String status,final String code, final String legalStuff, final String budget, final String startMomentDate,final String finalMomentDate,
 		final String link) {
 		super.signIn("patron1", "patron1");
-		super.clickOnMenu("Patron", "List Patronages");
+		super.clickOnMenu("Patron", "List my Patronages");
 		super.checkListingExists();
 		
 		super.clickOnButton("Create");
@@ -26,7 +26,7 @@ public class PatronPatronageCreateTest  extends TestHarness{
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Create");
 		
-		super.clickOnMenu("Patron", "List Patronages");
+		super.clickOnMenu("Patron", "List my Patronages");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
 		super.checkColumnHasValue(recordIndex, 0, status);
@@ -43,7 +43,7 @@ public class PatronPatronageCreateTest  extends TestHarness{
 	public void negativeTest(final int recordIndex, final String status,final String code, final String legalStuff, final String budget, final String startMomentDate,final String finalMomentDate,
 		final String link) {
 		super.signIn("patron1", "patron1");
-		super.clickOnMenu("Patron", "List Patronages");
+		super.clickOnMenu("Patron", "List my Patronages");
 		super.checkListingExists();
 		
 		super.clickOnButton("Create");
