@@ -30,7 +30,7 @@ public class InventorPatronageReportTest extends TestHarness
         super.checkInputBoxHasValue("creationMoment", creationMoment);
         super.checkInputBoxHasValue("memorandum", memorandum);
         super.checkInputBoxHasValue("link", link);
-        super.checkInputBoxHasValue("patronage.code", patronageCode);
+        super.checkInputBoxHasValue("patronageCode", patronageCode);
         
     
         
