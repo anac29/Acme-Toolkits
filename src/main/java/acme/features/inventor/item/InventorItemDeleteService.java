@@ -97,8 +97,8 @@ public class InventorItemDeleteService implements AbstractDeleteService<Inventor
 		}
 		
 		this.repository.delete(entity);
-		
-	}
+		  
+	}   
 	
 	
 

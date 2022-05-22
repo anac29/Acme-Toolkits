@@ -29,7 +29,7 @@ public class PatronPatronageUpdateTest extends TestHarness{
 		super.fillInputBoxIn("startMomentDate", startMomentDate);
 		super.fillInputBoxIn("finalMomentDate", finalMomentDate);
 		super.fillInputBoxIn("link", link);
-		super.clickOnSubmit("Update");
+		super.clickOnSubmit("Update");    
 
 		super.checkListingExists();
 		super.sortListing(1, "asc");

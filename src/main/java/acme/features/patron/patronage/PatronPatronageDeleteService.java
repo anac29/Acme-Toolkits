@@ -93,7 +93,7 @@ public class PatronPatronageDeleteService implements AbstractDeleteService<Patro
 			this.repository.delete(patronageReport);
 		}
 		
-		
+		   
 
 		this.repository.delete(entity);
 	}

@@ -17,7 +17,7 @@ public class PatronPatronageListMineTest extends TestHarness {
 		final String finalMomentDate, final String link, final String name, final String surname, final String email,final String publish ) {
 		
 super.signIn("patron1", "patron1");
-		
+		    
 		super.clickOnMenu("Patron","List my Patronages");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 

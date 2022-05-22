@@ -57,7 +57,7 @@ public interface InventorItemRepository extends AbstractRepository{
 	Collection<Quantity> findManyQuantityByItemId(int itemId);
     
     
-
+   
 
 	 
 	 

@@ -126,7 +126,7 @@ public class PatronPatronageDeleteTest extends TestHarness {
 		super.checkNotButtonExists("Delete");
 
 		
-		
+		    
 		
 		
 		

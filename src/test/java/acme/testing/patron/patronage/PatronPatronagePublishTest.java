@@ -25,7 +25,7 @@ public class PatronPatronagePublishTest extends TestHarness {
 		super.checkNotErrorsExist();
 
 		super.signOut();
-	}
+	}   
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/patron/patronage/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
