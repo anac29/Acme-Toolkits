@@ -84,21 +84,23 @@ public class InventorItemDeleteService implements AbstractDeleteService<Inventor
 		
 	}
 
-    @Override
-    public void delete(final Request<Item> request, final Item entity) {
-        assert request != null;
-        assert entity != null;
 
-        Collection<Quantity> quantities;
+	@Override
+	public void delete(final Request<Item> request, final Item entity) {
+		assert request != null;
+		assert entity != null;
 
-        quantities = this.repository.findManyQuantityByItemId(entity.getId());
-        for (final Quantity quantity : quantities) {
-            this.repository.delete(quantity);
-        }
-        
-        this.repository.delete(entity);
-        
-    }
+		Collection<Quantity> quantities;
+
+		quantities = this.repository.findManyQuantityByItemId(entity.getId());
+		for (final Quantity quantity : quantities) {
+			this.repository.delete(quantity);
+		}
+		
+		this.repository.delete(entity);
+		  
+	}   
+
 	
 	
 

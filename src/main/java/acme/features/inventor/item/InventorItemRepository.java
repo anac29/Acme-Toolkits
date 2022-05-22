@@ -55,6 +55,7 @@ public interface InventorItemRepository extends AbstractRepository{
 
     @Query("select q from  Quantity q where q.item.id = :itemId")
     Collection<Quantity> findManyQuantityByItemId(int itemId);
+
 	 
 	 
 	 

@@ -52,7 +52,7 @@ master.menu.administrator.system-configuration= Configuración del Sistema
 # master.menu.patron ####################################################
 
 master.menu.patron = Patrocinador
-master.menu.patron.patronages = Listado de Patrocinios
+master.menu.patron.patronages = Listado de  mis Patrocinios
 master.menu.patron.patronage-reports = Listado de Informe de Patrocinios
 master.menu.patron.dashboard = Panel
 

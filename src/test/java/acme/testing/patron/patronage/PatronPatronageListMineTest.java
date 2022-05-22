@@ -1,6 +1,7 @@
 package acme.testing.patron.patronage;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -13,11 +14,12 @@ public class PatronPatronageListMineTest extends TestHarness {
 	@Order(10) 
 	public void positiveTest(final int recordIndex, final String status, final String code, 
 		final String legalStuff, final String budget, final String creationMomentDate, final String startMomentDate, 
-		final String finalMomentDate, final String link, final String name, final String surname, final String email, final String publish ) {
+		final String finalMomentDate, final String link, final String name, final String surname, final String email,final String publish ) {
+
 		
-		super.signIn("patron1", "patron1");
-		
-		super.clickOnMenu("Patron","List Patronages");
+super.signIn("patron1", "patron1");
+		    
+		super.clickOnMenu("Patron","List my Patronages");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -43,11 +45,25 @@ public class PatronPatronageListMineTest extends TestHarness {
 		super.checkInputBoxHasValue("startMomentDate", startMomentDate);
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
 		super.checkInputBoxHasValue("link", link);
-		
-		
-		
-		
-		
+
+	}
+	
+	@Test
+	@Order(30)
+	public void hackingTest() {
+		super.checkNotLinkExists("Patron");
+		super.navigate("/patron/patronage/list");
+		super.checkPanicExists();
+
+		super.signIn("inventor1", "inventor1");
+		super.navigate("/patron/patronage/list");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("administrator", "administrator");
+		super.navigate("/patron/patronage/list");
+		super.checkPanicExists();
+
 		super.signOut();
 	}
 }
