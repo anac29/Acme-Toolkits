@@ -64,6 +64,21 @@ public class PatronPatronageDeleteTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 5, startMomentDateAd);
 		super.checkColumnHasValue(recordIndex, 6, finalMomentDateAd);
 		
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		
+		super.checkInputBoxHasValue("code", codeAd);
+		super.checkInputBoxHasValue("legalStuff", legalStuffAd);
+		super.checkInputBoxHasValue("budget", budgetAd);
+		super.checkInputBoxHasValue("startMomentDate", startMomentDateAd);
+		super.checkInputBoxHasValue("finalMomentDate", finalMomentDateAd);
+		super.checkInputBoxHasValue("link", linkAd);
+
+
+		
+		super.clickOnSubmit("Delete");
+		super.checkNotErrorsExist();
+		
 		
 		
 		
