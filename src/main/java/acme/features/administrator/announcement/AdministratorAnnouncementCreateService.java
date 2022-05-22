@@ -3,11 +3,10 @@ package acme.features.administrator.announcement;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
 import acme.entities.announcement.Announcement;
-import acme.entities.configuration.SystemConfiguration;
+import acme.features.spam.SpamDetectorService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -19,6 +18,9 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 
 	@Autowired
 	protected AdministratorAnnouncementRepository repo;
+	
+	@Autowired
+	protected SpamDetectorService spamService;
 	
 	@Override
 	public boolean authorise(final Request<Announcement> request) {
@@ -72,16 +74,12 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		errors.state(request, confirmation, "confirmation", "javax.validation.constraints.AssertTrue.message");
 		
 		if(!errors.hasErrors("body")) {
-			final SystemConfiguration sc = this.repo.findSystemConfiguration();
-			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-			final boolean isBodySpam = sd.isSpam(entity.getBody());
+			final boolean isBodySpam = this.spamService.isSpam(entity.getBody());
 			errors.state(request, !isBodySpam, "body", "administrator.announcement.form.error.spam");
 		}
 		
 		if(!errors.hasErrors("title")) {
-			final SystemConfiguration sc = this.repo.findSystemConfiguration();
-			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-			final boolean isTitleSpam = sd.isSpam(entity.getTitle());
+			final boolean isTitleSpam = this.spamService.isSpam(entity.getTitle());
 			errors.state(request, !isTitleSpam, "title", "administrator.announcement.form.error.spam");
 		}
 		
