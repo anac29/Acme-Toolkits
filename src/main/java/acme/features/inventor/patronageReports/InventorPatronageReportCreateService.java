@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.patronage.Patronage;
 import acme.entities.patronageReport.PatronageReport;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -28,7 +29,15 @@ public class InventorPatronageReportCreateService implements AbstractCreateServi
 	public boolean authorise(final Request<PatronageReport> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int patronageId;
+		final Patronage patronage;
+
+		patronageId = request.getModel().getInteger("masterId");
+		patronage = this.repository.findOnePatronageById(patronageId);
+		result = patronage!= null && patronage.getInventor().getId() == request.getPrincipal().getActiveRoleId();
+
+		return result;
 	}
 
 	@Override

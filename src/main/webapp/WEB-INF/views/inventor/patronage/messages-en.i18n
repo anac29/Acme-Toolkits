@@ -14,8 +14,7 @@ inventor.patronage.list.label.budget = Budget
 inventor.patronage.list.label.creationMomentDate = Creation Date
 inventor.patronage.list.label.startMomentDate = Start Date
 inventor.patronage.list.label.finalMomentDate = End Date
-inventor.patronage.list.button.create = Create
-inventor.patronage.form.button.update = Update
+inventor.patronage.list.button.create = Create Report
 
 inventor.patronage.form.label.status = Status
 inventor.patronage.form.label.proposed = PROPOSED
