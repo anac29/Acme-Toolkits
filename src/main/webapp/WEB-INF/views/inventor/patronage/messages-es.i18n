@@ -15,6 +15,7 @@ inventor.patronage.list.label.creationMomentDate = Fecha de creación
 inventor.patronage.list.label.startMomentDate = Fecha de inicio
 inventor.patronage.list.label.finalMomentDate = Fecha de finalización
 inventor.patronage.list.button.create = Crear
+inventor.patronage.form.button.update = Actualizar
 
 inventor.patronage.form.label.status = Estado
 inventor.patronage.form.label.proposed = PROPUESTO
