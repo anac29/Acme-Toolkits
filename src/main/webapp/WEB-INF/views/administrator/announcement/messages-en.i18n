@@ -1,4 +1,4 @@
-admin.announcement.form.button.create = Confirm
+admin.announcement.form.button.create = Create
 master.menu.administrator.announcement = Create announcement
 authenticated.announcement.form.label.confirm = Confirm
 administrator.announcement.form.error.spam = The text contains too many spam terms
