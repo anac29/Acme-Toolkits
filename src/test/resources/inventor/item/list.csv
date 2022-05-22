@@ -1,0 +1,4 @@
+recordIndex,name,code,item-type,technology,description,retail-price,link,published
+0,stone,AAA-123,COMPONENT,beta,It's night and day,EUR 4.62,https://genius.com/Rosalia-diablo-lyrics,false
+1,mouse,MOU-237,COMPONENT,gamma,A Mouse,EUR 7.88,https://es.wiktionary.org/wiki/palo,true
+2,pliers,PLI-574,TOOL,alpha,Does anyone need some pliers?,GBP 9.88,https://es.wikipedia.org/wiki/Alicate,false

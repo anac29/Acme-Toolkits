@@ -1,3 +1,0 @@
-recordIndex,name,code,technology,description,retail-price,item-type,link,key:inventor,inventor-name,inventor-surname,inventor-email
-0,drill,AGH-153-H,alpha,Morbi non placerat leo ut elementum justo,EUR 43.32,TOOL,https://www.lipsum.com/feed/html,inventor1,Inventor,One,"inventor1@mail.com"
-1,hammer,HAM-134,alpha,Just a hammer,USD 1.99,TOOL,https://es.wikipedia.org/wiki/Martillo,inventor1,Inventor,One,"inventor1@mail.com"
