@@ -47,10 +47,6 @@ public class PatronPatronageDeleteTest extends TestHarness {
 		super.checkInputBoxHasValue("startMomentDate", startMomentDate);
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
 
-
-
-
-		
 		super.clickOnSubmit("Delete");
 		super.checkNotErrorsExist();
 		
@@ -73,16 +69,10 @@ public class PatronPatronageDeleteTest extends TestHarness {
 		super.checkInputBoxHasValue("startMomentDate", startMomentDateAd);
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDateAd);
 		super.checkInputBoxHasValue("link", linkAd);
-
-
 		
 		super.clickOnSubmit("Delete");
 		super.checkNotErrorsExist();
 		
-		
-		
-		
-
 		super.signOut();
 	}
 	
@@ -124,15 +114,6 @@ public class PatronPatronageDeleteTest extends TestHarness {
 		super.sortListing(1, "asc");
 		super.clickOnListingRecord(recordIndex);
 		super.checkNotButtonExists("Delete");
-
-		
-		    
-		
-		
-		
-		
-		
-		
 
 		super.signOut();
 	}
