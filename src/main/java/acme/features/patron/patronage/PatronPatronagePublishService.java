@@ -14,15 +14,15 @@ import acme.framework.services.AbstractUpdateService;
 import acme.roles.Patron;
 
 @Service
-public class PatronPatronagePublishService implements AbstractUpdateService<Patron, Patronage>{
+public class PatronPatronagePublishService implements AbstractUpdateService<Patron, Patronage> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	protected PatronPatronageRepository repository;
 
-	// AbstractUpdateService<Patron, Patronage> -------------------------------------
-
+	// AbstractUpdateService<Patron, Patronage>
+	// -------------------------------------
 
 	@Override
 	public boolean authorise(final Request<Patronage> request) {
@@ -42,7 +42,7 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 	@Override
 	public Patronage findOne(final Request<Patronage> request) {
 		assert request != null;
-		
+
 		Patronage result;
 		int id;
 
@@ -57,10 +57,11 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		entity.setInventor(this.repository.findInventorById(Integer.valueOf(request.getModel().getAttribute("inventorId").toString())).orElse(null));
+		entity.setInventor(this.repository
+				.findInventorById(Integer.valueOf(request.getModel().getAttribute("inventorId").toString()))
+				.orElse(null));
 
-
-		request.bind(entity, errors, "code", "legalStuff", "budget", "startMomentDate", "finalMomentDate","link");
+		request.bind(entity, errors, "code", "legalStuff", "budget", "startMomentDate", "finalMomentDate", "link");
 	}
 
 	@Override
@@ -68,41 +69,43 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
+
 		if (!errors.hasErrors("code")) {
 			Patronage existing;
 
 			existing = this.repository.findOnePatronageByCode(entity.getCode());
-			if(existing!=null) {
-			errors.state(request, existing.getId()==entity.getId() , "code", "patron.patronage.form.error.duplicated");
+			if (existing != null) {
+				errors.state(request, existing.getId() == entity.getId(), "code",
+						"patron.patronage.form.error.duplicated");
 			}
 		}
-		
-		if(!errors.hasErrors("startMomentDate")) {
-			final Date minimumStartDate=DateUtils.addMonths(entity.getCreationMomentDate(), 1);
 
-			
-			errors.state(request, entity.getStartMomentDate().after(minimumStartDate), "startMomentDate", "patron.patronage.form.error.too-close-start-date");
-			
-		}
-		if(!errors.hasErrors("finalMomentDate")) {
-			final Date minimumFinishDate=DateUtils.addMonths(entity.getStartMomentDate(), 1);
+		if (!errors.hasErrors("startMomentDate")) {
+			final Date minimumStartDate = DateUtils.addMonths(entity.getCreationMomentDate(), 1);
 
-			errors.state(request, entity.getFinalMomentDate().after(minimumFinishDate), "finalMomentDate", "patron.patronage.form.error.one-month");
-			
+			errors.state(request, entity.getStartMomentDate().after(minimumStartDate), "startMomentDate",
+					"patron.patronage.form.error.too-close-start-date");
+
 		}
-		
-		
+		if (!errors.hasErrors("finalMomentDate")) {
+			final Date minimumFinishDate = DateUtils.addMonths(entity.getStartMomentDate(), 1);
+
+			errors.state(request, entity.getFinalMomentDate().after(minimumFinishDate), "finalMomentDate",
+					"patron.patronage.form.error.one-month");
+
+		}
+
 		if (!errors.hasErrors("budget")) {
-			final String[] currencies=this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
-            Boolean acceptedCurrency=false;
-            for(int i=0;i<currencies.length;i++) {
-                if(entity.getBudget().getCurrency().equals(currencies[i].trim())) {
-                    acceptedCurrency=true;
-                }
-            }
-			
-			errors.state(request, entity.getBudget().getAmount() > 0, "budget", "patron.patronage.form.error.negative-budget");
+			final String[] currencies = this.repository.findSystemConfiguration().getAcceptedCurrencies().split(",");
+			Boolean acceptedCurrency = false;
+			for (int i = 0; i < currencies.length; i++) {
+				if (entity.getBudget().getCurrency().equals(currencies[i].trim())) {
+					acceptedCurrency = true;
+				}
+			}
+
+			errors.state(request, entity.getBudget().getAmount() > 0, "budget",
+					"patron.patronage.form.error.negative-budget");
 			errors.state(request, acceptedCurrency, "budget", "patron.patronage.form.error.non-accepted-currency");
 		}
 
@@ -114,7 +117,8 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "code", "legalStuff", "budget", "startMomentDate", "finalMomentDate","link","published");
+		request.unbind(entity, model, "code", "legalStuff", "budget", "startMomentDate", "finalMomentDate", "link",
+				"published");
 		model.setAttribute("inventors", this.repository.findInventors());
 		model.setAttribute("inventId", entity.getInventor().getId());
 	}
@@ -123,11 +127,10 @@ public class PatronPatronagePublishService implements AbstractUpdateService<Patr
 	public void update(final Request<Patronage> request, final Patronage entity) {
 		assert request != null;
 		assert entity != null;
+		
 		entity.setPublished(true);
-
 		this.repository.save(entity);
 
 	}
 
-	
 }
