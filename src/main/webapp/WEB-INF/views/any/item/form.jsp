@@ -19,8 +19,14 @@
 	<acme:input-textbox code="any.item.form.label.name" path="name"/>
 	<acme:input-textbox code="any.item.form.label.code" path="code"/>
 	<acme:input-textbox code="any.item.form.label.technology" path="technology"/>
-	<acme:input-textarea code="any.item.form.label.description" path="description"/>
+		<acme:input-textarea code="any.item.form.label.description" path="description"/>
 	<acme:input-money code="any.item.form.label.retail-price" path="retailPrice"/>
+	<acme:input-select code="inventor.item.form.label.itemType" path="itemType">
+		
+			<acme:input-option code="inventor.item.form.label.tool" value="TOOL" selected="${ itemType == 'TOOL' }"/>
+			<acme:input-option code="inventor.item.form.label.component" value="COMPONENT" selected="${ itemType == 'COMPONENT' }"/>
+		
+		</acme:input-select>
 	<acme:input-url code="any.item.form.label.link" path="link"/>
 	<hr>
 	<h3><acme:message code="any.item.form.label.title"/></h3>

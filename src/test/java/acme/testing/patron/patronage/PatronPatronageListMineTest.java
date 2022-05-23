@@ -15,6 +15,7 @@ public class PatronPatronageListMineTest extends TestHarness {
 	public void positiveTest(final int recordIndex, final String status, final String code, 
 		final String legalStuff, final String budget, final String creationMomentDate, final String startMomentDate, 
 		final String finalMomentDate, final String link, final String name, final String surname, final String email,final String publish ) {
+
 		
 super.signIn("patron1", "patron1");
 		    
@@ -44,6 +45,7 @@ super.signIn("patron1", "patron1");
 		super.checkInputBoxHasValue("startMomentDate", startMomentDate);
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
 		super.checkInputBoxHasValue("link", link);
+
 	}
 	
 	@Test
@@ -61,6 +63,7 @@ super.signIn("patron1", "patron1");
 		super.signIn("administrator", "administrator");
 		super.navigate("/patron/patronage/list");
 		super.checkPanicExists();
+
 		super.signOut();
 	}
 }

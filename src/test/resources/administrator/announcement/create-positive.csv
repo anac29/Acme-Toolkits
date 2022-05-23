@@ -1,0 +1,11 @@
+recordIndex,title,body,critical,link
+0,0-announcement test,announcement body,false,http://testlink.test
+1,1-announcement test,test announcement body,true,
+2,2-Test Anuncio,Eñe con tílde y con caracteres raros.-|$%&/()=?¿¡!_:;¨Ç,true,http://testlink.test
+3,3,e,true,
+4,4-01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567,012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678012345678901234567890123456789012345678901234567891234567,true,
+5,"5- sex test test test test test test test test test","test","false",""
+6,"6- sexy test test test ","test","false",""
+7,"7-test","sex test test test test test test test test test test","false",""
+8,"8-test","sexy test test test test","false",""
+9,"9- sex test test test test test test test test test  ","sexy test test test test","false",""
