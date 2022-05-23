@@ -32,9 +32,6 @@ public interface InventorItemRepository extends AbstractRepository {
 
 	@Query("SELECT i FROM Item i WHERE i.inventor.id = :inventorid ")
 	Collection<Item> findMyItems(Integer inventorid);
-	
-  @Query("select c.defaultCurrency from SystemConfiguration c")
-  String defaultCurrency();
     
 	@Query("select q from  Quantity q where q.item.id = :itemId")
 	Collection<Quantity> findManyQuantityByItemId(int itemId);
