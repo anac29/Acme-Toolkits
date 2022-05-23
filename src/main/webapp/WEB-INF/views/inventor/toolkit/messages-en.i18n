@@ -27,6 +27,7 @@ inventor.toolkit.form.button.create=Create
 inventor.toolkit.form.label.confirm=Confirm
 
 inventor.toolkit.form.error.spam=The text contains too many spam terms
+inventor.toolkit.form.error.duplicated-code=This code already exists for another toolkit
 
 inventor.toolkit.form.label.code=Code:
 inventor.toolkit.form.label.title=Title:

@@ -1,11 +1,10 @@
 package acme.features.inventor.toolkit;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
-import acme.entities.configuration.SystemConfiguration;
 import acme.entities.toolkits.Toolkit;
+import acme.features.spam.SpamDetectorService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -17,6 +16,9 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 	
 	@Autowired
 	protected InventorToolkitRepository repo;
+	
+	@Autowired
+	protected SpamDetectorService spamService;
 	
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
@@ -50,26 +52,24 @@ public class InventorToolkitCreateService implements AbstractCreateService<Inven
 		assert entity != null;
 		assert errors != null;
 		
-
 		if(!errors.hasErrors("description")) {
-			final SystemConfiguration sc = this.repo.findSystemConfiguration();
-			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-			final boolean isDescSpam = sd.isSpam(entity.getDescription());
+			final boolean isDescSpam = this.spamService.isSpam(entity.getDescription());
 			errors.state(request, !isDescSpam, "description", "inventor.toolkit.form.error.spam");
 		}
 		
 		if(!errors.hasErrors("title")) {
-			final SystemConfiguration sc = this.repo.findSystemConfiguration();
-			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-			final boolean isTitleSpam = sd.isSpam(entity.getTitle());
+			final boolean isTitleSpam = this.spamService.isSpam(entity.getTitle());
 			errors.state(request, !isTitleSpam, "title", "inventor.toolkit.form.error.spam");
 		}
 		
 		if(!errors.hasErrors("assemblyNotes")) {
-			final SystemConfiguration sc = this.repo.findSystemConfiguration();
-			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-			final boolean isAnSpam = sd.isSpam(entity.getAssemblyNotes());
+			final boolean isAnSpam = this.spamService.isSpam(entity.getAssemblyNotes());
 			errors.state(request, !isAnSpam, "assemblyNotes", "inventor.toolkit.form.error.spam");
+		}
+		
+		if (!errors.hasErrors("code")) {
+			final Toolkit equalCode = this.repo.findOneToolkitByCode(entity.getCode()).orElse(null);
+			errors.state(request, equalCode == null, "code", "inventor.toolkit.form.error.duplicated-code");
 		}
 		
 	}
