@@ -1,0 +1,20 @@
+# i18n-en.i18n
+#
+# Copyright (C) 2012-2022 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+inventor.toolkit.tool=Ítem
+inventor.item.amount=Cantidad
+inventor.item.toolkit.create=Añadir
+inventor.item.toolkit.delete=Quitar
+inventor.quantity.number.error=La cantidad de este ítem debe ser mayor que 0
+
+inventor.item.quantity.add.0=Añadir herramienta
+inventor.item.quantity.add.1=Añadir componente
+inventor.item.quantity.delete.0=Quitar herramienta
+inventor.item.quantity.delete.1=Quitar componente

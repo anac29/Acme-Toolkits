@@ -8,17 +8,15 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-
- 
 inventor.patronage-report.list.label.automatic-sequence-number=Sequence Number
-inventor.patronage-report.list.label.creation-moment = Creation Moment
-inventor.patronage-report.list.label.memorandum = Memorandum 
-inventor.patronage-report.list.button.create = Create
+inventor.patronage-report.list.label.creation-moment=Creation Moment
+inventor.patronage-report.list.label.memorandum=Memorandum 
+inventor.patronage-report.list.button.create=Create
 
-inventor.patronage-report.form.label.automatic-sequence-number = Sequence Number:
-inventor.patronage-report.form.label.creation-moment = Creation Moment:
-inventor.patronage-report.form.label.memorandum = Memorandum:
-inventor.patronage-report.form.label.link = Link:
-inventor.patronage-report.form.label.patronage.code = Patronage Code:
-inventor.patronage-report.form.button.create = Create
-inventor.patronage-report.form.label.confirmation = Please, confirm in order to create the Patronage Report
+inventor.patronage-report.form.label.automatic-sequence-number=Sequence Number:
+inventor.patronage-report.form.label.creation-moment=Creation Moment:
+inventor.patronage-report.form.label.memorandum=Memorandum:
+inventor.patronage-report.form.label.link=Link:
+inventor.patronage-report.form.label.patronage.code=Patronage Code:
+inventor.patronage-report.form.button.create=Create
+inventor.patronage-report.form.label.confirmation=Please, confirm in order to create the Patronage Report

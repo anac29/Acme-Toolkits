@@ -34,7 +34,7 @@ public class InventorItemUpdateService implements AbstractUpdateService<Inventor
 		masterId = request.getModel().getInteger("id");
 		item = this.repository.findOneById(masterId);
 		inventor = item.getInventor();
-		result =!item.isPublished() && request.isPrincipal(inventor);
+		result = !item.isPublished() && request.isPrincipal(inventor);
 
 		return result;
 	}
@@ -101,12 +101,10 @@ public class InventorItemUpdateService implements AbstractUpdateService<Inventor
 		
 		if(!errors.hasErrors("code")) {
 			Item existing;
-			existing=this.repository.findOneById(entity.getId());
-			if(existing!=null) {
-				errors.state(request,existing.getId()==entity.getId() , "code", "inventor.item.form.error.duplicated-code");
-
+			existing = this.repository.findOneByCode(entity.getCode()).orElse(null);
+			if(existing != null) {
+				errors.state(request,existing.getId() == entity.getId() , "code", "inventor.item.form.error.duplicated-code");
 			}
-
 		}
 		
 		if (!errors.hasErrors("retailPrice")) {

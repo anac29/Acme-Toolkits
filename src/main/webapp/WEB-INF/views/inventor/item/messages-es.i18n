@@ -1,36 +1,44 @@
-inventor.item.list.label.name = Nombre
-inventor.item.list.label.code = Código
-inventor.item.list.label.technology = Tecnología
-inventor.item.list.label.description = Descripción
-inventor.item.list.label.retailPrice = Precio
-inventor.item.list.label.itemType = Tipo
-inventor.item.list.button.create = Crear
+
+inventor.item.list.label.name=Nombre
+inventor.item.list.label.code=Código
+inventor.item.list.label.technology=Tecnología
+inventor.item.list.label.description=Descripción
+inventor.item.list.label.retailPrice=Precio
+inventor.item.list.label.itemType=Tipo
+inventor.item.list.button.create=Crear
 
 
-inventor.item.list.label.published = Publicado
+inventor.item.list.label.published=Publicado
+inventor.item.tool.toolkit.delete=Quitar Herramienta
+inventor.toolkit.tool=Item
 
+inventor.item.toolkit.create=Añadir
+inventor.item.toolkit.delete=Quitar
 
-inventor.item.form.label.published = Publicado
-inventor.item.form.label.name = Nombre
-inventor.item.form.label.itemType = Tipo
-inventor.item.form.label.technology = Tecnología
-inventor.item.form.label.description = Descripción
-inventor.item.form.label.retailPrice = Precio
-inventor.item.form.label.tool = HERRAMIENTA
-inventor.item.form.label.component = COMPONENTE
-inventor.item.form.label.code = Código
-inventor.item.form.label.link = Link
-inventor.item.form.button.inventor = Inventor
-inventor.item.form.button.create = Crear
-inventor.item.form.button.update = Actualizar
-inventor.item.form.button.delete = Eliminar
+inventor.item.comp.toolkit.create=Añadir Componente
+inventor.item.comp.toolkit.delete=Quitar Componente
+
+inventor.item.form.label.published=Publicado
+inventor.item.form.label.name=Nombre
+inventor.item.form.label.itemType=Tipo
+inventor.item.form.label.technology=Tecnología
+inventor.item.form.label.description=Descripción
+inventor.item.form.label.retailPrice=Precio
+inventor.item.form.label.tool=HERRAMIENTA
+inventor.item.form.label.component=COMPONENTE
+inventor.item.form.label.code=Código
+inventor.item.form.label.link=Link
+inventor.item.form.button.inventor=Inventor
+inventor.item.form.button.create=Crear
+inventor.item.form.button.update=Actualizar
+inventor.item.form.button.delete=Eliminar
 patron.patronage.form.label.budget.default= Precio en moneda por defecto
 
 
 inventor.item.form.button.publish= Publicar
 
 
-inventor.item.form.error.negative-salary = El precio debe ser positivo
+inventor.item.form.error.negative-salary=El precio debe ser positivo
 inventor.item.form.error.duplicated-code= Este código ya existe para un ítem
 item.inventor.form.error.spam= El texto contiene demasiados términos spam
 inventor.item.form.error.non-accepted-currency= Esta unidad monetaria no está aceptada
