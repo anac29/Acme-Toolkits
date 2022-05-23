@@ -51,7 +51,7 @@ master.menu.administrator.system-configuration= System Configuration
 # master.menu.patron ####################################################
 
 master.menu.patron = Patron
-master.menu.patron.patronages =List Patronages
+master.menu.patron.patronages =List my Patronages
 master.menu.patron.patronage-reports = List Patronage Reports
 master.menu.patron.dashboard = Dashboard
 

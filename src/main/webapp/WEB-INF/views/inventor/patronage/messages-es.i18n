@@ -8,13 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-inventor.patronage.list.label.status=Estado
-inventor.patronage.list.label.code=Código
-inventor.patronage.list.label.budget=Presupuesto
-inventor.patronage.list.label.creationMomentDate=Fecha de creación
-inventor.patronage.list.label.startMomentDate=Fecha de inicio
-inventor.patronage.list.label.finalMomentDate=Fecha de finalización
-inventor.patronage.list.button.create=Crear
+inventor.patronage.list.label.status = Estado
+inventor.patronage.list.label.code = Código
+inventor.patronage.list.label.budget = Presupuesto
+inventor.patronage.list.label.creationMomentDate = Fecha de creación
+inventor.patronage.list.label.startMomentDate = Fecha de inicio
+inventor.patronage.list.label.finalMomentDate = Fecha de finalización
+inventor.patronage.list.button.create = Crear informe
 
 inventor.patronage.form.label.status=Estado
 inventor.patronage.form.label.proposed=PROPUESTO

@@ -3,11 +3,10 @@ package acme.features.any.chirp;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
 import acme.entities.chirp.Chirp;
-import acme.entities.configuration.SystemConfiguration;
+import acme.features.spam.SpamDetectorService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -21,6 +20,9 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 
 	@Autowired
 	protected AnyChirpRepository repository;
+	
+	@Autowired
+	protected SpamDetectorService spamService;
 
 	// AbstractCreateService<Administrator, Shout> interface --------------
 
@@ -61,29 +63,21 @@ public class AnyChirpCreateService implements AbstractCreateService<Any, Chirp> 
 		assert entity != null;
 		assert errors != null;
 		
-		boolean confirmation;
-
-		confirmation = request.getModel().getBoolean("confirmation");
+		final boolean confirmation = request.getModel().getBoolean("confirmation");
 		errors.state(request, confirmation, "confirmation", "any.chirp.form.label.confirmation");
 
 		if(!errors.hasErrors("title")) {
-			final SystemConfiguration sc = this.repository.findSystemConfiguration();
-			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-			final boolean isBodySpam = sd.isSpam(entity.getBody());
-			errors.state(request, !isBodySpam, "title", "any.chirp.form.error.spam");
+			final boolean isTitleSpam = this.spamService.isSpam(entity.getTitle());
+			errors.state(request, !isTitleSpam, "title", "any.chirp.form.error.spam");
 		}
 		
 		if(!errors.hasErrors("author")) {
-			final SystemConfiguration sc = this.repository.findSystemConfiguration();
-			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-			final boolean isBodySpam = sd.isSpam(entity.getBody());
-			errors.state(request, !isBodySpam, "author", "any.chirp.form.error.spam");
+			final boolean isAuthorSpam = this.spamService.isSpam(entity.getAuthor());
+			errors.state(request, !isAuthorSpam, "author", "any.chirp.form.error.spam");
 		}
 		
 		if(!errors.hasErrors("body")) {
-			final SystemConfiguration sc = this.repository.findSystemConfiguration();
-			final SpamDetector sd = new SpamDetector(sc.getStrongSpamTerms(), sc.getWeakSpamTerms(), sc.getStrongThreshold(), sc.getWeakThreshold());
-			final boolean isBodySpam = sd.isSpam(entity.getBody());
+			final boolean isBodySpam = this.spamService.isSpam(entity.getBody());
 			errors.state(request, !isBodySpam, "body", "any.chirp.form.error.spam");
 		}
 		

@@ -1,9 +1,12 @@
 package acme.features.patron.patronage;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.patronage.Patronage;
+import acme.entities.patronageReport.PatronageReport;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -17,6 +20,8 @@ public class PatronPatronageDeleteService implements AbstractDeleteService<Patro
 
 	@Autowired
 	protected PatronPatronageRepository repository;
+	
+
 
 	// AbstractDeleteService<Patron, Patronage> -------------------------------------
 
@@ -72,12 +77,23 @@ public class PatronPatronageDeleteService implements AbstractDeleteService<Patro
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+				
 	}
 
 	@Override
 	public void delete(final Request<Patronage> request, final Patronage entity) {
 		assert request != null;
 		assert entity != null;
+		
+		Collection<PatronageReport> patronagesReports;
+
+		patronagesReports = this.repository.findManyPatronageReportsByPatronageId(entity.getId());
+		for (final PatronageReport patronageReport : patronagesReports) {
+			this.repository.delete(patronageReport);
+		}
+		
+		   
 
 		this.repository.delete(entity);
 	}

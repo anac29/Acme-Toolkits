@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.entities.configuration.SystemConfiguration;
 import acme.entities.patronage.Patronage;
+import acme.entities.patronageReport.PatronageReport;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Inventor;
 import acme.roles.Patron;
@@ -38,4 +39,9 @@ public interface PatronPatronageRepository extends AbstractRepository {
 	
 	@Query("select c.defaultCurrency from SystemConfiguration c")
 	String defaultCurrency();
+	
+	@Query("select patronageReport from  PatronageReport patronageReport where patronageReport.patronage.id = :patronageId")
+	Collection<PatronageReport> findManyPatronageReportsByPatronageId(int patronageId);
 }
+   
+
