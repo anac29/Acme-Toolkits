@@ -1,5 +1,6 @@
 package acme.features.inventor.toolkit;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,9 +9,11 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.quantity.Quantity;
 import acme.entities.toolkits.Toolkit;
+import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
 
@@ -19,6 +22,9 @@ public class InventorToolkitPublishService implements AbstractUpdateService<Inve
 
 	@Autowired
 	protected InventorToolkitRepository repository;
+	
+	@Autowired
+	protected AuthenticatedMoneyExchangePerformService moneyService;
 
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
@@ -50,7 +56,22 @@ public class InventorToolkitPublishService implements AbstractUpdateService<Inve
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "code", "title", "description", "assemblyNotes");
+
+		final String defaultCurrency = this.repository.defaultCurrency();
+
+		final Collection<Quantity> collectedMoneys = this.repository.collectPrices(entity.getId());
+		final Double totalPrice = collectedMoneys.stream()
+				.mapToDouble(q -> this.moneyService.computeMoneyExchange(q.getItem().getRetailPrice(), defaultCurrency)
+						.getTarget().getAmount() * q.getNumber())
+				.sum();
+		final Money money = new Money();
+		money.setAmount(totalPrice);
+		money.setCurrency(defaultCurrency);
+
+		model.setAttribute("totalPrice", money);
+		model.setAttribute("toolkitId", entity.getId());
+		
+		request.unbind(entity, model, "code", "title", "description", "assemblyNotes", "published");
 
 	}
 

@@ -45,19 +45,14 @@ public class Toolkit extends AbstractEntity {
 
 	@URL
 	protected String link;
-	
 
 	protected boolean published;
-	
-	
-	
+
 	// Relations ---------------------------------------------------------
-	
-		@Valid
-		@NotNull
-		@ManyToOne(optional = false)
-		protected Inventor inventor;
-	
-	
+
+	@Valid
+	@NotNull
+	@ManyToOne(optional = false)
+	protected Inventor inventor;
 
 }

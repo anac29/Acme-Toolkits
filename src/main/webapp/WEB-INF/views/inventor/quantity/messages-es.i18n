@@ -13,3 +13,8 @@ inventor.item.amount=Cantidad
 inventor.item.toolkit.create=Añadir
 inventor.item.toolkit.delete=Quitar
 inventor.quantity.number.error=La cantidad de este ítem debe ser mayor que 0
+
+inventor.item.quantity.add.0=Añadir herramienta
+inventor.item.quantity.add.1=Añadir componente
+inventor.item.quantity.delete.0=Quitar herramienta
+inventor.item.quantity.delete.1=Quitar componente

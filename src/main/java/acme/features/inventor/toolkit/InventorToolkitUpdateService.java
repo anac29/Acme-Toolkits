@@ -1,14 +1,19 @@
 package acme.features.inventor.toolkit;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.spam_detector.SpamDetector;
 import org.springframework.stereotype.Service;
 
 import acme.entities.configuration.SystemConfiguration;
+import acme.entities.quantity.Quantity;
 import acme.entities.toolkits.Toolkit;
+import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractUpdateService;
 import acme.roles.Inventor;
 
@@ -17,6 +22,9 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 	
 	@Autowired
 	protected InventorToolkitRepository repo;
+	
+	@Autowired
+	protected AuthenticatedMoneyExchangePerformService moneyService;
 	
 	@Override
 	public boolean authorise(final Request<Toolkit> request) {
@@ -45,7 +53,20 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "title", "description","assemblyNotes","link");
+		final String defaultCurrency = this.repo.defaultCurrency();
+
+		final Collection<Quantity> collectedMoneys = this.repo.collectPrices(entity.getId());
+		final Double totalPrice = collectedMoneys.stream()
+				.mapToDouble(q -> this.moneyService.computeMoneyExchange(q.getItem().getRetailPrice(), defaultCurrency)
+						.getTarget().getAmount() * q.getNumber())
+				.sum();
+		final Money money = new Money();
+		money.setAmount(totalPrice);
+		money.setCurrency(defaultCurrency);
+
+		model.setAttribute("totalPrice", money);
+		
+		request.unbind(entity, model, "code", "title", "description","assemblyNotes","link","published");
 		
 	}
 
@@ -78,6 +99,14 @@ public class InventorToolkitUpdateService implements AbstractUpdateService<Inven
 		if(!errors.hasErrors("assemblyNotes")) {
 			final boolean isANSpam = sd.isSpam(entity.getAssemblyNotes());
 			errors.state(request, !isANSpam, "assemblyNotes", "inventor.toolkit.form.error.spam");
+		}
+		
+		if(!errors.hasErrors("code")) {
+			Toolkit existing;
+			existing = this.repo.findOneToolkitByCode(entity.getCode()).orElse(null);
+			if(existing!=null) {
+				errors.state(request, existing.getId() == entity.getId(), "code", "inventor.item.form.error.duplicated-code");
+			}
 		}
 		
 	}

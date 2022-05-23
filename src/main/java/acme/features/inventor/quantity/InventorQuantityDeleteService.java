@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.item.Item;
+import acme.entities.item.ItemType;
 import acme.entities.quantity.Quantity;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.components.models.Model;
@@ -25,13 +26,13 @@ public class InventorQuantityDeleteService implements AbstractDeleteService<Inve
 	{
 		assert request != null;
 		
-		int masterId;
-		final Toolkit toolkit;
+		final int masterId = request.getModel().getInteger("masterId");
+		final Toolkit toolkit = this.repo.findToolkitById(masterId);
+		final int type = request.getModel().getInteger("type");
 		
-		masterId = request.getModel().getInteger("masterId");
-		toolkit = this.repo.findToolkitById(masterId);
+		final int itemsIn = this.repo.findItemByToolkitAndType(masterId, ItemType.values()[type]).size();
 		
-		return !toolkit.isPublished() && request.isPrincipal(toolkit.getInventor());
+		return !toolkit.isPublished() && request.isPrincipal(toolkit.getInventor()) && itemsIn > 0;
 	}
 
 	@Override
@@ -51,17 +52,12 @@ public class InventorQuantityDeleteService implements AbstractDeleteService<Inve
 		
 		
 		final int masterId = request.getModel().getInteger("masterId");
-		if(request.getModel().getInteger("type") == 0) 
-		{
-			final List<Item> items = this.repo.findToolsByToolkit(masterId);
-			model.setAttribute("items", items);
-		}else 
-		{
-			final List<Item> items = this.repo.findComponentsByToolkit(masterId);
-			model.setAttribute("items", items);
-		}
+		final int type = request.getModel().getInteger("type");
+		final List<Item> items = this.repo.findItemByToolkitAndType(masterId,ItemType.values()[type]);
+		model.setAttribute("items", items);
 		
 		model.setAttribute("masterId", request.getModel().getInteger("masterId"));
+		model.setAttribute("type", type);
 		request.unbind(entity, model, "item");
 		
 	}
