@@ -84,6 +84,7 @@ public class InventorItemDeleteService implements AbstractDeleteService<Inventor
 		
 	}
 
+
 	@Override
 	public void delete(final Request<Item> request, final Item entity) {
 		assert request != null;
@@ -99,6 +100,7 @@ public class InventorItemDeleteService implements AbstractDeleteService<Inventor
 		this.repository.delete(entity);
 		  
 	}   
+
 	
 	
 

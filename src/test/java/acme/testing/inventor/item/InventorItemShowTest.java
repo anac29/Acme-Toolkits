@@ -11,7 +11,7 @@ public class InventorItemShowTest extends TestHarness {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/inventor/item/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveToolTest(final int recordIndex,
+	public void positiveTest(final int recordIndex,
 		final String name, final String code, final String itemType, final String technology, final String description, 
 		final String retailPrice, final String link, final String published) {
 		
