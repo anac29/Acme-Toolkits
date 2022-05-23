@@ -8,6 +8,7 @@ import acme.testing.TestHarness;
 
 public class PatronPatronageDeleteTest extends TestHarness { 
 	
+	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/patron/patronage/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -35,7 +36,7 @@ public class PatronPatronageDeleteTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 0, status);
 		super.checkColumnHasValue(recordIndex, 1, code);
 		super.checkColumnHasValue(recordIndex, 2, budget);
-		super.checkColumnHasValue(recordIndex, 5, startMomentDate);
+	
 		super.checkColumnHasValue(recordIndex, 6, finalMomentDate);
 		
 		super.clickOnListingRecord(recordIndex);
@@ -43,8 +44,6 @@ public class PatronPatronageDeleteTest extends TestHarness {
 		
 		super.checkInputBoxHasValue("code", code);
 		super.checkInputBoxHasValue("legalStuff", legalStuff);
-		super.checkInputBoxHasValue("budget", budget);
-		super.checkInputBoxHasValue("startMomentDate", startMomentDate);
 		super.checkInputBoxHasValue("finalMomentDate", finalMomentDate);
 
 		super.clickOnSubmit("Delete");
