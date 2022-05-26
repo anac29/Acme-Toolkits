@@ -43,7 +43,7 @@
 		<link>
 			<name>acme-toolkits</name>
 			<type>2</type>
-			<location>C:/Users/jaime/Desktop/Universidad/3ºAÑO/DP2/Workspace-22.0/Frameworks/Acme-Framework-22.7/target/classes</location>
+			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-22.7/target/classes</locationURI>
 		</link>
 		<link>
 			<name>classes</name>
