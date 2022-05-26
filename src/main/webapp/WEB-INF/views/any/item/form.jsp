@@ -16,24 +16,41 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:form readonly="${readonly}">
-	<acme:input-textbox code="any.item.form.label.name" path="name"/>
-	<acme:input-textbox code="any.item.form.label.code" path="code"/>
-	<acme:input-textbox code="any.item.form.label.technology" path="technology"/>
-		<acme:input-textarea code="any.item.form.label.description" path="description"/>
-	<acme:input-money code="any.item.form.label.retail-price" path="retailPrice"/>
-	<acme:input-select code="inventor.item.form.label.itemType" path="itemType">
-		
-			<acme:input-option code="inventor.item.form.label.tool" value="TOOL" selected="${ itemType == 'TOOL' }"/>
-			<acme:input-option code="inventor.item.form.label.component" value="COMPONENT" selected="${ itemType == 'COMPONENT' }"/>
-		
-		</acme:input-select>
-	<acme:input-url code="any.item.form.label.link" path="link"/>
+	<acme:input-textbox code="any.item.form.label.name" path="name" />
+	<acme:input-textbox code="any.item.form.label.code" path="code" />
+	<acme:input-textbox code="any.item.form.label.technology"
+		path="technology" />
+	<acme:input-textarea code="any.item.form.label.description"
+		path="description" />
+	<acme:input-money code="any.item.form.label.retail-price"
+		path="retailPrice" />
+	<jstl:choose>
+		<jstl:when
+			test="${acceptedCurrency && retailPriceDefault.getCurrency()!=retailPrice.getCurrency()}">
+			<acme:input-money code="patron.patronage.form.label.budget.default"
+				path="retailPriceDefault" readonly="true" />
+		</jstl:when>
+	</jstl:choose>
+	<acme:input-select code="inventor.item.form.label.itemType"
+		path="itemType">
+
+		<acme:input-option code="inventor.item.form.label.tool" value="TOOL"
+			selected="${ itemType == 'TOOL' }" />
+		<acme:input-option code="inventor.item.form.label.component"
+			value="COMPONENT" selected="${ itemType == 'COMPONENT' }" />
+
+	</acme:input-select>
+	<acme:input-url code="any.item.form.label.link" path="link" />
 	<hr>
-	<h3><acme:message code="any.item.form.label.title"/></h3>
-	<acme:input-textbox code="any.item.form.label.name" path="inventorName"/>
-	<acme:input-textbox code="any.item.form.label.surname" path="inventorSurname"/>
-	<acme:input-email code="any.item.form.label.email" path="inventorEmail"/>	
-	<acme:button code="any.item.form.button.toolkit" action="/any/toolkit/list-toolkit?id=${itemId}"/>	
+	<h3>
+		<acme:message code="any.item.form.label.title" />
+	</h3>
+	<acme:input-textbox code="any.item.form.label.name" path="inventorName" />
+	<acme:input-textbox code="any.item.form.label.surname"
+		path="inventorSurname" />
+	<acme:input-email code="any.item.form.label.email" path="inventorEmail" />
+	<acme:button code="any.item.form.button.toolkit"
+		action="/any/toolkit/list-toolkit?id=${itemId}" />
 
 
 
