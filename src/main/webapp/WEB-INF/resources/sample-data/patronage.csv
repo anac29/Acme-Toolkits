@@ -1,11 +1,11 @@
 key,status,code,legal-stuff,budget,creation-moment-date,start-moment-date,final-moment-date,link,published,key:inventor,key:patron
-patronage-01,ACCEPTED,ASD-123-B,Need some reports,EUR 40039393.32,2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,https://es.wikipedia.org/wiki/Patronaje,0,inventor1,patron1
+patronage-01,PENDING,ASD-123-B,Need some reports,EUR 40039393.32,2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,https://es.wikipedia.org/wiki/Patronaje,0,inventor1,patron1
 patronage-02,PROPOSED,ASD-123-C,Assortment pending,EUR 12345678.90,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,1,inventor1,patron1
-patronage-03,DENIED,ASD-123-D,Not documented enough,EUR 25654565.54,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,0,inventor1,patron1
-patronage-04,ACCEPTED,ASD-123-E,Fine,EUR 14725836.99,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,0,inventor1,patron1
-patronage-05,DENIED,ASD-123-F,Not documented enough,EUR 25654565.54,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,0,inventor1,patron1
-patronage-06,ACCEPTED,ASD-123-G,Need some reports,GBP 1598475.66,2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,null,0,inventor1,patron1
-patronage-07,ACCEPTED,ASD-123-H,Need some reports,GBP 1598475.66,2022/02/25 12:33,2022/04/25 00:00,2022/05/31 23:59,null,0,inventor1,patron1
+patronage-03,PENDING,ASD-123-D,Not documented enough,EUR 25654565.54,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,0,inventor1,patron1
+patronage-04,PENDING,ASD-123-E,Fine,EUR 14725836.99,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,0,inventor1,patron1
+patronage-05,PENDING,ASD-123-F,Not documented enough,EUR 25654565.54,2022/02/28 15:55,2022/04/14 00:00,2022/06/30 23:59,null,0,inventor1,patron1
+patronage-06,PENDING,ASD-123-G,Need some reports,GBP 1598475.66,2022/02/23 14:45,2022/03/31 23:12,2022/05/31 12:56,null,0,inventor1,patron1
+patronage-07,PENDING,ASD-123-H,Need some reports,GBP 1598475.66,2022/02/25 12:33,2022/04/25 00:00,2022/05/31 23:59,null,0,inventor1,patron1
 patronage-08,ACCEPTED,ASD-123-I,Need some reports,GBP 1598475.66,2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,null,1,inventor1,patron1
 patronage-09,ACCEPTED,ASD-123-J,Need some reports,GBP 1598475.66,2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,null,1,inventor2,patron1
-patronage-10,ACCEPTED,ASD-123-K,Need some reports,GBP 1598475.66,2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,null,0,inventor1,patron2
+patronage-10,PENDING,ASD-123-K,Need some reports,GBP 1598475.66,2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,null,0,inventor1,patron2
