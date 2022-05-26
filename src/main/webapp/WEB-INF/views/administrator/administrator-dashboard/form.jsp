@@ -16,6 +16,7 @@
 		code="administrator.dashboard.form.label.totalNumberOfComponents" />
 	</h2>
 
+
 	<div style="background:#f2f2f7; border-radius:5px; padding:5px 10px; width:fit-content; display: flex; margin-bottom:5px; margin-left:10px;">
 	<h2 style="margin-bottom:0;"><acme:print value="${totalNumberOfComponents}" /></h2></div>
 
