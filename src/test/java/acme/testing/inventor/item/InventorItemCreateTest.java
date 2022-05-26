@@ -17,7 +17,7 @@ public class InventorItemCreateTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.clickOnButton("Create");
 		super.fillInputBoxIn("name", name);
@@ -30,7 +30,7 @@ public class InventorItemCreateTest extends TestHarness {
 		super.clickOnSubmit("Create");
 		
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -53,7 +53,7 @@ public class InventorItemCreateTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.clickOnButton("Create");
 		super.fillInputBoxIn("name", name);

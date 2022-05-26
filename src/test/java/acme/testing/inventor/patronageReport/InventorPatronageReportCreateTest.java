@@ -17,7 +17,7 @@ public class InventorPatronageReportCreateTest extends TestHarness
 		final String memorandum,final String link,final String patronagecode) 
 	{
 		super.signIn("inventor1", "inventor1");
-		super.clickOnMenu("Inventor", "List Accepted Patronages");
+		super.clickOnMenu("Inventor", "List my Accepted Patronages");
 		
 		super.clickOnListingRecord(recordIndexAccepted);
         super.checkFormExists();
@@ -29,7 +29,7 @@ public class InventorPatronageReportCreateTest extends TestHarness
 		super.fillInputBoxIn("confirmation", "true");
 		super.clickOnSubmit("Create");
 		
-		super.clickOnMenu("Inventor","List Patronage Reports");
+		super.clickOnMenu("Inventor","List my Patronage Reports");
 		super.sortListing(0, "desc");
 		super.clickOnListingRecord(recordIndex);
 		
@@ -55,7 +55,7 @@ public class InventorPatronageReportCreateTest extends TestHarness
 		final String confirmation) 
 	{
 		super.signIn("inventor1", "inventor1");
-		super.clickOnMenu("Inventor", "List Accepted Patronages");
+		super.clickOnMenu("Inventor", "List my Accepted Patronages");
 		
 		super.clickOnListingRecord(recordIndexAccepted);
         super.checkFormExists();
