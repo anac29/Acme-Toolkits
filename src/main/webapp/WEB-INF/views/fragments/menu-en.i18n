@@ -52,18 +52,18 @@ master.menu.administrator.system-configuration= System Configuration
 
 master.menu.patron = Patron
 master.menu.patron.patronages =List my Patronages
-master.menu.patron.patronage-reports = List Patronage Reports
+master.menu.patron.patronage-reports = List my Patronage Reports
 master.menu.patron.dashboard = Dashboard
 
 # master.menu.inventor ##################################################
 
 master.menu.inventor = Inventor
-master.menu.inventor.patronage-report =List Patronage Reports
+master.menu.inventor.patronage-report =List my Patronage Reports
 
-master.menu.inventor.item = List Items
-master.menu.inventor.toolkit = List Toolkits
-master.menu.inventor.patronage.accepted =List Accepted Patronages 
-master.menu.inventor.patronage.pending =List Pending Patronages
+master.menu.inventor.item = List my Items
+master.menu.inventor.toolkit = List my Toolkits
+master.menu.inventor.patronage.accepted =List my Accepted Patronages 
+master.menu.inventor.patronage.pending =List my Pending Patronages
 
 
 # master.menu.user-account ####################################################

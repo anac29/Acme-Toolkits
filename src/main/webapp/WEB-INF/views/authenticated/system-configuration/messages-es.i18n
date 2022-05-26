@@ -1,2 +1,4 @@
+
 authenticated.form.label.acceptedCurrencies = Divisas aceptadas
 authenticated.form.label.defaultCurrency = Divisa por defecto
+authenticated.form.label.link = Enlace

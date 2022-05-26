@@ -17,7 +17,7 @@ public class InventorItemUpdateTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.sortListing(1, "asc");
 
 		super.checkColumnHasValue(recordIndex, 1, code);
@@ -32,7 +32,7 @@ public class InventorItemUpdateTest extends TestHarness {
 		super.clickOnSubmit("Update");
 		
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -54,7 +54,7 @@ public class InventorItemUpdateTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
 

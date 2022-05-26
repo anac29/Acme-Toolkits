@@ -15,7 +15,7 @@ public class InventorItemPublishTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
 		super.checkColumnHasValue(recordIndex, 0, code);
@@ -36,7 +36,7 @@ public class InventorItemPublishTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc");
 

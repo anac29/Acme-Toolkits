@@ -18,7 +18,7 @@ public class InventorItemDeleteTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -32,7 +32,7 @@ public class InventorItemDeleteTest extends TestHarness {
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Create");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -51,7 +51,7 @@ public class InventorItemDeleteTest extends TestHarness {
 
 		super.clickOnSubmit("Delete");
 
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -80,7 +80,7 @@ public class InventorItemDeleteTest extends TestHarness {
 		
 		super.signIn("inventor2", "inventor2");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -94,7 +94,7 @@ public class InventorItemDeleteTest extends TestHarness {
 		super.fillInputBoxIn("link", link);
 		super.clickOnSubmit("Create");
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -113,7 +113,7 @@ public class InventorItemDeleteTest extends TestHarness {
 
 		super.clickOnSubmit("Publish");
 
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		
@@ -130,7 +130,7 @@ public class InventorItemDeleteTest extends TestHarness {
 		super.checkInputBoxHasValue("technology", technology);
 		super.checkInputBoxHasValue("description", description);
 		
-		super.clickOnMenu("Inventor","List Items");
+		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.sortListing(1, "asc"); 
 		super.clickOnListingRecord(recordIndex);

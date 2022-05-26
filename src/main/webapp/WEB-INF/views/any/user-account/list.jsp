@@ -16,6 +16,7 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-		<acme:list-column code="Username" path="username"/>
-		<acme:list-column code="Roles" path="roles"/>
+		<acme:list-column code="anonymous.user-account.form.label.name" path="identity.name"/>
+		<acme:list-column code="anonymous.user-account.form.label.surname" path="identity.surname"/>
+		<acme:list-column code="anonymous.user-account.form.label.roles" path="roles"/>
 </acme:list>

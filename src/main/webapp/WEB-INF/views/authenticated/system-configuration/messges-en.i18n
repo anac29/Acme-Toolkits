@@ -1,2 +1,4 @@
+
 authenticated.form.label.acceptedCurrencies = Accepted Currencies
 authenticated.form.label.defaultCurrency = Default Currency
+authenticated.form.label.link = Link
