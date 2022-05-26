@@ -10,12 +10,17 @@
 	<acme:message code="administrator.dashboard.form.title" />
 </h1>
 
-<h2>
+	<div style="display: flex; flex-direction: row;">
+	<h2 style="margin-top:5px;">
 	<acme:message
 		code="administrator.dashboard.form.label.totalNumberOfComponents" />
-	<acme:print value="${totalNumberOfComponents}" />
-</h2>
+	</h2>
 
+
+	<div style="background:#f2f2f7; border-radius:5px; padding:5px 10px; width:fit-content; display: flex; margin-bottom:5px; margin-left:10px;">
+	<h2 style="margin-bottom:0;"><acme:print value="${totalNumberOfComponents}" /></h2></div>
+
+	</div>
 
 <h3>
 	<acme:message
@@ -150,12 +155,18 @@
 		</tr>
 	</jstl:forEach>
 </table>
-<h2>
-	<acme:message
-		code="administrator.dashboard.form.label.totalNumberOfTools" />
-	<acme:print value="${totalNumberOfTools}" />
-</h2>
 
+
+<div style="display: flex; flex-direction: row;">
+<h2 style="margin-top:5px;">
+	<acme:message
+		code="administrator.dashboard.form.label.totalNumberOfTools" /></h2>
+	<div style="background:#f2f2f7; border-radius:5px; padding:5px 10px; width:fit-content; display: flex; margin-bottom:5px; margin-left:10px;">
+	<h2 style="margin-bottom:0;">
+	<acme:print value="${totalNumberOfTools}" />
+	</h2>
+	</div>
+</div>
 <h3>
 	<acme:message
 		code="administrator.dashboard.form.label.averageRetailPriceOfToolsByCurrency" />

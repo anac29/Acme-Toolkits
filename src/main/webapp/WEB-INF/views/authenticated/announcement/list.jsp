@@ -6,7 +6,8 @@
 
 <acme:list>
 	<acme:list-column code="authenticated.announcement.list.label.creationMoment" path="creationMoment" width="30%"/>
-	<acme:list-column code="authenticated.announcement.list.label.title" path="title" width="70%"/>
+	<acme:list-column code="authenticated.announcement.list.label.title" path="title" width="60%"/>
+	<acme:list-column code="authenticated.announcement.form.label.flag" path="flag" width="10%"/>
 </acme:list>
 <security:authorize access="hasRole('Administrator')">
 	<acme:button code="master.menu.administrator.announcement" action="/administrator/announcement/create"/>

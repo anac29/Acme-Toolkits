@@ -22,6 +22,7 @@ public class AuthenticatedAnnouncementTest extends TestHarness{
 		
 		super.checkColumnHasValue(recordIndex, 0, creationMoment);
 		super.checkColumnHasValue(recordIndex, 1, title);
+		super.checkColumnHasValue(recordIndex, 2, flag);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
