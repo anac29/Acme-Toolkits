@@ -37,8 +37,8 @@ patron.patronage.form.label.budget.default= Precio en moneda por defecto
 
 inventor.item.form.button.publish= Publicar
 
-
-inventor.item.form.error.negative-salary=El precio debe ser positivo
+inventor.item.form.error.zero-negative-salary= El precio para herramientas debe ser cero o positivo
+inventor.item.form.error.negative-salary=El precio para componentes debe ser positivo
 inventor.item.form.error.duplicated-code= Este código ya existe para un ítem
 item.inventor.form.error.spam= El texto contiene demasiados términos spam
 inventor.item.form.error.non-accepted-currency= Esta unidad monetaria no está aceptada

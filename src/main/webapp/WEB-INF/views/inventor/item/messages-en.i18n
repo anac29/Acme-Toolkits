@@ -36,8 +36,8 @@ inventor.item.form.button.update=Update
 inventor.item.form.button.publish=Publish
 patron.patronage.form.label.budget.default=Retail Price in default currency
 
-
-inventor.item.form.error.negative-salary = The retail price must be positive
+inventor.item.form.error.zero-negative-salary= The retail price for tools must be zero or positive
+inventor.item.form.error.negative-salary = The retail price for component must be positive
 inventor.item.form.error.duplicated-code= This code already exists in an item
 item.inventor.form.error.spam= The text contains too many spam terms
 inventor.item.form.error.non-accepted-currency= This is not an accepted currency

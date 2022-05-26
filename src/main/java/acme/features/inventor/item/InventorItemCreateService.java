@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.item.Item;
+import acme.entities.item.ItemType;
 import acme.features.spam.SpamDetectorService;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
@@ -83,9 +84,16 @@ public class InventorItemCreateService implements AbstractCreateService<Inventor
 
 			final Boolean acceptedCurrency = this.repository.findSystemConfiguration().getAcceptedCurrencies()
 					.matches("(.*)" + entity.getRetailPrice().getCurrency() + "(.*)");
-
-			errors.state(request, entity.getRetailPrice().getAmount() > 0, "retailPrice",
+			
+			
+			if(entity.getItemType().equals(ItemType.TOOL)) {	
+			errors.state(request,entity.getRetailPrice().getAmount()>=0, "retailPrice",
+					"inventor.item.form.error.zero-negative-salary");
+			}
+			else {
+			errors.state(request, entity.getItemType().equals(ItemType.COMPONENT) && entity.getRetailPrice().getAmount() > 0, "retailPrice",
 					"inventor.item.form.error.negative-salary");
+			}
 			errors.state(request, acceptedCurrency, "retailPrice", "inventor.item.form.error.non-accepted-currency");
 
 		}
