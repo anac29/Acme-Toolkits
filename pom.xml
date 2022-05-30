@@ -12,7 +12,7 @@
   - they accept any liabilities with respect to them. 
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="https://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
@@ -35,6 +35,7 @@
 	
 	<properties>
 		<sourceDirectory>${basedir}/src</sourceDirectory>
+		
 		<targetDirectory>${basedir}/target</targetDirectory>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
@@ -106,6 +107,12 @@
 
 <dependencies>
 		<!-- Application server -->
+		<dependency>
+			<groupId>Acme</groupId>
+			<artifactId>Acme-Framework-22.7</artifactId>
+			<version>22.7</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
