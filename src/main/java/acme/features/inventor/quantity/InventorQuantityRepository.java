@@ -1,6 +1,7 @@
 package acme.features.inventor.quantity;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -10,6 +11,7 @@ import acme.entities.item.ItemType;
 import acme.entities.quantity.Quantity;
 import acme.entities.toolkits.Toolkit;
 import acme.framework.repositories.AbstractRepository;
+import acme.roles.Inventor;
 
 @Repository
 public interface InventorQuantityRepository extends AbstractRepository 
@@ -25,6 +27,9 @@ public interface InventorQuantityRepository extends AbstractRepository
 	
 	@Query("SELECT q FROM Quantity q WHERE q.item.id = :id and q.toolkit.id = :tid")
 	Quantity findQuantityTool(int tid, int id);
+	
+	@Query("select inventor from Inventor inventor WHERE inventor.id=:id")
+	Optional<Inventor> findInventorById(int id);
 	
 	@Query("SELECT q FROM Quantity q")
 	List<Quantity> findQuantities();
