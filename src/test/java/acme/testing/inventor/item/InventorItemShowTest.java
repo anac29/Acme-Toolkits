@@ -26,8 +26,7 @@ public class InventorItemShowTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 2, itemType);
 		super.checkColumnHasValue(recordIndex, 3, technology);
 		super.checkColumnHasValue(recordIndex, 4, description);
-		super.checkColumnHasValue(recordIndex, 5, retailPrice);
-		super.checkColumnHasValue(recordIndex, 6, link);
+		super.checkColumnHasValue(recordIndex, 5, link);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();

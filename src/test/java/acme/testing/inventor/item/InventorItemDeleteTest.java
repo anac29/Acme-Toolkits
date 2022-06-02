@@ -13,7 +13,8 @@ public class InventorItemDeleteTest extends TestHarness {
 	@Order(10)
 	public void positiveTest(final int recordIndex,
 		final String name, final String code, final String technology, final String description, 
-		final String retailPrice, final String itemType, final String link, final String nameAd, final String codeAd,
+		final String retailPrice, final String itemType, final String link, final String nameAd, 
+		final String codeAd,
 		final String technologyAd, final String descriptionAd) {
 		
 		super.signIn("inventor2", "inventor2");
