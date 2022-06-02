@@ -24,9 +24,8 @@ public class AnyItemListTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 1, code);
 		super.checkColumnHasValue(recordIndex, 2, itemType);
 		super.checkColumnHasValue(recordIndex, 3, technology);
-		super.checkColumnHasValue(recordIndex, 4, retailPrice);
-		super.checkColumnHasValue(recordIndex, 5, link);
-
+		super.checkColumnHasValue(recordIndex, 4, link);
+		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("name", name);
