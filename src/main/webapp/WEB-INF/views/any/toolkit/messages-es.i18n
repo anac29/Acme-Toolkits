@@ -8,9 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.toolkit.list.label.code = Código:
-any.toolkit.list.label.title = Título:
-any.toolkit.list.label.description = Descripción:
+any.toolkit.list.label.code = Código
+any.toolkit.list.label.title = Título
+any.toolkit.list.label.description = Descripción
 
 any.toolkit.list.label.code = Código:
 any.toolkit.list.label.inventor-title = Título:

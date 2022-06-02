@@ -79,18 +79,13 @@ public class PatronPatronageUpdateService implements AbstractUpdateService<Patro
 			}
 		}
 		
-		if(!errors.hasErrors("startMomentDate")) {
+		if(!errors.hasErrors("startMomentDate") && !errors.hasErrors("finalMomentDate")) {
 			final Date minimumStartDate=DateUtils.addMonths(entity.getCreationMomentDate(), 1);
 
-			
-			errors.state(request, entity.getStartMomentDate().after(minimumStartDate), "startMomentDate", "patron.patronage.form.error.too-close-start-date");
-			
-		}
-		if(!errors.hasErrors("finalMomentDate")) {
+			errors.state(request,entity.getStartMomentDate().after(minimumStartDate), "startMomentDate", "patron.patronage.form.error.too-close-start-date");
 			final Date minimumFinishDate=DateUtils.addMonths(entity.getStartMomentDate(), 1);
 
-			errors.state(request, entity.getFinalMomentDate().after(minimumFinishDate), "finalMomentDate", "patron.patronage.form.error.one-month");
-			
+			errors.state(request,entity.getFinalMomentDate().after(minimumFinishDate), "finalMomentDate", "patron.patronage.form.error.one-month");
 		}
 		
 		

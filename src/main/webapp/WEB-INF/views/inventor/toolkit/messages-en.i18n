@@ -8,10 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-inventor.toolkit.list.label.code=Code:
-inventor.toolkit.list.label.title=Title:
-inventor.toolkit.list.label.description=Description:
-inventor.toolkit.list.label.published=Published:
+inventor.toolkit.list.label.code=Code
+inventor.toolkit.list.label.title=Title
+inventor.toolkit.list.label.description=Description
+inventor.toolkit.list.label.published=Published
 
 inventor.toolkit.item.error=Toolkit must include one component and one tool
 
@@ -29,12 +29,8 @@ inventor.toolkit.form.label.confirm=Confirm
 inventor.toolkit.form.error.spam=The text contains too many spam terms
 inventor.toolkit.form.error.duplicated-code=This code already exists for another toolkit
 
-inventor.toolkit.form.label.code=Code:
-inventor.toolkit.form.label.title=Title:
-inventor.toolkit.form.label.description=Description:
 inventor.toolkit.form.label.total-price=Total Price:
 inventor.toolkit.form.label.assembly-notes=Assembly Notes:
 inventor.toolkit.form.label.link=Link:
-inventor.toolkit.form.label.published=Published 
 inventor.toolkit.form.button.tool=See Tools
 inventor.toolkit.form.button.component= See Components
