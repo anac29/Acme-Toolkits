@@ -15,7 +15,7 @@ public class AnyToolkitListTest extends TestHarness{
 		final String description, final String assemblyNotes, final String link, final String totalPrice,final String inventorName,final String inventorSurname,final String inventorEmail) { 
 		super.clickOnMenu("Anonymous","List Toolkits");
 		super.checkListingExists();
-		super.sortListing(0, "asc");
+		super.sortListing(0, "desc");
 		
 		super.checkColumnHasValue(recordIndex, 0, code);
 		super.checkColumnHasValue(recordIndex, 1, title);
