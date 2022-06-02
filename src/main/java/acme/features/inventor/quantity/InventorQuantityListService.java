@@ -28,8 +28,11 @@ public class InventorQuantityListService implements AbstractListService<Inventor
 	@Override
 	public boolean authorise(final Request<Quantity> request) {
 		assert request != null;
+		final int toolkitId = request.getModel().getInteger("masterId");
+		final Toolkit toolkit= this.repository.findToolkitById(toolkitId);
+		final Inventor inventor = this.repository.findInventorById(request.getPrincipal().getActiveRoleId()).orElse(null);
 
-		return true;
+		return inventor!=null  && toolkit!=null && toolkit.getInventor().equals(inventor);
 	}
 
 	@Override

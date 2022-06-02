@@ -9,9 +9,9 @@
 # they accept any liabilities with respect to them.
 
 
-any.toolkit.list.label.code = Code:
-any.toolkit.list.label.title = Title:
-any.toolkit.list.label.description = Description:
+any.toolkit.list.label.code = Code
+any.toolkit.list.label.title = Title
+any.toolkit.list.label.description = Description
  
 
 any.toolkit.form.label.code = Code:

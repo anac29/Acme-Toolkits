@@ -84,20 +84,14 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
 			errors.state(request, existing == null, "code", "patron.patronage.form.error.duplicated");
 		}
 		
-		if(!errors.hasErrors("startMomentDate")) {
+		if(!errors.hasErrors("startMomentDate") && !errors.hasErrors("finalMomentDate")) {
 			final Date minimumStartDate=DateUtils.addMonths(entity.getCreationMomentDate(), 1);
 
-			
 			errors.state(request,entity.getStartMomentDate().after(minimumStartDate), "startMomentDate", "patron.patronage.form.error.too-close-start-date");
-			
-		}
-		if(!errors.hasErrors("finalMomentDate")) {
 			final Date minimumFinishDate=DateUtils.addMonths(entity.getStartMomentDate(), 1);
 
 			errors.state(request,entity.getFinalMomentDate().after(minimumFinishDate), "finalMomentDate", "patron.patronage.form.error.one-month");
-			
 		}
-		
 		
 		if (!errors.hasErrors("budget")) {
 
