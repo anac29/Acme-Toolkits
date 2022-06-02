@@ -20,6 +20,7 @@ public class InventorItemCreateTest extends TestHarness {
 		super.clickOnMenu("Inventor","List my Items");
 		super.checkListingExists();
 		super.clickOnButton("Create");
+		
 		super.fillInputBoxIn("name", name);
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("technology", technology);
@@ -39,8 +40,7 @@ public class InventorItemCreateTest extends TestHarness {
 		super.checkColumnHasValue(recordIndex, 2, itemType);
 		super.checkColumnHasValue(recordIndex, 3, technology);
 		super.checkColumnHasValue(recordIndex, 4, description);
-		super.checkColumnHasValue(recordIndex, 5, retailPrice);
-		super.checkColumnHasValue(recordIndex, 6, link);
+		super.checkColumnHasValue(recordIndex, 5, link);
 
 	}
 	

@@ -108,13 +108,6 @@
 <dependencies>
 		<!-- Application server -->
 		<dependency>
-			<groupId>Acme</groupId>
-			<artifactId>Acme-Framework-22.7</artifactId>
-			<version>22.7</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>

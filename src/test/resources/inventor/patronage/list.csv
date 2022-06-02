@@ -1,2 +1,2 @@
 recordIndex,status,code,legal-stuff,budget,creation-moment-date,start-moment-date,final-moment-date,link,key:inventor,key:patron,patron-name,patron-surname,patron-email
-0,ACCEPTED,ASD-123-I,Need some reports,"GBP 1,598,475.66",2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,"",inventor1,patron1,Patron,One,"patron1@mail.com"
+0,PROPOSED,ASD-123-I,Need some reports,"GBP 1,598,475.66",2022/02/25 12:33,2022/09/13 00:00,2022/11/12 23:59,"",inventor1,patron1,Patron,One,"patron1@mail.com"
